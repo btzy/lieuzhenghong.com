@@ -2,12 +2,28 @@ const markdownIt = require("markdown-it");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
-  const md = new markdownIt({
-    html: true,
-  });
+  let markdownIt = require("markdown-it");
+  /*  include extra functionality to the markdown parser */
+  let markdownItFootnote = require("markdown-it-footnote");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItToc = require("markdown-it-toc-done-right");
 
+  const options = {
+    html: true,
+  };
+
+  /* add stuff to the markdown parser */
+  const markdownLib = markdownIt(options)
+    .use(markdownItFootnote)
+    .use(markdownItAnchor)
+    .use(markdownItToc);
+
+  eleventyConfig.setLibrary("md", markdownLib);
+
+  /* Parse markdown snippets inside {% markdown %} tags */
   eleventyConfig.addPairedShortcode("markdown", (content) => {
-    return md.render(content);
+    //return md.render(content);
+    return markdownLib.render(content);
   });
 
   // add syntax highlighting plugin

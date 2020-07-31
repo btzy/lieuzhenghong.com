@@ -8,6 +8,7 @@ tags:
   - private
   - diary
   - oxford
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 ## General comments
@@ -34,7 +35,7 @@ I will talk about the different facets of my time at Oxford (academic,
 interpersonal, extracurricular) and how I can improve these facets next turn.
 Lastly, I'll lay out my plans this holiday.
 
-## Academic 
+## Academic
 
 Couldn't change course to Computer Science. But all is well—I am happy to do
 PPE and learn computer science over the holidays. Bassel told me about the
@@ -92,7 +93,6 @@ first draft of the essay, etc
 
 Once again, consistency is key
 
-
 ## Extra-curricular
 
 This term, I did rowing, powerlifting, OXCAR. Cooking is also kind of an
@@ -102,11 +102,12 @@ extracurricular I suppose.
 
 Cooking takes too long a time: about 2 hours per session. Ways to optimise, in
 decreasing order of preference/effectiveness:
-  - Cook for fewer people/ cook for multiple days at a time
-  - Buy groceries in batches, don't buy every day
-  - Cook simpler dishes
-  - Eat early supper instead
-  - Skip dinner and have snacks instead (toast with cheese and ham etc)
+
+- Cook for fewer people/ cook for multiple days at a time
+- Buy groceries in batches, don't buy every day
+- Cook simpler dishes
+- Eat early supper instead
+- Skip dinner and have snacks instead (toast with cheese and ham etc)
 
 Cooking for myself is the only way to do a low-carb, high protein diet though.
 If I'm convinced of the merits of such a diet, I will have to cook for myself.
@@ -122,22 +123,25 @@ open.
 ### Powerlifting
 
 I really like powerlifting because:
-  1. I have a decent build for it
-  2. I already have a good base (275 Wilks at the novice powerlifting meet)
-  3. the total I have to hit to be competitive doesn't seem very far away
-  4. it's a very low-variance sport compared to other sports that are eligible
-  for Blues.
-That's why I want to take it seriously if my injury will allow.
-That means making it into Varsity next year (Hilary 2019) and getting a
-Full Blue by the time I graduate.
+
+1. I have a decent build for it
+2. I already have a good base (275 Wilks at the novice powerlifting meet)
+3. the total I have to hit to be competitive doesn't seem very far away
+4. it's a very low-variance sport compared to other sports that are eligible
+   for Blues.
+   That's why I want to take it seriously if my injury will allow.
+   That means making it into Varsity next year (Hilary 2019) and getting a
+   Full Blue by the time I graduate.
 
 I need a Wilks score of 350 for a Half Blue and 375 for Full Blue:
+
 - ~450kg (1000lb) for 350 Wilks, and 500kg for 375 Wilks
 
 I'm still thinking of what the best time to go to the gym is. The most
 important thing is being consistent and going Mon, Wed, Fri _every single week_
 for 8 weeks. It shouldn't be that hard.
- - well, quite hard considering OXCAR had an Xmas concert on Wednesday
+
+- well, quite hard considering OXCAR had an Xmas concert on Wednesday
 
 I was thinking of blocking out 5–7 but that would make me miss early supper. If
 I went later then it'd be a bit crowded. Any earlier and I'd be too full from
@@ -183,7 +187,7 @@ Not sure what I can do on this front.
 1. Bassel, for being so patient and accommodating when I wanted to switch to
    Compsci and for being an excellent tutor overall
 2. Oskar, for kindly hosting me in his room, sharing his food with me, buying
-    groceries with and for me, and for having such a big heart
+   groceries with and for me, and for having such a big heart
 3. Leo, my tute buddy dinner kaki, and the person I hang out with most
 4. Martin, who has never once missed a dinner I've cooked
 5. Tak Huen and Venla, for being great college parents: they patiently answered so
@@ -196,29 +200,34 @@ Not sure what I can do on this front.
 ## What am I doing this holiday?
 
 0. Career goals
-  - Send IMDA my academic plan and CV, start applying for internship w them
-  - Also, apply for internship with a firm in either SG or UK this summer.
-    Otherwise I won't have anything to do this summer after my IMDA internship.
-  - I'm not interested in consulting; more interested in writing code
+
+- Send IMDA my academic plan and CV, start applying for internship w them
+- Also, apply for internship with a firm in either SG or UK this summer.
+  Otherwise I won't have anything to do this summer after my IMDA internship.
+- I'm not interested in consulting; more interested in writing code
 
 1. Consolidate my knowledge for Economics and Philosophy
-  - I think I'm 60% on both subjects, definitely quite shaky
-  - Write good notes for Economics; definitions, problems, diagrams
+
+- I think I'm 60% on both subjects, definitely quite shaky
+- Write good notes for Economics; definitions, problems, diagrams
 
 2. Do vacation reading to prepare for Hilary term:
-  - Mill, _Utilitarianism_
-  - Russell, _Problems with Philosophy_
-  - Lijphart, _Patterns of Democracy_
-  - some other readings specified in the Politics handout
+
+- Mill, _Utilitarianism_
+- Russell, _Problems with Philosophy_
+- Lijphart, _Patterns of Democracy_
+- some other readings specified in the Politics handout
 
 3. Continue working on CS curriculum
-  - Solve Leetcode problems, embark on LinAlg course (with the help of Oskar's
-    lecture notes)
-  - Learn C++/ C
+
+- Solve Leetcode problems, embark on LinAlg course (with the help of Oskar's
+  lecture notes)
+- Learn C++/ C
 
 4. Gym
-  - Consistency is key. Will make gains iff I go consistently.
+
+- Consistency is key. Will make gains iff I go consistently.
 
 5. Driving
-  - Try and pass lor.
 
+- Try and pass lor.

@@ -17,6 +17,7 @@ img: "/img/sms_pipeloop/prior_5.png"
 blurb: "A SMS pipeline I built to investigate 
 the effect of different messages on clickthrough rates, 
 using Thompson sampling to maximise effectiveness."
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 I architected and built a system that programmatically sends SMSes and tracks

@@ -8,22 +8,22 @@ tags:
   - private
   - diary
   - post-ord
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
-Since my 
+Since my
 [last post]({{'/_posts/2017-03-25-quarterly-report-2017/'}}) I have done the following:
 
-* Finished my internship at iGlobe (ended May 12, 2017)
-* Been rejected by MAS and GIC in the penultimate round
-* Went to Japan for the first time in my life
-* Finished building the Raspberry Pi console
-* Finished my first substantial MOOC, Andrew Ng's Machine Learning
-* Built my first executable file (.exe rather than .py) and wrote *software* rather than a *program*
+- Finished my internship at iGlobe (ended May 12, 2017)
+- Been rejected by MAS and GIC in the penultimate round
+- Went to Japan for the first time in my life
+- Finished building the Raspberry Pi console
+- Finished my first substantial MOOC, Andrew Ng's Machine Learning
+- Built my first executable file (.exe rather than .py) and wrote _software_ rather than a _program_
 
 Some of these deserve a separate post so I'll dedicate the whole of today to writing them.
 
-
-## Finished my internship at iGlobe ##
+## Finished my internship at iGlobe
 
 I started interning at iGlobe on 23rd January 2017 and ended 12th May 2017. My
 main responsibility was to help the investment team (Jeff) in his sourcing for
@@ -48,12 +48,12 @@ I was also tasked to do market research on industries iGlobe was interested in
 insurtech, medtech and payment data monetisation.
 
 On the investor side, I helped the investor team conduct research on the
-possibility of getting family offices to invest in iGlobe. 
+possibility of getting family offices to invest in iGlobe.
 
 I also learned miscellaneous administrative stuff like how to use a courier
 service, how to post a letter and so on.
 
-### Programming at iGlobe ###
+### Programming at iGlobe
 
 I wrote two programs during my stint at iGlobe,
 [form-letterer](https://github.com/lieuzhenghong/form-letterer) and
@@ -101,32 +101,32 @@ successfully being used by end-users. I'm also happy that I was able to
 contribute to iGlobe above and beyond the help normally expected from an
 intern.
 
-## Rejected from scholarships ##
+## Rejected from scholarships
 
 I was rejected from both GIC and MAS in the penultimate round, the 'group
 discussion' round... perhaps my personality was too abrasive. Unfortunately the
 scholarship agencies don't give feedback on unsuccessful applications.
 Nevertheless, it was a good learning experience; I don't regret the application
-process. 
+process.
 
 The last scholarship I am waiting for is IMDA. As of this moment, IMDA is
 trying to schedule an interview slot with the directors. I told them that I
 would be willing to cancel my trip to Yunnan if need be; nothing to do now but
 wait.
 
-## Future plans ##
+## Future plans
 
 The path ahead of me is bifurcated. All depends on my decision to go to Ox or
-NTU. 
+NTU.
 
 There are things that I will be doing no matter my eventual choice, however.
 
-### Some very clear goals: ###
+### Some very clear goals:
 
 1. Get a Class 3 driving license by September 31 2017
 2. Do at least one machine learning project by August 2 2017
 
-### Some more nebulous ones: ###
+### Some more nebulous ones:
 
 1. Think about a new niche for the Codellective: see [this Saturday kids
    class](http://saturdaykids.com/creative-coder/pykids-level-1/) also doing
@@ -134,7 +134,7 @@ There are things that I will be doing no matter my eventual choice, however.
    per workshop?? I think the real question is : what is Codellective, what are
    we doing different from the rest, what kind of volunteers do we want?
 
-### Pipe dreams: ###
+### Pipe dreams:
 
 I am pretty sure that these won't happen
 

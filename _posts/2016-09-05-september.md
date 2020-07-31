@@ -6,6 +6,7 @@ tags:
   - progress report
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 Today I presented the WITS project to all the branch heads, including Carmo and
@@ -21,15 +22,15 @@ mine will have to be seen.
 
 This WITS project was supposed to be my ticket to recognition. I'm not sure what
 chance I have now with "only" a silver. I am meeting Maj Susan on Wednesday and
-I will see what she says... hopefully there's still a chance of progressing. 
+I will see what she says... hopefully there's still a chance of progressing.
 
 The iDA group has now only Rahman and me. Gabriel is trying to hang on but he
 has commitment issues. Putting that aside, I'm not sure where this group is
 going. Will I have to be labouring for months, years, with nothing to show for
 it? We need big wins--we need to be doing something different. The idea Rahman
-had is to be a *community* that ties everyone together. That of course raises
+had is to be a _community_ that ties everyone together. That of course raises
 the questions: what kind of community? and what will this community do? and I
-have not been able to get a satisfactory answer from them yet. 
+have not been able to get a satisfactory answer from them yet.
 
 My teaching the kids at Ulu Pandan is still continuing week by week but what am
 I doing? The idea was to start my own Python thing but I've been teaching them
@@ -40,7 +41,6 @@ All three of my projects seem to have come to a halt. I have to come up with new
 ideas, new initiatives that I can push. But these three projects are sapping my
 time and energy and giving me nothing in return. It is like an enormous ball and
 chain is tied to me and I cannot run with all of this accumulated deadweight.
-
 
 Here are some more things that I have to worry about:
 

@@ -8,6 +8,7 @@ tags:
   - macroeconomics
   - explanation
   - public
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 <style>
@@ -35,9 +36,9 @@ tags:
 ## Table of contents
 
 0. Introduction and nontechnical explanation of the paradox
-2. We can solve the paradox by directed technical change
-3. But why would technical change be directed? Market effects
-4. Implications of the model, and comparisons to other models:
+1. We can solve the paradox by directed technical change
+2. But why would technical change be directed? Market effects
+3. Implications of the model, and comparisons to other models:
    - Schumpeterian-Solow model
 
 ## Introduction and nontechnical explanation
@@ -51,7 +52,7 @@ Consider these two facts:
    workers.
 
 This seems counterintuitive. We know the labour market is determined by supply
-and demand. Therefore, it seems like the skill premium should decrease.  We
+and demand. Therefore, it seems like the skill premium should decrease. We
 must conclude that something is making the skill premium go up despite the
 large influx of high-skilled workers.
 
@@ -100,7 +101,6 @@ all we've just talked about. Why Acemoglu's model specifically?
 <p> How can the skill premium go up even as the relative supply of high-skilled workers goes up?</p>
 </div>
 
-
 ## Formalising the paradox
 
 The production function, as well as our utility function, is given by
@@ -125,13 +125,13 @@ w_L \equiv MPL = A^\rho_L \left[A^\rho_L + A^\rho_H\left(\frac{H}{L}\right)^\rho
 w_H \equiv MPH = A^\rho_H \left[A^\rho_L \left(\frac{H}{L}\right)^{-\rho} + A^\rho_H\right]^\frac{1-\rho}{\rho}
 \end{equation}
 
-Combining these two equations we get the *skill premium* $$\omega$$:
+Combining these two equations we get the _skill premium_ $$\omega$$:
 
 \begin{equation}
 \omega \equiv \frac{w_H}{w_L} = \left(\frac{A_H}{A_L}\right)^\rho \left(\frac{H}{L}\right)^{-(1-\rho)}
 \end{equation}
 \begin{equation}
-= \left(\frac{A_H}{A_L}\right)^{(\sigma-1)/\sigma} \left(\frac{H}{L}\right)^{-(\frac{1}{\sigma})} 
+= \left(\frac{A_H}{A_L}\right)^{(\sigma-1)/\sigma} \left(\frac{H}{L}\right)^{-(\frac{1}{\sigma})}
 \end{equation}
 
 where $$\sigma$$ is the elasticity of substitution: $$\sigma \equiv \frac{1}{1-\rho}$$[^2]
@@ -142,7 +142,7 @@ Taking logs on both sides gives
 \end{equation}
 
 Let's take a look at this last equation, and plot it in a graph with x-axis
-$$\frac{H}{L}$$.  We can see that as the number of skilled workers increases
+$$\frac{H}{L}$$. We can see that as the number of skilled workers increases
 ($$H \uparrow$$), the lower the wage premium.
 
 ![An increase in skilled workers causes a decrease in the wage
@@ -160,8 +160,7 @@ to a decrease in wage premium (movement from A $$\rightarrow$$ B).
 
 [^2]: How do we get the elasticity of substitution?? How is it defined? TODO
 
-
-___
+---
 
 ## Solving the paradox by directed technical change
 
@@ -169,14 +168,14 @@ We have just formalised the result that as the relative ratio of high-skilled
 workers increases, the wage premium decreases. This is great, but how then can
 we explain the empirical finding that the skill premium $$\omega$$ has
 increased over the decades? The answer is a combination of both elasticity of
-substitution $$\sigma$$ and a *skill-biased technical change*. Looking once
+substitution $$\sigma$$ and a _skill-biased technical change_. Looking once
 again at the previous equation, we see that $$\omega$$ can increase if the term
 $$\frac{\sigma-1}{\sigma} \ln(\frac{A_h}{A_l})$$ increases.
 
 Under what circumstances will this term increase? Well, one way is to increase
 $$A_h$$. But an increase in $$A_h$$ will only increase this term if $$\sigma >
-1$$.  If workers are not very substitutable ($$\sigma < 1$$), an improvement in
-the productivity of skilled workers *reduces* the skill premium. This case
+1$$. If workers are not very substitutable ($$\sigma < 1$$), an improvement in
+the productivity of skilled workers _reduces_ the skill premium. This case
 appears paradoxical at first but is in fact quite intuitive. As Acemoglu says:
 
 > Consider, for example, a Leontieff (fixed proportions) production function.
@@ -206,9 +205,9 @@ I've just shown that one can have an increase in the ratio of high- to low-
 skilled workers IF the coefficient of substitution $$\sigma > 1$$ AND technical
 change is directed towards high-skilled workers.
 
-But that begs the questions: why *was* technical change directed towards
-high-skilled workers? Now we attempt to *endogenise* technical change (i.e.
-try and find a reason *within* the model why technical change was directed).
+But that begs the questions: why _was_ technical change directed towards
+high-skilled workers? Now we attempt to _endogenise_ technical change (i.e.
+try and find a reason _within_ the model why technical change was directed).
 
 We have our utility/production function once again:
 
@@ -218,7 +217,7 @@ Y = [(A_H H)^\rho + (A_L L)^\rho]^{1-\rho}
 
 Here, let's introduce some innovators. Innovators can produce innovations,
 $$A_H$$ or $$A_L$$, that increase the productivity of all high- or low-skill
-workers.  Let the fixed cost of producing an innovation be B and let the
+workers. Let the fixed cost of producing an innovation be B and let the
 marginal cost of producing the new technology be 0. Then the marginal benefit
 of providing a new technology is simply the marginal increase in productivity
 ($$H$$ or $$L$$) multiplied by the price of that good; this gives $$p_H H$$ and
@@ -254,7 +253,7 @@ substitute 1 unit of H for 1 unit of L.
 But we know here that the production and utility functions are the same! Thus,
 $$MU_H == MPH$$ and $$MU_L = MPL$$.
 
-Therefore, we can reuse the previous result 
+Therefore, we can reuse the previous result
 
 $$\frac{p_H}{p_L} = \left [ \frac{A_H H}{A_L L} \right ] ^{\rho-1}$$
 
@@ -283,7 +282,7 @@ $$ = \left(\frac{H}{L}\right)^{\sigma-2} $$
 
 This result tells us that if $$\sigma > 2$$, then an increase in relative
 supply of high-skilled workers increases the skill premium. Note that this is
-different from the exogenous model. In the exogenous model, as long as $$\sigma > 1$$ 
+different from the exogenous model. In the exogenous model, as long as $$\sigma > 1$$
 both the level of skill-biased technology and the skill premium increase.
 In the endogenous model, if $$1 < \sigma < 2$$ the level of technology does
 increase, but the skill premium actually decreases (the increase in supply
@@ -292,12 +291,11 @@ outweighs the increase in technology).
 ![](/img/acemoglu_explained/acemoglu_endogenous_sigma_1_2.png)
 ![](/img/acemoglu_explained/acemoglu_endogenous_sigma_2.png)
 
-| Level of $$\sigma$$| Exogenous model                        | Endogenous model                       |
-|--------------------|----------------------------------------|----------------------------------------|
-| $$0 < \sigma < 1$$ | $$\omega \downarrow$$ $$A_L \uparrow$$ | $$\omega \downarrow$$ $$A_L \uparrow$$ |
-| $$1 < \sigma < 2$$ | $$\omega \uparrow$$ $$A_H \uparrow$$   | $$\omega \downarrow$$ $$A_H \uparrow$$ |
-| $$\sigma > 2 $$    | $$\omega \uparrow$$ $$A_H \uparrow$$   | $$\omega \uparrow$$ $$A_H \uparrow$$   |
-
+| Level of $$\sigma$$ | Exogenous model                        | Endogenous model                       |
+| ------------------- | -------------------------------------- | -------------------------------------- |
+| $$0 < \sigma < 1$$  | $$\omega \downarrow$$ $$A_L \uparrow$$ | $$\omega \downarrow$$ $$A_L \uparrow$$ |
+| $$1 < \sigma < 2$$  | $$\omega \uparrow$$ $$A_H \uparrow$$   | $$\omega \downarrow$$ $$A_H \uparrow$$ |
+| $$\sigma > 2 $$     | $$\omega \uparrow$$ $$A_H \uparrow$$   | $$\omega \uparrow$$ $$A_H \uparrow$$   |
 
 ## Comparison to other models
 
@@ -310,4 +308,3 @@ TODO
 ## Conclusion
 
 TODO
-

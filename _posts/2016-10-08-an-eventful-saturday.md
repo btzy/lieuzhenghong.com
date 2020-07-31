@@ -1,15 +1,16 @@
---- 
-layout: base 
-date: 2016-10-08 
-title: An eventful Saturday 
+---
+layout: base
+date: 2016-10-08
+title: An eventful Saturday
 tags:
   - private
   - diary
 
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
-I woke up at 8:30 a.m. today and did a bit of Problem Set 4 in CS50.  Then I
-went to teach the C4C P5 class (Dylan, Gao Hong, Audrey and Gillian).  Last
+I woke up at 8:30 a.m. today and did a bit of Problem Set 4 in CS50. Then I
+went to teach the C4C P5 class (Dylan, Gao Hong, Audrey and Gillian). Last
 week, I taught them lessons 1 and 2 (the input and print command) and this week
 I taught Python Turtle.
 
@@ -18,25 +19,26 @@ the lesson went:
 
 > ![image posted by zhengyang](/img/audrey_gillian_yi.jpg)
 
->just to add a bit of context to Zheng Yang's post, and a post-mortem of today's
->lesson:
+> just to add a bit of context to Zheng Yang's post, and a post-mortem of today's
+> lesson:
 
 > I have been teaching them Python for two weeks now according to my curriculum.
-> Last week they learned four main things: 
-  - the `print()` function, 
-  - the concept of variables, 
-  - taking user input with `input()` and
-  - type conversion.
+> Last week they learned four main things:
+
+- the `print()` function,
+- the concept of variables,
+- taking user input with `input()` and
+- type conversion.
 
 > We spent the first ~45 minutes of the day on recapping those four things.
 > Then we moved on to the next lesson, which is drawing with Python's turtle
-> module. 
-> 
+> module.
+>
 > The kids were all able to grasp the concept of the turtle very quickly— this
-> bolsters my confidence in Turtle as a teaching tool.  And the photo by Zheng
+> bolsters my confidence in Turtle as a teaching tool. And the photo by Zheng
 > Yang is the Chinese character 易 done by Audrey and Gillian. I think it is
 > very nice.
-> 
+>
 > Overall, all the lesson objectives were met and I was pleased with the
 > progress of the lesson. Audrey, Gillian and Dylan were focused and
 > well-behaved, Gao Hong not so much (but still relatively tractable). I would
@@ -44,9 +46,9 @@ the lesson went:
 > about Python programming on his own accord! Very pleased with his interest and
 > I feel that given his young age, he will be an accomplished coder very soon as
 > long as we continue to stoke his interest and challenge him. Maybe it's not
-> too early to think about *his* DSA.... 😂
-> 
-> One last thing —thanks to Zhen Yang and Poe for coming today. 
+> too early to think about _his_ DSA.... 😂
+>
+> One last thing —thanks to Zhen Yang and Poe for coming today.
 > I hope to see all you guys again next week!
 
 I met Mrs Hauw after the lesson. She had approached me earlier this week to
@@ -69,7 +71,7 @@ such thing as modesty" when I said that I was reluctant to put non-credentialed
 skills on my CV.
 
 If I have read her correctly (and I could be wrong...) she is basically saying
-that the CV is a mere formality and she already wants me for the job. 
+that the CV is a mere formality and she already wants me for the job.
 But either way I
 have to write a CV and make it a good one since this CV isn't just for this
 internship application, it's for all subsequent applications so best to bite the
@@ -90,7 +92,7 @@ Meh.
 Here is when the really joosy part comes in. So after gym we called up Nauxiy
 and asked him to join us for dinner. We agreed to meet at Star Vista.
 
-At Buona MRT, while we were taking the escalator down, Chew pointed out to me 
+At Buona MRT, while we were taking the escalator down, Chew pointed out to me
 an old Indian man who looked like he was stuck on the escalator. From what we
 could see, because he kept moving backward, it looked like his leg was stuck in
 the escalator! I quickly ran down only to see the guy walking backwards,
@@ -100,11 +102,11 @@ I was completely taken aback as I had **no fucking idea** what he was doing and
 I just stood there not knowing what to do...
 until some guy came behind me and pulled the man off the escalator. One
 uncle asked him "Are you drunk?" and he mumbled, grinning, yes I am very drunk.
-Thank you very much. 
+Thank you very much.
 The
 uncle asked him to take the stairs and I watched him climb up the stairs
 barefoot (his slippers were upstairs with another Indian man, his friend
-probably). 
+probably).
 
 Until now I still don't know what he was trying to do...lol
 
@@ -127,7 +129,7 @@ seated opposite us. I had my eye on a thick one (hehehe).
 We were discussing whether they were poly or uni students but anyway they
 finished and left.
 
-The waiter, this short guy with big round glasses and a full sleeve on his left 
+The waiter, this short guy with big round glasses and a full sleeve on his left
 arm, went
 to separate the tables and clean up. I saw him take a phone from the chair and
 grin as he walked away. I made a throwaway remark "lol the waiter just took
@@ -138,7 +140,7 @@ After like ten or fifteen minutes Thick and Thin came in looking very anxious.
 They asked the waiter whether he had seen Thick's phone and the waiter put on a
 very concerned face and said no, whereupon he started putting up a big show
 looking for the phone under the table and asking them to call the phone. His
-*wayang* was so good they should have given him golden horse! In fact it was so
+_wayang_ was so good they should have given him golden horse! In fact it was so
 good that I was gaslighted. Although I had definitely seen him take the phone I
 became not so sure. But nonetheless I walked up to them after the waiter had
 left to presumably look for the phone and asked them "You guys are looking for
@@ -148,16 +150,16 @@ Again although I was quite sure it was that guy, I was i) gaslighted and ii) did
 not want to accuse someone wrongly so I said that I wasn't sure.
 
 Then because I was so gaslighted I actually went back to my table and asked the
-gang whether I had actually seen the phone being taken? And *thank god* I had
+gang whether I had actually seen the phone being taken? And _thank god_ I had
 made that throwaway remark earlier because they confirmed that I had did indeed
 said that and something as specific as "the waiter took a phone" is quite
 reliable.
 
 After five to ten minutes of what must be unadulterated panic felt by the girls,
 they managed to get a hold of the manager who told them that he would go and
-check the CCTV. After he went in he came out, returned the phone, and told them 
+check the CCTV. After he went in he came out, returned the phone, and told them
 that the phone was
-found *outside* but to give them their phone number as he wanted to conduct an
+found _outside_ but to give them their phone number as he wanted to conduct an
 "investigation". I wasn't smart enough to read the subtext but someone told me
 that the manager said "outside" to safeguard the reputation of the restaurant
 and in actual fact (of course) it was found in the grubby pockets of that fuckin
@@ -170,25 +172,25 @@ girls thanked me and left. Nauxiy finished his waffle and we left.
 ## What could I have done better?
 
 I'm in two minds about this incident. On the one hand, I think that I handled it
-*okay* compared to the drunken Indian man incident. But maybe I could have
+_okay_ compared to the drunken Indian man incident. But maybe I could have
 handled it better? I played it too conservative and Bayesian and kept saying
 that I wasn't sure who the waiter was. But maybe I should have just walked up to
 the waiter and told him something alpha like "brother, I saw you take the phone,
-give it to us there's no need to call police". (And also I could have walked with 
-them more all the way to help them solve the incident instead of returning to my table). 
+give it to us there's no need to call police". (And also I could have walked with
+them more all the way to help them solve the incident instead of returning to my table).
 After all, it was a public place,
 I was bigger than him and wearing a singlet. But of course these are things that
-are really *l'esprit de l'escalier*... you fantasise about how you would have
+are really _l'esprit de l'escalier_... you fantasise about how you would have
 done it in the **cool** and **ALPHA** way but in the real world when it happens
 you're bo ji and do it the humji way, very 婉转!! And this 婉转 way definitely caused the girls some unnecessary anguish. So I have to train myself to be a more alpha
-man and don't be afraid of confrontation like a pussy. 
+man and don't be afraid of confrontation like a pussy.
 
 I think that is the takeaway.
 
 The other thing (and this one I think it's a real pity) is that I didn't get
 Thick's number 😂😂. We were joking about it on the train like "since the
-manager asked for her number you should've asked for her number too" but more 
-and more I'm thinking that *maybe* I should have done that... hahaha. After all
+manager asked for her number you should've asked for her number too" but more
+and more I'm thinking that _maybe_ I should have done that... hahaha. After all
 you did a good deed so that's social proof that you're a Good Person so why not
 capitalise on the fact that you did her a huge favour and she has a good
 impression of you to get to know her better right??? Of course (as nauxiy

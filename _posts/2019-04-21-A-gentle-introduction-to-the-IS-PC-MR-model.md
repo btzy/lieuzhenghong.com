@@ -8,6 +8,7 @@ tags:
   - economics
   - macroeconomics
   - explanation
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 <style>
@@ -58,33 +59,32 @@ Finally, we look at how the model works in practice.
 - How the central bank responds to a demand shock
 - How the central bank can do better if it expects the shock
 
-
 ## Assumptions of the model
 
 1. We have an economy with diminishing returns. (MPL, ES)
 2. The economy is made up purely of labourers and companies. Companies pay labourers wages, then produce goods, which labourers consume.
 3. We have some market power in both the labour supply and labour
-  demand markets. (WS, PS)
+   demand markets. (WS, PS)
 4. Changing interest rates affects consumption decisions and thus
-  affects future output. (IS) 
+   affects future output. (IS)
 5. Output gap affects inflation due to WS/PS curves (PC)
 6. Central bank operates with a loss function (MR)
 
 ## The IS curve
 
 \begin{equation}
-	IS: y_t - y_e = a(r_{t-1} - r_e)
+IS: y*t - y_e = a(r*{t-1} - r_e)
 \end{equation}
 
 ### Microfoundations
 
-We begin with the IS curve. The IS curve says that output deviates from long-run output $$y_e$$ depending on the deviation of *last period's* interest rate.
+We begin with the IS curve. The IS curve says that output deviates from long-run output $$y_e$$ depending on the deviation of _last period's_ interest rate.
 
 A change in interest rates affect the output of the economy. Specifically, they affect consumption and investment decisions. (assumption 4). How does this work?
 
-Consider this: you're a consumer, and you want to consume. *Ceteris paribus*, if interest rates are low (or even negative), then you would want to consume as much as you can. On the other hand, if interest is high, you'd want to reduce consumption and save more now to spend more in the future.
+Consider this: you're a consumer, and you want to consume. _Ceteris paribus_, if interest rates are low (or even negative), then you would want to consume as much as you can. On the other hand, if interest is high, you'd want to reduce consumption and save more now to spend more in the future.
 
-Higher interest rates also affect investment decisions. if you were a company wanting to build a new plant, you'd have to borrow money to do it. If the interest rate was high, it's very *bohua*; you'd rather keep the money.
+Higher interest rates also affect investment decisions. if you were a company wanting to build a new plant, you'd have to borrow money to do it. If the interest rate was high, it's very _bohua_; you'd rather keep the money.
 
 And because Y = (C+I+G), both investment and consumption affect output.
 
@@ -92,8 +92,7 @@ Note the \(t-1\) subscript on the interest rate: this is because central banks'
 interest rates only affect the economy with a lag. This is because investment
 decisions today have been made some time in the past, and aren't affected by
 current interest rates. Current interest rates only factor into deciding
-*future* investment/output.  
-
+_future_ investment/output.
 
 ## The ES, WS, PS and MPL curves
 
@@ -109,19 +108,19 @@ The ES, WS, PS and MPL pin down the level of real wages at a certain level of ou
 In a competitive labour market, the demand for labourers is given
 by the MPL. The supply is given by individuals' utility functions, but we shan't go into that here.
 
-The intersection of *employment supply* (ES) and *employment demand* (MPL)
+The intersection of _employment supply_ (ES) and _employment demand_ (MPL)
 is the equilibrium level of employment in a competitive market. Note that
 employment demand is downward sloping due to diminshing returns (see
 assumption 1).
 
 However, in this model, participants have market power (assumption 3).
 Labour unions can sign labour contracts that give them wages above the
-competitive wage. This is called the *wage-setting curve* (WS) that lies above the ES curve.
+competitive wage. This is called the _wage-setting curve_ (WS) that lies above the ES curve.
 
 ![](/img/is-pc-mr_explained/ws_curve.png)
 
-Similarly, there is a *price-setting curve* (PS) that lies below the MPL
-curve. The intersection of these two curves is the equilibrium level of employment 
+Similarly, there is a _price-setting curve_ (PS) that lies below the MPL
+curve. The intersection of these two curves is the equilibrium level of employment
 
 ### Involuntary and voluntary employment
 
@@ -134,38 +133,38 @@ Involuntary unemployment: people who are willing to work at the prevailing marke
 
 ### Effect on wages ambiguous
 
-The effect on wages is ambiguous. It depends on the relative slopes of the WS and PS curves. 
-
+The effect on wages is ambiguous. It depends on the relative slopes of the WS and PS curves.
 
 Compare these two images.
+
 <div class = "fig-compare">
 	<img src="/img/is-pc-mr_explained/ws_ps_curve.png">
 	<img src="/img/is-pc-mr_explained/ws_ps_curve_2.png">
 </div>
 
-In the figure on the left, the competitive equilibrium's wage w* lies above the wage that was gotten in the noncompetitive equilibrium. In the figure on the right, the reverse is true.
+In the figure on the left, the competitive equilibrium's wage w\* lies above the wage that was gotten in the noncompetitive equilibrium. In the figure on the right, the reverse is true.
 
 ## The PC curve
 
 \begin{equation}
-	PC: \pi_t = \pi_t^E + \alpha(y_t - y_e)	
+PC: \pi_t = \pi_t^E + \alpha(y_t - y_e)
 \end{equation}
 
 In the case of adaptive expectations,
 
 \begin{equation}
-	PC: \pi_t = \pi_{t-1} + \alpha(y_t - y_e)	
+PC: \pi*t = \pi*{t-1} + \alpha(y_t - y_e)
 \end{equation}
 
 ### Microfoundations
 
-The Phillips curve is gotten by the interaction of the WS and PS curves. The Phillips curve states that inflation in this period equals *expected* inflation this period, plus a shock from the output gap. But why would the output gap affect inflation? We use the WS and PS curves to explain.
+The Phillips curve is gotten by the interaction of the WS and PS curves. The Phillips curve states that inflation in this period equals _expected_ inflation this period, plus a shock from the output gap. But why would the output gap affect inflation? We use the WS and PS curves to explain.
 
 With the WS and PS curves in place, we can begin to understand the Phillips curve.
 
 ![](/img/is-pc-mr_explained/deriving_the_pc_curve.png)
 
-The figure illustrates. Suppose we want to raise output from Y* to Y'. Well, two things will happen:
+The figure illustrates. Suppose we want to raise output from Y\* to Y'. Well, two things will happen:
 
 1. Labourers will demand higher wages to work more
 2. Due to diminishing returns, MPL will fall: companies are willing to pay less.
@@ -182,11 +181,11 @@ produce)
 
 Therefore, prices go up == inflation.
 
-**The coefficient $$\alpha$$ in the PC depends on the *relative steepness* of the WS and PS curves.** The steeper both of them are, the larger the gap between the two curves, the larger the coefficient, and the steeper the PC will be.
+**The coefficient $$\alpha$$ in the PC depends on the _relative steepness_ of the WS and PS curves.** The steeper both of them are, the larger the gap between the two curves, the larger the coefficient, and the steeper the PC will be.
 
 ## The MR curve
 
-Central bank's loss function: 
+Central bank's loss function:
 \begin{equation}
 L = (y - y_T)^2 + (\pi - \pi_T)^2
 \end{equation}
@@ -198,7 +197,7 @@ L = (y - y_T)^2 + (\pi - \pi_T)^2
 \end{equation}
 
 \begin{equation}
-s.t. \pi_t = \pi_{t-1} + (y_t - y_e)
+s.t. \pi*t = \pi*{t-1} + (y_t - y_e)
 \end{equation}
 
 So we substitute the PC into the loss function, differentiate, and
@@ -210,14 +209,11 @@ rearrange to obtain
 
 ## a, alpha and beta
 
-a : Found in the IS curve. Measures how responsive the economy is to interest rate changes.
-	- For instance, economies credit-constrained consumers will have higher a.
+a : Found in the IS curve. Measures how responsive the economy is to interest rate changes. - For instance, economies credit-constrained consumers will have higher a.
 
-$$\alpha$$: Found in the Phillips curve. It measures the relative steepness of the WS and PS curves.
-	- Stronger labour unions or firms with more market power increase $$\alpha$$.
+$$\alpha$$: Found in the Phillips curve. It measures the relative steepness of the WS and PS curves. - Stronger labour unions or firms with more market power increase $$\alpha$$.
 
-$$\beta$$: Found in the central bank's loss function. Measures how inflation-averse a bank is (how much output it's willing to give up in order to decrease inflation).
-	- A more inflation-averse central bank will increase $$\beta$$.
+$$\beta$$: Found in the central bank's loss function. Measures how inflation-averse a bank is (how much output it's willing to give up in order to decrease inflation). - A more inflation-averse central bank will increase $$\beta$$.
 
 ### The effect of these coefficients on MR
 

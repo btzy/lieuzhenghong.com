@@ -7,8 +7,8 @@ tags:
   - progress report
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
-
 
 The following paragraphs were written on 7th May:
 
@@ -16,21 +16,21 @@ The following paragraphs were written on 7th May:
 > the Ulu Pandan place, arriving at 1215. I met with Mrs Hauw and Dr Bimler.
 
 > I got to meet Li Yicheng, Carol, Brenda, Mun Kit and I caught a glimpse of
-> Delphine. 
-> 
+> Delphine.
+>
 > Mrs Hauw explained that the 8--12 year olds were participating in a competition
 > called Code Xtreme or something along those lines. It's a three-hour hackathon
 > where kids are supposed to use Scratch to build something that fits the theme of
-> FinTech. 
-> 
+> FinTech.
+>
 > As expected, Mrs Hauw said that she was shorthanded and wanted me to help with
 > the Scratch team until July. Well, July is fine. It will serve multiple
 > purposes: one, it's a probation period for Mrs Hauw to see what I can do, and
 > two, it's a chance for me to learn more about pedagogical techniques.
-> 
+>
 > I hope to impress her with my consistency and willingness to work hard. Also,
 > I've been trying to build a database app for Carol, who is trying to create a
-> maths question repo for her kids. 
+> maths question repo for her kids.
 
 ## Swimming with Xiao Hui
 
@@ -58,14 +58,14 @@ Here's what I have had to use/config:
 1. Node.js
 2. Expressjs
 3. Mongodb
-4. Multer -- for file upload 
+4. Multer -- for file upload
 5. Pug (Jade) -- templating engine to serve up the images
 6. Compass -- just to make CSS easier.
 
 I'll also have to learn things like **promises** and **async-await**. Right now
-I've been struggling with the app. There is a problem where ```res.render``` is 
+I've been struggling with the app. There is a problem where `res.render` is
 being called before my manipulations are complete, which results in an empty
-page. 
+page.
 
 ## Meeting with IDA
 
@@ -73,6 +73,4 @@ Thanks to Dr Balakrishnan, I've been able to get in touch with the iDA. Turns
 out that a couple of them are already helping kids on their own time, be it
 21C Girls, Mendaki, SINGA etc. I am taking off tomorrow to meet them at their office.
 I'll try and find out what they've been up to and how I can work with
-them. 
-
-
+them.

@@ -8,6 +8,7 @@ tags:
   - data science
   - internship
   - public
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/index.html"
 ---
 
 I built and iterated on a deep learning model that replicates the outputs of

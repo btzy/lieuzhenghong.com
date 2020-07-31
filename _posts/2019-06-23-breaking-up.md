@@ -2,12 +2,13 @@
 layout: base
 date: 2019-06-23
 title: "Breaking up"
-tags: 
+tags:
   - post-mortem
   - milestone
   - oxford
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 1. What went wrong?
@@ -39,7 +40,6 @@ relationships (at least the way I'm trying to do it) necessitates sharing my
 deep personal convictions (not so scary), my deep-seated insecurities
 (scarier), and my fundamental inadequacies (very scary). Even for me, writing
 about these things makes me feel very vulnerable and uncomfortable.
-
 
 ## What went wrong?
 
@@ -75,7 +75,7 @@ not have sent her anything without knowing her address, and I did not know her
 address because she did not give it to me even after asking her twice.
 
 She didn't have a reply to that, but I do. After much reflection, I think I
-know why she was very coy about it: she wanted me to *work* to get her address,
+know why she was very coy about it: she wanted me to _work_ to get her address,
 as a signal of my love. If I really, really wanted to get something to her, I
 certainly could have. I could have been more persistent in my asking. I could
 have sent an FB message request to her friend, asking for her address, and I'm
@@ -97,8 +97,8 @@ After all, you know exactly where I live. She said she was busy preparing for
 interviews and so didn't have the time to get me anything. I said: but didn't
 you just say that Valentine's Day was very important to you? She clarified:
 when I said Valentine's Day is very important to me, I mean that it's very
-important *to me* that I receive a gift from my boyfriend, but not very
-important that I give a gift to my boyfriend. 
+important _to me_ that I receive a gift from my boyfriend, but not very
+important that I give a gift to my boyfriend.
 
 On first blush, this didn't sit well with me. While I don't mind not receiving
 anything for Valentine's, I thought there's something not quite right here. If
@@ -142,13 +142,13 @@ I genuinely do not think that there is any right or wrong in the conception of
 love. Maybe you think (as many of my friends have remarked) that her conception
 of love is somehow wrong because it's very materialistic. That may be the case,
 but I suppose my friends are my friends because we think alike. I am sure when
-she conferred with *her* friends her friends were likewise aghast at how poorly
+she conferred with _her_ friends her friends were likewise aghast at how poorly
 she was treated by me: not doting on her at all, not doing the basic things
 that boyfriends should do --- e.g. wanting to go Dutch on dinners, not buying
 her a gift for her birthday (I did give her a gift eventually --- I made a
-photo collage of our time together --- but it did indeed come *after* her
+photo collage of our time together --- but it did indeed come _after_ her
 birthday, which was definitely my fault), letting her do most of the planning
-for our holiday... 
+for our holiday...
 
 And in large part what we want from our relationships is shaped by our
 formative experiences and the culture we grew up in. To me quality time is very
@@ -168,7 +168,7 @@ and Nainai and Popo can all live with us, under one roof.
 
 My father is almost 60. I asked him when he plans to retire and he said "I will
 keep working until I'm 80". I really respect that --- god knows I don't have
-nearly the doggedness or work ethic that he does. *I* certainly hope to be long
+nearly the doggedness or work ethic that he does. _I_ certainly hope to be long
 retired by 60 (although hopefully still busy working on difficult, interesting
 problems).
 
@@ -180,14 +180,14 @@ wife and kids.
 
 I also had/have an irrational fear of spending money. I find it very difficult.
 The Great Recession happened around 10 years ago, and my father's business went
-into ruin. 
+into ruin.
 
 It was a tough time. I remember regularly coming home after school and seeing
 my mother in tears. We had no money to pay for anything. We couldn't pay the
 mortgage on the flat, we couldn't pay the utility bill. I overheard my mother
 on the phone with the school bus auntie. The auntie was chewing her out because
 we could not pay the school bus fare: 60 dollars (about 30 pounds?).
-"你們什麼家庭 連60塊都付不起".  As a young child I felt helpless and distraught
+"你們什麼家庭 連 60 塊都付不起". As a young child I felt helpless and distraught
 at seeing my mother in this state. There was a lot of crying, a lot of
 shouting, there was talk of divorce, and I know my mother seriously
 contemplated suicide at that point in time.
@@ -206,7 +206,7 @@ security and quality time.
 
 The main point of this digression was to show that my culture and upbringing
 has shaped what I want---and what I am prepared to give---from my
-relationships.  It must be the same for Judy too. I visited her at her
+relationships. It must be the same for Judy too. I visited her at her
 university, a liberal arts college in Maine. Her friends (and their boyfriends)
 were all very well-to-do, driving brand-new Bentleys and Porsches that they'd
 then resell after completing their degree and flying back home. I think it
@@ -251,7 +251,7 @@ don't want to waste money on things that don't matter: my clothes fit me,
 aren't discoloured, and don't have holes in them, I don't see why they should
 be replaced". But this bothered me much less than it did her, and I thought I
 owed it to her to look attractive for her, so I donated away many of my
-existing clothes, threw away my underwear and socks, and bought new ones.  (We
+existing clothes, threw away my underwear and socks, and bought new ones. (We
 had an argument when she wouldn't allow me to buy Primark underwear, which I
 thought was perfectly good, but that is tangential). This wasn't a very
 difficult change to make; I only had to spend (not very much) money, and only a
@@ -296,7 +296,7 @@ would interpret something I said or pick up on subtle emotional cues, and get
 really mad, and have a temper and storm off. As someone who likes to sit down
 and talk rationally about things, I found this very frustrating, because I
 first had to soothe her and calm her down and basically admit fault (even when
-I was certainly *not* at fault) before she would be pacified. And when I tried
+I was certainly _not_ at fault) before she would be pacified. And when I tried
 to bring up the issue of whatever had sparked the argument in the first place,
 she would get angry again, thinking that I was trying to extract some sort of
 concession (or confession) from her. It was a little bit of both. I figured out
@@ -307,24 +307,24 @@ arguing in the first place.
 Another thing was when we had arguments about something, and I would always do
 something like the following as some sort of debrief. I would say "in this
 incident, A happened because of reasons BCD. It was my fault for doing/not
-doing X. In the future, to prevent a repeat of A, I undertake to do Y." 
+doing X. In the future, to prevent a repeat of A, I undertake to do Y."
 
 Then I would ask her for her thoughts and what she thought she could do on her
-part to prevent future occurrences of A. She *really* didn't like that. I think
+part to prevent future occurrences of A. She _really_ didn't like that. I think
 we viewed it differently. To me, it was fair and helpful for both parties to
-compromise and improve, fault aside. But I think she didn't *want* the
+compromise and improve, fault aside. But I think she didn't _want_ the
 relationship to be fair ---“為什麼什麼東西都要講公平？”---because she expected
 the boyfriend to be the more conciliatory one. Again, I can see where that
 comes from, but to me it just felt like more evidence that she would not change
 for me. I suspect part of the reason why she was not as willing to compromise
 was because of our very different socioeconomic backgrounds. It was already a
-big compromise for her to step down and date me. 
+big compromise for her to step down and date me.
 
 To her, love was about being doted on and being given attention and gifts.
 Because she did not see that from me, she became resentful. To me, love was
-about being given quality time, sacrifice, and compromise.  Because I did not
-see that from her, I became dejected. In the end, we had *different
-interpretations of how love should be expressed*, which led to our breakup.
+about being given quality time, sacrifice, and compromise. Because I did not
+see that from her, I became dejected. In the end, we had _different
+interpretations of how love should be expressed_, which led to our breakup.
 
 ---
 
@@ -335,7 +335,7 @@ question.
 Here's one way to think about it. Because I did not love her, I was not willing
 to shower her with gifts and attention and let her win arguments. I didn't
 feel a very strong emotion towards her. I wanted to get her a Valentine's Day
-gift out of duty, not out of of *love*. Therefore, I had wasted both of our
+gift out of duty, not out of of _love_. Therefore, I had wasted both of our
 time, trapping her in a loveless relationship.
 
 Here's the other interpretation. I did love her--- I was willing to compromise
@@ -364,7 +364,7 @@ summarises:
 
 > We have been together for almost a year, and despite ending in a sad manner, I cast my mind back to the previous year and it fills me with happy, dreamy, lovely memories. My fondest experiences with you were punting in Oxford, my birthday night in Singapore, skateboarding in LA and taking adorable Polaroids at the Colby fall ball. In fact, the more I think back, the more things i want to add to that list. But the thing I loved most and will miss the most was just cuddling in the middle of the night, talking about our plans as we slowly drifted off to sleep. I still have the list of things we wrote down to do in the future: 看夜空, 滑雪, 吃豆腐宴, 吃豆腐宴...
 
-> That may never happen now. While I still love and miss you very much, there's no denying that we are very different people with two very different notions of what romantic love entails. You take a more traditional view of gender roles in a relationship, while I am relatively egalitarian. While I'm willing to change, i) who knows if I can actually change, and ii) I know your patience has long ago been worn thin. Guilt still runs through my mind: what if I had tried harder; been more dedicated; loved more gallantly; acted more charitably? Sadly, it is too little too late. There are also other issues like you wanting to pursue a career in the US, while I have to go back in Singapore, and the fact that we come from different socioeconomic classes with different attitudes towards money. To me, a large part of love is duty and sacrifice, but also caring about the other person's happiness. And I have to accept that if I truly love you,  I should not bind you to a relationship that you feel unhappy in. I should let you find a better partner for whom pampering and spoiling his lover comes naturally, rather than someone who has to work hard to do it.
+> That may never happen now. While I still love and miss you very much, there's no denying that we are very different people with two very different notions of what romantic love entails. You take a more traditional view of gender roles in a relationship, while I am relatively egalitarian. While I'm willing to change, i) who knows if I can actually change, and ii) I know your patience has long ago been worn thin. Guilt still runs through my mind: what if I had tried harder; been more dedicated; loved more gallantly; acted more charitably? Sadly, it is too little too late. There are also other issues like you wanting to pursue a career in the US, while I have to go back in Singapore, and the fact that we come from different socioeconomic classes with different attitudes towards money. To me, a large part of love is duty and sacrifice, but also caring about the other person's happiness. And I have to accept that if I truly love you, I should not bind you to a relationship that you feel unhappy in. I should let you find a better partner for whom pampering and spoiling his lover comes naturally, rather than someone who has to work hard to do it.
 
 > We are very different people, but this makes me even more grateful to have known and dated someone who's almost from another world —- a much higher social class, with an upbringing and experience far removed from mine. It has been an eye-opening experience for me. From the bottom of my heart, I thank you for the good times that we had and for the many, many things you've taught me. Despite the fact that you were feeling tired and drained towards the end of the relationship, I do sincerely hope that you found our relationship on the whole a happy, positive, and constructive one.
 
@@ -372,7 +372,7 @@ summarises:
 
 I should learn to be more caring and loving. Maybe I was adequate, maybe I
 wasn't --- but it's surely strictly better if I'm more of both. Unfortunately I
-don't know *how* to do this. Some of my friends have suggested that when I find
+don't know _how_ to do this. Some of my friends have suggested that when I find
 "the one", I'll automatically want to care for them and dote on them, etc. I
 don't know if this is true. Also by modus tollens, if I don't feel like I want
 to dote on them and care for them, does that mean I don't love them/ they are
@@ -401,14 +401,14 @@ wasn't able to love her (interpretation I), or different enough such that we
 had radically incompatible notions of what it meant to love and be loved
 (interpretation II).
 
-I may be relying too much on notions of duty here: "I *should be* more
-loving, *should be* more gallant, *should be* more understanding". But maybe if
-I found someone more compatible with me, I wouldn't *need* duty to do those
+I may be relying too much on notions of duty here: "I _should be_ more
+loving, _should be_ more gallant, _should be_ more understanding". But maybe if
+I found someone more compatible with me, I wouldn't _need_ duty to do those
 things. Maybe if I found someone more willing to have arguments without taking
-them personally, I wouldn't *have* to be understanding. Maybe if I found
+them personally, I wouldn't _have_ to be understanding. Maybe if I found
 someone intellectually curious about the same things as I was, checking in on
 each other would be more organic and enjoyable. None of this should be read as
-an indictment of her; if anything, it should be an indictment of *myself*,
+an indictment of her; if anything, it should be an indictment of _myself_,
 seeing that I wanted to date her without first checking if we were compatible
 in those other ways.
 

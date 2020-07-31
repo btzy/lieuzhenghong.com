@@ -4,7 +4,7 @@ date: 2017-08-01
 tags: project
 layout: base
 img: "/img/inspectors_gadget/inspectors_gadget_gif.gif"
-blurb: "Custom Electron app written to streamline building inspections"
+blurb: "Custom Electron app that makes building inspections more efficient"
 ---
 
 ## Inspector's Gadget

@@ -1,12 +1,13 @@
 ---
 layout: base
 date: 2016-09-20
-title: Building my first Telegram bot 
+title: Building my first Telegram bot
 tags:
   - programming
   - software
   - public
 
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 I built my first Telegram bot, Charge Bot. The first commit was 3 days ago (18th
@@ -34,14 +35,14 @@ It was also the first time I wrote anything for public consumption.
 
 Overall, I am quite happy with this project. The scope was manageable and it did
 not balloon (probably because it was a game and, being a game, the scope is rather
-clearly defined; what also helped was the limitations of the Telegram medium). 
-At the same time, I was able to incorporate user feedback and suggestions. 
+clearly defined; what also helped was the limitations of the Telegram medium).
+At the same time, I was able to incorporate user feedback and suggestions.
 
 ## How it works
 
 The Python code to write a Telegram bot is extremely trivial.
 It is just a while loop that sends HTTP requests with a long timeout (long
-polling). Upon receiving a response, it sends the next request. 
+polling). Upon receiving a response, it sends the next request.
 
 There is another way which is push instead of pull (doesn't send requests: waits for
 Telegram to send updates to you) but it is far more involved and wasn't suitable for a
@@ -109,19 +110,19 @@ def dispatcher(data):
 ```
 
 Basically, this pattern allows a function in one file to call a function in another file,
-*without importing*. The reason why we cannot import is because we don't want a two-way
+_without importing_. The reason why we cannot import is because we don't want a two-way
 import (index imports network, not the other way round).
 
 But we still need some way for the "child" to communicate with the "parent" and the way
 to do it is by setting the callback function in the "child" to the parent's function.
 
 I am not sure I am explaining it clearly...I'll come back in a few days to this post
-and see. 
+and see.
 
-### Deploying on Heroku ###
+### Deploying on Heroku
 
 Heroku was a real pain to set up...the documentation was lacking and I spent two nights'
-worth just trying to figure it out. 
+worth just trying to figure it out.
 
 The gist of it is that you have to have a `requirements.txt` file, a `Procfile` and a
 `runtime.txt` file.
@@ -135,7 +136,7 @@ Unicode handling.
 
 What I mean by that is: when Python2 receives a response as a string, it doesn't actually
 use Unicode encoding. In order to get it as Unicode you have to put a `u'` in front of it.
-Python 3 does this all by itself. 
+Python 3 does this all by itself.
 
 The Procfile is also not straightforward. Basically the Procfile tells Heroku what kind of
 dyno your app is (web, worker, something else), what file to run with what program. So
@@ -150,7 +151,7 @@ been able to Google)
 
 This app was developed very haphazardly, and it shows. I used tons of global variables
 because I'm very bad. Coming from a Javascript background I don't know how to use classes,
-like, *at all*. So it's good that I'm learning Python.
+like, _at all_. So it's good that I'm learning Python.
 
 I tried refactoring but it was truly a huge pain and I actually had to rollback to the
 previous commit because I fucked everything up. 😭

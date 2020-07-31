@@ -6,21 +6,22 @@ tags:
   - progress report
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 ## daily report for 2016-05-05
 
 Am writing this in camp now. I suppose I should write about what I've been up to
-these past two weeks  and what I've learned. 
+these past two weeks and what I've learned.
 
 I have been learning a little more vim and a little more about bash. I did one
-or two Project Euler problems but they didn't interest me. 
+or two Project Euler problems but they didn't interest me.
 
 My last post was 24th April and today is the 5th of May, so there's two weeks to
 catch up on. Here we go...
 
 The main project that has captured my attention these past two weeks is the
-proposal for Teck Ghee Primary School. I wrote a proposal (at the cost of $100,
+proposal for Teck Ghee Primary School. I wrote a proposal (at the cost of \$100,
 to Shan Wei, and more than twenty hours of my time) and I submitted it
 yesterday. I have to say that the MOE security requirements are **extremely**
 onerous, and Mark was definitely not happy with them. Still, we have to make our
@@ -40,7 +41,7 @@ called Mrs Hauw (what a surname, huh).
 
 He did indeed hook me up. It turns out that Ulu Pandan CC has already set up a
 Coding for Kids programme (C4C), which teaches Scratch to 8–12 year olds.
-There's also a junior version of the programme that's targeted at 6–7 year olds. 
+There's also a junior version of the programme that's targeted at 6–7 year olds.
 
 Mrs Hauw said that "your target is for older children, secondary level. This is
 more difficult to organise due to the mentality of the students. However, I am
@@ -72,43 +73,40 @@ optimistic...
 
 In other news, I messaged Dr Vivian Balakrishnan:
 
+> Dear Dr Balakrishnan,
 
-> Dear Dr Balakrishnan, 
+> I'm Zheng Hong, a resident under your charge (I stay at Block 144, Petir Road). Back in January, I messaged you on Facebook to thank you for speaking to my mother. You wrote that I could email you if I had any issues to discuss.
 
->I'm Zheng Hong, a resident under your charge (I stay at Block 144, Petir Road). Back in January, I messaged you on Facebook to thank you for speaking to my mother. You wrote that I could email you if I had any issues to discuss.
+> I want to start an initiative teaching programming to underprivileged youths. The goal is to equip underprivileged youths with the most in-demand skill of the future—and to use that skill as a means of social mobility.
 
->I want to start an initiative teaching programming to underprivileged youths. The goal is to equip underprivileged youths with the most in-demand skill of the future—and to use that skill as a means of social mobility. 
+> I know that you have written and spoken extensively on the importance of a Smart Nation ("a Smart Nation is essential for us to confront some of the biggest existential challenges of our time"), and are a programmer yourself. I feel that my initiative is well-placed and well-timed to capitalise on Singapore's push to become a Smart Nation, and I hope that you will look favourably upon it.
 
->I know that you have written and spoken extensively on the importance of a Smart Nation ("a Smart Nation is essential for us to confront some of the biggest existential challenges of our time"), and are a programmer yourself. I feel that my initiative is well-placed and well-timed to capitalise on Singapore's push to become a Smart Nation, and I hope that you will look favourably upon it.
+> I have attached my proposal and syllabus—it is rather lengthy, you don't have to read it all—and if it's at all possible, I'd like to meet you during next Monday's Meet-the-People session. (I will print out a hard copy).
 
->I have attached my proposal and syllabus—it is rather lengthy, you don't have to read it all—and if it's at all possible, I'd like to meet you during next Monday's Meet-the-People session. (I will print out a hard copy). 
+> I would greatly appreciate your input and support, and I'd love to work under your guidance. And once again, thank you very much for the contributions you've made to our estate—my mother cannot stop singing your praises.
 
->I would greatly appreciate your input and support, and I'd love to work under your guidance. And once again, thank you very much for the contributions you've made to our estate—my mother cannot stop singing your praises.
+> Yours sincerely,
 
->Yours sincerely, 
+> Lieu Zheng Hong
 
->Lieu Zheng Hong
+---
 
-------
+> Dear Zheng Hong
 
->Dear Zheng Hong
+> Thank you for contacting me. Let me check with my colleagues on the best options for you to get involved in. We'll get back to you soon. No need to queue up to see me on Monday night!
 
->Thank you for contacting me. Let me check with my colleagues on the best options for you to get involved in. We'll get back to you soon. No need to queue up to see me on Monday night!
-
->Please send my best wishes to your mother. 
+> Please send my best wishes to your mother.
 >
->Warm regards 
+> Warm regards
 
-------
+---
 
->Dear Zheng Hong,
+> Dear Zheng Hong,
 
->I would like to introduce Mark Lim from IDA to you. Hope this project takes off.
->Please keep me informed.
->Many thanks.
+> I would like to introduce Mark Lim from IDA to you. Hope this project takes off.
+> Please keep me informed.
+> Many thanks.
 
--------
+---
 
 Am now frantically thinking of what to reply and how to start off this email...
-
-

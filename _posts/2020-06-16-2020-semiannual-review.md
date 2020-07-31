@@ -9,12 +9,12 @@ tags:
   - oxford
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 # Table of Contents
 
-1. TOC
-   {:toc}
+[toc]
 
 # Introduction and overview
 

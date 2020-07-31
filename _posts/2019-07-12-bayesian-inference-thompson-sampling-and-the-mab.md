@@ -12,6 +12,7 @@ tags:
   - bayesian inference
   - explanation
   - public
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 I'm using the work I do at my internship to run a behavioural economics
@@ -33,13 +34,13 @@ Behavioural economics predicts that people are loss-averse, so I am trying to
 find out if sending SMSes that have a loss-aversion framing
 
 > "install the app
-now, or you'll lose your 4500THB cashback"
+> now, or you'll lose your 4500THB cashback"
 
 has a greater effect than sending
-SMSes that have a positive framing 
+SMSes that have a positive framing
 
 > "install the app now, to get 4500THB
-cashback"
+> cashback"
 
 The question is:
 
@@ -76,14 +77,14 @@ something you just grok the instant you hear about it.
 > each with a different probability of paying out. How should one pull the slot
 > machines in order to maximise one's payout over the long run?
 
-There are two tradeoffs here. On the one hand, we want to *explore* in order to
+There are two tradeoffs here. On the one hand, we want to _explore_ in order to
 find out what the best slot machine is. The best way to be sure of what the
 actual probabilities of the payouts are is to pull every arm equally.
 
-But on the other hand, do we really *care* about what the actual probabilities
-of *all* the payouts are? Does it really matter if slot machine #4 could have
+But on the other hand, do we really _care_ about what the actual probabilities
+of _all_ the payouts are? Does it really matter if slot machine #4 could have
 a probability of 0.01--0.03 if we are pretty sure that slot machine #5 has a
-probability of 0.40-0.60? Fundamentally we want to *exploit*: if we are already
+probability of 0.40-0.60? Fundamentally we want to _exploit_: if we are already
 90% sure that this slot machine is the best one, we shouldn't keep pulling the
 others to "explore", because that will in expectation reduce our earnings.
 [This
@@ -91,17 +92,12 @@ post](https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-pro
 was incredibly helpful for getting the intuitions, and I'll refer to this post
 again and again.
 
-In the same way, it's suboptimal^[1] to run a "pure exploration strategy" of
+In the same way, it's suboptimal [^1] to run a "pure exploration strategy" of
 800/800/800 split. Once we've made, say, 100 pulls each, we should be more or
 less "sure enough" about the probability of each treatment, and therefore we
 should "shift gears" and start the exploitation.
 
-^[1]: Here I should clarify --- suboptimal *for what*? For a scientific
-experiment where the goal is to discover a fact about the world, then we
-shouldn't care about exploitation at all. We want the highest possible
-statistical power, and that means maximising exploration. But of course in this
-case where money is on the line, some balance of exploration and exploitation
-must be struck.
+[^1]: Here I should clarify --- suboptimal _for what_? For a scientific experiment where the goal is to discover a fact about the world, then we shouldn't care about exploitation at all. We want the highest possible statistical power, and that means maximising exploration. But of course in this case where money is on the line, some balance of exploration and exploitation must be struck.
 
 ---
 
@@ -112,13 +108,13 @@ leads to a very natural follow-up question:
 **What is the optimal strategy to maximise cumulative reward?**
 
 Now that we have intuition firmly in our heads, it is useful at this point to
-introduce some mathematics so that we can more formally specify the problem. 
+introduce some mathematics so that we can more formally specify the problem.
 
 I'll not focus here on the general multi-armed bandit (MAB) problem. Instead
 I'll specify the Bernoulli bandit, and I'll modify slightly the description
 from [this paper](https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf)
 
-> *(Bernoulli Bandit)* Suppose there are $$K$$ actions and $$T$$ time-steps,
+> _(Bernoulli Bandit)_ Suppose there are $$K$$ actions and $$T$$ time-steps,
 > and when an action is played, it yields either a success or a failure. Action
 > $$k \in {1, ..., K}$$ produces a success with probability $$\theta_k \in
 > [0,1]$$. If there is a success, then $$r_t = 1$$, else $$r_t = 0$$. The
@@ -131,7 +127,7 @@ Let's first think about a few simple strategies. Let's start with the worst:
 
 1. Random -- choose an arm at random every period.
 
-Both of these approaches are pretty bad. 
+Both of these approaches are pretty bad.
 
 First of all, the random strategy is exactly that---random---and the expected
 cumulative reward for this strategy is simply
@@ -151,11 +147,11 @@ Can we do better? Let's try the following:
 
 Note the two degenerate cases: if $$N=0$$, Dumb Greedy picks an arm at random
 and pulls it all the way. If $$N=T/K$$, the greedy approach reduces to the
-random strategy. For intermediate values of N,  we *first* pull all arms N
+random strategy. For intermediate values of N, we _first_ pull all arms N
 times, to get a better idea of the distribution, then checks the best arm and
 pulls that. Greedy(N) dominates random choice, because it
-gets *some* information about which arm is best, and uses that information to
-inform its choice. 
+gets _some_ information about which arm is best, and uses that information to
+inform its choice.
 
 This strategy's effectiveness follows a U-shaped curve: it's no better than
 random choice if you just pick a random arm at t=0 and pull it forever, or
@@ -165,10 +161,10 @@ have to pull the best arm. This captures our intuition of exploring and
 exploiting: the knowledge you gain from exploring is good, but only if you
 manage to exploit that knowledge.
 
-*TODO (questions for author): How much better is Greedy(N) than random? What is the optimal N?*
+_TODO (questions for author): How much better is Greedy(N) than random? What is the optimal N?_
 
 It would be good if we had some measure of not just the mean, but also how
-*certain* we were of our estimate of the mean. If I flip a coin 10 times and get
+_certain_ we were of our estimate of the mean. If I flip a coin 10 times and get
 1 head and 9 tails, I am much less certain of its fairness as if I were to flip
 that coin 500 times and get 50 heads and 450 tails.
 
@@ -193,7 +189,7 @@ p)$$.
 
 Suppose we conduct N trials and observe $$\alpha$$ successes and $$\beta$$
 failures. Then the beta distribution $$Beta(\alpha+1, \beta+1)$$ gives us the
-*range* of "reasonable estimates" of the binomial distribution parameter $$p$$.
+_range_ of "reasonable estimates" of the binomial distribution parameter $$p$$.
 
 ![](/img/thompson-sampling/beta_distribution_1.png)
 
@@ -210,7 +206,6 @@ Furthermore, the beta distribution has a lovely property in that we can
 again. It comes up heads. Then the beta distribution easily updates to
 $$Beta(4,10)$$.
 
-
 Armed with this knowledge of beta-distributions, we can try the following strategy.
 
 Can we do better? Let's try the following:
@@ -221,15 +216,16 @@ Can we do better? Let's try the following:
 
 How "Smart" beta-Greedy works: Initialise each arm with $$\hat{\theta} =
 \mathbb{E}[Beta(1, 1)] = 0.5$$. The Beta(1,1) distribution is a uniform
-distribution over [0,1], and is what's known as an *uninformative prior*: we
+distribution over [0,1], and is what's known as an _uninformative prior_: we
 assume that all rewards are equally likely.
 
 At the start, seeing that all thetas are equal, we pull an arm at random; call this
 arm $$k$$. We update $$\hat{\theta_k}$$ appropriately
 
 We update as follows:
--	If we do get a reward: $$(\alpha_k, \beta_k) = (\alpha_k+1, \beta)$$
--	If we do not get a reward: $$(\alpha_k, \beta_k) = (\alpha_k, \beta+1)$$
+
+- If we do get a reward: $$(\alpha_k, \beta_k) = (\alpha_k+1, \beta)$$
+- If we do not get a reward: $$(\alpha_k, \beta_k) = (\alpha_k, \beta+1)$$
 
 Finally, pick the best $$\hat{\theta}$$, which is given by
 $$\frac{\alpha_k}{(\alpha_k + \beta_k}$$. Repeat this process.
@@ -238,9 +234,9 @@ This greedy algorithm is smarter than "dumb" greedy, because it constantly
 reevaluates what the best arm is with our new beta updating rule. This is
 pretty good, right?
 
-*Can we do better?*
+_Can we do better?_
 
-Take a look at this image from *A Tutorial on Thompson Sampling*.
+Take a look at this image from _A Tutorial on Thompson Sampling_.
 
 ![](/img/thompson-sampling/beta_distribution_2.png)
 
@@ -248,7 +244,7 @@ There are three possible arms. The greedy algorithm would always choose action
 1, because action 1 has the maximal expected mean reward. "Since the
 uncertainty around this expected mean reward is small, observations are
 unlikely to change the expectation substantially, and therefore, action 1 is
-likely to be selected *ad ininitum*."
+likely to be selected _ad ininitum_."
 
 It seems reasonable to avoid action 2, since it is extremely unlikely that
 $$\theta_2 > \theta_1$$, but the algorithm should try out $$\theta_3$$, because
@@ -271,7 +267,7 @@ on a local optima: 5% of the time it will try action 3, for instance, and learn
 more about it. Eventually the ε-greedy algorithm will converge onto the best
 action.
 
-*TODO (questions for author): How good is ε-Greedy compared to Smart Greedy?*
+_TODO (questions for author): How good is ε-Greedy compared to Smart Greedy?_
 
 But again ε-greedy is not optimal for two reasons. First, if we're already dead
 certain about the best lever, we don't want it to pull a random bad lever ε of
@@ -288,16 +284,16 @@ Enter...
 
 Thompson sampling is a very subtle modification of the "smart" greedy
 algorithm: so subtle, in fact, that I missed it the first time! Here's the
-difference: instead of choosing the highest expected theta value, *sample* the
+difference: instead of choosing the highest expected theta value, _sample_ the
 theta values from the beta distributions.
 
-Take a look at the image again: 
+Take a look at the image again:
 
 ![](/img/thompson-sampling/beta_distribution_2.png)
 
 The expected rewards are $$\theta = [0.6, 0.4, 0.4]$$. The greedy algorithm
 selects the action with the highest expected reward: that is, action 1.
-Thompson sampling *samples* from the beta distributions: in other words,
+Thompson sampling _samples_ from the beta distributions: in other words,
 
 $$\hat{\theta_k} \sim Beta(\alpha_k, \beta_k)$$. It then pulls the arm with the
 maximum sampled reward.
@@ -305,7 +301,7 @@ maximum sampled reward.
 This is genius! Why? Consider a typical sample. Sampling action 1 will give us
 a value very close to 0.6. Sampling action 2 will give us a value very close to
 0.4. Sampling action 3, on the other hand, will give us a wide range of values,
-*including* values greater than 0.6. This means that action 2 will pretty much
+_including_ values greater than 0.6. This means that action 2 will pretty much
 never be chosen, but there's a good chance of action 3 being chosen! In other
 words --- Thompson sampling nicely directs exploration effort towards the
 unknown.
@@ -313,7 +309,6 @@ unknown.
 I ran 10,000 simulations, and here are the results...
 
 **Bayesian inference vs frequentist inference**
-
 
 Once I have the results ....
 
@@ -328,15 +323,13 @@ the three beta distributions:
 [Given several beta distributions, what is the probability that one is the
 highest?](https://mathoverflow.net/q/90361)
 
+A paper from NIPS 2011 ("An empirical evaluation of Thompson Sampling") shows, in experiments, that Thompson Sampling beats UCB. UCB is based on choosing the lever that promises the highest reward under optimistic assumptions (i.e. the variance of your estimate of the expected reward is high, therefore you pull levers that you don't know that well). Instead, Thompson Sampling is fully Bayesian: it generates a bandit configuration (i.e. a vector of expected rewards) from a posterior distribution, and then acts as if this was the true configuration (i.e. it pulls the lever with the highest expected reward). [^2]
 
-A paper from NIPS 2011 ("An empirical evaluation of Thompson Sampling") shows, in experiments, that Thompson Sampling beats UCB. UCB is based on choosing the lever that promises the highest reward under optimistic assumptions (i.e. the variance of your estimate of the expected reward is high, therefore you pull levers that you don't know that well). Instead, Thompson Sampling is fully Bayesian: it generates a bandit configuration (i.e. a vector of expected rewards) from a posterior distribution, and then acts as if this was the true configuration (i.e. it pulls the lever with the highest expected reward).  ^[1]
-
-^[1]: Pedro A. Ortega (https://stats.stackexchange.com/users/9572/pedro-a-ortega), Best bandit algorithm?, URL (version: 2017-03-24): https://stats.stackexchange.com/q/24027
-
+[^2]: Pedro A. Ortega (https://stats.stackexchange.com/users/9572/pedro-a-ortega), Best bandit algorithm?, URL (version: 2017-03-24): https://stats.stackexchange.com/q/24027
 
 Call the different SMS treatments A, B, and C, and the probability of someone
 installing the app $$r$$ can be conditional on either one of these treatments.
-The *value* of each treatment $$Q(\cdot)$$ is the expected reward given that
+The _value_ of each treatment $$Q(\cdot)$$ is the expected reward given that
 treatment, $$Q(A) = \mathbb{E}[r|A]$$.
 
 **A little wrinkle**
@@ -344,11 +337,11 @@ treatment, $$Q(A) = \mathbb{E}[r|A]$$.
 [Formulas for Bayesian A/B Testing](https://www.evanmiller.org/bayesian-ab-testing.html#notes)
 
 Why do I use Bayesian methods?
+
 - Frequentist approaches require me to set sample size for adequate power, and
   this sample size depends on effect size. But I have no good prior for effect
   size
 - Sample size large
-
 
 **Contextual bandits**
 
@@ -360,4 +353,3 @@ Payoffs](http://proceedings.mlr.press/v28/agrawal13.pdf)
 [Simple Bayesian Algorithms for Best-Arm Identification](https://arxiv.org/pdf/1602.08448.pdf)
 
 Now suppose we have
-

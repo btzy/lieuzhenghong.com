@@ -7,24 +7,26 @@ tags:
   - monthly report
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 Since my [last post]({{ '/_posts/2017-05-29-monthly-report-may-2017/' | url }})
 I have done the following:
 
-* Went to Yunnan
-* Dabbled in 3D printing
-* Prepared the kids for CodeXtreme 2017
-* Turned 21
-* Matriculated at NTU
-* Participated in two NTU orientation camps
-* Withdrew from NTU
-* Got IMDA's NIS scholarship
-* Built my first piece of native production software using Electron 
+- Went to Yunnan
+- Dabbled in 3D printing
+- Prepared the kids for CodeXtreme 2017
+- Turned 21
+- Matriculated at NTU
+- Participated in two NTU orientation camps
+- Withdrew from NTU
+- Got IMDA's NIS scholarship
+- Built my first piece of native production software using Electron
 
-## Went to Yunnan ##
+## Went to Yunnan
+
 I went with Samuel and Jian Kai and I had a great time. We did a lot of walking
-and hiking and the 12-day trip came to about $1,200.
+and hiking and the 12-day trip came to about \$1,200.
 
 They were very nice to me even though I don't really know them. Mad props to
 them for even letting me go on the trip with them in the first place.
@@ -33,17 +35,20 @@ I loved the snow-capped mountain and the hike through Tiger Leaping Gorge: took
 a lot of pictures with Jian Kai's DSLR.
 
 ### Yulong Snow Mountain
+
 ![image-title-here](/img/yunnan/me.jpg)
 ![image-title-here](/img/yunnan/snow-mountain.jpg)
 ![image-title-here](/img/yunnan/landscape.jpg)
 
 ### Tiger Leaping Gorge
+
 ![image-title-here](/img/yunnan/landscape-3.jpg)
 ![image-title-here](/img/yunnan/gorge.jpg)
 ![image-title-here](/img/yunnan/landscape-4.jpg)
 ![image-title-here](/img/yunnan/group-photo-3.jpg)
 
 ### Other places
+
 ![image-title-here](/img/yunnan/landscape-2.jpg)
 ![image-title-here](/img/yunnan/me-2.jpg)
 ![image-title-here](/img/yunnan/group-photo-2.jpg)
@@ -60,9 +65,10 @@ well.
 
 All in all, a great trip—thanks to Sam and JK.
 
-## Dabbled in 3D printing ##
+## Dabbled in 3D printing
+
 Built a burr puzzle as a gift to Wei Heng to thank him for lending me his SUICA
-card and travel adapter for my Japan trip. 
+card and travel adapter for my Japan trip.
 
 ![burr puzzle pieces](/img/3d-printing/burr-puzzle-split.jpg)
 ![burr puzzle pieces assembled](/img/3d-printing/burr-puzzle.jpg)
@@ -73,10 +79,11 @@ The cube in cube was just for fun.
 ![cube-in-cube-1](/img/3d-printing/cube-in-cube-.jpg)
 ![cube-in-cube-2](/img/3d-printing/cube-in-cube-2.jpg)
 
-## Prepared the kids for CodeXtreme 2017 ##
+## Prepared the kids for CodeXtreme 2017
+
 The annual hackathon event. I took Audrey, Gillian and Gao Hong; Dylan was
 taken by Eng Chye. Got to know Van, a final year student at NUS SoC. She helped
-me greatly in the project. 
+me greatly in the project.
 
 We built a micro:bit "magic wallet" implementation, and also a little LEGO
 umbrella dispenser. We demonstrated the ability to use the micro:bit to send
@@ -84,13 +91,14 @@ and receive user-specified amounts of money.
 
 ![''](/img/microbit-wallet/group-photo.jpg)
 ![''](/img/microbit-wallet/group-photo2.jpg)
-*Looking glam in slippers*
+_Looking glam in slippers_
 ![''](/img/microbit-wallet/dylan-team.jpg)
 ![microbit-wallet-poster](/img/microbit-wallet/microbit-wallet-poster.jpg)
 
 My team took third place, and Eng Chye's team took first. Mrs Hauw was thrilled.
 
-## Turned 21 ##
+## Turned 21
+
 I treated the gang to a buffet to celebrate. The food was pretty good but Nauxiy
 was so shag after his hall camp he could barely keep his eyes open.
 
@@ -104,11 +112,13 @@ Marc and I will be leaving for the UK and the rest will be staying in
 Singapore. I hope the six of us last long and all of us find happiness and
 success.
 
-## Matriculated at NTU ##
+## Matriculated at NTU
+
 Nothing to say here
 
-## Participated in two NTU orientation camps ##
-Met new people 
+## Participated in two NTU orientation camps
+
+Met new people
 
 I really like the people in NTU; they are really genuine and down-to-earth. I
 participated in Banyan hall camp and SCSE's faculty orientation camp.
@@ -118,26 +128,27 @@ participated in Banyan hall camp and SCSE's faculty orientation camp.
 I really will miss my OG mates and I do sincerely hope that they'll want to
 keep in touch even after I go overseas to study....
 
-## Withdrew from NTU ##
+## Withdrew from NTU
+
 Had to be done; I had fun.
 
 I plan to visit for one final week (25,26,27,28,29) and stop going after 1st
 September to focus on my MOOCs and prepare for Oxford.
 
-## Got IMDA's NIS scholarship ##
+## Got IMDA's NIS scholarship
 
 I will reproduce what I wrote in May here:
 
-  > I was rejected from both GIC and MAS in the penultimate round, the 'group
-  discussion' round... perhaps my personality was too abrasive. Unfortunately the
-  scholarship agencies don't give feedback on unsuccessful applications.
-  Nevertheless, it was a good learning experience; I don't regret the application
-  process. 
+> I was rejected from both GIC and MAS in the penultimate round, the 'group
+> discussion' round... perhaps my personality was too abrasive. Unfortunately the
+> scholarship agencies don't give feedback on unsuccessful applications.
+> Nevertheless, it was a good learning experience; I don't regret the application
+> process.
 
-  > The last scholarship I am waiting for is IMDA. As of this moment, IMDA is
-  trying to schedule an interview slot with the directors. I told them that I
-  would be willing to cancel my trip to Yunnan if need be; nothing to do now but
-  wait.
+> The last scholarship I am waiting for is IMDA. As of this moment, IMDA is
+> trying to schedule an interview slot with the directors. I told them that I
+> would be willing to cancel my trip to Yunnan if need be; nothing to do now but
+> wait.
 
 First off:
 Although MAS does not give feedback, I was extremely fortunate to have had Ms
@@ -163,7 +174,7 @@ chatbot that replies only in quotes from Shakespeare's plays. I thought the
 interview went well, and I can only suppose that it did.
 
 It's curious that IMDA's entire interview process did not include an aptitude
-test. 
+test.
 
 It is a rather semantic distinction, but I am the first IMDA scholar to be
 attached to IMDA. There have been many local scholars (Marvin, Wei Heng, Gui
@@ -174,7 +185,7 @@ I will work hard these three years and fight for my First in Oxford. I will
 live frugally off the allowance IMDA gives me and I aim to save 300 pounds
 every month to start building my nest egg.
 
-## Built my first piece of native production software using Electron ##
+## Built my first piece of native production software using Electron
 
 From July 1 to ~August 15, I built [Inspector's
 Gadget](www.github.com/lieuzhenghong/inspectors-gadget), a desktop app that
@@ -184,6 +195,7 @@ This was at my dad's behest, who kept on complaining about how tedious it was
 to do these reports.
 
 As usual, many firsts:
+
 - First time using Webpack
 - First time using Electron
 - First time using Vue
@@ -194,13 +206,14 @@ As usual, many firsts:
 - First time using Travis to do continuous integration
 
 I still want to learn:
+
 - How to use tests and do test-driven development
 - A better way to package, deploy and release binaries
 
 Check [here](https://github.com/lieuzhenghong/inspectors-gadget/blob/master/what-i-learned.md)
 for a more comprehensive list.
 
-## Future plans ##
+## Future plans
 
 I have made my decision to go to Oxford and study PPE, and will not look back.
 
@@ -267,12 +280,12 @@ This is why I have decided to dedicate the next three years to study the
 equivalent of an undergraduate CS syllabus on my own, while studying
 PPE at Oxford. I hear from my friends and OUMSSA "parents" that the workload
 even for PPE is not too bad, but we'll soon see. Securing a First of course
-comes *first* but I believe that by paring the inefficiencies out of my life I
+comes _first_ but I believe that by paring the inefficiencies out of my life I
 will be able to accomplish these two goals with aplomb.
 
 Being an IMDA scholar could help me achieve these goals more easily. I won't
 have to waste my time looking for a job or an internship; I will (hopefully) be
-given $3,000 to help finance the cost of attaining these certificates under
+given \$3,000 to help finance the cost of attaining these certificates under
 NIS's Talent Development Programme; they will give me a 1 year—1.5 year
 deferment before I start serving my bond at IMDA.
 

@@ -19,6 +19,7 @@ tags:
 img: '/img/raspi-cluster/cluster_closeup.jpg'
 blurb: "A cluster of 16 Raspberry Pi 4s used for 
 distributed data analysis with Apache Spark."
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 (Summer 2019 internship with Inzura)

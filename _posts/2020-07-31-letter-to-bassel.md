@@ -1,6 +1,6 @@
 ---
 title: "Letter to Bassel in August 2020, after my Finals results"
-date: 2020-07-28
+date: 2020-07-31
 tags:
   - private
 ---

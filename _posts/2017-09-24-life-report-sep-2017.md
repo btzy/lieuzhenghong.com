@@ -8,6 +8,7 @@ tags:
   - milestone
   - private
   - diary
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 This post marks the end of an era. The chrysalid years are over, and I fly to

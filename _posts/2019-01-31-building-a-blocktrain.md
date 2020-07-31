@@ -10,14 +10,16 @@ tags:
   - internship
   - imda
   - public
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
 **WIP**
 
 # Introduction
+
 ![](/img/blockchain_project/final_product.jpg)
 
-Over the summer of 2018 (June-Aug 2018), I built an automated, blockchain-connected model train diorama and an accompanying visualisation. The diorama shows how changes in the locations of goods can be added in real-time to the blockchain, ensuring an immutable and unforgeable chain of provenance. This exhibit is also *interactive*: members of the public can scan QR codes pasted on several shipping containers, and they'll see that good's location and history on their phones update in real time.
+Over the summer of 2018 (June-Aug 2018), I built an automated, blockchain-connected model train diorama and an accompanying visualisation. The diorama shows how changes in the locations of goods can be added in real-time to the blockchain, ensuring an immutable and unforgeable chain of provenance. This exhibit is also _interactive_: members of the public can scan QR codes pasted on several shipping containers, and they'll see that good's location and history on their phones update in real time.
 
 # Why a blocktrain?
 
@@ -41,16 +43,13 @@ There are four main components of this diorama:
 3. Blockchain visualisation (running on the Raspberry Pi)
 4. Asset tracker (served by a DigitalOcean instance)
 
-
 <video width = "100%" controls>
 <source src ="/img/blockchain_project/in_action.MOV">
 </video>
 
-
-
 # Blockchain on the cloud
 
-I spun up a DigitalOcean instance to run the blockchain. 
+I spun up a DigitalOcean instance to run the blockchain.
 
 Hyperledger Composer comes with its own REST API.
 
@@ -62,17 +61,15 @@ I made a nice animation whereupon new blocks slide in, giving the diorama a sens
 
 ## Asset tracker
 
-I wanted to make the diorama interactive so I created a 
+I wanted to make the diorama interactive so I created a
 
-People viewing the diorama can use their phones to scan the QR codes attached to several goods containers. 
-
-
+People viewing the diorama can use their phones to scan the QR codes attached to several goods containers.
 
 # Building the diorama
 
 ## Ideation
 
-I bought a $20 *Thomas the Train* model train set just to figure out how the diorama would work. You can see the video of it here:
+I bought a \$20 _Thomas the Train_ model train set just to figure out how the diorama would work. You can see the video of it here:
 
 <video width = "100%" controls>
 <source src = "/img/blockchain_project/thomas_the_train.mp4">
@@ -80,19 +77,18 @@ I bought a $20 *Thomas the Train* model train set just to figure out how the dio
 
 ## Starting and stopping the train
 
+This was the hardest part of the project.
 
-This was the hardest part of the project. 
-
-I first tried to use a weird German device called an *Aufenthaltsschalter* to stop and start the train automatically. 
+I first tried to use a weird German device called an _Aufenthaltsschalter_ to stop and start the train automatically.
 
 ![](/img/blockchain_project/german_device.jpg)
-The Aufenthaltsschalter*
+The Aufenthaltsschalter\*
 
 ![](/img/blockchain_project/jain_puzzled.jpg)
-*Jain trying to figure out the device*
+_Jain trying to figure out the device_
 
 ![](/img/blockchain_project/crazy_german_manual.jpg)
-*Complicated schematic*
+_Complicated schematic_
 
 Finally, **Eureka moment**
 
@@ -104,7 +100,7 @@ It then makes a HTTP request to the Hyperledger blockchain REST API to update th
 
 There were many possible approaches I considered: ultrasonic sensor, light sensor, etc
 
-Here's a video of the train starting and stopping when toggling the reed switch. 
+Here's a video of the train starting and stopping when toggling the reed switch.
 
 <video width = "100%" controls>
 <source src = "/img/blockchain_project/reed_switch.mp4">
@@ -120,9 +116,8 @@ It worked quite well, I think: see for yourself.
 
 ![Closeup of realistic water, before ship was added](/img/blockchain_project/water_closeup.jpg)
 
-
-
 # Glamour shots
+
 ![](/img/blockchain_project/final_product.jpg)
 ![](/img/blockchain_project/detail_2.jpg)
 ![](/img/blockchain_project/detail_3.jpg)
@@ -130,7 +125,6 @@ It worked quite well, I think: see for yourself.
 
 ![](/img/blockchain_project/detail_4.jpg)
 ![](/img/blockchain_project/detail_5.jpg)
-
 
 # Conclusion
 
@@ -142,4 +136,4 @@ Learned a lot of new things:
 
 - Hyperledger
 - Reed switch, relay switch
-- 
+-
