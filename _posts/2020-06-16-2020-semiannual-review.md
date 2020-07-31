@@ -1,6 +1,6 @@
 ---
 layout: base
-date: 2020-07-30
+date: 2020-07-31
 title: "2020 Semiannual Review"
 tags:
   - annual review
@@ -23,7 +23,7 @@ but wrote the bulk of the post-exam thoughts _after_ results were released.
 So I was in the amusing position of having to "predict" my results in
 every subject despite already knowing my marks.
 I have tried to be honest, however, and wrote down my predictions as
-they were reported on the Google Spreadsheet**
+they were reported on the Google Spreadsheet.**
 
 As mentioned in my previous post, I'm now calling the reviews semiannual and
 annual reviews.
@@ -67,7 +67,7 @@ Since the last review post ([2019 Annual Review](/2020/01/01/2019-annual-review.
 
 I was rejected from ETH Zurich's Data Science course, Stanford's Data Science
 course, and CMU's Computational Data Science course. I was also rejected from
-the ETH Zurich and Stanford Knight-Hennessy scholarships
+the ETH Zurich and Stanford Knight-Hennessy scholarships.
 
 I was accepted to ETH Zurich's Statistics course, Oxford's Statistical Science
 course, and Harvard's Data Science course.
@@ -808,23 +808,124 @@ But I was very very lucky to have Celine to keep me on track.
 
 # Weathering the coronavirus
 
+Celine and I weathered the coronavirus quite well.
+While it was sad that many of our friends left, we still had each other
+and the Liddell flatmates.
+The coronavirus didn't really affect us too much because we were basically
+spending our days in the house, with occasional trips to the grocery store
+or around the parks.
+It helped a lot for us to have a daily routine: waking up, studying,
+having lunch, having a nap, studying, cooking dinner, watching some videos,
+and then going off to bed.
+It was eerie but also quite nice that the streets of Oxford were so empty.
+That was really nice peace and quiet.
+
 # Thoughts about my degree
 
-The three years in Oxford have made me grow very much as a person. I've done a
-plethora of embarrassing, cringey, thirsty things (and no, it didn't stop even
-after matriculation). Sometimes recalling these things keep me up at night. It
-is a slow and painful process of learning not to say/do these things.
+The three years in Oxford have made me grow very much as a person. I've done,
+and continue to do, a plethora of embarrassing, cringey, thirsty things.
+Sometimes recalling these things keep me up at night.
+It is a slow and painful process of learning not to say/do these things.
+But I am slowly learning, and I am grateful to all my friends for being patient with me.
 
-I really enjoyed
+I had a lot of firsts in Oxford:
 
-I will write a review about my three years in Oxford after finishing this post.
+- first time visiting Europe,
+- first time matriculating,
+- first time living independently,
+- first time cooking dinners for friends,
+- first time with a woman,
+- first time taking Prelims and getting trashed,
+- first time cooking for a crowd,
+- first time joining an acapella group,
+- first time joining a gin + ironing party,
+- first time punting,
+- first time skiing and snowboarding,
+- first time playing board games with friends,
+- and many many more.
+
+I really enjoyed my time in Oxford. I am incredibly grateful for
+all the people I've met, all the friends I've made, and the excellent tutors
+I've had the pleasure to learn from. Bassel and Sergi have made the most
+impact in my three years, but every tutor in Merton has been wonderful:
+a big thank you to Tia, Karina, Simon and Ralf.
+My friends have helped me immensely as well.
+I will write a proper review about my three years in Oxford
+after finishing this post.
 
 # My plan for the summer
 
+The original idea was to take this summer off,
+seeing as I have been working (kind of) hard studying for Finals.
+But it seems like lots of different projects have started creeping up on me.
+
+Before the pandemic, the plan was to take the summer off,
+travel Europe with Celine (visiting friends along the way),
+catch my family for graduation on the 7th of August,
+then bring them around Europe before I fly to the US at the end August
+and start my master's at Harvard.
+
+Now everything has been turned topsy-turvy.
+Harvard is going full remote,
+which means that I'm no longer eligible for an F1 visa,
+which means I cannot enter the country,
+which means I'm not eligible for any CPT or OPT internship clearance,
+which means I don't want to go to Harvard anymore.
+
+Some projects I'm currently working on include:
+
+- writing a path tracer in Julia;
+- building an online board game engine;
+- learning Classical Chinese;
+- doing some clustering project for Inzura;
+- adding new features to the Districtr web app for MGGG GSoC;
+- cleaning up my thesis to submit as a working paper;
+- cleaning up my work with Rodden and Eubank to submit as a working paper;
+- self-studying probability, statistics and data science.
+
+I have written an (aspirational) plan for this summer,
+but I haven't been following it very well.
+I think this is because I am not able to say no to interesting projects.
+
 # Addendum on blogs being taken down
 
-Philip Guo
-
-Scott Alexander
+Two of my favourite blogs, [Philip Guo](pgbovine.net)
+and [Slate Star Codex](slatestarcodex.com) were taken down.
+This makes me somewhat worried.
+Prof Guo wrote that one of the reasons he took down his public blog
+was because he was afraid that some of the things he wrote
+many years ago would be taken out of context, with bad outcomes.
+This happened recently to [Stephen Hsu](infoproc.blogspot.com),
+who lost his place as the vice president for research and graduate studies
+after a petition by MSU's Graduate Employees Union.
+If two people I respect and admire very much have taken down their blogs
+because they are worried about being doxxed by media, should I also take note
+and be more careful about what I post?
 
 # Final thoughts
+
+This is what I wrote at the end of 2019:
+
+> Despite my poor mood towards the end of the year, I'm optimistic about 2020. As
+> long as I put in the effort, I'm confident that I will get a First, and I am
+> cautiously optimistic that I'll get a place in a Master's program.
+>
+> I have enjoyed my time in Oxford very much and will be sad to leave the place
+> and all my friends. I very much look forward to squeezing out all I can in my
+> last 6 months in Oxford ("sucking the marrow out of Oxford", lol).
+
+I have mixed feelings about these six months.
+On the one hand, I'm very pleased that I fulfilled
+my academic and career goals: I got a First (**N.B: spoiler alert**),
+and I got several Master's offers. But on the other hand,
+all my friends had to leave 59, there was the whole coronavirus thing,
+and all the post-exams celebrations (punting, trashing, schools dinner) and
+graduation are no longer present. It saddens me to have our last moments in Merton
+snatched away so suddenly, without even a chance to bid goodbye to my friends.
+
+As lovely as these three years have been,
+and as much as I loved living the idyllic Oxford student life,
+we must always move on eventually.
+In this respect, then, I am grateful to have
+finished walking this section of road,
+and look forward to the journey ahead with excitement and optimism.
