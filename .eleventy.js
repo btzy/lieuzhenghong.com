@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   let markdownItFootnote = require("markdown-it-footnote");
   let markdownItAnchor = require("markdown-it-anchor");
   let markdownItToc = require("markdown-it-toc-done-right");
+  let markdownItKatex = require("@iktakahiro/markdown-it-katex");
 
   const options = {
     html: true,
@@ -16,7 +17,8 @@ module.exports = function (eleventyConfig) {
   const markdownLib = markdownIt(options)
     .use(markdownItFootnote)
     .use(markdownItAnchor)
-    .use(markdownItToc);
+    .use(markdownItToc)
+    .use(markdownItKatex);
 
   eleventyConfig.setLibrary("md", markdownLib);
 

@@ -114,28 +114,26 @@ I'll not focus here on the general multi-armed bandit (MAB) problem. Instead
 I'll specify the Bernoulli bandit, and I'll modify slightly the description
 from [this paper](https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf)
 
-> _(Bernoulli Bandit)_ Suppose there are $$K$$ actions and $$T$$ time-steps,
+> _(Bernoulli Bandit)_ Suppose there are $K$ actions and $T$ time-steps,
 > and when an action is played, it yields either a success or a failure. Action
-> $$k \in {1, ..., K}$$ produces a success with probability $$\theta_k \in
-> [0,1]$$. If there is a success, then $$r_t = 1$$, else $$r_t = 0$$. The
+> $k \in {1, ..., K}$ produces a success with probability $\theta_k \in
+> [0,1]$. If there is a success, then $r_t = 1$, else $r_t = 0$. The
 > success probabilities are unknown to the agent, but are fixed over time. The
-> objective is to maximise the cumulative reward $$\sum^T_{t=1} r_t$$ over
-> $$T$$ periods, where $$T$$ is relatively large compared to the number of arms
-> $$K$$.
+> objective is to maximise the cumulative reward $\sum^T_{t=1} r_t$ over
+> $T$ periods, where $T$ is relatively large compared to the number of arms
+> $K$.
 
 Let's first think about a few simple strategies. Let's start with the worst:
 
 1. Random -- choose an arm at random every period.
 
-Both of these approaches are pretty bad.
-
 First of all, the random strategy is exactly that---random---and the expected
 cumulative reward for this strategy is simply
 
-$$\sum^K_{k=1} \frac{T}{3} \theta_k$$
+$$\sum^K_{k=1} \frac{T}{3} \theta_k.$$
 
-for instance, if $$\theta = \{0.3, 0.4, 0.5\}$$ and $$T=300$$, then the random
-strategy would give $$\mathbb{E}[r] = 30 + 40 + 50 = 120$$.
+For instance, if $\theta = \{0.3, 0.4, 0.5\}$ and $T=300$, then the random
+strategy would give $\mathbb{E}[r] = 30 + 40 + 50 = 120$.
 
 Notice that the Random strategy is exactly the "random assignment" algorithm of
 assigning 800/800/800.
@@ -143,10 +141,10 @@ assigning 800/800/800.
 Can we do better? Let's try the following:
 
 2. "Dumb" Greedy(N) -- pull each arm N times. Pick the arm with the highest sampled
-   $$\theta$$; call it arm $$K*$$. Then always pull arm $$K*$$ henceforth.
+   $\theta$; call it arm $K^{*}$. Then always pull arm $K^{*}$ henceforth.
 
-Note the two degenerate cases: if $$N=0$$, Dumb Greedy picks an arm at random
-and pulls it all the way. If $$N=T/K$$, the greedy approach reduces to the
+Note the two degenerate cases: if $N=0$, Dumb Greedy picks an arm at random
+and pulls it all the way. If $N=T/K$, the greedy approach reduces to the
 random strategy. For intermediate values of N, we _first_ pull all arms N
 times, to get a better idea of the distribution, then checks the best arm and
 pulls that. Greedy(N) dominates random choice, because it
@@ -183,13 +181,13 @@ would certainly recommend reading through David Robinson's answer.
 
 Here's how I would explain it:
 
-We know that the treatments are Bernoulli with parameter $$p$$. Then in $$N$$
-repeated trials the treatments must follow a binomial distribution with $$B(N,
-p)$$.
+We know that the treatments are Bernoulli with parameter $p$. Then in $N$
+repeated trials the treatments must follow a binomial distribution with $B(N,
+p)$.
 
-Suppose we conduct N trials and observe $$\alpha$$ successes and $$\beta$$
-failures. Then the beta distribution $$Beta(\alpha+1, \beta+1)$$ gives us the
-_range_ of "reasonable estimates" of the binomial distribution parameter $$p$$.
+Suppose we conduct N trials and observe $\alpha$ successes and $\beta$
+failures. Then the beta distribution $Beta(\alpha+1, \beta+1)$ gives us the
+_range_ of "reasonable estimates" of the binomial distribution parameter $p$.
 
 ![](/img/thompson-sampling/beta_distribution_1.png)
 
@@ -202,33 +200,33 @@ second curve (in yellow) lies close to 0.8.
 
 Furthermore, the beta distribution has a lovely property in that we can
 "update" the beta distribution very easily as we get more data. Suppose we have
-2 heads and 8 tails: the beta distribution is $$Beta(3, 9)$$. We flip the coin
+2 heads and 8 tails: the beta distribution is $Beta(3, 9)$. We flip the coin
 again. It comes up heads. Then the beta distribution easily updates to
-$$Beta(4,10)$$.
+$Beta(4,10)$.
 
 Armed with this knowledge of beta-distributions, we can try the following strategy.
 
 Can we do better? Let's try the following:
 
-1. "Smart" beta-Greedy: At every time step, calculate $$\hat{\theta}$$ of every arm,
-   then pull the arm with the highest $$\hat{\theta}$$ and update the
-   $$\hat{\theta}$$ according to the result.
+1. "Smart" beta-Greedy: At every time step, calculate $\hat{\theta}$ of every arm,
+   then pull the arm with the highest $\hat{\theta}$ and update the
+   $\hat{\theta}$ according to the result.
 
-How "Smart" beta-Greedy works: Initialise each arm with $$\hat{\theta} =
-\mathbb{E}[Beta(1, 1)] = 0.5$$. The Beta(1,1) distribution is a uniform
+How "Smart" beta-Greedy works: Initialise each arm with $\hat{\theta} =
+\mathbb{E}[Beta(1, 1)] = 0.5$. The $Beta(1,1)$ distribution is a uniform
 distribution over [0,1], and is what's known as an _uninformative prior_: we
 assume that all rewards are equally likely.
 
-At the start, seeing that all thetas are equal, we pull an arm at random; call this
-arm $$k$$. We update $$\hat{\theta_k}$$ appropriately
+At the start, seeing that all thetas are equal, we pull an arm at random;
+call this arm $k$. We update $\hat{\theta_k}$ appropriately.
 
 We update as follows:
 
-- If we do get a reward: $$(\alpha_k, \beta_k) = (\alpha_k+1, \beta)$$
-- If we do not get a reward: $$(\alpha_k, \beta_k) = (\alpha_k, \beta+1)$$
+- If we do get a reward: $(\alpha_k, \beta_k) = (\alpha_k+1, \beta)$
+- If we do not get a reward: $(\alpha_k, \beta_k) = (\alpha_k, \beta+1)$
 
-Finally, pick the best $$\hat{\theta}$$, which is given by
-$$\frac{\alpha_k}{(\alpha_k + \beta_k}$$. Repeat this process.
+Finally, pick the best $\hat{\theta}$, which is given by
+$\frac{\alpha_k}{(\alpha_k + \beta_k}$. Repeat this process.
 
 This greedy algorithm is smarter than "dumb" greedy, because it constantly
 reevaluates what the best arm is with our new beta updating rule. This is
@@ -247,7 +245,7 @@ unlikely to change the expectation substantially, and therefore, action 1 is
 likely to be selected _ad ininitum_."
 
 It seems reasonable to avoid action 2, since it is extremely unlikely that
-$$\theta_2 > \theta_1$$, but the algorithm should try out $$\theta_3$$, because
+$\theta_2 > \theta_1$, but the algorithm should try out $\theta_3$, because
 if you take a look at that distribution in red it's quite plausible that its
 mean reward exceeds 0.6. "The algorithm fails to account for uncertainty in the
 mean reward of action 3, which should entice the agent to explore and learn
@@ -258,7 +256,7 @@ that it can be misled by an initial lucky or unlucky streak, and get stuck in a
 suboptimal maxima of exploitation. We could modify "Smart" Greedy to pull every
 arm N times first, just like "Dumb" Greedy(N), but here's another way to do it:
 
-1. ε-Greedy -- like "Smart" Greedy, but with probability $$\epsilon$$ pull an
+1. ε-Greedy -- like "Smart" Greedy, but with probability $\epsilon$ pull an
    arm at random.
 
 The ε-greedy algorithm takes the best action most of the time, but does random
@@ -291,11 +289,10 @@ Take a look at the image again:
 
 ![](/img/thompson-sampling/beta_distribution_2.png)
 
-The expected rewards are $$\theta = [0.6, 0.4, 0.4]$$. The greedy algorithm
+The expected rewards are $\theta = [0.6, 0.4, 0.4]$. The greedy algorithm
 selects the action with the highest expected reward: that is, action 1.
 Thompson sampling _samples_ from the beta distributions: in other words,
-
-$$\hat{\theta_k} \sim Beta(\alpha_k, \beta_k)$$. It then pulls the arm with the
+$\hat{\theta_k} \sim Beta(\alpha_k, \beta_k)$. It then pulls the arm with the
 maximum sampled reward.
 
 This is genius! Why? Consider a typical sample. Sampling action 1 will give us
@@ -329,8 +326,8 @@ A paper from NIPS 2011 ("An empirical evaluation of Thompson Sampling") shows, i
 
 Call the different SMS treatments A, B, and C, and the probability of someone
 installing the app $$r$$ can be conditional on either one of these treatments.
-The _value_ of each treatment $$Q(\cdot)$$ is the expected reward given that
-treatment, $$Q(A) = \mathbb{E}[r|A]$$.
+The _value_ of each treatment $Q(\cdot)$ is the expected reward given that
+treatment, $Q(A) = \mathbb{E}[r|A]$.
 
 **A little wrinkle**
 
