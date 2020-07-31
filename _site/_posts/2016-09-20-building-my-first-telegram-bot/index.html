@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/vars.css" type="text/css">
+    <link rel="stylesheet" href="/css/base.css" type="text/css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+    <!-- syntax highlighting -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet"> 
+
+    <!-- Dark mode : script 1 of 2-->
+    <script src="/css/dark_mode_init.js"></script>
+
+    <title>Building my first Telegram bot</title>
+  </head>
+  <body>
+
+    <div class = "container">
+      <div class = "header">
+      </div>
+
+      <div class = "body">
+      <div class = "sidebar">
+      <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+<!-- Switch for dark mode toggle -->
+<link rel="stylesheet" href="/css/switch.css" type="text/css">
+
+<div>
+ <a class = "page-title" href = "/"> 劉 </a>
+ <span class = "page-subtitle"> Lieu Zheng Hong </span>
+</div>
+
+
+<hr>
+
+
+<ul class = "navlist">
+    <li> <a href="/"> Home </a> </li>
+    <li> <a href="/about"> About </a> </li>
+    <li> <a href="/projects"> Projects </a> </li>
+    <li> <a href="/archive"> Archive </a> </li>
+    <li> <a href="/ppe-stuff"> PPE work </li>
+    <li> <a href="/notes"> Notes </a> </li>
+</ul>
+
+<hr>
+
+
+<div class = "dark-mode-toggle-area">
+
+  dark mode:
+  <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+  <input type="checkbox" id="checkbox_theme" class="switch">
+  <span class="slider"></span>
+  </label>
+
+</div>
+
+      </div>
+
+      <div class = "content-wrapper">
+        <div class = "content">
+          <h1> Building my first Telegram bot </h1>
+          <p>I built my first Telegram bot, Charge Bot. The first commit was 3 days ago (18th
+September) but I first started working on it on 27th August. Then I took a three-week
+break and resumed working on it on 17th September.</p>
+<p>You can check the bot out on Telegram <a href="https://telegram.me/charge_game_bot">here.</a>
+The Github repo is <a href="https://github.com/lieuzhenghong/charge-bot/">here.</a></p>
+<p>This checked a couple of technical firsts for me:</p>
+<ol>
+<li>First Telegram bot</li>
+<li>First time I used Python to write anything substantial</li>
+<li>First deploy on Heroku</li>
+<li>First time using non-ASCII characters and working with UTF-8 encoding</li>
+<li>First time using a linter (pylint)</li>
+</ol>
+<p>There are also a couple of non-technical firsts:</p>
+<ol>
+<li>First time building a multiplayer &quot;game&quot;</li>
+<li>First time building anything my friends can use</li>
+<li>First time building something for public consumption (apart from a blog)</li>
+</ol>
+<p>It was also the first time I wrote anything for public consumption.</p>
+<p>Overall, I am quite happy with this project. The scope was manageable and it did
+not balloon (probably because it was a game and, being a game, the scope is rather
+clearly defined; what also helped was the limitations of the Telegram medium).
+At the same time, I was able to incorporate user feedback and suggestions.</p>
+<h2>How it works</h2>
+<p>The Python code to write a Telegram bot is extremely trivial.
+It is just a while loop that sends HTTP requests with a long timeout (long
+polling). Upon receiving a response, it sends the next request.</p>
+<p>There is another way which is push instead of pull (doesn't send requests: waits for
+Telegram to send updates to you) but it is far more involved and wasn't suitable for a
+first-time project.</p>
+<p>Anyway, here's the code:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_updates</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span><br>        string <span class="token operator">=</span> URL <span class="token operator">+</span> <span class="token string">'getUpdates?offset={0}&amp;timeout={1}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><br>            read_offset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3600</span><span class="token punctuation">)</span><br>        req <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>string<span class="token punctuation">)</span><br>        handle_updates<span class="token punctuation">(</span>req<span class="token punctuation">)</span></code></pre>
+<p>That's it. But there was a gotcha: As my background is in Javascript where all responses
+are asynchronous, the line <code>req = requests.get(string)</code> tripped me up. If you were to write
+that in Javascript you would get <code>req == undefined</code> or something like that and thus
+<code>handle_updates(req)</code> would throw an error.</p>
+<p>For Python, the synchronous nature of the code means that the assignment operator will
+actually stop the evaluation until it returns a proper result. That means no callback is
+needed and the code becomes very simple.</p>
+<h2>Snafus</h2>
+<h3>Modularisation</h3>
+<p>This was something that I had a lot of trouble with, despite Mark's best efforts to help me.</p>
+<p>My code is divvied up as follows:</p>
+<pre><code>* index.py (should be main.py): is the main file, imports everything
+* network.py: sends requests and handles responses
+* lobby.py: code that allows players to create and join a game
+* game.py: game code
+* charge_keyboard.py: the inline keyboard needed for the game
+</code></pre>
+<p>I was unable to understand the idea of a function that called another function (also known
+as... a callback function LOL). Here's what I had trouble with:</p>
+<pre class="language-python"><code class="language-python"><span class="token comment"># network.py</span><br><span class="token keyword">def</span> <span class="token function">setPushDataTo</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">global</span> callback<br>    callback <span class="token operator">=</span> func<br><br><span class="token keyword">def</span> <span class="token function">pushDataToDispatcher</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">global</span> callback<br>    callback<span class="token punctuation">(</span>data<span class="token punctuation">)</span><br><br><span class="token comment"># index.py</span><br><br><span class="token keyword">import</span> network<br><br><span class="token keyword">def</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token triple-quoted-string string">"""Initialises the app and sets up all callbacks"""</span><br>    network<span class="token punctuation">.</span>setPushDataTo<span class="token punctuation">(</span>dispatcher<span class="token punctuation">)</span><br><br><span class="token keyword">def</span> <span class="token function">dispatcher</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p>Basically, this pattern allows a function in one file to call a function in another file,
+<em>without importing</em>. The reason why we cannot import is because we don't want a two-way
+import (index imports network, not the other way round).</p>
+<p>But we still need some way for the &quot;child&quot; to communicate with the &quot;parent&quot; and the way
+to do it is by setting the callback function in the &quot;child&quot; to the parent's function.</p>
+<p>I am not sure I am explaining it clearly...I'll come back in a few days to this post
+and see.</p>
+<h3>Deploying on Heroku</h3>
+<p>Heroku was a real pain to set up...the documentation was lacking and I spent two nights'
+worth just trying to figure it out.</p>
+<p>The gist of it is that you have to have a <code>requirements.txt</code> file, a <code>Procfile</code> and a
+<code>runtime.txt</code> file.</p>
+<p>The &quot;Getting Started with Heroku&quot; tutorial mentioned the first two but not the last one!!</p>
+<p>Basically, <code>requirements.txt</code> is just a list of dependencies... that's quite straightforward
+I still don't know what <code>runtime.txt</code> does but I had to put in the line <code>python-3.5.2</code> in
+order for Heroku to deploy my app with Python 3. I needed Python 3 because of it's native
+Unicode handling.</p>
+<p>What I mean by that is: when Python2 receives a response as a string, it doesn't actually
+use Unicode encoding. In order to get it as Unicode you have to put a <code>u'</code> in front of it.
+Python 3 does this all by itself.</p>
+<p>The Procfile is also not straightforward. Basically the Procfile tells Heroku what kind of
+dyno your app is (web, worker, something else), what file to run with what program. So
+like this:</p>
+<p><code>worker: python index.py --loglevel=info</code></p>
+<p>(Weirdly, typing python3 index.py throws some weird error and I don't know why and haven't
+been able to Google)</p>
+<h2>Bad code</h2>
+<p>This app was developed very haphazardly, and it shows. I used tons of global variables
+because I'm very bad. Coming from a Javascript background I don't know how to use classes,
+like, <em>at all</em>. So it's good that I'm learning Python.</p>
+<p>I tried refactoring but it was truly a huge pain and I actually had to rollback to the
+previous commit because I fucked everything up. 😭</p>
+<h2>Learning points and future plans</h2>
+<p>I want to make as many bots as I can in the future, because Telegram is by far the most-used
+app on my phone. It was extremely smart of the Telegram team to expose this API to developers--
+this has allowed it to eclipse Whatsapp even further.</p>
+<p>For my next app, I will definitely try and use the webhooks push method.</p>
+<p>Heroku has a free dyno tier so I have <strong>no idea</strong> why I'm paying 8 dollars a month to DigitalOcean.
+I think that I will move my automated transaction tracker over to Heroku as well.</p>
+<p>I mentioned the bad code: for my next app I am going to try and write it <strong>right</strong> and I
+know everyone says that but I mean it, I'm going to aim for 0 warnings on pylint!!!</p>
+<p>Overall, this was a good learning experience, I had fun. Am pretty psyched to build my
+next Telegram bot!</p>
+
+        <div>
+      </div>
+
+      <div class = "footer">
+      </div>
+
+    <div>
+
+
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--Dark mode toggle -->
+    <script src="/css/dark_mode_toggle.js"></script>
+
+  </body>
+</html>

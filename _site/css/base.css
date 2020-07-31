@@ -1,0 +1,86 @@
+body {
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 18px;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
+
+/* This stuff is for the grid layout: fluid two-column layout with navbar on left */
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: blue;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  padding-left: 20px;
+  text-align: center;
+}
+
+/* Note this is .body, not body! */
+/* Holds content. Right of sidebar. */
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 800px;
+}
+
+/* For larger screens, pull out the sidebar */
+@media (min-width: 900px) {
+  .sidebar {
+    text-align: left;
+  }
+  .body {
+    overflow: hidden;
+    grid-template-columns: 200px 1fr;
+  }
+  .content-wrapper {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body {
+    overflow: hidden;
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  color: var(--sidebar-color);
+}

@@ -1,0 +1,25 @@
+---
+layout: base
+eleventyExcludeFromCollections: true
+title: "Projects"
+---
+
+<link href="/css/projects.css" type="text/css" rel='stylesheet' >
+
+<p> These are things I've built either for an internship or for fun. </p>
+
+<div class = 'projects-wrapper'>
+    {%- for post in collections.project -%}
+    <div class = 'project-card' href="{{post.url | url}}">
+        <div class = 'project-card-image-wrapper'>
+            <img src="{{post.data.img}}">
+        </div>
+        <div class = 'project-card-text-wrapper'>
+            <a class = "project-card-title" href="{{ post.url | url }}"> {{post.data.title}}</a>
+            <i>{{ post.date.toLocaleString('default', { month: 'long' })}} {{ post.date.getFullYear() }}</i>
+            <br>
+            {{ post.data.blurb }}
+        </div>
+    </div>
+    {%- endfor -%}
+</div>

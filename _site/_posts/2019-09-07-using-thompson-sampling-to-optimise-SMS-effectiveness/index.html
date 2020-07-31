@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/vars.css" type="text/css">
+    <link rel="stylesheet" href="/css/base.css" type="text/css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+    <!-- syntax highlighting -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet"> 
+
+    <!-- Dark mode : script 1 of 2-->
+    <script src="/css/dark_mode_init.js"></script>
+
+    <title>Building an Bayesian SMS sender</title>
+  </head>
+  <body>
+
+    <div class = "container">
+      <div class = "header">
+      </div>
+
+      <div class = "body">
+      <div class = "sidebar">
+      <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+<!-- Switch for dark mode toggle -->
+<link rel="stylesheet" href="/css/switch.css" type="text/css">
+
+<div>
+ <a class = "page-title" href = "/"> 劉 </a>
+ <span class = "page-subtitle"> Lieu Zheng Hong </span>
+</div>
+
+
+<hr>
+
+
+<ul class = "navlist">
+    <li> <a href="/"> Home </a> </li>
+    <li> <a href="/about"> About </a> </li>
+    <li> <a href="/projects"> Projects </a> </li>
+    <li> <a href="/archive"> Archive </a> </li>
+    <li> <a href="/ppe-stuff"> PPE work </li>
+    <li> <a href="/notes"> Notes </a> </li>
+</ul>
+
+<hr>
+
+
+<div class = "dark-mode-toggle-area">
+
+  dark mode:
+  <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+  <input type="checkbox" id="checkbox_theme" class="switch">
+  <span class="slider"></span>
+  </label>
+
+</div>
+
+      </div>
+
+      <div class = "content-wrapper">
+        <div class = "content">
+          <h1> Building an Bayesian SMS sender </h1>
+          <p>I architected and built a system that programmatically sends SMSes and tracks
+each one to see if it has been clicked. I used the pipeline to conduct a
+behavioural economics experiment on ~2000 users to investigate the effect of
+loss-aversive framing on clickthrough rates. I used Bayesian statistics
+(Thompson sampling) to maximise the number of people who were reached by the
+optimal SMS.</p>
+<p>I also sent various other SMSes (a total of ~10,000 messages). Overall,
+my interventions increased the number of active users by ~25% over a period of
+two months.</p>
+<p>(Summer 2019 internship with Inzura)</p>
+<hr>
+<p>As far as I am aware, this is the first behavioural economics experiment that
+uses Thompson sampling. There are very good reasons why most experiments don't
+(I elaborate upon this later), but I argue that the multi-armed bandit approach
+I used had several advantages over traditional A/B testing.</p>
+<p>I had previously written a <a href="/2019/07/12/bayesian-inference-thompson-sampling-and-the-mab.html">more technical
+post</a> on
+Bayesian inference and Thompson sampling. Those interested in the details (or
+interested in picking apart my misunderstandings) are most welcome to peruse
+it. This post will talk about <em>why</em> I built the pipeline and the architecture
+of the pipeline, not the maths.</p>
+<p>I have deliberately been vague about the details of the policy and campaign, to
+safeguard the privacy of our client.</p>
+<hr>
+<h2>Motivation</h2>
+<p>Our client is a large insurer who had rolled out a new policy that used our
+app. If the policyholder uses the app to record his driving (and fulfills some
+other conditions), he will be eligible for a cashback. However, people were not
+installing the app. Our working hypothesis was that people had either forgotten
+about the app, or had forgotten that they had to install it/use it to be
+eligible for a cashback. Therefore, we wanted to send reminder SMSes to these
+customers and see if we could get more uptake of the app.</p>
+<p>As we were going into this blind, we wondered what sort of SMSes would be most
+effective. We decided to send three SMSes---a neutral reminder SMS, a
+&quot;positive&quot; SMS, and a &quot;negative&quot; SMS</p>
+<p>Our purpose was twofold: i) to get as many people to install the app, and
+ii) to see which type of SMS was the most effective.</p>
+<h3>Why three types of SMSes?</h3>
+<p>Behavioural economics predicts that people are loss-averse: that is, they feel
+the pain of a loss more acutely than they feel the pleasure of an equivalent
+gain. My hypothesis was that an SMS worded to trigger loss aversion (&quot;Install
+the app now or lose the cashback you're eligible for&quot;) would be more effective
+than an SMS worded positively (&quot;Install the app now to gain a cashback&quot;), which
+would in turn be more effective than a neutral reminder SMS (&quot;Install the app
+now&quot;).</p>
+<h3>Why frame the experiment as a multi-armed bandit?</h3>
+<p>The gold standard of causal inference is to do a randomised controlled trial:
+randomly divide, say, 2400 participants into groups of 800 each, then send 800
+the neutral (control), 800 the positive, and 800 the negative. Record the
+number of successes (clicked SMS) and failures (did not click SMS) for each
+treatment.</p>
+<p>This is Good and Rigorous™. In particular, it maximises our certainty about the
+performance of each treatment. In most experimental contexts, this is fine.
+Most experiments try to uncover some fact about the world, and to maximise our
+certainty in the truth of those facts. But there are three additional
+considerations with this experiment design when it comes to the real world.</p>
+<p>The first and biggest consideration is that nobody is going to let you run it
+because this is leaving money on the table. With this design 2/3rds (1600) of
+the customers will be getting a suboptimal SMS. In a business environment, we
+want to <strong>maximise the number of customers who receive the optimal SMS</strong>, not
+really maximise the certainty of our knowledge.</p>
+<p>The second consideration is that we don't really want to be certain about the
+performance of every treatment. We want to be certain of the <em>best</em> treatment,
+which means that a uniform allocation (800 SMSes to each group) is nonideal.
+[^1]</p>
+<p>The third consideration is that we don't have to send all the SMSes at the same time.
+We can send a subset of the SMSes and use that initial data to draw tentative
+conclusions about which SMS is the best.</p>
+<p>[^1]: This is the problem of &quot;best arm identification&quot;. For N &gt; 2, it isn't optimal to pull all arms equally. If one arm is very obviously worse than the rest, the algorithm shouldn't waste time on pulling it more. <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/COLT10_ABM.pdf">this paper</a> (Best Arm Identification in Multi-Armed Bandits) has more details. See also <a href="https://icml.cc/Conferences/2009/papers/229.pdf">this paper</a> on Heoffding and Bernstein races where the objective is to try to establish the best action at a given confidence level with the fewest pulls.</p>
+<p>Given that we want to maximise the number of customers who receive the optimal
+SMS, the traditional experimental design is nonoptimal. But we don't know which
+SMS is best, so how do we find out as quickly as possible, and then maximise
+the number of customers who receive it?</p>
+<p>It turns out that this problem can be neatly modeled as a &quot;multi-armed bandit&quot;:</p>
+<blockquote>
+<p>You are walking around the casino floor where there are ten slot machines,
+each with a different probability of paying out. How should one pull the slot
+machines in order to maximise one’s payout over the long run?</p>
+</blockquote>
+<p>In this case, we have three slot machines (neutral, positive and negative
+SMSes). And since we don't know <em>which</em> arm is best, we have to send some SMSes
+initially to find out.</p>
+<p>But there's a balance to be struck here. We want to spend some time learning,
+but after we're &quot;pretty sure&quot; about what the best arm is, we should keep
+pulling the best arm all the time. This is known as the explore vs exploit
+tradeoff (or, more pithily, &quot;learn or earn&quot;). We can see now why the initial
+experiment design was not fit for purpose: it's very good at learning, but no
+good at earning. (And we're trying to earn money here!)</p>
+<h3>Why Thompson sampling?</h3>
+<p>There are many proposed algorithms to solve the multi-armed bandit problem:
+these include epsilon-greedy, upper confidence bounds (UCB) and Thompson sampling.</p>
+<p>I spent about a week
+<a href="https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html#bandit-strategies">reading</a>
+<a href="http://iosband.github.io/2015/07/19/Efficient-experimentation-and-multi-armed-bandits.html">the</a>
+<a href="http://iosband.github.io/2015/07/28/Beat-the-bandit.html">literature</a> and
+thinking about it and eventually decided on Thompson sampling. More details are
+covered in my <a href="/2019/07/12/bayesian-inference-thompson-sampling-and-the-mab.html">more technical
+post</a>.</p>
+<h2>Experiment design</h2>
+<p>I decided on the following three SMSes (neutral, positive and negative):</p>
+<blockquote>
+<p>You have not logged any trips. The &lt;POLICY&gt; you have purchased
+requires you to log trips regularly on the &lt;APP&gt; app.
+Install the app and start logging your trips today. Any problems, call &lt;NUM&gt;, or
+email &lt;EMAIL&gt;. Click here to start: http://&lt;*&gt;.inz.ai/&lt;SMS_ID&gt;</p>
+</blockquote>
+<blockquote>
+<p>You have not logged any trips. The &lt;POLICY&gt; you have purchased requires you to
+log trips regularly on the &lt;APP&gt; app. Install the app and start logging your
+trips today to be eligible for your (up to) &lt;AMT&gt; cashback! Any problems, call
+&lt;NUM&gt;, or email &lt;EMAIL&gt;. Click here to start: http://&lt;*&gt;.inz.ai/&lt;SMS_ID&gt;</p>
+</blockquote>
+<blockquote>
+<p>You have not logged any trips. The &lt;POLICY&gt; you have purchased requires you to
+log trips regularly on the &lt;APP&gt; app. Install the app and start logging your
+trips today or you will lose your (up to) &lt;AMT&gt; cashback! Any problems, call
+&lt;NUM&gt;, or email &lt;EMAIL&gt;. Click here to start: http://&lt;*&gt;.inz.ai/&lt;SMS_ID&gt;</p>
+</blockquote>
+<p>While traditional multi-armed bandits allow you to pull one arm at a time and
+wait for the results, we didn't have the luxury of time here. Here we have to
+send thousands of SMSes in a short period of time, and we can't wait for the
+result of an SMS to come in (a user might take days to click an SMS if at all)
+before sending the next one. The simplest way is to simply send more SMSes in
+one go, but I wasn't sure if this would affect any of the nice guarantees (e.g.
+regret bounds) of Thompson sampling. I tried <a href="https://stats.stackexchange.com/questions/416951/multi-armed-bandit-where-you-must-pull-n-pulls-in-t-timesteps">asking
+StackExchange</a> but got no response.</p>
+<p>I had to push through in any case. The modified Thompson sampling procedure
+works as follows. I start by sending a total of 300 SMSes per batch: in
+expectation, 100/100/100 of each type. Some of these SMSes will be clicked on
+and some will not.</p>
+<p>Once the results come in, the algorithm will preferentially choose to send more
+of the better-performing SMS and fewer of the worst-performing one. For
+instance, after the first round the algorithm might send 124/80/96.</p>
+<p>As more batches are sent, the algorithm builds up a better and better picture
+of the relative efficacy of each SMS, and will converge upon sending the best
+SMS exclusively.</p>
+<p>In this experiment I sent 6 batches of SMSes.</p>
+<h2>Architecture</h2>
+<p>I knew what SMSes I wanted to send; I now had to build a system that would
+allow me to send it.</p>
+<p>There are four key parts of this pipeline:</p>
+<ol start="0">
+<li>Inzura server that contained customer data</li>
+<li>NGINX server to log clicked SMSes</li>
+<li>PostgreSQL database to log customer data and status of all SMSes sent</li>
+<li>Multi-armed-bandit code to calculate the optimal number of each SMS to send</li>
+</ol>
+<p>I logged clicked SMSes in the following way:</p>
+<h3>SMS tracking architecture</h3>
+<p><img src="/img/sms_pipeloop/sms_pipeloop_0.png" alt=""></p>
+<p><strong>Step 1</strong>: The most important part is to measure the effectiveness of each SMS variant
+(neutral, positive or negative). I generate unique SMS IDs (3 alphanumeric characters + checksum)
+for each SMS and append them to a template string, making a unique SMS
+string. I then make GET requests to the service that sends SMSes, the Ant API.</p>
+<p><strong>Step 2 and 3</strong>: The user receives an unique SMS with a link at the end. Upon
+clicking it, the user is taken to a <em>logging server</em> on the <code>inz.ai</code> domain,
+which logs the ID of the SMS and redirects the user to the app store.</p>
+<p><strong>Step 4</strong>: I download the server's logs and process it, and update my database
+of which SMSes have been clicked.</p>
+<h3>Data analysis and MAB architecture</h3>
+<p><img src="/img/sms_pipeloop/sms_pipeloop_1.png" alt=""></p>
+<p>Now that I had a system to log SMS clicks, I had to implement the experiment.</p>
+<p>First I had to create a PostgreSQL database and decide upon the schema for it.</p>
+<p>Secondly, I had to pull customer data from the Inzura server and add it to
+the PostgreSQL database to identify eligible customers (we
+obviously don't want to send reminder SMSes to customers who have already
+installed the app).</p>
+<p>Third, I had to write the Thompson sampling code that would read the data
+from the database (the slot machine labeled &quot;MAB&quot;). It calculates the optimal
+number of each SMS to send given the SMSes' past performances.</p>
+<p>Finally, we generate unique SMSes and give them to the Ant API, and the cycle
+restarts. I call this a &quot;pipeloop&quot; because it's a pipeline that loops upon itself.</p>
+<h3>Thompson sampling code</h3>
+<p>This is the code that performs Thompson sampling. First, some definition:</p>
+<p>Each arm is a tuple of the number of clicks and no-clicks of each SMS plus one.
+For instance, if I had sent 100 SMSes and there were 7 clicks, then the arm
+would be (8, 94).</p>
+<p>The code takes a tuple of arms e.g. <code>[(8, 94), (15, 87), (2, 103)]</code> and the
+number of samples we want to take (ergo the number of SMSes we want to send
+this batch). It will then give us the optimal number of each SMS to send. In
+the example above, the algorithm will tell us to send more of the 2nd SMS, some
+of the 1st SMS, and almost none of the 3rd.</p>
+<pre class="language-python"><code class="language-python"><span class="token triple-quoted-string string">'''<br>Thompson sampling code<br>'''</span><br><span class="token keyword">from</span> collections <span class="token keyword">import</span> namedtuple<br><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<br><span class="token keyword">import</span> random<br><span class="token keyword">from</span> iteround <span class="token keyword">import</span> saferound<br><br>Arm <span class="token operator">=</span> namedtuple<span class="token punctuation">(</span><span class="token string">'Arm'</span><span class="token punctuation">,</span> <span class="token string">'alpha beta'</span><span class="token punctuation">)</span><br><br><br><span class="token keyword">def</span> <span class="token function">thompson_sample</span><span class="token punctuation">(</span>arms<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token triple-quoted-string string">'''<br>Takes as input arms and number of pulls we need to make, and<br>returns a tuple of arms to pull<br>'''</span><br>    samples <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br>    arms_to_pull <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br>    <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">:</span><br>        samples<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><br>        <span class="token keyword">for</span> arm <span class="token keyword">in</span> <span class="token punctuation">(</span>arms<span class="token punctuation">)</span><span class="token punctuation">:</span><br>            samples<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>sample<span class="token punctuation">(</span>arm<span class="token punctuation">)</span><span class="token punctuation">)</span><br>        <span class="token comment"># pick the best arm</span><br>        arm_to_pull <span class="token operator">=</span> samples<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>samples<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br>        arms_to_pull<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arm_to_pull<span class="token punctuation">)</span><br>    <span class="token keyword">return</span> arms_to_pull<br><br><span class="token keyword">def</span> <span class="token function">sample</span><span class="token punctuation">(</span>arm<span class="token punctuation">)</span><span class="token punctuation">:</span><br>	<span class="token keyword">return</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>beta<span class="token punctuation">(</span>arm<span class="token punctuation">.</span>alpha<span class="token punctuation">,</span> arm<span class="token punctuation">.</span>beta<span class="token punctuation">)</span></code></pre>
+<h2>Results</h2>
+<p>I got a null result. There wasn't much of a difference between loss-aversive
+SMSes (negative framing), positive SMSes and neutral SMSes.</p>
+<p>Because we are using Bayesian statistics here, we can calculate the probability
+that loss-aversive SMSes are more effective than neutral or positive ones
+directly.</p>
+<p>I calculated the following using a simulation approach:</p>
+<p>There is a <strong>26.6%</strong> probability that <span style="color:blue">loss-aversive
+SMSes</span> are more effective than <span style="color:red">neutral</span> SMSes.</p>
+<p>There is a <strong>60.7%</strong> probability that <span style="color:blue">loss-aversive
+SMSes</span> are more effective than <span style="color:green">positive</span> SMSes.</p>
+<p>Obviously none of these results are very credible.</p>
+<p>Code for the simulation:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> random<br><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<br><br><span class="token keyword">def</span> <span class="token function">sample</span><span class="token punctuation">(</span>tup<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">return</span> <span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>beta<span class="token punctuation">(</span>tup<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> tup<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> size<span class="token operator">=</span>N<span class="token punctuation">)</span><span class="token punctuation">)</span><br><br>N <span class="token operator">=</span> <span class="token number">1000000</span><br><br>neutral <span class="token operator">=</span> sample<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">69</span><span class="token punctuation">,</span> <span class="token number">828</span><span class="token punctuation">)</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><br>positive <span class="token operator">=</span> sample<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">154</span><span class="token punctuation">)</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><br>negative <span class="token operator">=</span> sample<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">266</span><span class="token punctuation">)</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><br><br>c <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>negative<span class="token punctuation">,</span> neutral<span class="token punctuation">)</span><span class="token punctuation">)</span><br>c <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>negative<span class="token punctuation">,</span> positive<span class="token punctuation">)</span><span class="token punctuation">)</span><br>d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> c <span class="token keyword">if</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">></span> x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">/</span> N<span class="token punctuation">)</span></code></pre>
+<p>The following diagrams are <a href="https://en.wikipedia.org/wiki/Beta_distribution">beta
+distributions</a>. Think of them
+as a measure of our uncertainty in the effectiveness of each SMS. The x-axis
+measures the effectiveness of each SMS, and the y-axis measures our degree of
+certainty. The higher and sharper the distribution, the more certain we are
+about the effectiveness of an SMS.</p>
+<p>The diagrams show the evolution of the estimates over time by SMS
+variant: <span style="color:red">red</span> is neutral, <span
+style="color:green">green</span> is positive, and <span
+style="color:blue">blue</span> is negative. Overall we can see that the
+distributions lie very closely to one another.</p>
+<p>When we begin, we have no idea how effective the SMSes are, so we assume that
+all SMSes form a uniform distribution. [^2]
+<img src="/img/sms_pipeloop/prior_0.png" alt="">
+<img src="/img/sms_pipeloop/prior_1.png" alt=""></p>
+<p>As we send SMSes and get the results back we begin to update our beliefs about
+the SMSes. Here the <span style="color:red">neutral</span> SMSes seem to do
+best and thus the Thompson sampling algorithm chooses to send a lot of it.</p>
+<p><img src="/img/sms_pipeloop/prior_2.png" alt=""></p>
+<p>But the good performance of the neutral SMSes is quickly revealed to be a fluke
+as more SMSes are sent out.</p>
+<p><img src="/img/sms_pipeloop/prior_3.png" alt="">
+<img src="/img/sms_pipeloop/prior_4.png" alt="">
+<img src="/img/sms_pipeloop/prior_5.png" alt=""></p>
+<p>Eventually after all the SMSes have been sent we realise that all of the SMSes
+are about the same in effectiveness.</p>
+<p>Due to time constraints, I could not run further experiments: I did A/B testing
+henceforth sending multiple reminder messages and again got null results. So
+I'm glad this was a very robust null finding :P</p>
+<p>Nonetheless, my further interventions were able to increase the number of
+active users by around ~25%. I will not reveal numbers here for privacy
+reasons, but this had a real business impact because Inzura gets paid per
+monthly active user.</p>
+<p>[^2]: The choice of a uniform prior was because I had never run an experiment like this before, and had no idea what the clickthrough rate of an SMS was supposed to be. For subsequent experiments I would initialise the priors at around a 0.07 click rate.</p>
+<h2>What I learned</h2>
+<p>I gained valuable practice in designing an experiment and carrying it to
+completion. I had originally wanted to kill two birds with one stone and use
+this for my BEE thesis, but a null finding isn't particularly exciting, so I
+will keep looking. [^3]</p>
+<p>[^3]: Yes, I know I'm contributing to publication bias---but my grades are on the line here...</p>
+<p>I learned quite a lot about Bayesian inference in the course of designing the
+experiment, and would like to learn more about it. When I have more bandwidth I
+will consider doing the <a href="https://www.coursera.org/specializations/probabilistic-graphical-models">Probabilistic Graphical Models MOOC by Daphne
+Koller</a>,
+and reading Judea Pearl's co-authored book on DAGs (highly recommended by Bassel).</p>
+<p>I had to learn SQL in order to build the databases. In the course of doing this
+project I worked through the <a href="https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about">Stanford Databases MOOC by Jennifer
+Widom</a>. I
+completed <code>DB1 Introduction and Relational Databases</code>, <code>DB4 Relational Algebra</code>, <code>DB5 SQL</code> and <code>DB8 Relational Design Theory</code>. DB4 and DB8 helped me
+design the schema and DB5 improved my very hackish/amateur queries into much
+more elegant and readable ones.</p>
+<p>Lastly, I was able to stretch my mind by architecting a complex system. It's
+kind of like thinking about the Lego parts you'll need to 3D-print to build the
+rocket ship you have in mind. It was a good exercise to think about what parts
+I needed in the system and how they would talk to each other. (I guess this is
+what senior SWEs like Chris and David do in their sleep.) I've greatly
+simplified the architecture in my breezy explanation---the actual architecture
+I built has more moving parts, and it was quite challenging for me.</p>
+<h2>Conclusion</h2>
+<p>I am very glad that my knowledge of statistics and behavioural economics could
+be brought to bear in this project. I have always gone through my degree
+thinking that it was useless for doing anything technical.</p>
+<p>This project gave me an idea about my comparative advantage in data science.
+While it isn't difficult for a computer science major to learn statistics, many
+of them might not have done so. If I max out my statistics and maintain my
+ability to write software I could be some sort data-scientist data-engineer
+hybrid; not a &quot;pure&quot; data scientist but someone who likes to get his hands
+dirty wrangling the code and building the systems.</p>
+
+        <div>
+      </div>
+
+      <div class = "footer">
+      </div>
+
+    <div>
+
+
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--Dark mode toggle -->
+    <script src="/css/dark_mode_toggle.js"></script>
+
+  </body>
+</html>

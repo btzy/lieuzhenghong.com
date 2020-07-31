@@ -1,0 +1,46 @@
+@import "vars";
+
+.page-title {
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+  display: block;
+}
+
+.page-title:hover {
+  text-decoration: underline;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: rgb(250, 250, 250);
+}
+
+.navlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist a {
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+  font-family: var(--sans-serif-font);
+  font-weight: 300;
+}
+
+.navlist a:hover {
+  text-decoration: underline;
+}
+
+/* Wrapper div around the switch */
+.dark-mode-toggle-area {
+  color: var(--sidebar-color);
+  font-family: var(--sans-serif-font);
+  font-weight: 300;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/vars.css" type="text/css">
+    <link rel="stylesheet" href="/css/base.css" type="text/css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+    <!-- syntax highlighting -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet"> 
+
+    <!-- Dark mode : script 1 of 2-->
+    <script src="/css/dark_mode_init.js"></script>
+
+    <title>Building an automated, blockchain-connected model train diorama</title>
+  </head>
+  <body>
+
+    <div class = "container">
+      <div class = "header">
+      </div>
+
+      <div class = "body">
+      <div class = "sidebar">
+      <link rel="stylesheet" href="/css/nav.css" type="text/css">
+
+<!-- Switch for dark mode toggle -->
+<link rel="stylesheet" href="/css/switch.css" type="text/css">
+
+<div>
+ <a class = "page-title" href = "/"> 劉 </a>
+ <span class = "page-subtitle"> Lieu Zheng Hong </span>
+</div>
+
+
+<hr>
+
+
+<ul class = "navlist">
+    <li> <a href="/"> Home </a> </li>
+    <li> <a href="/about"> About </a> </li>
+    <li> <a href="/projects"> Projects </a> </li>
+    <li> <a href="/archive"> Archive </a> </li>
+    <li> <a href="/ppe-stuff"> PPE work </li>
+    <li> <a href="/notes"> Notes </a> </li>
+</ul>
+
+<hr>
+
+
+<div class = "dark-mode-toggle-area">
+
+  dark mode:
+  <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+  <input type="checkbox" id="checkbox_theme" class="switch">
+  <span class="slider"></span>
+  </label>
+
+</div>
+
+      </div>
+
+      <div class = "content-wrapper">
+        <div class = "content">
+          <h1> Building an automated, blockchain-connected model train diorama </h1>
+          <p><strong>WIP</strong></p>
+<h1>Introduction</h1>
+<p><img src="/img/blockchain_project/final_product.jpg" alt=""></p>
+<p>Over the summer of 2018 (June-Aug 2018), I built an automated, blockchain-connected model train diorama and an accompanying visualisation. The diorama shows how changes in the locations of goods can be added in real-time to the blockchain, ensuring an immutable and unforgeable chain of provenance. This exhibit is also <em>interactive</em>: members of the public can scan QR codes pasted on several shipping containers, and they'll see that good's location and history on their phones update in real time.</p>
+<h1>Why a blocktrain?</h1>
+<p>My boss was part of the group promoting industry adoption of blockchain. He wanted me to find some way to i) explain how the blockchain works, and ii) show how blockchain can be used in industry.</p>
+<p>I chose to showcase the supply chain, because this application is already being promoted by <a href="https://www.ibm.com/blockchain/industries/supply-chain">IBM</a> and it would have more relevance to the industry experts my boss talks to.</p>
+<p>My boss was enamoured with the idea of a moving train, having seen a model train set at the Accenture HQ. So I had the task of finding out how to use a model train set to showcase the supply chain. After several iterations, I decided on the current diorama + blockchain visualisation.</p>
+<h1>Architecture</h1>
+<p><img src="/img/blockchain_project/blockchain_1.png" alt="">
+<img src="/img/blockchain_project/blockchain_2.png" alt="">
+<img src="/img/blockchain_project/blockchain_3.png" alt="">
+<img src="/img/blockchain_project/final_product_annotated.jpg" alt=""></p>
+<p>There are four main components of this diorama:</p>
+<ol>
+<li>Hyperledger Blockchain and REST API (running on a DigitalOcean instance)</li>
+<li>Train diorama (controlled by a Raspberry Pi)</li>
+<li>Blockchain visualisation (running on the Raspberry Pi)</li>
+<li>Asset tracker (served by a DigitalOcean instance)</li>
+</ol>
+<video width = "100%" controls>
+<source src ="/img/blockchain_project/in_action.MOV">
+</video>
+<h1>Blockchain on the cloud</h1>
+<p>I spun up a DigitalOcean instance to run the blockchain.</p>
+<p>Hyperledger Composer comes with its own REST API.</p>
+<h2>Blockchain visualisation</h2>
+<p>The blockchain visualisation is written from scratch in HTML5 Canvas, and runs on the Raspberry Pi. It polls the Hyperledger REST API to check for updates.</p>
+<p>I made a nice animation whereupon new blocks slide in, giving the diorama a sense of dynamism.</p>
+<h2>Asset tracker</h2>
+<p>I wanted to make the diorama interactive so I created a</p>
+<p>People viewing the diorama can use their phones to scan the QR codes attached to several goods containers.</p>
+<h1>Building the diorama</h1>
+<h2>Ideation</h2>
+<p>I bought a $20 <em>Thomas the Train</em> model train set just to figure out how the diorama would work. You can see the video of it here:</p>
+<video width = "100%" controls>
+<source src = "/img/blockchain_project/thomas_the_train.mp4">
+</video>
+<h2>Starting and stopping the train</h2>
+<p>This was the hardest part of the project.</p>
+<p>I first tried to use a weird German device called an <em>Aufenthaltsschalter</em> to stop and start the train automatically.</p>
+<p><img src="/img/blockchain_project/german_device.jpg" alt="">
+The Aufenthaltsschalter*</p>
+<p><img src="/img/blockchain_project/jain_puzzled.jpg" alt="">
+<em>Jain trying to figure out the device</em></p>
+<p><img src="/img/blockchain_project/crazy_german_manual.jpg" alt="">
+<em>Complicated schematic</em></p>
+<p>Finally, <strong>Eureka moment</strong></p>
+<p>The program running on the Raspberry Pi is very simple. It constantly listens for a voltage change on any of the reed switches, and if there is, it toggles the reed switch, which stops the train (to simulate goods unloading/loading).</p>
+<p>It then makes a HTTP request to the Hyperledger blockchain REST API to update the locations of the goods on the train.</p>
+<p><img src="/img/blockchain_project/how_it_works.png" alt="Schematic of how the Raspberry Pi controls the train"></p>
+<p>There were many possible approaches I considered: ultrasonic sensor, light sensor, etc</p>
+<p>Here's a video of the train starting and stopping when toggling the reed switch.</p>
+<video width = "100%" controls>
+<source src = "/img/blockchain_project/reed_switch.mp4">
+</video>
+<h2>Construction</h2>
+<p>I knew I wanted water in my diorama, as i) water looks very aesthetic, ii) I wanted to put a shipping container on the ship which people could scan, iii) Singapore is an island.</p>
+<p>To get a nice water effect, I used this thing called &quot;Realistic Water&quot;. We painted the styrofoam base a deep blue to get a &quot;deep sea&quot; effect, taped the sides to prevent water egress, then slowly poured the &quot;Realistic Water&quot; in, pressed in some rocks and finally left it to set overnight.</p>
+<p>It worked quite well, I think: see for yourself.</p>
+<p><img src="/img/blockchain_project/water_closeup.jpg" alt="Closeup of realistic water, before ship was added"></p>
+<h1>Glamour shots</h1>
+<p><img src="/img/blockchain_project/final_product.jpg" alt="">
+<img src="/img/blockchain_project/detail_2.jpg" alt="">
+<img src="/img/blockchain_project/detail_3.jpg" alt="">
+<img src="/img/blockchain_project/detail_6.jpg" alt=""></p>
+<p><img src="/img/blockchain_project/detail_4.jpg" alt="">
+<img src="/img/blockchain_project/detail_5.jpg" alt=""></p>
+<h1>Conclusion</h1>
+<p>I greatly enjoyed this project.</p>
+<p>It was super fun to play with model trains and fix up the diorama.</p>
+<p>Learned a lot of new things:</p>
+<ul>
+<li>Hyperledger</li>
+<li>Reed switch, relay switch</li>
+<li></li>
+</ul>
+
+        <div>
+      </div>
+
+      <div class = "footer">
+      </div>
+
+    <div>
+
+
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--Dark mode toggle -->
+    <script src="/css/dark_mode_toggle.js"></script>
+
+  </body>
+</html>

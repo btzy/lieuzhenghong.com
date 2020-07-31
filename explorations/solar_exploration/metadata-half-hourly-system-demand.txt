@@ -1,0 +1,70 @@
+# Metadata for Half Hourly System Demand
+---
+Identifier: 'a84e2109-b55a-40f9-adfa-0d5a7d44f3ba'
+Name: 'half-hourly-system-demand'
+Title: 'Half Hourly System Demand'
+Description: 'Historical electricity system Demand for every half hour period (MW)'
+Topics:
+  - 'Environment'
+Keywords:
+  - 'Electricity'
+  - 'System Demand'
+Publisher:
+  Name: 'Energy Market Authority'
+  Admin 1:
+    Name: 'Syahirah Said'
+    Department: 'Research & Statistics Unit'
+    Email: 'syahirah_said@ema.gov.sg'
+Sources:
+  - 'Energy Market Authority'
+Source Url: 'https://www.ema.gov.sg/statistic.aspx?sta_sid=20140826Y84sgBebjwKV'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Weekly'
+Coverage: '2012-02-06 to 2016-06-06'
+Last Updated: '2017-02-06T07:00:06.377020'
+Resources:
+  -
+    Identifier: '85e22503-74c8-43a1-8cee-f4e4b1d9c5fc'
+    Title: 'Half Hourly System Demand Data (From 2 Feb 2012 Onwards)'
+    Url: 'https://storage.data.gov.sg/half-hourly-system-demand/resources/half-hourly-system-demand-data-from-2-feb-2012-onwards-2016-06-14T05-29-36Z.csv'
+    Format: 'CSV'
+    Coverage: '2012-02-06 to 2016-06-06'
+    Last Updated: '2016-06-14T05:29:36.425665'
+    Schema:
+      -
+        Name: 'date'
+        Title: 'Date'
+        Type: 'datetime'
+        Sub Type: 'date'
+        Format: 'YYYY-MM-DD'
+      -
+        Name: 'period_ending_time'
+        Title: 'Period Ending Time'
+        Type: 'datetime'
+        Sub Type: 'time'
+        Format: 'HH:mm'
+      -
+        Name: 'system_demand_actual'
+        Title: 'System Demand (Actual)'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'MW'
+        Description: 'Includes demand of consumers with their own embedded generators.'
+      -
+        Name: 'nem_demand_actual'
+        Title: 'Nem Demand (Actual)'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'MW'
+        Description:
+          - 'Actual Demand met by all Generation Registered Facilities.'
+          - '"na" : Data not available or not applicable'
+      -
+        Name: 'nem_demand_forecast'
+        Title: 'Nem Demand (Forecast)'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'MW'
+        Description:
+          - 'Forecast demand for scheduling of Generation Registered Facilities.'
+          - '"na" : Data not available or not applicable'

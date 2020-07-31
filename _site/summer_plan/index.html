@@ -1,0 +1,335 @@
+<p>\tableofcontents</p>
+<p>\pagebreak</p>
+<h1>Introduction</h1>
+<p>This is what I plan to do this summer.</p>
+<h1>Politics</h1>
+<p>I aim to put up at least two working papers with a view towards publishing
+them. This closely relates to my upcoming Master's in data science. The summer
+grant would help defray the costs of running the many computationally-expensive
+simulations I will require for my working paper.</p>
+<h2>MGGG GSoC project</h2>
+<ul>
+<li>Call Bhushan on Monday: see what I'll be doing.
+<ul>
+<li>Figuring out what communities of interest are (optimal transport? arxiv link <a href="https://arxiv.org/pdf/1910.09618.pdf">here</a>)</li>
+<li>Building geopandas in Julia? (have to learn Julia first)</li>
+</ul>
+</li>
+</ul>
+<h2>Try and get my thesis published as a working paper</h2>
+<ul>
+<li>Email Andy about next steps</li>
+<li>Maybe get Tak Huen to co-author with me</li>
+<li>Probably need to clean up the code and all the files</li>
+</ul>
+<h2>Try and get my work with Eubank and Rodden published as a working paper</h2>
+<ul>
+<li>Wait for Nick's email back on Monday, see if he's still interested.</li>
+<li>Spend a few days looking through the codebase</li>
+<li>Double check the code to make sure it's giving correct results (how?)
+<ul>
+<li>Write tests? (Is it worth it??)</li>
+<li>Move to Julia??? (no---absolutely not---horrible idea)</li>
+</ul>
+</li>
+<li>See if there's a better way to memoise computations rather than saving the
+distance matrix as an enormous file (I already solved the &quot;huge file in
+memory&quot; problem with my thesis by reading line-by-line)</li>
+</ul>
+<h1>Data Science and Programming</h1>
+<h2>Build (parallel) path tracer (using BDRF) in Julia with Ross and Doyun</h2>
+<ul>
+<li>
+<p><strong>How do I learn about path tracers? Theory?</strong> Is there a textbook?</p>
+<ul>
+<li>Ask Ross about the theory of path tracing</li>
+<li>Write something really really simple myself before Ross comes in</li>
+<li>Scope out the project</li>
+<li>Prime ray generation</li>
+</ul>
+</li>
+<li>
+<p>Learn the maths for Markov Chains to actually understand the BDRF function...</p>
+<ul>
+<li><a href="http://graphics.stanford.edu/courses/cs348b-01/course29.hanrahan.pdf">Stanford handout on Monte Carlo path tracing</a></li>
+<li><a href="http://www.pbr-book.org/3ed-2018/Introduction/Photorealistic_Rendering_and_the_Ray-Tracing_Algorithm.html">Physically-based rendering textbook</a></li>
+<li><a href="http://www.pbr-book.org/3ed-2018/Light_Transport_I_Surface_Reflection/Path_Tracing.html">Path tracing section</a></li>
+</ul>
+</li>
+</ul>
+<h2>Self-study everything on the recommended reading list</h2>
+<h3>Mathematics</h3>
+<ul>
+<li>Matrix algebra – transpose, symmetric, rank, inverse, orthogonal, trace</li>
+<li>Matrix operations – multiplication, solution of linear system of equations</li>
+<li>Eigenvalues, eigenvectors</li>
+<li>Eigendecomposition and singular value decomposition of a matrix</li>
+<li>Differentiation – including partial differentiation, Hessian matrix</li>
+<li>Integration – including multiple integrals, and Jacobians and change of
+variables in multiple integrals</li>
+<li>Taylor series expansion</li>
+<li>Difference equations</li>
+</ul>
+<p>The linear algebra notes
+<a href="http://cs229.stanford.edu/section/cs229-linalg.pdf">5</a> cover most of the
+required linear algebra. Jordan and Smith [12] covers the material at an
+appropriate level. The relevant material is commonly included in books on
+engineering mathematics: good examples are Kreyszig [13] and Stroud [18].</p>
+<h3>Probability notes and exercises</h3>
+<ul>
+<li>Probability spaces</li>
+<li>Random variables – discrete and continuous</li>
+<li>Distributions, expectation, variance, covariance, independence</li>
+<li>Joint distributions, conditional distributions, method of change of variables
+using Jacobian</li>
+<li>Multivariate normal distribution – basic properties</li>
+<li>Moment generating functions</li>
+<li>Convergence of random variables, weak and strong law of large numbers,
+central limit theorem</li>
+<li>Basic properties of discrete-time Markov chains and Poisson processes</li>
+</ul>
+<p>The Probability notes <a href="https://courses.maths.ox.ac.uk/node/39/materials">1</a>
+cover the required material at an appropriate level, as do Chapters 1–6 of
+Grimmett and Stirzaker [11]. An alternative introductory probability book is
+Ross [17]. An alternative source for the material on Markov chains is Chapter 1
+of Norris [14]. The books by Rice [15] and DeGroot and Schervish [9] cover
+most of this material.</p>
+<h3>Statistics notes and exercises</h3>
+<ul>
+<li>Basic exploratory plots, e.g. histograms, boxplots, Q-Q plots</li>
+<li>Maximum likelihood estimation</li>
+<li>Properties of estimators – unbiasedness, consistency, mean squared error</li>
+<li>Delta method, asymptotic normality of maximum likelihood estimator</li>
+<li>Confidence intervals – exact intervals, approximate intervals using large
+sample theory</li>
+<li>Hypothesis testing, types of error, including t-tests (basic, paired, two
+sample)</li>
+<li>Likelihood ratio tests, asymptotic distribution of likelihood ratio
+statistic, applications to contingency tables, $\chi^2$ goodness-of-fit tests</li>
+<li>Basic single and multiple linear regression</li>
+<li>Basic Bayesian statistics – conjugate prior and posterior, maximum a
+posteriori and expected posterior estimates, credible/highest posterior
+density intervals</li>
+</ul>
+<p>The Statistics notes <a href="https://courses.maths.ox.ac.uk/node/40/materials">2</a>
+cover the required material at an appropriate level. The books by Rice [15]
+and DeGroot and Schervish [9] provide good coverage of the required material.
+2 Alternative references which are very suitable for MSc preparatory reading
+on statistics are Casella and Berger [7], Davison [8], Faraway [10],
+Wasserman [19]. The first five chapters of [19] also provide a summary of
+much of the prerequisite material on probability.</p>
+<h3>Simulation notes and exercises</h3>
+<p>Simulation methods: inversion, transformation, rejection. Importance sampling.
+Basic aspects of Markov Chain Monte Carlo. The basics of programming, in
+either R or Python.</p>
+<p>Note: although simulation, and statistical programming in R, is taught in the
+MSc, it is covered at a fast pace and therefore some previous experience is a
+distinct advantage and expected. If you have not used R before, then you should
+gain some familiarity with it before the start of the MSc. If you have used
+Python but not R, we are assuming you would be able to make the transition to R
+quickly – you may still want to gain some experience with R before the start of
+the MSc.</p>
+<p>The above material is covered in the Simulation notes [3] and the introduction to R and
+programming in the Statistical Programming notes [4]. Books that cover this material at an
+appropriate level are Braun and Murdoch [6], and Robert and Casella [16].</p>
+<p>Statistical Programming notes and exercises:
+<a href="http://www.stats.ox.ac.uk/~evans/statprog/index.htm">here</a> Linear Algebra</p>
+<p>Review and Reference:
+<a href="http://cs229.stanford.edu/section/cs229-linalg.pdf">here</a></p>
+<h2>Self-study: Introduction to Statistical Learning</h2>
+<h1>Other fun stuff</h1>
+<h2>Learn Classical Chinese</h2>
+<blockquote>
+<p>Michael Fuller’s An Introduction to Literary Chinese. It’s much newer (1999,
+revised 2004), and takes into account recent scholarship into the grammar of
+Classical Chinese (“Classical” in its true sense, since most of the book’s
+materials come from that period). It makes frequent references to Edwin
+Pulleyblank’s Outline of Classical Chinese Grammar, so you may want to pick up
+a copy of that too for reference. There are other, more recent books than
+Fuller’s, but from what I’ve seen none of them are of quite the same caliber.</p>
+</blockquote>
+<blockquote>
+<p>Fuller starts out with 8 Lessons teaching the basic structure of the
+language.
+He also includes a little about reading classical commentary and resources to
+use when you have questions, such as large scholarly dictionaries. The second
+part, Intermediate Texts, consists of 16 lessons. They are all, like the
+Beginning Texts, from classical sources like Confucius, Strategies of the
+Warring States, Mencius, etc. The Advanced Texts section consists of longer
+readings from classical and Jin dynasty authors. The fourth part is selections
+of Tang and Song dynasty prose and poetry. He gradually gives you more work to
+do as the book goes on, including bibliographic exercises (verify what work X
+means by using dictionary Y; find country A on the map in atlas B, etc.) and
+further reading. The book is excellent, and really makes you think about why
+each phrase means what it does, from both grammatical and contextual points of
+view.</p>
+</blockquote>
+<p>Goal: do one chapter a week, which will give us the basic grammar and two
+intermediate texts</p>
+<h2>Learn German</h2>
+<p><a href="https://courses.dcs.wisc.edu/wp/readinggerman/">A Foundation Course in Learning German</a></p>
+<p>16 chapters. Won't finish.</p>
+<p>Goal: do one chapter a week, which will give me a lot of the grammar.</p>
+<h2>(If got time) build that board game framework (during Game Jam July 10--12)?</h2>
+<p>N.B. Before I came to Oxford I thought I would come out after three years being
+fluent in Latin. It turns out that's very far from the truth. (I have picked up
+several pretentious phrases in philosophy like <em>eo ipso</em>, <em>prima facie</em>, etc.,
+but not much else)</p>
+<h2>Travel around</h2>
+<ul>
+<li>After OberRamstadt, where?</li>
+</ul>
+<h2>Get back to the gym</h2>
+<ul>
+<li>Deadlift, bench, (maybe) squat, pull-ups (rows), arms</li>
+</ul>
+<h1>Admin things</h1>
+<h2>Update blog and resume</h2>
+<h2>Write blog post (year-in-review)</h2>
+<h2>Update project page on blog</h2>
+<h2>Send emails to the people I should email</h2>
+<ul>
+<li>Sergi</li>
+<li>Andy</li>
+<li>Prof Huang</li>
+</ul>
+<h1>Timeline</h1>
+<p>June 1 -- Aug 31: GSOC internship</p>
+<h2>TTW8/Summer W0: 14--20 Jun</h2>
+<p>Do all the admin stuff</p>
+<ul>
+<li>Pack my stuff</li>
+<li>Send my stuff to Ober-Ramstadt</li>
+<li>Write emails</li>
+<li>Write blog posts</li>
+<li>Update website design</li>
+<li>Update projects page</li>
+</ul>
+<h3>Postmortem of TT Week 8</h3>
+<p>I basically didn't do any of those things: instead I played a lot of Terraria. Oops.</p>
+<h2>Summer W1 : 21--27 Jun</h2>
+<ul>
+<li>Pack my stuff (Thursday)</li>
+<li>Send my stuff to Ober-Ramstadt (Friday)</li>
+<li>Write emails</li>
+<li>Write blog posts</li>
+<li>Update website design</li>
+<li>Update projects page</li>
+<li>Finalise the project I'll be working on with GSoC</li>
+<li>Scope out the path tracer project</li>
+<li>Scope out the work that needs to be done to make both papers publishable</li>
+</ul>
+<p>Key goal: scoping. Making sure that I'm absolutely certain about what needs to
+be done, so I can hit the ground running writing code every single day.</p>
+<h3>Monday 22nd June</h3>
+<ul>
+<li>Send email to Moon (done)</li>
+<li>Write out the design document for the summer path tracer (done)</li>
+<li>Write my semiannual blog post</li>
+<li>Send email to Prof Huang</li>
+</ul>
+<h3>Wednesday 24th June</h3>
+<ul>
+<li>Send email to Prof Huang</li>
+<li>Scope out the project I'll be doing for MGGG</li>
+<li>Write my semiannual blog post</li>
+</ul>
+<p>Zhenghong: work with JN and Nick on getting adjacency info into Districtr and
+writing functions for cut edges and contiguity checks. Time: 2-4 weeks</p>
+<p>Motivation: to be able to do graphical analysis on the plans drawn by Districtr
+akin to that we can do with Gerrychain</p>
+<p>MVP: a Python script that takes in shapefile + district assignments (in JSON)
+and returns several metrics like contiguity and number of cut edges.</p>
+<p>Rough approach:</p>
+<p>For each state:</p>
+<ol>
+<li>Import the shapefile</li>
+<li>Using the shapefile, create the dual graph of a state</li>
+</ol>
+<p>For each proposed districting plan:</p>
+<ol start="3">
+<li>Import the district assignments JSON</li>
+<li>Using the district assignments JSON, form the graph partition (possibly with
+Gerrychain, NetworkX, something else)</li>
+<li>Using the graph partition, answer queries like number of cut edges and
+contiguity.</li>
+</ol>
+<p>Questions to ask: How large is the largest district assignment
+JSON? Are metrics like number of cut edges and contiguity even well-defined for
+incomplete district assignments?</p>
+<p>Possible extensions: Integrate into the main Districtr app, either locally on
+the client or as an AWS Lambda function. Consider and implement other
+interesting metrics.</p>
+<h3>Thursday 25th June</h3>
+<ul>
+<li>Go on a hike with Celine</li>
+<li>Pack up all my suitcase and boxes</li>
+<li>Start working on GSoC project (finally):
+<ul>
+<li>Get a Colab notebook up and running</li>
+<li>Make sure that it's backed up successfully to GH</li>
+<li>Import the Iowa shapefile and create the dual graph of Iowa</li>
+<li>That should take up the entire work block.</li>
+</ul>
+</li>
+<li>Attend both network talks</li>
+</ul>
+<h3>Friday 26th June</h3>
+<p>The task description Moon set was &quot;Zhenghong: work with JN and Nick on getting
+adjacency info into Districtr and writing functions for cut edges and
+contiguity checks. Time: 2-4 weeks&quot;.</p>
+<h2>Update for Friday 26th June 2020</h2>
+<p>OK, I think I've gotten a good sense of what I was tasked to do (successfully
+calculate contiguity and cut edges given a Districtr assignment JSON). My
+conclusions:</p>
+<ul>
+<li>It's straightforward---once you know how to do it---to convert Districtr
+assignments into a GerryChain graph partition on the server-side. This is in
+large part due to the helpful functions that GerryChain already possesses.</li>
+<li>The assignment files are not too large, so presumably one could send the
+assignments to the server after suitably compressing them. We can also modify
+Districtr to send only the assignment deltas, which shouldn't be too
+difficult. We'd have to do more testing on how long the partition generation
+would take on the server side. Are we thinking some sort of AWS Lambda
+function?</li>
+<li>Generating the dual graph from a shapefile takes a long time, and these
+should be precalculated and stored on the server.</li>
+</ul>
+<p>What should I do next?</p>
+<h2>Summer W2 : 28 Jun--4 Jul</h2>
+<h3>Sunday 28th June</h3>
+<ul>
+<li>Researchathon: scope out the research topic and block out my time</li>
+<li>Summer path tracer: take a look at the Julia libraries and commit the first commit</li>
+<li>Draft email to IMDA</li>
+<li>Draft email to Moon</li>
+<li>Draft email to MP?</li>
+<li>Draft email to Prof Huang?</li>
+</ul>
+<h2>Summer W3 : 5--11 Jul</h2>
+<h3>GMTK Game Jam: 10th -- 12th July, 8pm--8pm</h3>
+<p>Here would be a good time to either use : Julia path tracer, OR board game framework</p>
+<h2>Summer W4 : 12--18 Jul</h2>
+<h3>GSoC</h3>
+<p>On Monday and Tuesday, I successfully implemented contiguity checker and cut
+edges for the state of Iowa.</p>
+<p><img src="./img/contiguity.gif" alt="Successfully implemented prototype contiguity checker">
+<img src="./img/cut_edges.gif" alt="Successfully implemented cut edges checker"></p>
+<p>I was also tasked to give a presentation to the MGGG group. I gave a
+presentation about the explorable I recently wrote, about a game-theoretic look
+at how the GRC system advantages the PAP under some weak assumptions.</p>
+<h2>Summer W5 : 19--25 Jul</h2>
+<p>Visit to the Schwartzwald.</p>
+<p>First to Freiburg, a university town.</p>
+<p>Then visiting...</p>
+<p>Hike ...</p>
+<p>Picking redberries and cherries...</p>
+<p>Blog redesign...</p>
+<h2>Summer W6 : 26 Jul--01 Aug</h2>
+<p>Returning back to OberRamstadt...</p>
+<p>Lots of projects ...</p>
+<p>Most likely doing full-time job at IMDA starting Sep 1...</p>
+<h2>Summer W7 : 02 Aug--08 Aug</h2>
+<h2>Summer W8 : 09 Aug--15 Aug</h2>
+<h2>Summer W9 : 16 Aug--22 Aug</h2>
+<h2>Summer W10 : 23 Aug--28 Aug</h2>
