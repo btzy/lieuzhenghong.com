@@ -1,0 +1,16 @@
+/* 
+* For the markdown-toc-done-right package
+* https://www.npmjs.com/package/@gerhobbelt/markdown-it-toc-done-right)
+*
+*/
+
+ol {
+  counter-reset: list-item;
+}
+ol > li {
+  display: block;
+  counter-increment: list-item;
+}
+ol > li:before {
+  content: counters(list-item, ".") " ";
+}
