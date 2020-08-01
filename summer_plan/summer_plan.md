@@ -1,6 +1,9 @@
 ---
 title: Plan for Summer 2020
+layout: base
 ---
+
+[[toc]]
 
 \tableofcontents
 

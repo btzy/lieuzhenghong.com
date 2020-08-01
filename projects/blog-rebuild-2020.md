@@ -72,7 +72,8 @@ links to a page entitled "The Morality of Sperm Donation".
 The pages are constantly updated:
 while the page was first written in 2012,
 the last major update to the page was in 2018.
-This makes sense for Gwern's "long content".
+This makes sense for Gwern's "long content": the date of document creation is
+irrelevant because the pages are constantly updated.
 I don't have much long content on the site yet,
 but I hope to start writing some soon.
 I think the explorations and explanations would be good candidates.
