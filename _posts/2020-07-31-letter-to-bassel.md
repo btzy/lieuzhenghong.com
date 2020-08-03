@@ -169,7 +169,7 @@ country road v. on a highway, in a traffic jam v. in smooth traffic, and so on.
 One issue I thought of is that these are possibly very high dimensional points,
 and additionally, each tuple (representing a trip) is of different length.
 AFAIK, Regular k-means clustering only deals with points---but these are tuples, not points.
-I could just take the mean to give an aggregrate score (so one $1xN$ point per trip)
+I could just take the mean to give an aggregrate score (so one $1 \times N$ point per trip)
 but that would lose a lot of information.
 
 #### Revamping my personal website
@@ -275,5 +275,6 @@ lunch at Liddell... I really don't think I could have asked or dreamed of a bett
 It was truly my good fortune and an absolute honour to have been your student
 these past three years.
 
-With much love
+With much love,
+
 Zhenghong
