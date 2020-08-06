@@ -1,24 +1,9 @@
 ---
 layout: base
 title: Building a code sharing MVP with React and the WebSockets API
-date: 2020-08-02
-tags:
-  - programming
-  - build
-  - interview
-  - mvp
-  - react
-  - public
-  - project
-permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
-img: "/img/xccelerate_interview/mvp.png"
-blurb: "I learn all I can about systems design and 
-build an MVP using React and the WebSockets API
-in four days for a technical interview.
-"
+eleventyExcludeFromCollections: true,
+date: 2020-08-06
 ---
-
-[[toc]]
 
 # Introduction
 
@@ -61,7 +46,7 @@ I break the monolithic environment into separate services:
 
 I'll now go through the overall architecture and show where the individual services fit in.
 
-![Overall architecture](/img/xccelerate_interview/serverless-architecture.png)
+![Overall architecture](serverless-architecture.png)
 
 The overall architecture uses Amazon's API Gateway, AWS Lambda, and Amazon DynamoDB
 for scalability. We use these services as we get scalability "for free", although
@@ -83,7 +68,7 @@ The waiting AWS Lambda function calls Amazon DynamoDB for the WebSockets
 subscribed to the chat channel, and callback to the API Gateway.
 The API Gateway then sends payloads through all the other WebSocket connections.
 
-![Chat service with Amazon API Gateway](/img/xccelerate_interview/websockets-chat-app.png)
+![Chat service with Amazon API Gateway](websockets-chat-app.png)
 
 The same principle applies to the code sharing service (we build an MVP in
 section 2), which is very similar to the real time chat service. Once again,
@@ -104,7 +89,7 @@ and course materials can be stored in some shared database.
 Finally, live streaming should be handled with HTTP Live Streaming (HLS).
 The following diagram from [Apple's developer documentation](https://developer.apple.com/documentation/http_live_streaming) lays out all the moving parts:
 
-![Live stream service with HLS](/img/xccelerate_interview/HLS-streaming.png)
+![Live stream service with HLS](HLS-streaming.png)
 
 We should use a dedicated server to receive AV input from instructors,
 do the encoding and stream segmentation
@@ -117,7 +102,7 @@ The code for the app is on a private repository [here](https://github.com/lieuzh
 
 This is what an old version of the app looks like (GIF):
 
-![](/img/xccelerate_interview/xccelerate_mvp.gif)
+![Old version](mvp.png)
 
 There is a React app running on port 3000 and an Express server running on port 3333. Clients communicate with the server using a bidirectional WebSockets connection. The server contains a list of Rooms and can handle actions (instead of routes) such as join (a room), leave (a room), run (some code), and share (some code).
 We can see that the teacher's view updates in real-time as the student
