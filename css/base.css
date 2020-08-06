@@ -30,7 +30,8 @@ body {
 /* Holds content. Right of sidebar. */
 .body {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  /* The minmax is to ensure content doesn't overflow the grid */
 }
 
 .content {
