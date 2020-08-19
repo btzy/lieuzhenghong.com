@@ -18,14 +18,15 @@ tags:
 
 Enormous swathes of virgin forest in Indonesia are being cut and burned down
 all the time and this contributes significantly to the climate crisis.
-How can we stop this? I propose a market-based mechanism that might help.
+How can we stop this? I propose a decentralised market-based mechanism
+that has the following desirable properties:
 
-Rather than reaching for governmental intervention, the key here is to realise
-that a) the forests are a _positive externality_ in the sense that they
-sequester carbon and reduce global temperatures, and b) we are much richer
-than many of the Indonesians who own the forests, and they need to eat.
+- Scalable
+- Decentralised
+- Bounded cost for the philantropist
+- Owners of the land are better off
 
-To this end, Norway has some sort of agreement with Indonesia where they pay Indonesia
+Norway has some sort of agreement with Indonesia where they pay Indonesia
 \$1 billion to reduce their forest emissions: see links
 [here](https://www.wri.org/blog/2019/02/indonesia-reduces-deforestation-norway-pay)
 and
@@ -44,12 +45,11 @@ from lobbying our governments? Also, this approach is _slow_:
 > combination of the structuring of the agreement and a change in the
 > Indonesian government since the 2010 signing.
 
-Can we do better? Here I present a mechanism that has the following desirable properties:
-
-- Scalable
-- Decentralised
-- Bounded cost for the philantropist
-- Owners of the land are (weakly) better off
+I present a market mechanism that might help safeguard the forests, but doesn't
+require long and protracted intergovernmental negotations and can work with
+only a few dollars of funding.
+The idea is probably not original and I would greatly appreciate if someone
+could point me to the relevant literature.
 
 ## The mechanism in brief
 
@@ -106,3 +106,10 @@ both of which could be incentivised with some fees.
 Of course, this works with any resource that we want to preserve, not just Indonesia's forests.
 
 Have I missed something? Interested in implementing this? Send me a message, please.
+
+## Things I cut
+
+The key here is to realise that a) the forests are a _positive externality_
+in the sense that they sequester carbon and reduce global temperatures, and
+b) we are much richer than many of the Indonesians who own the forests, and
+they need to eat.
