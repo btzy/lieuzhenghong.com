@@ -26,6 +26,8 @@ that has the following desirable properties:
 - Bounded cost for the philantropist
 - Owners of the land are better off
 
+## Background
+
 Norway has some sort of agreement with Indonesia where they pay Indonesia
 \$1 billion to reduce their forest emissions: see links
 [here](https://www.wri.org/blog/2019/02/indonesia-reduces-deforestation-norway-pay)
@@ -56,8 +58,12 @@ could point me to the relevant literature.
 In brief, the idea is as follows:
 philantropists can sell a _ticket_ attached to some forested area
 that pays out _if and only if_ that area remains pristine.
+People would bid on the price of this ticket and the highest bidder would
+stand to gain (Ticket Payout Price - Price Paid for Ticket).
 With satellite imagery, we can easily tell whether an area has been logged or not,
 and this would serve as a source of truth.
+
+## An explanation of the mechanism
 
 Here's how it would work.
 Suppose we have a philantropist that wants to preserve some area of forest.
