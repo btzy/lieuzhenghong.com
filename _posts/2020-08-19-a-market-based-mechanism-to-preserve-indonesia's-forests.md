@@ -34,16 +34,18 @@ Norway has some sort of agreement with Indonesia where they pay Indonesia
 and
 [here](https://news.mongabay.com/2019/02/indonesia-to-get-first-payment-from-norway-under-1b-redd-scheme/).
 
-This is great and should be applauded.
-But this sort of enormous government-to-government approach
-has its problems. First of all, what can _we_ do as private citizens, apart
-from lobbying our governments? Also, this approach is _slow_:
-
 > The two countries signed the \$1 billion pact in 2010, under the REDD+
 > (reducing emissions from deforestation and forest degradation) mechanism. In
 > exchange for the funding, Indonesia would have to slow its emissions from
-> deforestation, which accounts for the bulk of its CO2 emissions. That
-> it’s taken so long for the first payment to be announced is due to a
+> deforestation, which accounts for the bulk of its CO2 emissions.
+
+This is great and should be applauded.
+But this sort of enormous government-to-government approach
+has its problems. First of all, what can _we_ do as private citizens, apart
+from lobbying our governments? Also, this approach is _slow_: the first payment
+was paid out almost _ten years_ after the agreement was signed.
+
+> That it’s taken so long for the first payment to be announced is due to a
 > combination of the structuring of the agreement and a change in the
 > Indonesian government since the 2010 signing.
 
@@ -72,14 +74,16 @@ And now suppose we have some satellite feed of this area
 (e.g. [zoom.earth](https://zoom.earth/)).
 Then what the philantropist can do is say the following:
 
-"I will pay \$50,000 to the person who buys this ticket if and only if <AREA>
-remains forested by <DATE>, as determined by satellite imagery."
+> "I will pay \$50,000 to the person who buys this ticket if and only if $AREA
+> remains forested by $DATE, as determined by satellite imagery. Otherwise,
+> the $50,000 will go to a reputable $FOREST_PROTECTION_CHARITY
+> both buyer and seller have agreed upon."
 
 And then he simply puts this ticket up for auction. Once someone wins the bid,
 the buyer pays the philantropist. The philantropist then puts his funds in escrow,
 and some trusted third-party determines whether or not the area has remained
 forested by the date specified in the ticket---whereupon the funds will either
-be released back to the philantropist, or to the buyer of the ticket.
+be released to the buyer, or to the forest protection charity.
 
 How does this work? The buyer has an incentive to hunt down the farmer/owner
 of the forest and come to some deal to make sure that the farmer/owner
@@ -97,7 +101,45 @@ having to lobby their governments to do something. All you'd need is a trusted
 third party to i) hold funds in escrow and ii) verify the forest cover of the area,
 both of which could be incentivised with some fees.
 
+## FAQs
+
+### Why not pay the owners directly? Why the need for this complicated scheme?
+
+How are you going to track down the owners of the land if they live in a forest
+in the middle of nowhere? Is there a unified land ownership and designation map?
+Is your Indonesian good enough to find out? How likely is it that that the land
+ownership map is constantly updated?
+What happens if ownership has changed hands without your knowledge?
+What happens if the land is co-owned by several smallholders in some sort of
+sharecropping arrangement? And so on.
+
+An Indonesian friend of mine wrote to me:
+
+> A universal land designation map was initiated in 2014, but it hasn’t come to
+> completion yet because the project has been delayed over and over again.
+
+Rather than having to spend effort to track them down ourselves,
+the idea is to pay middlemen an "information arbitrage" fee:
+to provide the service of tracking down the owners of the land.
+The hope is that these middlemen who buy the ticket will have low-cost ways to
+contact and convince the farmers.
+
+### Wouldn't this incentivise owners to just sit on the forests and not do anything to collect their payout?
+
+That is the entire point of this mechanism, yes.
+
 ## Possible problems with this mechanism
+
+In a previous version of this mechanism I suggested that the \$50,000 would either
+be released to the buyer, or returned back to the philantropist. I realised
+that this would incentivise "philantropists" to sell a lot of tickets,
+then commit arson so as not to pay out to make a profit.
+Any mechanism must ensure that the philantropist can _never_ gain from this transaction.
+That's why I introduced the charity. While it's possible that the charity could
+collude with the seller, if they are a reputable forest protection charity
+trusted by both parties then they probably i) have a good reputation,
+ii) won't want to burn down forests
+(they should value the forest more than they value the money).
 
 - Collusion amongst buyers when there are multiple plots on auction
 - Unintended consequences
@@ -110,10 +152,12 @@ both of which could be incentivised with some fees.
 ## Conclusion
 
 Of course, this works with any resource that we want to preserve, not just Indonesia's forests.
+You can even sell tickets on areas where the land has _already_ been cut down,
+and pay out iff the land gets reforested
 
 Have I missed something? Interested in implementing this? Send me a message, please.
 
-## Things I cut
+## Things I cut and links
 
 The key here is to realise that a) the forests are a _positive externality_
 in the sense that they sequester carbon and reduce global temperatures, and
