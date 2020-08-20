@@ -175,3 +175,10 @@ they need to eat.
 > In a small number of cases, government and corporate bodies have invited indigenous landowners to participate in sosialisasi before land developments. But sosialisasi, a term that can be translated loosely as ‘awareness raising’ or ‘public information dissemination’, is also problematic.
 
 > Firstly, sosialisasi often takes the form of a one-way transfer of information about the planned development from the government and companies to the communities, rather than a two-way conversation in which communities have a say in whether or not the project will go ahead, and under what conditions. Secondly, sosialisasi usually takes place in urban centres, such as Merauke City or Jayapura, rather than in the villages where indigenous communities are based. Those invited to attend these events are often handpicked by the government and companies and do not represent the broader interests or rights of the communities to which they belong. Thirdly, sosialisasi meetings are frequently supervised or attended by members of the police and military, who work with oil palm companies in the capacity of plantation security patrols and brokers. Many Marind are reluctant to speak out freely under such conditions for fear of consequent reprisal.
+
+> Meanwhile, Marind villagers who have already voiced their opposition to oil palm projects during consultations complained of being persistently approached, and sometimes intimidated, by company personnel and police officials to surrender their lands for agribusiness development. “They keep coming and asking us to change our minds,” reported village elder Geronimo. “We already said no, but they think that if they keep pushing us, we will agree to collaborate. That is not seeking consent. That is harassment”.
+
+Why this harassment? Incentives not aligned. At the moment, oil companies
+want to skirt the law any way they can. If we can pay the oil palm companies
+or local governments more money to leave the land intact, this problem solves
+itself.
