@@ -10,9 +10,14 @@ tags:
   - economics
   - incentive
   - public
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
+<div class="toc">
+
 [[toc]]
+
+</div>
 
 ## Introduction
 

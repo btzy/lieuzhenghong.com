@@ -18,7 +18,11 @@ in four days for a technical interview.
 "
 ---
 
+<div class="toc">
+
 [[toc]]
+
+</div>
 
 # Introduction
 
