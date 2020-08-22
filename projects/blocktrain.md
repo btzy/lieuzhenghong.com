@@ -49,7 +49,7 @@ so we can see new blocks being added in real-time.
 ![screenshot of blockchain slides](/img/blockchain_project/blockchain_2.png)
 
 I've written a more extensive writeup about the project
-[here](../2019/01/31/building-a-blocktrain.html),
+[here](/2019/01/31/building-a-blocktrain),
 where I go into further detail.
 
 Built with Hyperledger, Node.js, and HTML Canvas.
