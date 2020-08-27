@@ -6,10 +6,10 @@ title: "Projects"
 
 <link href="/css/projects.css" type="text/css" rel='stylesheet' >
 
-<p> These are things I've built either for an internship or for fun. </p>
+<p> These are things I've built. </p>
 
 <div class = 'projects-wrapper'>
-    {%- for post in collections.project -%}
+    {%- for post in collections.project | reverse -%}
     <div class = 'project-card' href="{{post.url | url}}">
         <div class = 'project-card-image-wrapper'>
             <img src="{{post.data.img}}">
