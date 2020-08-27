@@ -10,14 +10,14 @@ title: lieu
 
   <h2> Writings </h2>
 
-  <h3> "Explorations": exploring questions I've always wanted answered </h3>
+  <h3> Exploring questions no one really wanted the answer to </h3>
   <ol>
   {%- for post in collections.exploration | reverse -%}
     <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
   {%- endfor -%}
   </ol>
 
-  <h3> "Explanations": explaining concepts I had difficulty understanding </h3>
+  <h3> Poorly explaining concepts I found difficult to understand </h3>
   <ol>
   {%- for post in collections.explanation | reverse -%}
     <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
