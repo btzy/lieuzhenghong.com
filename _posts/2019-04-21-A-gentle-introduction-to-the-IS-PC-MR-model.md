@@ -34,6 +34,7 @@ permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 
 	.fig-compare {
 		display: flex;
+		flex-wrap: wrap;
 	}
 </style>
 
