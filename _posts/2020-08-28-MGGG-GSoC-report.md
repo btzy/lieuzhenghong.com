@@ -314,7 +314,8 @@ For each state we have precomputed 10,000 sample districting plans
 and stored it in a csv file.
 This process takes anywhere from a few hours to a few days, but only has to be done once:
 once the distribution of cut edges is known it can simply be used again and again.
-The csv files live in `assets/cut_edges_histograms/$STATE_chain_10000/csv`.
+The csv files live in
+`assets/cut_edges_histograms/$STATE_chain_10000/csv`.
 
 #### Generating the histogram
 
