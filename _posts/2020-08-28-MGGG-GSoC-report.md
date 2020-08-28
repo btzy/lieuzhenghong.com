@@ -554,7 +554,7 @@ lambda functions.)
 **EDIT 28/08:** I did the benchmarking and it turns out that loading the JSON
 file in was indeed what was taking so long:
 
-```
+```bash
 2020-08-28 10:18:54 /home/mggg/districtr-eda/dual_graphs/mggg-dual-graphs/texas.json
 2020-08-28 10:18:54 Time taken to load into gerrychain Graph from json: 0.8254358768463135
 2020-08-28 10:18:54 Time taken to form assignment from dual graph: 0.008115530014038086
@@ -565,7 +565,7 @@ file in was indeed what was taking so long:
 Caching the state graph (just adding it to a dictionary and checking if it exists)
 makes it much, much quicker. Total response times dropped from 0.85 seconds to ~0.1 seconds.
 
-```
+```bash
 2020-08-28 10:38:51 /home/mggg/districtr-eda/dual_graphs/mggg-dual-graphs/texas.json
 2020-08-28 10:38:51 Caching the state graph...
 2020-08-28 10:38:51 Time taken to load into gerrychain Graph from json: 0.7195932865142822
