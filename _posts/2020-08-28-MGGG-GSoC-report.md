@@ -5,7 +5,6 @@ date: 2020-08-28
 tags:
   - programming
   - build
-  - interview
   - public
   - project
   - mggg
@@ -46,6 +45,11 @@ in-browser, this thus requires server-side computation.
 In this post, I explain how these metrics are calculated,
 how I deployed the server that does the calculations,
 and how I built the front-end to send requests and display the results.
+
+The main PR is #212 where I implement cut edges
+[here (PR #212)](https://github.com/districtr/districtr/pull/212)
+but I also implemented contiguity before that
+[here (PR #209)](https://github.com/districtr/districtr/pull/209)
 
 ## Understanding the problem
 
