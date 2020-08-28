@@ -4,34 +4,22 @@ body {
   font-size: 18px;
   color: var(--font-color);
   background-color: var(--bg-color);
+  overflow-wrap: break-word;
 }
 
 /* This stuff is for the grid layout: fluid two-column layout with navbar on left */
 
 .container {
-  height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-}
-
-.header {
-  background-color: blue;
+  grid-template-columns: minmax(0, 1fr);
+  overflow-y: hidden;
 }
 
 .sidebar {
   background-color: var(--sidebar-bg-color);
   padding-left: 20px;
   text-align: center;
-}
-
-/* Note this is .body, not body! */
-/* Holds content. Right of sidebar. */
-.body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  /* The minmax is to ensure content doesn't overflow the grid */
 }
 
 .content {
@@ -44,19 +32,16 @@ body {
   .sidebar {
     text-align: left;
   }
-  .body {
-    overflow: hidden;
+  .container {
     grid-template-columns: 200px 1fr;
-  }
-  .content-wrapper {
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 }
 
 @media (min-width: 1200px) {
-  .body {
-    overflow: hidden;
+  .container {
     grid-template-columns: 300px 1fr;
+    overflow-y: hidden;
   }
 }
 
@@ -85,4 +70,13 @@ a:hover {
 
 label {
   color: var(--sidebar-color);
+}
+
+.katex > .katex-html {
+  white-space: normal;
+}
+
+.katex .base {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
