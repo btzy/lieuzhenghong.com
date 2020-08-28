@@ -1,6 +1,6 @@
 ---
 layout: base
-title: MGGG GSoC report
+title: "GSoC 2020 report: implementing a new feature for MGGG's Districtr app"
 date: 2020-08-28
 tags:
   - programming
