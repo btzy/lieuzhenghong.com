@@ -543,13 +543,43 @@ up to 100 requests/second. It could do 100 Iowa requests/second but not
 100 Texas requests/second, so there's some work to be done.
 
 I will have to do some benchmarking: why is the server slow?
-Is it loading the dual graph into memory, or generating the partition,
+Is it converting the JSON to a dual graph, generating the partition,
 or sending the response back that's slow? Depending on the answer, we could
 either consider horizontal scaling (implementing a load balancer) or moving to the
 very recently developed JuliaChain (GerryChain in Julia). (Maybe also Amazon
 lambda functions.)
 
 (**[TODO]** do benchmarking and ask Bhushan/Matthew about benchmarking in Julia)
+
+**EDIT 28/08:** I did the benchmarking and it turns out that loading the JSON
+file in was indeed what was taking so long:
+
+```
+2020-08-28 10:18:54 /home/mggg/districtr-eda/dual_graphs/mggg-dual-graphs/texas.json
+2020-08-28 10:18:54 Time taken to load into gerrychain Graph from json: 0.8254358768463135
+2020-08-28 10:18:54 Time taken to form assignment from dual graph: 0.008115530014038086
+2020-08-28 10:18:54 Time taken to form partition from assignment: 0.0035495758056640625
+2020-08-28 10:18:55 Time taken to get split districts: 0.0813145637512207
+```
+
+Caching the state graph (just adding it to a dictionary and checking if it exists)
+makes it much, much quicker. Total response times dropped from 0.85 seconds to ~0.1 seconds.
+
+```
+2020-08-28 10:38:51 /home/mggg/districtr-eda/dual_graphs/mggg-dual-graphs/texas.json
+2020-08-28 10:38:51 Caching the state graph...
+2020-08-28 10:38:51 Time taken to load into gerrychain Graph from json: 0.7195932865142822
+2020-08-28 10:38:51 Time taken to form assignment from dual graph: 0.0022351741790771484
+2020-08-28 10:38:51 Time taken to form partition from assignment: 0.002564668655395508
+2020-08-28 10:38:52 Time taken to get split districts: 0.013953685760498047
+2020-08-28 10:38:53 /home/mggg/districtr-eda/dual_graphs/mggg-dual-graphs/texas.json
+
+2020-08-28 10:38:53 Retrieving the state graph from memory..
+2020-08-28 10:38:53 Time taken to retrieve the state graph from memory: 4.5299530029296875e-06
+2020-08-28 10:38:53 Time taken to form assignment from dual graph: 0.002898693084716797
+2020-08-28 10:38:53 Time taken to form partition from assignment: 0.003316164016723633
+2020-08-28 10:38:53 Time taken to get split districts: 0.014100790023803711
+```
 
 ## Conclusion
 
