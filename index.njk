@@ -4,10 +4,6 @@ layout: base
 title: lieu
 ---
 
-  <h2> Introduction </h2>
-
-  <p> Welcome to my website.</p>
-
   <h2> Writings </h2>
 
   <h3> Exploring questions no one really wanted the answer to </h3>
@@ -31,6 +27,8 @@ title: lieu
     <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
   {%- endfor -%}
   </ol>
+
+  {% include 'newsletter.html' %}
 
   <h3> Diary entries that should be of no interest to anyone other than my close
   friends and family </h3>
