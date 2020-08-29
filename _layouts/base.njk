@@ -49,9 +49,9 @@
       </div>
 
       <div class = "footer">
-
-      {% include 'newsletter.html' %}
-
+          {% if date %}
+            {% include 'newsletter.html' %}
+          {% endif %}
       </div>
     </div>
 
