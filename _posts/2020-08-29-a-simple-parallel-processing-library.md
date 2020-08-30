@@ -24,18 +24,18 @@ a parallel processing pipeline Python package
 (just rolls off the tongue, doesn't it) over a couple of days.
 We used it to process a large number (over 3 million) of JSON files.
 
-The package is called R-3PO (pronounced like C-3PO): it's a  
-library built on top of [Ray](https://github.com/ray-project/ray)
+**Richard's Parallel Processing Protocol**, or R-3PO for short (like C-3PO)
+is an embarassingly
+trivial package built on top of [Ray](https://github.com/ray-project/ray)
 to make embarassingly parallel problems embarassingly easy.
-(It's also embarassingly trivial -- I hesitate to even call it
-a library.)
 
-Suppose you have lots of data files that
+Use case: Suppose you have lots of data files that
 need to be processed in the exact same way with the same function.
 And suppose you want to save the results of that processing into a CSV file.
 This is an _embarassingly parallel_ problem: it should be easy.
-And that's what R3PO aims to deliver: R3PO lets you do it with a `config.yaml`
-file and three lines of code. It automatically
+
+_Embarassingly_ easy, even: R3PO lets you do it with a `config.yaml`
+file and two lines of code. It automatically
 handles the distribution of tasks to processes,
 saves your progress so you can stop and restart the job anytime,
 and logs all errors automatically.
@@ -43,9 +43,45 @@ and logs all errors automatically.
 This package is probably useless to you unless your
 workflow and use case are very similar to mine.
 But if it is, I believe it could save you an hour or two
-from needing to write parallel boilerplate code.
+from needing to write boilerplate code.
 
 ---
+
+## 1 minute guide
+
+Have the following two files in your directory.
+
+`config.yaml`:
+
+```yaml
+job_name: count_produce
+processes: 2
+source_path: /home/lieu/produce_log
+source_file_part: .json
+working_dir: /home/lieu/working_dir
+output_path: /home/lieu/output_dir
+```
+
+`main.py`:
+
+```python
+# main.py
+
+from r3po import jobbuilder, jobrunner
+from count_fruits import count_fruits
+
+# Build jobs
+build_jobs('./config.yaml')
+
+# Now run them
+run_jobs('./config.yaml', count_fruits)
+```
+
+Running `python3 main.py` will run the `count_fruits` function on all `.json`
+files in `/home/lieu/produce_log/` and log the results in numbered csv files
+inside `/home/lieu/output_dir/`.
+
+Sounds like something you'd find useful? Read on...
 
 ## Quickstart guide
 
@@ -167,11 +203,11 @@ but basically this means that
    and
 3. write the results in `/home/lieu/output_dir`.
 
-Now let's open the `main.js` file and see what's in it
+Now let's open the `main.py` file and see what's in it
 (a whopping two lines of code):
 
 ```python
-# main.js
+# main.py
 
 from r3po import jobbuilder, jobrunner
 from count_fruits import count_fruits
@@ -288,28 +324,33 @@ and concatenated with pandas's `pd.concat` function
 to get pandas `DataFrames`,
 which is the format in which I do the majority of my data analysis.
 
-## Documentation
+## How it works in more detail
 
 ### Overall abstraction
 
 This pipeline runs a function `f` on a large number of
 input files in parallel and logs the results into a CSV.
-It is made up of two files.
 
-The first file, `jobbuilder.py`, takes an input (source) directory
-and produces `nodejobfile` text files that tell each process
+It is made up of two files.
+The first file `jobbuilder.py` reads the `source_path` from `config.yaml`.
+It looks for all files inside `source_path` that match a user-specified criteria.
+It writes these file paths inside `nodejobfile` text files that tell each process
 which files to work on.
 
-Then the second file `jobrunner.py` spins up the processes. Each process
-looks at its `nodejobfile` text file, and works through the list.
-For each `$FILEPATH` listed in `nodejobfile`, the process opens the file, runs
-some function `f` on that file, and appends the output to a .csv
-file.
+The second file `jobrunner.py` spins up the processes.
+Each process looks at its `nodejobfile` text file, and works through the list.
+
+For each `$FILEPATH` listed in `nodejobfile`:
+
+- the process opens the file,
+- runs some function `f` on that file,
+- and (tries to) append the output to a .csv file.
 
 If the function successfully runs, an empty file called `done.job`
 is created in `<$WORKING_DIR>/tracking/<$FILEPATH>/`as a record of completion.
-If the function throws an exception, then an empty file called `error.job`
-is created in the directory instead.
+If the function throws an exception, then a file called `error.job`
+is created instead.
+
 Keeping a record of file completion means that
 the processes can be terminated and restarted at any time
 without going through the same files again.
@@ -376,6 +417,8 @@ writing these filepaths to a CSV that jobrunner can read later.
 It does not write the filepath if the file has already been processed
 or if an error occurred whilst processing that file.
 
+This is how it does it:
+
 1. Read config.yaml file and find `source_path`, `working_dir`, and
    `source_file_part`
 2. Create the folder `working_dir` if one does not exist
@@ -384,49 +427,22 @@ or if an error occurred whilst processing that file.
 4. Write `X.nodejobfile.txt` by dividing the file paths up equally
    across all X process nodejobfiles
 
-```python
-def build_jobs(yaml_path: str):
-    config = read_yaml_file(yaml_path)
-    print("Building job called: " + config['job_name'])
-
-    Path(config['working_dir']).mkdir(parents=True, exist_ok=True)
-
-    print("Scanning for files ending with " + config['source_file_part'])
-    match = config['source_path']+'/**/*'+config['source_file_part']
-
-    files: List[str] = glob(str(match), recursive=True)
-    # Select only files that do not have .done or .error
-    pending_files = generate_all_pending_files(files, config['working_dir'])
-    print("Pending files generated.")
-
-    # Remove old node job files and generate new ones
-    print("Removing old node jobfiles...")
-    remove_nodejobfiles(config['working_dir'])
-    distributed_files = distribute_filepaths(
-        pending_files, config['processes'])
-
-    print("Writing new node jobfiles...")
-    write_nodejobfiles(
-        distributed_files,
-        config['working_dir'])
-
-    # Write out the YAML file describing the processing job
-    print(f"Number of files: {len(files)}")
-    print(f"Number of pending files: {len(pending_files)}")
-    config['count_all_files'] = len(files)
-    config['count_job_files'] = len(pending_files)
-
-    print(config)
-
-    # with open(Path(str(config['working_dir']+'/config.yaml')), 'w') as f:
-    with open(Path(str('./config.yaml')), 'w') as f:
-        yaml.dump(config, f)
-
-
-if __name__ == "__main__":
-    build_jobs(sys.argv[1])
-```
-
 ## Why does this even exist?
 
+Admittedly, the code is pretty trivial, and quite overfitted to my specific
+use-case. Why did I even bother packaging it up in the first place?
+I offer three reasons:
+
+1. If you think about it, the code is not _that_ trivial.
+   It's easy enough to write parallel code in Python just with the `multiprocessing`
+   library. But it can be tricky to write code that allows jobs to terminate
+   and restart arbitrarily, while not reprocessing already-processed files.
+2. It follows from point 1 that
+   this package will save you spending an hour or two reinventing the wheel
+   if your use-case and dataflow are similar to mine.
+3. I was lazy and wanted to be able to `pip install` rather than `git clone`-ing
+   and moving the files around manually.
+
 ## Conclusion
+
+Thanks for reading!
