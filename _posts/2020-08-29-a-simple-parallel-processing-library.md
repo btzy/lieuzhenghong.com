@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Building a parallel processing pipeline Python package"
+title: "Building a Python parallel processing pipeline package (R-3PO)"
 date: 2020-08-29
 tags:
   - programming
@@ -20,7 +20,7 @@ permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ## Introduction
 
 Richard Jelbert (CEO of Inzura) and I whipped up
-a parallel processing pipeline Python package
+a Python parallel processing pipeline package
 (just rolls off the tongue, doesn't it) over a couple of days.
 We used it to process a large number (over 3 million) of JSON files.
 
@@ -434,7 +434,7 @@ use-case. Why did I even bother packaging it up in the first place?
 I offer three reasons:
 
 1. If you think about it, the code is not _that_ trivial.
-   It's easy enough to write parallel code in Python just with the `multiprocessing`
+   It's easy enough to parallelise code in Python with the `multiprocessing`
    library. But it can be tricky to write code that allows jobs to terminate
    and restart arbitrarily, while not reprocessing already-processed files.
 2. It follows from point 1 that
