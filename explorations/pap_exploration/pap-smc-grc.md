@@ -7,6 +7,7 @@ tags:
   - exploration
   - political science
   - game theory
+  - public
 ---
 
 (with huge thanks to Tsun Lok, Bassel and Chin Wee, and thanks to all who

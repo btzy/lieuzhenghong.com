@@ -6,6 +6,7 @@ tags:
   - data-science
   - explorable
   - d3.js
+  - public
 ---
 
 <div class='toc'>
