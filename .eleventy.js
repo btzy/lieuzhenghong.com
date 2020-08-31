@@ -1,7 +1,9 @@
 const markdownIt = require("markdown-it");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
+
   let markdownIt = require("markdown-it");
   /*  include extra functionality to the markdown parser */
   let markdownItFootnote = require("markdown-it-footnote");
@@ -31,6 +33,9 @@ module.exports = function (eleventyConfig) {
   // add syntax highlighting plugin
   // https://www.11ty.dev/docs/plugins/syntaxhighlight/
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // add RSS plugin: https://www.11ty.dev/docs/plugins/rss/
+  eleventyConfig.addPlugin(pluginRss);
 
   // returns an array of post years given a collection of posts
   eleventyConfig.addFilter("getYears", function (collection) {
