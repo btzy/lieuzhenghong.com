@@ -94,7 +94,7 @@ Kuhlenbronn was an amazing place and the lifestyle Patricia and Dieter lead
 honestly opened my eyes to how many other ways there are to live apart from
 the one we have in Singapore. Before I left Singapore, I was a frog in the well.
 I went to Oxford and realised a different way to live.
-Then I visited Venla in Finalnd and saw another way to live.
+Then I visited Venla in Finland and saw another way to live.
 Then I visited Dajiu in California and saw yet another way to live.
 And now I visit Kuhlenbronn and find a way to live that is completely different.
 
