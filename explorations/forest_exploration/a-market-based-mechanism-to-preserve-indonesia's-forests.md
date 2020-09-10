@@ -78,16 +78,21 @@ And now suppose we have some satellite feed of this area
 (e.g. [zoom.earth](https://zoom.earth/)).
 Then what the philantropist can do is say the following:
 
-> "I will pay \$50,000 to the person who buys this ticket if and only if $AREA
+> "I will pay \$50,000 to the person who holds this ticket if and only if $AREA
 > remains forested by $DATE, as determined by satellite imagery. Otherwise,
-> the $50,000 will go to a reputable $FOREST_PROTECTION_CHARITY
-> both buyer and seller have agreed upon."
+> the \$50,000 will be used to fund another similar ticket. [^1]
 
 And then he simply puts this ticket up for auction. Once someone wins the bid,
 the buyer pays the philantropist. The philantropist then puts his funds in escrow,
 and some trusted third-party determines whether or not the area has remained
 forested by the date specified in the ticket---whereupon the funds will either
-be released to the buyer, or to the forest protection charity.
+be released to the bearer of the ticket, or used to fund a similar future ticket.
+
+[^1]:
+    The \$50,000 needs to be "burned" (to use a crypto term) somehow. It
+    cannot go back to the philantropist/to charity or to any third party, because
+    then that person will have a perverse incentive to make sure the area of land
+    is cut down in order to receive the payout.
 
 How does this work? The buyer has an incentive to hunt down the farmer/owner
 of the forest and come to some deal to make sure that the farmer/owner
