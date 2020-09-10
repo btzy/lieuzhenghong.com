@@ -144,11 +144,10 @@ be released to the buyer, or returned back to the philantropist. I realised
 that this would incentivise "philantropists" to sell a lot of tickets,
 then commit arson so as not to pay out to make a profit.
 Any mechanism must ensure that the philantropist can _never_ gain from this transaction.
-That's why I introduced the charity. While it's possible that the charity could
-collude with the seller, if they are a reputable forest protection charity
-trusted by both parties then they probably i) have a good reputation,
-ii) won't want to burn down forests
-(they should value the forest more than they value the money).
+More strongly, it must ensure that nobody can possibly make any profit
+if the forest is cut down.
+
+Other possible problems include:
 
 - Collusion amongst buyers when there are multiple plots on auction
 - Unintended consequences
@@ -162,7 +161,8 @@ ii) won't want to burn down forests
 
 Of course, this works with any resource that we want to preserve, not just Indonesia's forests.
 You can even sell tickets on areas where the land has _already_ been cut down,
-and pay out iff the land gets reforested
+and pay out iff the land gets reforested.
+To handle the issues of escrow, we could do it on the blockchain.
 
 Have I missed something? Interested in implementing this? Send me a message, please.
 
