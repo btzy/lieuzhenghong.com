@@ -5,7 +5,7 @@ author: Lieu Zheng Hong
 date: 2020-09-26
 tags:
   - exploration
-  - game-design
+  - game design
   - scratchpad
   - public
 ---
@@ -31,6 +31,8 @@ So these posts are going to be incomplete, imperfect, and incorrect even.
 They may not have a clear thesis or introduction and certainly won't
 have a clear answer.
 You can think of them as "scratchpad" posts.
+
+_Time taken to write this post: ~4 hours_
 
 ## Introduction
 
