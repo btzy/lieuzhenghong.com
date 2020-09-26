@@ -278,6 +278,34 @@ serendipitous chats with coworkers/"co-worlders".
 At the same time, the fact that everyone has their own private room means that
 there's a quiet sanctum for you to do deep work without being interrupted.
 
+### Examples in the wild
+
+[Recurse RC](https://www.recurse.com/virtual-rc)
+built a very barebones virtual world that ticks a lot of the boxes:
+
+![](/img/virtual_workspaces/recurse_rc.gif)
+![](/img/virtual_workspaces/recurse_rc_2.gif)
+
+> This is Virtual RC. It’s the social space that Recursers enter when they
+> start their days while in batch, and we’ve designed it with the goal of
+> facilitating the kind of serendipitous, synchronous, and ephemeral
+> interactions we think are so important to the experience of doing RC.
+
+> The entire world is editable: you can explore, build walls, change colors,
+> write notes, add links, and create audio chats. You can share what you’re
+> working on by leaving a note and see at a glance what’s going on by reading
+> what others have posted. Each of the colorful rooms has a persistent Zoom
+> meeting associated with it, which you enter by clicking on it. The map
+> displays who’s in each room in real time, so you can look for a friend and
+> pop into a room to say hello — much like in the real world!
+
+> The calendar blocks display information about scheduled events going on in
+> the rooms, so that when you open Virtual RC and look around, you could see
+> that there’s a machine learning study group going on in Hopper, a video game
+> interest group in Sammet, and a few people working on projects together at
+> the pairing stations. There might also be Recursers hanging out in the
+> virtual kitchen or programming together in the quiet space.
+
 ## Conclusion
 
 This is a pretty offbeat idea, but I'd like to explore this further.
@@ -287,4 +315,5 @@ Any and all comments are most welcomed.
 
 ## Acknowledgements
 
-Thanks to CKY for talking to me about this
+- Thanks to CKY for talking to me about this
+- Thanks to Nick for giving me the link to Recurse RC
