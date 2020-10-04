@@ -1,5 +1,5 @@
 ---
-title: "Virtual workspaces --- using Minecraft for work?"
+title: "Virtual workspaces --- working in a Minecraft office?"
 layout: base
 author: Lieu Zheng Hong
 date: 2020-09-26
