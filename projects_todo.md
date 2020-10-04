@@ -1,7 +1,8 @@
 ---
+title: "Projects to-do list"
 layout: base
-eleventyExcludeFromCollections: true
-title: "Projects to-do"
+tags:
+  - draft
 ---
 
 These are things I need/want to do but don't have the bandwidth to do right now.

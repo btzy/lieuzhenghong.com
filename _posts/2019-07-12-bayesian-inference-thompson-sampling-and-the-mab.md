@@ -12,6 +12,7 @@ tags:
   - bayesian inference
   - explanation
   - public
+  - draft
 permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 

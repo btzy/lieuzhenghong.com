@@ -6,19 +6,13 @@ title: lieu
 
   <h2> Writings </h2>
 
-  <h3> Exploring questions no one really wanted the answer to </h3>
+  <h3> Explorations </h3>
   <ol>
   {%- for post in collections.exploration | reverse -%}
     <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
   {%- endfor -%}
   </ol>
 
-  <h3> Poorly explaining concepts I found difficult to understand </h3>
-  <ol>
-  {%- for post in collections.explanation | reverse -%}
-    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
-  {%- endfor -%}
-  </ol>
 
   <h3> Things I've built </h3>
 
@@ -30,7 +24,14 @@ title: lieu
 
   {% include 'newsletter.html' %}
 
-  <h3> Diary entries that should be of no interest to anyone other than my close
+  <h3> Drafts </h3>
+  <ol>
+  {%- for post in collections.draft | reverse -%}
+    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ol>
+
+  <h3> Diary entries that should be of no interest to anyone other than close
   friends and family </h3>
 
   <ol>

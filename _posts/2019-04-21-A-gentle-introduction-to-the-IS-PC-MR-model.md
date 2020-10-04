@@ -8,6 +8,7 @@ tags:
   - economics
   - macroeconomics
   - explanation
+  - draft
 permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
 
