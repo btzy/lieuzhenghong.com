@@ -1,7 +1,7 @@
 ---
 layout: base
 eleventyExcludeFromCollections: true
-title: "Projects to-do list"
+title: "Projects to-do"
 ---
 
 These are things I need/want to do but don't have the bandwidth to do right now.
