@@ -1,12 +1,17 @@
 ---
 title: "Home gym ideas"
+layout: base
 date: 2020-09-27
 tags:
   - public
   - draft
   - build
-permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{page.fileSlug}}/"
 ---
+
+# Introduction
+
+Rather than pay \$1,000 for a gym membership my neighbour Bryan and I
+are thinking about building our own home gym.
 
 https://www.tworepcave.com/10581/outdoor-home-gyms-how-to-avoid-rust-or-uv-damage/amp/
 
@@ -22,6 +27,16 @@ https://www.titan.fitness/racks/power-racks/t-3-series/?start=0&sz=30
 
 https://garagegymreviews.com/best-budget-home-gym-setups
 
-How to build a Home Gym on the Trip
+How to build a Home Gym on the Cheap
 
 https://www.artofmanliness.com/articles/how-to-build-a-home-gym-on-the-cheap/
+
+# Update 4th October 2020
+
+Discussed with Bryan: either put it inside my room or outside in the space between
+both of our houses.
+
+Prices are actually pretty reasonable: should be <\$2000 for the entire set.
+
+Got the link from Marc: [directhomegym.sg](https://www.directhomegym.sg) ---
+no name Chinese brand that Marc used for his home gym
