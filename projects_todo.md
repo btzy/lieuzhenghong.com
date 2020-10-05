@@ -28,3 +28,13 @@ I look forward to working on them in the future
 - Buy split keyboard
 - Paper with Nick Eubank
 - Paper with Gabe Schoenbach
+- From Ben: [KindleRSS](https://www.benkuhn.net/krss/)
+  but for the Remarkable.
+  Check the following [GitHub repo](https://github.com/reHackable/awesome-reMarkable).
+  Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
+- New exploration: could Singapore afford a minimum wage?
+  What would be the cost?
+- New exploration: why is metro construction in Singapore so expensive? Why
+  have costs ballooned over the past fifteen years?
+  Check [Pedestrian Observations](https://pedestrianobservations.com/?s=singapore])
+  and wait for Alon's reply
