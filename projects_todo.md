@@ -38,3 +38,4 @@ I look forward to working on them in the future
   have costs ballooned over the past fifteen years?
   Check [Pedestrian Observations](https://pedestrianobservations.com/?s=singapore])
   and wait for Alon's reply
+- Add "Related Posts" widget on my posts
