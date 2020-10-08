@@ -44,8 +44,7 @@ to portion out a task into smaller subtasks and
 assign each person a small bit.
 But I think this approach is paradoxically suboptimal.
 Paradoxical, because surely working in parallel is faster than working serially?--
-but in most cases, the bottleneck is motivation and blockers---not raw execution
-speed---and pair work helps a lot in removing them.
+but in thought work, the bottleneck isn't raw execution speed.
 
 Also, I specifically use the term _pair work_ because
 I don't just mean pair _programming_---
@@ -65,7 +64,7 @@ pair work acts as a strong commitment device,
 it removes blockers effectively,
 and shares information amongst all collaborators "for free".
 It's very effective despite the apparent loss of parallel productivity
-because the bottlenecks in knowledge-based side projects is not raw productivity,
+because the bottleneck in knowledge-based side projects is not raw productivity,
 but rather motivation, faulty assumptions, and incomplete information.
 
 ## Pair work acts as a commitment device
@@ -174,3 +173,6 @@ I've found pair working extremely effective: primarily as a commitment device
 but also
 with the (significant) side benefits of being able to unblock yourself quicker
 and having knowledge automatically shared amongst collaborators.
+If you do try it out (or have already been practicing it for a while),
+I'd love to hear from you about your experiences, and if there are any
+pitfalls to watch out for---shoot me an email.
