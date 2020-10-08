@@ -17,8 +17,9 @@ tags:
 
 </div>
 
-**\_This is a draft**: stuff is going to be very unpolished.\_
+**\_This is a draft.**
 _Epistemic status: somewhat uncertain._
+\_Time taken to write this draft: ~30 minutes ideation, ~1h writing.
 
 ## Introduction
 
