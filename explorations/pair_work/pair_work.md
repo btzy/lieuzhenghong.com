@@ -34,9 +34,9 @@ these days), the following (which I call _pair work_) really helps:
    a collaborative editor.
 4. Work together.
 
-This feels so obvious that it doesn't seem worth writing about.
-Maybe everyone already does this,
-but somehow I've missed the memo.
+This feels so pedestrian that it doesn't seem worth writing about.
+Maybe everyone already does this but somehow I've missed the memo.
+In any case---if you haven't been doing this already, I highly recommend trying it.
 
 I want to distinguish _pair work_ from _group work_.
 "Group work" often means
@@ -157,7 +157,8 @@ or disagreed on what should be done,
 or believed that others' work was not up to snuff.
 It was overall a very grim experience,
 and I just assumed that would translate to pair work as well:
-that's just decreasing N=2, right? But there's a difference between
+that's just setting N=2, right?
+But there's a world of a difference between
 _working as a group of two_ (splitting the work half-half)
 and _working as a pair_ (doing all the work together).
 
@@ -169,7 +170,8 @@ iii) I _want_ to work on my side projects---life just gets in the way.
 
 ## Conclusion
 
-I've found pair working extremely effective: primarily as a commitment device
+So far, I've found pair working extremely effective:
+primarily as a commitment device
 but also
 with the (significant) side benefits of being able to unblock yourself quicker
 and having knowledge automatically shared amongst collaborators.
