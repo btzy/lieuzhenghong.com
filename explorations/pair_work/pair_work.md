@@ -73,12 +73,11 @@ This is by far the most important benefit to me.
 When I start side projects, I always want to work on them but other life stuff
 gets in the way: be it revising for exams, preparing for a job interview,
 meeting friends, binge watching YouTube, and the like.
-Committing to a time with your collaborator gets you 80% of the way there
+Making a public commitment to someone gets you 80% of the way there
 because you'll be afraid to let them down.
-But setting a time to _work together_ gets you the last 20%, because
-without the commitment to work together it's too easy to blow off your collaborator
-with plausible-sounding reasons and your collaborator is too nice to call you
-out on it (or might even secretly be relieved that you've flaked).
+But setting a time to _work together_ with a collaborator gets you the last 20%, because
+without the commitment to work together it's too easy to come up
+with plausible-sounding reasons to excuse yourself.
 
 ## Pair work helps remove blockers
 
@@ -87,21 +86,22 @@ you might be put off by a tedious part of the project.
 This is me whenever I'm faced with "weed-clearing" work like setting up builds
 or debugging `import` incompatibilities.
 The problem is that the tedious parts of the project still need to be done,
-and you ruin your productivity by letting it block you.
-It's much less painful to do it together with your collaborators.
+and the more you put it off the more you ruin your productivity.
+Tedious work is much less so when done together with your collaborator.
 
 Working together also helps
 when you don't have a clue about how to tackle a particular problem.
 For instance, I was stuck on a pretty nasty bug when building the board game engine,
 which blocked me for days as I would dread even _trying_ to solve the problem
 after banging my head against it fruitlessly for so long.
-Talking through it with someone else helps a lot;
-talking through it with someone else _also involved in the project_
+
+Talking through a bug with someone else helps a lot;
+talking through a bug with someone else _also involved in the project_
 helps immensely.
 And obviously two minds are better than one;
 any problem that appeared insurmountable alone always seems to fall quite quickly.
 
-It also surfaces incorrect assumptions.
+Pair work also surfaces incorrect assumptions.
 Most (if not all) misunderstandings arise because one person has a faulty assumption/
 mental model.
 Through the process of argument and discussion that naturally occurs in pair work,
