@@ -17,17 +17,18 @@ tags:
 
 </div>
 
-**\_This is a draft.**
+**_This is a draft._**
 _Epistemic status: somewhat uncertain._
-\_Time taken to write this draft: ~30 minutes ideation, ~1h writing.
+
+_Time taken to write this draft_: ~30 minutes ideation, ~1h writing.
 
 ## Introduction
 
 I may have stumbled upon the _One Weird Trick_ for maintaining momentum
 on side projects. If your side projects are collaborative (most of mine are,
-these days), the following really helps:
+these days), the following (which I call _pair work_) really helps:
 
-1. Commit to a date and time period (~2h works) with your partner.
+1. Commit to a date and time period (~2h) with your partner.
 2. Get on a call.
 3. One person shares screen. You might use
    a collaborative editor.
@@ -57,6 +58,15 @@ I can personally vouch for the effectiveness of this strategy,
 particularly if you have a project that's been mothballed for quite a while now.
 Joshua and I meandered around for weeks without any progress until we decided
 to debug together. We got more done in two hours than we did the past three weeks.
+
+Why and how is pair work so effective?
+In my experience, there are three main benefits:
+pair work acts as a strong commitment device,
+it removes blockers effectively,
+and shares information amongst all collaborators "for free".
+It's very effective despite the apparent loss of parallel productivity
+because the bottlenecks in knowledge-based side projects is not raw productivity,
+but rather motivation, faulty assumptions, and incomplete information.
 
 ## Pair work acts as a commitment device
 
