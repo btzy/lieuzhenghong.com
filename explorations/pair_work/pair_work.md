@@ -20,7 +20,7 @@ tags:
 **_This is a draft._**
 _Epistemic status: somewhat uncertain._
 
-_Time taken to write this draft_: ~30 minutes ideation, ~1h writing.
+_Time taken to write this draft_: ~30 minutes ideation, ~1h writing, ~1h editing.
 
 ## Introduction
 
@@ -30,8 +30,7 @@ these days), the following (which I call _pair work_) really helps:
 
 1. Commit to a date and time period (~2h) with your partner.
 2. Get on a call.
-3. One person shares screen. You might use
-   a collaborative editor.
+3. One person shares screen. You might use a collaborative editor.
 4. Work together.
 
 This feels so pedestrian that it doesn't seem worth writing about.
@@ -42,9 +41,6 @@ I want to distinguish _pair work_ from _group work_.
 "Group work" often means
 to portion out a task into smaller subtasks and
 assign each person a small bit.
-But I think this approach is paradoxically suboptimal.
-Paradoxical, because surely working in parallel is faster than working serially?--
-but in thought work, the bottleneck isn't raw execution speed.
 
 Also, I specifically use the term _pair work_ because
 I don't just mean pair _programming_---
@@ -116,22 +112,23 @@ This misunderstanding might otherwise have gone unnoticed for a long time.
 
 ## Pair work puts everyone on the same page
 
-It may be faster for two people to split up and work on different things initially,
-but this causes two silos of knowledge to be formed,
-and it becomes very difficult to work together in the future
-unless significant time is invested familiarising each other with the
-knowledge of each part. The cost of `brain merge`-ing may be greater than
+It may be faster initially for two people to split up and work on different things,
+but this causes two silos of knowledge to be formed.
+This slows future progress
+unless significant time is invested familiarising one other with the
+knowledge of each part.
+The cost of `brain merge`-ing may be greater than
 the gains from parallelisation.
 
 This happened when Joshua read up on the multiplayer server architecture
 and I did all the client-side work.
 But that meant that Joshua knew nothing about what I was doing on the client side
-and what difficulties I was facing, and _mutatis mutandis_ for me.
+and what difficulties I was facing, and _vice versa_ for me.
 This would result in us often talking past each other
 when discussing how to implement new features.
 With such a small team and such an interconnected codebase
 we couldn't _not_ know every part of the system.
-I think had we worked together from the start, initial progress would be slower
+Had we worked together from the start, initial progress would be slower
 but overall progress would be faster.
 
 ## Caveats
@@ -149,11 +146,14 @@ but no more than that.
 So this would not be feasible with extremely large projects or extremely
 large teams.
 
+**EDIT**: Thanks also to Ben Kuhn for pointing out that pair work doesn't work well
+when there is a big gulf of understanding/knowledge between the partners.
+
 ## Why this eluded me for the longest time
 
+I had conflated pair work with group work.
 I hated group work in school.
 Everyone felt that everyone else was not doing their fair share of the work,
-or disagreed on what should be done,
 or believed that others' work was not up to snuff.
 It was overall a very grim experience,
 and I just assumed that would translate to pair work as well:
@@ -162,11 +162,7 @@ But there's a world of a difference between
 _working as a group of two_ (splitting the work half-half)
 and _working as a pair_ (doing all the work together).
 
-Now that I've started working in pairs I really can't recommend it enough.
-It helps a lot that
-i) I've grown up and am now (I hope) less difficult to work with,
-ii) I get to choose who I work with on my side projects,
-iii) I _want_ to work on my side projects---life just gets in the way.
+Now that I've started working as a pair I really can't recommend it enough.
 
 ## Conclusion
 
@@ -175,6 +171,7 @@ primarily as a commitment device
 but also
 with the (significant) side benefits of being able to unblock yourself quicker
 and having knowledge automatically shared amongst collaborators.
+
 If you do try it out (or have already been practicing it for a while),
 I'd love to hear from you about your experiences, and if there are any
 pitfalls to watch out for---shoot me an email.
