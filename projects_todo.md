@@ -35,6 +35,7 @@ I look forward to working on them in the future
 ## Improving the blog
 
 - Add "Related Posts" widget on my posts
+- Add blogroll
 
 ## Building software
 
