@@ -40,3 +40,15 @@ Prices are actually pretty reasonable: should be <\$2000 for the entire set.
 
 Got the link from Marc: [directhomegym.sg](https://www.directhomegym.sg) ---
 no name Chinese brand that Marc used for his home gym
+
+# Update 7th
+
+# Update 9th October 2020
+
+I did some research and standing racks are right out because they take up far
+too much space.
+
+# Update Sunday 10th October 2020
+
+Bryan seems to be having cold feet about the whole thing.
+He balked at the price.

@@ -5,16 +5,28 @@ tags:
   - draft
 ---
 
+**This is a draft**.
+
 ## Introduction
+
+Ben Kuhn's blog has a [blogroll](https://www.benkuhn.net/blogroll/)
+and I thought it was an idea good enough to steal.
+(I guess it's a more grown-up version of the blogrolls we used to have
+back when every single one of us had a blogspot.com).
+
+And I'm also apeing his call to action:
+if there's a blog you like, or think I'd like,
+_please_ send an email to me: I really love reading!
 
 ## People whose writing I admire
 
 - [Ben Kuhn](https://www.benkuhn.net/): I first found his blog on HN with the post
   [how to make your video calls almost as good as face-to-face](https://www.benkuhn.net/vc/).
   My favourites:
-  [why and how to start a startup serving emerging markets](https://www.benkuhn.net/emco/),
-  [Stop your video calls from stuttering](https://www.benkuhn.net/vcnet/),
-  [Be impatient](https://www.benkuhn.net/impatient/).
+
+  - [why and how to start a startup serving emerging markets](https://www.benkuhn.net/emco/),
+  - [Stop your video calls from stuttering](https://www.benkuhn.net/vcnet/),
+  - [Be impatient](https://www.benkuhn.net/impatient/).
 
 - [Robert Heaton](https://robertheaton.com/): devilishly clever, very offbeat,
   dreadfully funny. I first found his blog on HN, on the post
@@ -23,12 +35,13 @@ tags:
   throughout. Robert has this unique conceit of using a "frame story" to talk about
   dry technical concepts, which I really enjoy.
   My favourites:
-  [I got married and had kids so you don't have to](https://robertheaton.com/married-with-kids/),
-  [Lessons from a Silicon Valley job search](https://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/),
-  [Tales from a San Francisco housing search](https://robertheaton.com/2014/10/25/tales-from-a-san-francisco-housing-search/)
-  [Parenthood #3: Oscar Heaton, Quarterly Baby Review](https://robertheaton.com/2019/08/25/parenthood-3-oscar-heaton-quarterly-baby-review/)
-  [A blogging style guide](https://robertheaton.com/2018/12/06/a-blogging-style-guide/),
-  [I Might Be Spartacus: a differential privacy marketplace](https://robertheaton.com/2018/10/28/i-might-be-spartacus-differential-privacy-marketplace/)
+
+  - [I got married and had kids so you don't have to](https://robertheaton.com/married-with-kids/),
+  - [Lessons from a Silicon Valley job search](https://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/),
+  - [Tales from a San Francisco housing search](https://robertheaton.com/2014/10/25/tales-from-a-san-francisco-housing-search/)
+  - [Parenthood #3: Oscar Heaton, Quarterly Baby Review](https://robertheaton.com/2019/08/25/parenthood-3-oscar-heaton-quarterly-baby-review/)
+  - [A blogging style guide](https://robertheaton.com/2018/12/06/a-blogging-style-guide/),
+  - [I Might Be Spartacus: a differential privacy marketplace](https://robertheaton.com/2018/10/28/i-might-be-spartacus-differential-privacy-marketplace/)
 
 - [Wicked Fighting](https://www.wickedfighting.wordpress.com):
   His faculty with words is unparalleled, and even when I don't agree with him
@@ -59,7 +72,9 @@ tags:
 
 - [Gwern](https://gwern.net): ditto.
 
-- [Shamus Young](https://www.shamusyoung.com)
+- [Shamus Young](https://www.shamusyoung.com): writes wonderfully about video
+  games and explains video game development/programming very well. Was one of the
+  first writers I ever read.
 
 - [Patrick McKenzie](https://www.kalzumeus.com/), or patio11.
   Very famous for his success in building and running successful SaaSes: see
@@ -72,10 +87,12 @@ tags:
   stolen so I could avail myself of the advice in the article and tear the CRAs
   a new one.
   He's also great at explaining interesting things:
-  [How Discount Brokerages Make Money](https://www.kalzumeus.com/2019/6/26/how-brokerages-make-money/),
-  [Japan's Hometown Tax](https://www.kalzumeus.com/2018/10/19/japanese-hometown-tax/).
 
-- [Bret Deveraux](https://acoup.blog/): writes a history blog.
+  - [How Discount Brokerages Make Money](https://www.kalzumeus.com/2019/6/26/how-brokerages-make-money/),
+  - [Japan's Hometown Tax](https://www.kalzumeus.com/2018/10/19/japanese-hometown-tax/).
+
+- [Bret Deveraux](https://acoup.blog/): writes a very famous history blog.
+  I really liked his Logistics series and the farming series.
 
 ## People I know IRL
 
