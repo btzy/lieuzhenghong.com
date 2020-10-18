@@ -66,7 +66,8 @@ I look forward to working on them in the future
 
 ## Rampant consumerism
 
-- Buy split keyboard
+- Buy split keyboard (~ \$500)
+- Buy home gym equipment (~\$800--\$2000)
 
 ## Miscellaneous
 
