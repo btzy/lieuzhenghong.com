@@ -19,6 +19,10 @@ This is going to be a reference page so I know
 what to do and
 why I'm doing it.
 
+The goal is for my routine to be _zero-friction_:
+make sure I exercise every day and maintain the meta-stable habit.
+Otherwise I will definitely slack off.
+
 # Goals
 
 My priorities are to shore up my weaknesses and
@@ -131,7 +135,7 @@ Here's an infographic:
 ## Strength and hypertrophy
 
 I'll be starting with a Push-Pull bodyweight bodybuilding routine
-that I found on /r/naturalbodybuilding.
+that I found on /r/naturalbodybuilding, exercising six times a week.
 
 The PDF is in this directory and
 the Reddit post is
@@ -221,3 +225,8 @@ reps. So if you're warming up to do incline push-ups, and last time you got
 push-ups for 6 reps. Rest for a minute, and start your regular working sets.
 
 ## Conclusion
+
+My current routine is a big departure from my earlier days
+where the only thing I wanted to do was get big with as little effort as possible.
+I suppose I'm paying the price now with the imbalances that have occurred
+as a result.
