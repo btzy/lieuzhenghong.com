@@ -1,0 +1,89 @@
+#+TITLE: Fitness log
+
+------
+`C-c .` adds a date
+`C-c C-l` adds a link
+`C-c C-x c` clones a subtree and makes sibling copies
+`M-x org-sort RET t` sorts by time
+------
+
+* Reference
+** What I'm doing every day
+1. Starting Stretching
+2. Face pulls and glute stretches
+3. Pull or push workout
+** Exercise GIF reference
+- [[https://i.imgur.com/bzQMhNJ.gif][Archer pushup]]
+- [[https://i.imgur.com/rMWqubP.gif][Inverted skullcrushers]]
+** Fitness infographics
+- Starting Stretching Infographic
+  [[file:~/dev/lieuzhenghong.com/img/fitness/starting_stretching.jpg]]
+* Exercise templates
+** <2020-11-03 Tues>
+*** Remarks
+Pull workout
+*** Exercises:
+**** Starting Stretching
+**** Warmup
+**** Archer pullups
+**** Incline pullups
+**** Bicep curls
+**** Lat raises
+**** Nordic curls
+**** Single-legged Romanian deadlifts
+**** Abs
+** <2020-11-02 Mon>
+*** Remarks
+Push workout
+*** Exercises:
+**** Starting Stretching
+**** Warmup
+**** Archer pushups
+**** Decline pushups
+**** Inverted skullcrushers
+**** Pistol squats
+**** Bulgarian split squats
+**** Unilateral standing calf raises
+* Exercise log
+** DONE <2020-11-02 Mon> PUSH 
+*** Remarks
+Bodyweight push workout.
+Still thinking about the specific format I should use to log my workouts.
+*** Exercises:
+**** Starting Stretching
+**** Archer pushups
+BW
+8
+8 
+These were OK 
+**** Decline pushups
+BW
+20
+**** Tricep extensions
+Didn't do inverted skullcrushers, did
+tricep extensions instead.
+** TODO <2020-11-03 Tues> [0/1]
+*** Remarks
+Pull workout
+*** TODO Exercises [0/9]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pullups
+**** TODO Incline pullups
+**** TODO Bicep curls
+**** TODO Lat raises
+**** TODO Nordic curls
+**** TODO Single-legged Romanian deadlifts
+**** TODO Abs
+** TODO <2020-11-04 Wed>  [0/1]
+*** Remarks
+Push workout
+*** TODO Exercises [0/8]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pushups
+**** TODO Decline pushups
+**** TODO Inverted skullcrushers
+**** TODO Pistol squats
+**** TODO Bulgarian split squats
+**** TODO Unilateral standing calf raises

@@ -1,0 +1,159 @@
+#+TAGS:  PHYSICAL(0) [ WORK(1) : IMDA OGP ] SERENDIPITY(2) [ SIDEPROJECTS(3) : BLOG BOARDGAMEENGINE THESIS CS ] HOBBIES(4) RELATIONSHIPS(5)
+
+------
+To repeat
+To clone type `C-c C-x c`
+`C-c C-t` changes the state of a TODO
+------
+* TODO Exercise :PHYSICAL:
+SCHEDULED: <2020-11-03 Tue ++1d>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-03 Tue 00:57]
+:END:
+- State "DONE"       from "TODO"       [2020-11-02 Mon 23:59]
+* TODO Work for IMDA :WORK:IMDA:
+** TODO Attend standup
+SCHEDULED: <2020-11-03 Tue 09:00 ++1d>
+** TODO Build the Python pipeline 
+*** DONE Think about the advantages and disadvantages of the DeepStream SDK
+:LOGBOOK:
+CLOCK: [2020-11-02 Mon 17:16]--[2020-11-02 Mon 18:18] =>  1:02
+:END:
+*** WAIT Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
+*** WAIT Write a proposal on how to build a Python pipeline
+*** DONE Ask about how the current ML model works and how to deploy it on the Jetson
+* TODO Meet and talk to people :SERENDIPITY:RELATIONSHIPS:
+** DONE Video call Tak Huen
+SCHEDULED: <2020-11-02 Mon 22:15>
+** DONE Congratulate Bea and Chen on expecting (and their new flat)
+DEADLINE: <2020-11-02 Mon 21:00>
+** [X] Meet Joy for lunch
+** [ ] Meet Bernard for dinner
+SCHEDULED: <2020-11-07 Sat 12:00>
+** [ ] Call Celine 
+SCHEDULED: <2020-11-08 Sun 16:00 +1w>
+* TODO Learn org-mode :CS:
+** TODO [[https://blog.jethro.dev/posts/capturing_inbox/][Read this entire series written by Jethro]]
+** TODO [[https://orgmode.org/worg/org-tutorials/org4beginners.html][Org Mode beginning at the basics]]
+** [[orgmode.org/manual][Org Mode Manual]]
+** TODO Think about how to use agenda mode
+** TODO Think about how to organise my todo files
+Do I use `todo.org` at all? Should I just use `braindump.org` for everything?
+In general should I use multiple files or a single large file?
+Take a look at [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Jethro's Zettelkasten with Org-mode.]]
+See if I want to use Zettlekasten.
+* TODO Become the best software engineer that I can be :WORK:OGP:CS:
+** Overview
+I will be a "proper" card-carrying software engineer soon.
+I want to focus on being the best software engineer that I can be.
+What should I learn in order to be the best?
+This is what OGP's career document has to say:
+
+:OGPCAREERDOCUMENT:
+Software Engineers are competent individual contributors. 
+They are comfortable with engineering tools such as source control, error
+monitoring, automated testing, and more. They can successfully run systems in
+production, though they may be unable to design such systems themselves. They
+can reason about the practical implications of a system design and can make
+useful contributions to design discussions. Overall, they are able to prioritize
+engineering tasks for themselves and complete them independently.
+ 
+Concretely this means Software Engineers are able to:
+
+- Write code that matches the readability and design standards of the team
+- Implement systems from a given architectural design
+- Understand the design goals and limits of a given system and work around them
+- Prioritize engineering tasks effectively and avoid getting stuck on low impact work
+- Use engineering tools effectively
+  - Collaborate with other engineers by writing well defined pull requests
+  - Participate productively in a code review both as a reviewee and reviewer
+  - Branching and merging appropriately in source control
+  - Configure build tools for simplified deployment and development
+  - Setup automated testing to prevent code regressions
+- Operate production systems reliably
+  - Setup and operate cloud infrastructure for a given architectural design
+  - Implement logging and be comfortable searching through logs
+  - Configure basic alert systems to minimize downtime
+  - Deploy code to production using practices that minimize risk of user interruption
+  - Respond to production outages and recover from simple errors
+  - Conduct post mortems detailing the significant events and root cause analysis
+    :END:
+    
+It looks like the pull request and code review part 
+can be learned through OSS work (or on the job),
+but how do I learn the learn automated testing and build tools?
+And how do I learn everything under the section 
+"Operate production systems reliably"?
+
+What's going to give me the best bang for my buck?
+Should I be working on open-source projects?
+Or writing my own side projects?
+Or should I learn fundamental CS concepts like networks, OS, distributed systems?
+** TODO Ask mentors for advice: what should I do?
+*** WAIT Ask Seb for advice with several well-crafted questions
+*** TODO Write an email to Ben to give him a heads-up
+*** TODO Attend Office hours with Ben 
+SCHEDULED: <2020-11-05 Thu 21:45>
+*** TODO Write an email to Robert to ask him for advice + ask for another office hour?
+** TODO Read and learn from the best textbooks
+*** TODO Move the PDFs to the Remarkable so that I can read them on the go
+*** TODO [[./books/DDIA.pdf][Designing Data-Intensive Applications (DDIA)]]
+*** TODO [[./books/SICP_JS.pdf][SICP (JS version)]]
+** TODO Do projects that maximise my learning
+*** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
+Prerequisite: [[Learn Rust]]
+*** TODO Learn Rust
+**** TODO [[https://doc.rust-lang.org/book/index.html][Rust tutorial]]
+**** TODO [[http://www.arewewebyet.org/][Web development in Rust]]
+**** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
+**** TODO [[https://www.youtube.com/watch?v=DnT-LUQgc7s][Considering Rust: video link]]
+* TODO Write for the blog :BLOG:
+** TODO Write post about my three years in Oxford
+  - Year 1
+  - Year 2
+  - Year 3
+*** TODO collate pictures
+** TODO Write post about interviewing with OGP and preparation process, even if I get rejected
+** TODO Write series about "How to write a First-Class Oxford PPE essay":
+  - how to read,
+  - how to synthesise what you've read into a big debate/ few key viewpoints
+  - "Think very hard",
+  - how to structure the essay
+** TODO Write a post about Board Game Engine
+** TODO New exploration: why is metro construction in Singapore so expensive?
+Why have costs ballooned over the past fifteen years?
+Check [[https://pedestrianobservations.com/?s=singapore][Pedestrian Observations]] and wait for Alon's reply
+*** TODO Follow up with Alon
+SCHEDULED: <2020-11-03 Tue ++1w>
+** TODO New exploration: could Singapore afford a minimum wage? What would it take?
+* TODO Improve the UX of my website :BLOG:
+** TODO Add "Related Posts" widget on my posts
+** DONE Add blogroll
+* TODO Build software :SIDEPROJECTS:
+** TODO Finish and ship MVP of Board Game Engine: server and lobby
+*** TODO Pair program with Joshua 
+SCHEDULED: <2020-11-07 Sat 22:00>
+** HOLD Build Julia Path Tracer
+** HOLD Build [[https://www.benkuhn.net/krss/][KindleRSS]] but for the Remarkable.
+Idea from Ben Kuhn.
+Check the following [GitHub repo](https://github.com/reHackable/awesome-reMarkable).
+Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
+* TODO Build hardware :SIDEPROJECTS:HOBBIES:
+** HOLD Repair gramophone
+** TODO Build adjustable monitor stand
+** TODO Build DIY RGBA night lamp
+** WAIT Build home gym
+* TODO Publish academic work :SIDEPROJECTS:THESIS:
+** HOLD Paper with Nick Eubank
+** TODO Paper with Gabe Schoenbach
+*** TODO Pair program with Gabe
+SCHEDULED: <2020-11-03 Tue 22:00 +1w>
+* TODO Buy things
+- [ ] Buy split keyboard (~ \$500)
+- [X] Buy home gym equipment (~\$800--\$2000)
+- [ ] Buy a night light
+* TODO Find a format for my resume that fulfills all my goals :WORK:
+(not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
+layout customisable by me)
+* TODO Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
+* TODO Publish cryptogram book on Amazon 

@@ -1,0 +1,64 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/lieu/dev/lieuzhenghong.com/org/todo.org
+
+
+* TODO Set up brain dump [1/1] :SERENDIPITY:
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-02 Mon 20:40
+  :ARCHIVE_FILE: ~/dev/lieuzhenghong.com/org/todo.org
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: TODO
+  :END:
+** [X] Populate brain dump with most recent links
+
+* TODO Learn how to use org-mode [4/4] :SERENDIPITY:
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-02 Mon 20:40
+  :ARCHIVE_FILE: ~/dev/lieuzhenghong.com/org/todo.org
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: TODO
+  :END:
+** DONE Look at the correct installation of emacs
+** DONE Install Doom for Emacs
+** [X] Learn how to use org-mode in evil mode
+** [X] Find out what the difference is between checkboxes and nested TODOs? Pros and Cons?
+
+* DONE Call Matthew to fix my intranet problem
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-03 Tue 00:19
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/org/todo.org
+:ARCHIVE_OLPATH: Work for IMDA
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK IMDA
+:END:
+:LOGBOOK:
+CLOCK: [2020-11-02 Mon 11:19]--[2020-11-02 Mon 11:53] =>  0:34
+:END:
+
+* DONE Look through emails and respond to the important ones
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-03 Tue 00:19
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/org/todo.org
+:ARCHIVE_OLPATH: Work for IMDA
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK IMDA
+:END:
+:LOGBOOK:
+CLOCK: [2020-11-02 Mon 14:18]--[2020-11-02 Mon 14:49] =>  0:31
+:END:
+
+* DONE Exercise [3/3] :PHYSICAL:
+SCHEDULED: <2020-11-02 Tue +1d>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-11-03 Tue 00:38
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/org/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** DONE Do Starting Stretching
+** DONE Do face pulls and glute stretches
+** DONE Do Push or Pull workout
