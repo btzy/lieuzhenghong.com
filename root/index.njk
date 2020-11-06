@@ -1,0 +1,42 @@
+---
+eleventyExcludeFromCollections: true
+layout: base
+title: 劉
+permalink: "/"
+---
+
+  <h2> Writings </h2>
+
+  <h3> Explorations </h3>
+  <ol>
+  {%- for post in collections.exploration | reverse -%}
+    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ol>
+
+
+  <h3> Things I've built </h3>
+
+  <ol>
+  {%- for post in collections.programming | reverse -%}
+    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ol>
+
+  {% include 'newsletter.html' %}
+
+  <h3> Drafts </h3>
+  <ol>
+  {%- for post in collections.draft | reverse -%}
+    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ol>
+
+  <h3> Diary entries that should be of no interest to anyone other than close
+  friends and family </h3>
+
+  <ol>
+  {%- for post in collections.diary | reverse -%}
+    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ol>

@@ -1,0 +1,169 @@
+#+TITLE: Fitness log
+
+------
+`C-c .` adds a date
+`C-c C-l` adds a link
+`C-c C-x c` clones a subtree and makes sibling copies
+`M-x org-sort RET t` sorts by time, or `Spc m s S t`
+------
+
+* Reference
+** What I'm doing every day
+1. Starting Stretching
+2. Face pulls and glute stretches
+3. Pull or push workout
+** Exercise GIF reference
+- [[https://i.imgur.com/bzQMhNJ.gif][Archer pushup]]
+- [[https://i.imgur.com/rMWqubP.gif][Inverted skullcrushers]]
+** Fitness infographics
+- Starting Stretching Infographic
+  [[file:~/dev/lieuzhenghong.com/img/fitness/starting_stretching.jpg]]
+* Exercise templates
+** <2020-11-03 Tues>
+*** Remarks
+Pull workout
+*** Exercises:
+**** Starting Stretching
+**** Warmup
+**** Archer pullups
+**** Incline pullups
+**** Bicep curls
+**** Lat raises
+**** Nordic curls
+**** Single-legged Romanian deadlifts
+**** Abs
+** <2020-11-02 Mon>
+*** Remarks
+Push workout
+*** Exercises:
+**** Starting Stretching
+**** Warmup
+**** Archer pushups
+**** Decline pushups
+**** Inverted skullcrushers
+**** Pistol squats
+**** Bulgarian split squats
+**** Unilateral standing calf raises
+* Exercise log
+** DONE <2020-11-02 Mon> PUSH 
+*** Remarks
+Bodyweight push workout.
+Still thinking about the specific format I should use to log my workouts.
+*** Exercises:
+**** Starting Stretching
+**** Archer pushups
+BW
+8
+8 
+These were OK 
+**** Decline pushups
+BW
+20
+**** Tricep extensions
+Didn't do inverted skullcrushers, did
+tricep extensions instead.
+** KILL <2020-11-03 Tues> [1/1]
+Didn't do this today --- went climbing with Jon instead
+*** Remarks
+Pull workout
+*** KILL Exercises [10/10]
+**** DONE Starting Stretching
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 10:29]--[2020-11-03 Tue 10:47] =>  0:18
+:END:
+**** KILL Face pulls, pec stretches and glute stretches
+**** KILL Warmup
+**** KILL Archer pullups
+**** KILL Incline pullups
+**** KILL Bicep curls
+**** KILL Lat raises
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** KILL Abs
+** KILL <2020-11-04 Wed>  [1/1]
+*** Remarks
+Push workout
+*** KILL Exercises [8/8]
+**** KILL Starting Stretching
+**** KILL Warmup
+**** DONE Archer pushups
+BW
+10 10
+**** KILL Decline pushups
+**** KILL Inverted skullcrushers
+**** KILL Pistol squats
+**** KILL Bulgarian split squats
+**** KILL Unilateral standing calf raises
+
+** DONE <2020-11-05 Thu> [1/1]
+*** Remarks
+Pull workout
+*** DONE Exercises [9/9]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pullups
+BW 10 6
+Really focused on the unilateral pulling this time
+and could really feel the exercise getting much harder.
+**** DONE Incline pullups
+BW 15 12
+My forearms start to burn even before my back becomes sore.
+Why is this? Should investigate. Maybe ask on Reddit.
+**** DONE Bicep curls
+**** DONE Lat raises
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** DONE Abs
+3 sets of side planks / ab lifts
+I find that when doing planks or ab lifts, my arms tire sooner
+than my abs do. Again, need to fix this.
+** TODO <2020-11-06 Fri>  [0/1]
+*** Remarks
+Push workout
+*** TODO Exercises [0/8]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pushups
+**** TODO Decline pushups
+**** TODO Inverted skullcrushers
+**** TODO Pistol squats
+**** TODO Bulgarian split squats
+**** TODO Unilateral standing calf raises
+** TODO <2020-11-07 Sat> [0/1]
+*** Remarks
+Pull workout
+*** TODO Exercises [0/9]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pullups
+**** TODO Incline pullups
+**** TODO Bicep curls
+**** TODO Lat raises
+**** TODO Nordic curls
+**** TODO Single-legged Romanian deadlifts
+**** TODO Abs
+** TODO <2020-11-08 Sun>  [0/1]
+*** Remarks
+Push workout
+*** TODO Exercises [0/8]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pushups
+**** TODO Decline pushups
+**** TODO Inverted skullcrushers
+**** TODO Pistol squats
+**** TODO Bulgarian split squats
+**** TODO Unilateral standing calf raises
+** TODO <2020-11-09 Mon> [0/1]
+*** Remarks
+Pull workout
+*** TODO Exercises [0/9]
+**** TODO Starting Stretching
+**** TODO Warmup
+**** TODO Archer pullups
+**** TODO Incline pullups
+**** TODO Bicep curls
+**** TODO Lat raises
+**** TODO Nordic curls
+**** TODO Single-legged Romanian deadlifts
+**** TODO Abs

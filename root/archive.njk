@@ -1,0 +1,38 @@
+---
+eleventyExcludeFromCollections: true
+layout: base
+title: All posts
+permalink: "/{{page.fileSlug}}/"
+---
+
+<h2> All posts by year </h2>
+
+{% for y in collections.all | getYears %}
+
+<h3> {{y}} </h3>
+		<ol>
+		{% for post in collections.all | year(y) | reverse %}
+    <li>
+      <a href="{{ post.url}}"> {{post.data.title}}</a>
+      <br>
+      date: {{ post.date.toDateString() }}
+      <br>
+      tags: [{{post.data.tags}}]
+    </li>
+		{% endfor %}
+		</ol>
+{% endfor %}
+
+<h2> All posts </h2>
+
+<ol>
+{%- for post in collections.all | reverse -%}
+  <li>
+    <a href="{{ post.url}}"> {{post.data.title}}</a>
+    <br>
+	date: {{ post.date.toDateString() }}
+    <br>
+    tags: [{{post.data.tags}}]
+  </li>
+{%- endfor -%}
+</ol>

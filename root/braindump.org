@@ -1,0 +1,381 @@
+---------
+**Very useful commands for Org Mode:**
+- `C-c C-o` navigates to link
+- `C-c C-x C-v` displays inline images
+- `C-c C-x C-l` previews $LaTeX$
+- `C-c C-l` inserts a link
+- `Space o A` opens agenda mode
+- `C-c C-s` schedules a schedule/schedules a deadline 
+- `C-c C-x C-s` archives the subtree
+- ~Spc w w~ switches windows
+---------
+    
+* All about OGP
+** Feedback on my interview
+initiative => strong, working on all sorts of stuff, blog it out, outline my thoughts, interview prep
+ability => resume deep dive with nikhil and chinying not that impressive (question mark), but Hong thought the bayesian SMS was deep enough (dispelled doubts about technical depth)
+
+CHin ying noted familiar with complexity, made it about halfway trhough the question, i do plan and talk about high level approaches and considerations, but coding ended up a bit chaotic. Need to work on explaining the code (but great I explained it before i started writing). He said I had more experience i would be able to handle the edge cases
+
+Nikhil's question: went a lot more smoothly, got stuck but managed to get unstuck which is good, he said I could code fast, i knew what i could do to refactor, i knew algo complexity, decent,
+
+More generally on communication: I'm a good communicator especially on the technical interview, Everyone noted I was able to speak clearly and well, BUT i do tend to talk extensively/waffle at the theoretical or high level, and it takes some time to get to the actual nuts and bolts <— this was hongyi's feedback. Overall strong communicator
+
+My personal suggestion (from Russell) —> great at documenting and preparing, but don't be compelled to say eveyrthing you prepare.
+
+especially for someone who comes from a nontraditional background, I have a good technical depth and side projects
+
+"work is very good, nontrivial side-projects, especially for someone non traditional , but technical depth not as good as the best engineer candidates" — verbatim quote from hongyi
+
+strong initiative —> good fit for team
+
+strong communicator (only minor tuning needed)
+
+strong POTENTIAL for technical depth
+** Leveling Philosophy:
+[[./docs/Levelling_Performance_Promotions.pdf]]
+[[./docs/Software_Engineer_Career_Schema.pdf]]
+** Pay:
+*Software Developer*
+SD1 77
+SD2 95
+
+*Associate Software Engineer*
+ASE1 116 <— the CS grads with a traditional background come in here
+ASE2 127
+ASE3 139
+
+*Software Engineer*
+SE1 <— 151,005
+SE2
+SE3: because they're better, ppl come to them for mentorship
+
+*Senior Software Engineer*
+SSE1 <— 210,500: resting level for engineers
+SSE2
+SSE3
+
+Deliberately mapping nicely to Google's own system:
+L3 is Associate
+L4 is Core
+L5 is Senior
+L6 is Staff
+** Next steps:
+Hey Zheng Hong - had a quick chat with the Govtech HR team. They clarified next steps:
+
+The next steps from here are:
+
+Zheng Hong will need to enquire from IMDA the Liquidated Damage (LD) amount – for Govtech HR to present to Govtech CE as the amount we need to pay for the transfer.
+
+Zheng Hong will then need to meet with representatives from the Govtech Senior Leadership Team for an interview, before Govtech can confirm that they will be proceeding with the bond transfer
+
+When Zheng Hong is accepted by SLM, Govtech HR will follow through with IMDA on the transfer payment.
+
+I've clarified with them for their advice on how you should approach IMDA HR. They suggested that until you have the interview with the Govtech senior leadership team, you could position this as a general query to understand your LD. Whilst its accurate to say that you have cleared Govtech interviews and OGP would be happy to take you in as a software engineer, it would be premature to also inform IMDA that Govtech has agreed to takeover your bond, as this requires govtech senior leadership approval (hence the interview).
+* Salaries of different roles
+Global Markets Analyst, HSBC, 9.2k (110k pa) + 3 month bonus
+Analyst, IB Credit Suisse, 10k monthly (120k pa) + bonus
+Consultant, Bain, 6.5k monthly (75k pa) + 10k bonus
+SWE, Jump Trading, 135k base (never increases), discretionary bonus with no cap (i.e. goes up infinitely)
+
+DX9, MINDEF, 3850 + 300 allowance (total 4150)
+Stripe: 100k base, 160k USD stocks vesting over 4 years, sign on bonus 30k SGD, 10-15% yearly bonus
+Jane Street HK: 450k SGD lol disgusting
+
+van chia: 140k GBP after TC
+* CKY's thoughts on how to Make ADM Great Again
+lieu, [09.10.20 12:07]
+now that youve come to the end ish of your NTU ADM journey
+if you were the NTU ADM tsar
+how would you design the degree
+
+:CKY:
+game design should be a separate dedicated pathway
+theres no way u can shoehorn it into an art school style system
+u need an entire school dedicated to it, digipen style
+u have pathways for art, programming, level design, and business
+everyone is required to take the intro level course of each pathway
+im not familiar with the school structure of digipen
+anyway the key innovation would be that very early on, you divide students into groups of 4
+u pair up one member from each pathway
+and then u prototype shit like crazy, every semester build a game together
+thats what i would propose if the dean asked me
+no comment on the fine arts side, fine arts is all bs anyway so you can literally teach nothing and students can still become artists
+maybe u are overseen by a mentor, you have the chance to change team every semester
+the key thing is that u build team competencies from the get go
+and you allow teams to stick together if they want
+this encourages effective close knit cells to form
+thats how u get masterpieces
+also right the standards for game design course need to be set way the fuck higher
+because im in all half fuck courses
+and i know that most of my course mates have no future except making secondary assets for gacha games
+people supposedly in final year at uni but they make some garbage newgrounds 3 star quality flash game
+how to compete with digipen
+:END:
+
+*Lieu:*
+what's the quality of people in digipen
+
+:CKY:
+also not amazing but at least digipen can deliver something that looks like sweatshop quality
+as opposed to "babby's first unity game" quality
+if u go game design pathway the expectation is that it gives u a minimum standard of competency to be a good fit in the industry
+rn this is absolutely not the case in my opinion
+a lot of people will have their dreams crushed
+:END:
+
+*Lieu:*
+does game design include programming or not
+
+*CKY:*
+yes but the programming is very basic
+
+*Lieu:*
+should it need to include programming
+
+:CKY:
+and the math level of this cohort is abysmal
+yes absolutely
+at least the basics
+:END:
+
+*Lieu:*
+you can do writing/world design right
+be like a D&D writer
+or something
+you get me
+or an artist
+
+:CKY:
+how many randomly selected art students do you think are actually capable of writing coherent prose
+these are not oxford students
+these are literal hipsters who think instagram is cool
+do u expect them to understand economics, history, politics, and all the other things that go into worldbuilding
+so realistically right, these people will become game artists 99% of the time
+except, animation is a way better pathway for game artists
+game design tries to be this half fuck grab bag and ends up teaching too low a standard of programming AND too low a standard of art
+no matter how you look at it though, ADM in its current state is a waste of time and resources
+at least for my courses
+:END:
+
+* Entrepreneurship
+** [[https://commoncog.com/blog/just-f-cking-ship/][Just Fucking Ship]]: book by Amy Hoy
+*** Set a Deadline and Mean It
+*** Work Backwards
+* Board Game Engine
+** Gameboard-1: [[https://www.youtube.com/watch?v=BRnjbP0trug&app=desktop][very cool hardware project]]
+* [[https://news.ycombinator.com/item?id=24934722][What Would Mechanical Programming Look Like?]]
+* What can one do with a Raspberry Pi 400? The future of computing
+[[https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/][Raspberry Pi 400: the $70 desktop PC]]
+[[https://www.raspberrypi.org/app/uploads/2020/10/Raspberry-Pi-400-back--800x571.jpg][Form factor of a Raspberry Pi 400]]
+With just a 5V DC and microHDMI-to-HDMI port you can get a legitimate
+desktop computer.
+And it's incredibly low-cost to boot.
+It would honestly be great if everyone had one.
+It would be a pretty portable solution.
+If only they had added a (tiny) battery to the 400, then you
+could move it around for a while without shutting down.
+http://pragmaticemacs.com/emacs/master-your-inbox-with-mu4e-and-org-mode/
+[[https://www.jeffgeerling.com/sites/default/files/images/raspberry-pi-model-size-comparison.jpg][Compute module size comparison]]
+https://www.jeffgeerling.com/blog/2020/raspberry-pi-compute-module-4-review
+TL;DR you will need a Compute Module 4 IO Board which will give it all the ports on the model B Pi
+and then some. PCIe slot: what can you do with it? Ditto with NVMe (super fast disk I/O).
+Watch Jeff Gerling's space for using GPU on the RPi4B, that would be insane.
+
+* CS concepts I'm not sure about
+** From the Rust video:
+*** What is a runtime?
+*** What is a FFI call?
+*** What is dynamic dispatch?
+*** Refresh the notion of stack vs heap allocation
+*** What is a "C ABI"?
+You get the ability to swap Python Code and you want some module, you can rewrite it in Rust because Python has C++
+* Becoming a better SWE
+** Bradfield CS course: [[https://bradfieldcs.com/csi/][link]] 
+What I'll learn:
+1. Introduction to Computer Systems 	Machine representations of data and programs, the CPU execution model, exceptional control flow, low level programming, reverse engineering x86-64 and optimization, all from a programmer’s perspective. 	Implement a basic virtual machine, reverse engineer x86 assembly, refactor a Go program to improve CPU cache utilization, write a shell with job control.
+2. Advanced Programming 	Techniques and practices we expect of seasoned programmers, such as program design, language paradigms and patterns, concurrent programming, portability and interoperability, testing, and profiling. 	Refactor interfaces of existing Go code, profile and optimize an I/O intensive application, configure the garbage collector to reduce latency, detect and fix deadlocks in a concurrent program, interface with C code using cgo.
+3. Data Structures for Storage and Retrieval 	An in depth look at some important data structures including B-trees, Log-Structured Merge Trees and Bloom filters. 	Optimize performance of a RocksDB database by understanding and tuning the block cache, compaction, and Bloom filter configuration.
+4. Computer Networks 	Understanding network protocols (particularly at the application, transport and network layers) with a focus on programming networked applications, understanding network infrastructure, and working with third party systems (such as cloud providers and third party CDNs etc).
+   **Projects: Parse a packet capture file, write a DNS client, write an HTTP proxy, and configure a VPC on AWS.**
+5. Operating System Principles and Interfaces 	Learning how best to utilize the systems that sit between our applications and our computer systems, covering topics such as memory virtualization, task scheduling, file systems, and OS-level concurrency primitives.
+   **Projects: Create a simple file system with FUSE, create a simple container framework using cgroups, implement green threads on top of POSIX threads, measure a program's cache misses and page faults.**
+6. Relational Databases 	Understanding, effectively using, and optimizing relational database systems.
+   **Projects: Optimize complex queries in PostgreSQL by reading EXPLAIN statements, parse the PostgreSQL WAL for the purpose of change data capture, and identify and fix isolation anomalies.**
+7. Distributed Systems 	Understanding principles and practical considerations for building high-scale data-intensive applications, and learning to reason about tradeoffs between fault tolerance, latency, throughput, consistency and operational overhead.
+   **Design and implement a simple distributed key-value store.*
+
+** Talking to people who know better
+*** Notes from call with Ben
+- Ben says he's quite skeptical about doing a Master's because of opp cost and because I won't learn anything that will make me a better software engineer.
+- Master's they put less effort in the social situation.
+- Summary of the blog post: people often think the way to get better as a software engineer is to learn computer science because these are fundamentals.
+  That's *somewhat* true, but I think that people generally overweight the "unchanging pure fundamentals" and underweight the nitty-gritty of whatever systems that they are working with.
+  On the margin, people are better served by deeply understanding the tools that they are using. Learn how the database actually works. Learn how React actually works. Learn how computer networking works.
+  Focus on building detailed models on as many layers of the stack as you can.
+  It seems like they're a lot of boring random facts,
+  but they often generalise. E.g. the details of React and how the React reconciliation algorithm works, but it turns out that the next-gen iOS and Android frameworks also copy React.
+  There's a core of highly generalisable stuff in React: view being expressed as props and state and using reconciliation to update the view in the efficient way.
+  Learning fiddly details is actually super important for implementation.
+  There are some systems that succeed *precisely* because they get the fiddly details right.
+  Two other reasons: **they inspire your own software design**.
+  Right now in Wave importing your code is really slow, 
+  Without the knowledge that you can "hot-reload" code instantly,
+  you wouldn't know where to get there.
+  Last reason: **helps you debug tricky problems.** If you have a deep understanding you can make
+  order-of-magnitude speed improvements. Build models that go through serveral layers of the stack.
+  "Our app is randomly slow for a little bit because we're saturating our thread pools...
+  Postgres is contending for locks because..."
+
+  **Learn to read source code.**
+  **Learning to read your co-workers' source-code on the job.**
+  
+  Look for CS classes that teach you the details of things in the real world.
+
+  Something very helpful to Ben was reading a networking textbook.
+
+  Docker does a lot of networking 
+  How can you run two Docker containers that listen on the same port and have them work?
+
+  Docker isolates processes in a bunch of different ways. There are OS-level isolation
+  but the main thing that is difficult is networking.
+
+  **Julia Evans' comics**
+  How containers work: [[https://jvns.ca/blog/2020/04/27/new-zine-how-containers-work/][link]] 
+
+  How to use tcpdump or strace to figure out how ...
+
+  Learn to debug!
+
+  General point: learn more about what is going on in the program's innards.
+  It's a different *set* of fundamentals that you should learn.
+  Software architecture for user interfaces --- no such course
+  about how to structure your UI code that it doesn't suck.
+  
+ [[https://www.benkuhn.net/blub/][Ben Kuhn's advice on being a better SWE]] 
+
+  How can I learn this?
+  Three mental habits:
+  
+  1. Simply refusing to debug via guess-and-check
+    "I want to understand why this is happening and not just paste
+    the top answer from StackOverflow."
+  2. I might have a complicated object relational model,
+     and I want the library to map it in a particular way.
+     One I can figure out SQLAlchemy to do what I want
+     or I can just hack it and write ugly code/workaround.
+     Try to do it the "right" way rather than the ugly way.
+  3. If you have some code and it feels like magic
+     (I wonder why the code is why it is), this is a gold mine:
+     I need to understand why the code is what it is.
+     I should be constantly trying to guess how the library function 
+     is implemented..
+     Weirdass thing when you run HTML tags in your javascript.
+     JSX. How does that work? What code is actually executed?
+     Hooks are super magical and I should really dive into and learn them.
+     - Why do Hooks have to be called in the same order every time?
+     - Implementation leaking 
+     Make a list of the areas of React that you don't know
+     and when you have time, work through them
+     
+*** What Seb said
+**I think in general you don't need to start teaching yourself distributed
+systems, os, networking, etc**
+if you don't work on that it's a waste of your time
+if you do work on it you'll pick it up
+they won't expect an entry engineer to know all that stuff
+
+**half of being a good software engineer is being a good coworker**:
+knowing how and when to contribute during meetings (both business meetings and
+technical meetings)
+knowing how to give good code feedback
+honestly you should just figure out what technologies you'll be working with and
+making sure you know a bit about that the first month or so will be 'ramp up'
+and the faster you do that the faster you'll be able to write your first feature
+that's probably the most important thing
+
+**it really depends on how much you presently know**:
+it's kind of silly to try and learn a bunch of technology without any cs
+fundamentals
+but I think if you have the basics you don't need to go and do category theory
+so you know about how monoids work
+that'll be highly irrelevant for your job, I think
+there's a certain level of fundamentals above which it isn't really in your
+interested from a practical point of view to invest more time
+but again without knowing exactly how much you know, and what you'll be working on
+it's hard to give a blanket statement about what you should or should not do with your time
+
+**assuming you have some background, a reasonable thing to do is what I suggested:**
+**learn the basics of the tech stack you'll in fact be using**
+
+if they use react,
+they'll probably use something like redux, and you should know how that works
+recently react has moved away from class based components and into functional components
+it's probably useful to know what that is and the advantages (and disadvantages)
+
+they'll probably also use graphql, so it might be good to know how that works etc
+you should ask them
+
+in general talking to your mentor (I assume you'll have one) and asking them
+what they did (or wish they did) before starting is a good strategy
+
+*** What Julius said
+oh pretty recently i was quite curious how the python interpreter works,
+especially with regards to threads so i tried reading the docs first, which gave
+me an understanding (a "mental model") of how to think about runtimes, so for
+the most part it's good enough but i tried to think about how i would've done
+it, and i realised i didn't really have a good answer, since in python there's
+this thing called the GIL which needs to be locked and aquired between threads
+so i got into this rabbithole of how that whole deal works haha
+
+also just to be clear, most of the time diving into a codebase (for big
+projects) shouldn't be your first approach haha, most big libraries & tools
+(like React, Python) probably have documentation for what you need (i.e. getting
+a mental model of things, examples, etc). Reading implementation details should
+be like... for if you're just curious about how to implement things, and if you
+really can't find out why certain things behave certain ways.
+* How to make my writing more popular
+- Write more things and pay attention to what people want to read about.
+- Posting interesting things to HN is an underrated public good.
+- Ben's blog got famous because Dan Luu posted on HN
+- Very useful data to see which posts were interesting and which weren't.
+- I had writer's block because I started holding myself to much higher standards
+  which is bad because blog posts are sampled
+  from a long-tailed distribution.
+  You really only need one good blog post.
+- Takeaway: write more, write interesting stuff,
+  and control the inputs where I can post things that I write. How many people see the things that I've written? Increase that number without getting banned for self-promotion.
+- Ben suggests I add a comment section or share it publicly.
+- If I started posting blog links on Facebook,
+  that would make others' walls better.
+  There will be a constituency that thinks
+  "finally something interesting to read!"
+* New social app idea: give poor illiterate families the ability to automatically apply for all the social programs they're eligible for?
+Think about how we could make everyone automatically apply for the social programs they're eligible for
+Idea came from Mrs Hauw where she said that a family of four was only getting 900 SGD a month even though
+by right they would be eligible for much more.
+
+
+* Digital gardens
+ I realise that I've been doing something very similar --- convergent evolution?
+rather than doing a stream of consciousness, or a list of blog posts/essays,
+I've been using my repo as a dump 
+Key idea here: chronological order is not a good way to order my posts
+taking cues from Gwern
+[[https://twitter.com/Mappletons/status/1250532315459194880][List of digital gardens (Twitter thread)]]
+
+There are two things really that I want here.
+The first is that I want to move my blog around in such a way that I don't have to think about
+where to put a new post of mine.
+The second is to make it very easy to link from any post to every other post, as well as access any auxillary resources.
+
+That's why we want to put everything in a root folder, so every note is accessible by any other note.
+
+** Roam
+Super hot note taking app nowadays, some principles I should follow, but I will never leave my own editor.
+Non-negotiable!
+Check out the demo here: https://www.roambrain.com/getting-started/
+
+* TODO New post idea: "The principle of zero friction"
+* TODO New post idea: The six pillars of software engineering tradeoffs (or something about complexity budgets)
+* TODO Filter pages, tag pages, tag search, tag index pages... 

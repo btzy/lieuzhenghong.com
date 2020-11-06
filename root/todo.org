@@ -1,0 +1,311 @@
+#+TAGS:  PHYSICAL(0) [ WORK(1) : IMDA OGP ] SERENDIPITY(2) [ SIDEPROJECTS(3) : BLOG BOARDGAMEENGINE THESIS CS ] HOBBIES(4) RELATIONSHIPS(5)
+
+------
+To repeat
+To clone type ~C-c C-x c~
+~C-c C-t~ changes the state of a TODO
+~C-c C-x C-i~ clocks in,
+~C-c C-x C-o~ clocks out.
+------
+* TODO Exercise :PHYSICAL:
+SCHEDULED: <2020-11-03 Tue ++1d>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-03 Tue 00:57]
+:END:
+- State "DONE"       from "TODO"       [2020-11-02 Mon 23:59]
+* TODO Work for IMDA :WORK:IMDA:
+** TODO Attend standup
+SCHEDULED: <2020-11-05 Thu 09:00 ++1d>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-04 Wed 10:36]
+:ORDERED:  t
+:END:
+:LOGBOOK:
+CLOCK: [2020-11-06 Fri 09:03]--[2020-11-06 Fri 09:29] =>  0:26
+CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
+:END:
+- State "DONE"       from "TODO"       [2020-11-04 Wed 10:36]
+- State "DONE"       from "TODO"       [2020-11-03 Tue 09:53]
+** TODO Build the Python pipeline 
+*** DONE Think about the advantages and disadvantages of the DeepStream SDK
+:LOGBOOK:
+CLOCK: [2020-11-02 Mon 17:16]--[2020-11-02 Mon 18:18] =>  1:02
+:END:
+*** TODO Write a proposal on how to build a Python pipeline
+**** DONE Sketch out a big picture architecture diagram
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 11:10]--[2020-11-03 Tue 11:30] =>  0:20
+:END:
+[[./img/diagram.png]]
+**** DONE Note down or otherwise document how to install RealSense libs on the Jetson
+**** TODO Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
+**** TODO Understand RealSense API and I/O
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 11:30]--[2020-11-03 Tue 12:05] =>  0:35
+:END:
+[[https://dev.intelrealsense.com/docs/api-architecture][Intel RealSense API Reference]]
+[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.html#module-pyrealsense2][Python LibRealSense bindings reference]]
+[[https://dev.intelrealsense.com/docs/python2][Code examples showing how to use LibRealSense's Python wrapper]]
+[[https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md][Installing LibRealSense on the Jetson]]
+**Outputs of wait_for_frame**:
+~pipeline~ has a ~wait_for_frames~ or ~poll_for_frames~ function that returns a
+[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~   ]]
+This [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~]] extends the [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.frame.html?highlight=get_data#pyrealsense2.frame.get_data][~frame~]] class.
+We get the data from the frame using the ~get_data~ method,
+which in turn returns a ~BufData~ data structure.
+***** TODO find out what the type signature is for BufData (help(type(self)))
+We know that the BufData can be converted into a numpy array which we might be able to feed
+**** TODO Ask one of the scientists of the inputs of the 7-class model
+What is the I/O of the current model?
+Would this change when moving to TensorRT?
+
+**ANSWER**: The I/O takes a NumPy array no problems and returns a JSON object.
+We can check the JSON object schema in the folder.
+**** TODO Check with Marcus or Siyang how I would deploy the 7-class model on the Jetson
+[[s3://vama-sceneuds-images/Archive_weights/best_4class.pt]]
+"The above link is the saved model, we can use it with B1_detect.py,
+change weights_path."
+**** TODO Finalise architecture diagram
+*** TODO Get a "Hello World" working on librealsense
+**** TODO Write a Dockerfile to make installation of pylibrealsense easy
+***** TODO Find a way to get past the permissions thing of the script
+**** DONE Install pylibrealsense libraries (build from source)
+**** DONE Write documentation on how to install pylibrealsense on the Jetson
+:LOGBOOK:
+CLOCK: [2020-11-05 Thu 14:05]--[2020-11-05 Thu 15:32] =>  1:27
+:END:
+*** TODO Fix the Dockerfile for James
+***** TODO Comment out the PyTorch line in the Dockerfile
+*** TODO Get the ML model working
+* TODO Get transferred to OGP
+** DONE Follow up on the liquidated damages query
+** WAIT Wait for IMDA to calculate my LD
+** TODO Interview with GovTech CEO
+SCHEDULED: <2020-12-04 Fri 16:30>
+* TODO Meet and talk to people :SERENDIPITY:RELATIONSHIPS:
+** DONE Video call Tak Huen
+SCHEDULED: <2020-11-02 Mon 22:15>
+** DONE Congratulate Bea and Chen on expecting (and their new flat)
+DEADLINE: <2020-11-02 Mon 21:00>
+** [X] Meet Joy for lunch
+** [ ] Meet Bernard for dinner
+SCHEDULED: <2020-11-07 Sat 12:00>
+** [ ] Call Celine 
+SCHEDULED: <2020-11-08 Sun 16:00 +1w>
+* TODO Learn org-mode :CS:
+** TODO [[https://blog.jethro.dev/posts/capturing_inbox/][Read this entire series written by Jethro]]
+** TODO [[https://orgmode.org/worg/org-tutorials/org4beginners.html][Org Mode beginning at the basics]]
+** [[orgmode.org/manual][Org Mode Manual]]
+** TODO Think about how to use agenda mode
+** TODO Think about how to organise my todo files
+Do I use `todo.org` at all? Should I just use `braindump.org` for everything?
+In general should I use multiple files or a single large file?
+Take a look at [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Jethro's Zettelkasten with Org-mode.]]
+See if I want to use Zettlekasten.
+* TODO Become the best software engineer that I can be :WORK:OGP:CS:
+** Overview
+I will be a "proper" card-carrying software engineer soon.
+I want to focus on being the best software engineer that I can be.
+What should I learn in order to be the best?
+This is what OGP's career document has to say:
+
+:OGPCAREERDOCUMENT:
+Software Engineers are competent individual contributors. 
+They are comfortable with engineering tools such as source control, error
+monitoring, automated testing, and more. They can successfully run systems in
+production, though they may be unable to design such systems themselves. They
+can reason about the practical implications of a system design and can make
+useful contributions to design discussions. Overall, they are able to prioritize
+engineering tasks for themselves and complete them independently.
+ 
+Concretely this means Software Engineers are able to:
+
+- Write code that matches the readability and design standards of the team
+- Implement systems from a given architectural design
+- Understand the design goals and limits of a given system and work around them
+- Prioritize engineering tasks effectively and avoid getting stuck on low impact work
+- Use engineering tools effectively
+  - Collaborate with other engineers by writing well defined pull requests
+  - Participate productively in a code review both as a reviewee and reviewer
+  - Branching and merging appropriately in source control
+  - Configure build tools for simplified deployment and development
+  - Setup automated testing to prevent code regressions
+- Operate production systems reliably
+  - Setup and operate cloud infrastructure for a given architectural design
+  - Implement logging and be comfortable searching through logs
+  - Configure basic alert systems to minimize downtime
+  - Deploy code to production using practices that minimize risk of user interruption
+  - Respond to production outages and recover from simple errors
+  - Conduct post mortems detailing the significant events and root cause analysis
+    :END:
+    
+It looks like the pull request and code review part 
+can be learned through OSS work (or on the job),
+but how do I learn the learn automated testing and build tools?
+And how do I learn everything under the section 
+"Operate production systems reliably"?
+
+What's going to give me the best bang for my buck?
+Should I be working on open-source projects?
+Or writing my own side projects?
+Or should I learn fundamental CS concepts like networks, OS, distributed systems?
+** TODO Compile the largest gaps in my CS knowledge
+- Reading source code
+- Force yourself to understand it by reading through the source code.
+** TODO Ask mentors for advice: what should I do?
+*** DONE Ask Seb for advice with several well-crafted questions
+*** DONE Attend Office hours with Ben 
+SCHEDULED: <2020-11-05 Wed 21:30>
+see braindump for notes on the call
+*** TODO Write an email to Robert to ask him for advice + ask for another office hour?
+*** DONE Think about what Ben said and send an email to thank him
+** TODO Compile what different mentors said and synthesise them into something actionable
+** TODO Read and learn from the best textbooks
+*** DONE Move the PDFs to the Remarkable so that I can read them on the go
+*** TODO [[./books/DDIA.pdf][Designing Data-Intensive Applications (DDIA)]]
+*** TODO [[./books/SICP_JS.pdf][SICP (JS version)]]
+** TODO Do projects that maximise my learning
+*** TODO Learn Rust
+**** DONE [[https://www.youtube.com/watch?v=DnT-LUQgc7s][Considering Rust: video link]]
+**** TODO [[https://doc.rust-lang.org/book/index.html][Rust tutorial: The Rust Programming Language]]
+***** TODO Work through the tutorial [0/20]
+****** TODO Chapter 1
+****** TODO Chapter 2
+****** TODO Chapter 3
+****** TODO Chapter 4
+****** TODO Chapter 5
+****** TODO Chapter 6
+****** TODO Chapter 7
+****** TODO Chapter 8
+****** TODO Chapter 9
+****** TODO Chapter 10
+****** TODO Chapter 11
+****** TODO Chapter 12
+****** TODO Chapter 13
+****** TODO Chapter 14
+****** TODO Chapter 15
+****** TODO Chapter 16
+****** TODO Chapter 17
+****** TODO Chapter 18
+****** TODO Chapter 19
+****** TODO Chapter 20
+**** TODO [[http://www.arewewebyet.org/][Web development in Rust]]
+**** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
+*** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
+Prerequisite: [[Learn Rust]]
+* TODO Write for the blog :BLOG:
+** TODO Write post about interviewing with OGP and preparation process, even if I get rejected
+SCHEDULED: <2020-11-06 Fri>
+:LOGBOOK:
+CLOCK: [2020-11-05 Thu 22:25]--[2020-11-06 Fri 00:00] => 01:35
+:END:
+Clarified with Russell what I am or am not allowed to say:
+
+> my general principle which I'd say to OGP officers (and I counting you in that
+> fold by extension) is go ahead and share freely, but dont go and share
+> something that would give any reader an unfair advantage into the actual
+> hiring process e.g. the stuff we tell u about what we're looking for - yeah you
+> can go ahead and share that too. but the actual questions we use and ask,
+> please don't
+** TODO Write post about my three years in Oxford
+  - Year 1
+  - Year 2
+  - Year 3
+*** TODO collate pictures
+** TODO Upload my notes
+** TODO Upload my exam paper attempts
+** TODO Write series about "How to write a First-Class Oxford PPE essay":
+  - how to read,
+  - how to synthesise what you've read into a big debate/ few key viewpoints
+  - "Think very hard",
+  - how to structure the essay
+** TODO Write a post about Board Game Engine
+** TODO New exploration: why is metro construction in Singapore so expensive?
+Why have costs ballooned over the past fifteen years?
+Check [[https://pedestrianobservations.com/?s=singapore][Pedestrian Observations]] and wait for Alon's reply
+
+**EDIT**
+[[https://pedestrianobservations.com/][New post from Alon:]]
+
+> It increasingly looks like the cause of high construction costs in the
+English-speaking world is the trend of the privatization of the state since the
+1980s. Instead of public planning departments, there is growing use of
+consultants. This trend is intensifying, for example with increasing use of
+design-build contracts, introduced into Canada just before costs exploded.
+
+*** TODO Follow up with Alon
+SCHEDULED: <2020-11-03 Tue ++1w>
+** TODO New exploration: could Singapore afford a UBI? What would it take?
+* TODO Improve the UX of my website :BLOG:
+** TODO Add "Related Posts" widget on my posts
+** DONE Add blogroll
+* TODO Build software :SIDEPROJECTS:
+** TODO Finish and ship MVP of Board Game Engine: server and lobby
+*** TODO Pair program with Joshua 
+SCHEDULED: <2020-11-03 Tue 21:30>
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
+:END:
+** HOLD Build Julia Path Tracer
+** HOLD Build [[https://www.benkuhn.net/krss/][KindleRSS]] but for the Remarkable.
+Idea from Ben Kuhn.
+Check the following [GitHub repo](https://github.com/reHackable/awesome-reMarkable).
+Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
+* TODO Build hardware :SIDEPROJECTS:HOBBIES:
+** HOLD Repair gramophone
+** TODO Build adjustable monitor stand
+** TODO Build DIY RGBA night lamp
+** WAIT Build home gym
+* TODO Publish academic work :SIDEPROJECTS:THESIS:
+** HOLD Paper with Nick Eubank
+** TODO Paper with Gabe Schoenbach
+*** TODO Pair program with Gabe
+SCHEDULED: <2020-11-10 Tue 22:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-03 Tue 23:54]
+:END:
+- State "DONE"       from "TODO"       [2020-11-03 Tue 23:54]
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
+:END:
+* TODO Buy things [3/5]
+- [X] Buy home gym equipment (~\$800--\$2000)
+- [X] Buy a new toothbrush
+- [ ] Buy a webcam
+- [ ] Buy a night light
+- [ ] Buy split keyboard (~ \$500)
+* TODO Find a format for my resume that fulfills all my goals :WORK:
+(not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
+layout customisable by me)
+* TODO Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
+* TODO Publish cryptogram book on Amazon 
+** TODO Add gutter margins
+[[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
+* WAIT Complain to Town council about the poorly shaded floodlights
+** DONE Wait for call from Town Council
+** WAIT Wait for Frederick to come and inspect the place
+* TODO Start scheduling my priorities
+How many hours do I devote each day to each item?
+Have a set time to exercise every day
+So the things I need to do are:
+- Write Three Years in Oxford
+- Write How to Write a First-Class PPE Essay
+- Write OGP interview and preparation post
+- Upload resume to personal website
+- Learn Rust
+- Go through the OS course
+- Self-study networking or go through a project or something
+
+* DONE Find out why I can't open shit in the same Emacs instance
+* TODO Just a random (stupid) idea: maybe I can make my blog use a color scheme like this Emacs theme
+* TODO Thank Kwotsin and update him about my job offer
+SCHEDULED: <2020-11-06 Fri 09:45>
+
+* TODO Think about how best to structure my digital garden/second brain/whatever
+** DONE Move all my files around and stuff
+:LOGBOOK:
+CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] =>  3:35
+:END:
+* TODO Think about the separation between todo.org and braindump.org.
+Todos are todos, braindumps are just dumps/notes,
+but sometimes braindumps are actionable and sometimes TODOs need context.

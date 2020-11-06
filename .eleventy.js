@@ -65,12 +65,19 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("root/img");
+  eleventyConfig.addPassthroughCopy("root/css");
+  eleventyConfig.addPassthroughCopy("root/docs");
+  eleventyConfig.addPassthroughCopy("root/favicon.ico");
+  // The following line will pass through all the markdown files so am not doing that
+  // eleventyConfig.addPassthroughCopy({"root": "/"});
+  // Because all my files expect the /img/ folder to be at the top level
+  // eleventyConfig.addPassthroughCopy({"root/img": "/img"});
+  // eleventyConfig.addPassthroughCopy({"root/docs": "/"});
 
   return {
     dir: {
+	  input: "root",
       output: "./_site", // Equivalent to Jekyll's destination property
       includes: "_includes",
       layouts: "_layouts",

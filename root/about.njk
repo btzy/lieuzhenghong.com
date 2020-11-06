@@ -1,0 +1,18 @@
+---
+eleventyExcludeFromCollections: true
+title: "About me and this website"
+layout: base
+permalink: "/{{page.fileSlug}}/"
+---
+
+<h2> About me </h2>
+
+{% markdown %}
+{% include 'about_me.md' %}
+{% endmarkdown %}
+
+<h2> About this website </h2>
+
+{% markdown %}
+{% include 'about_this_site.md' %}
+{% endmarkdown %}
