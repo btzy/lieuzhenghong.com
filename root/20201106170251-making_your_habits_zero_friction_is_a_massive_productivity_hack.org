@@ -1,0 +1,103 @@
+#+title: Making your habits zero-friction is a massive productivity hack
+
+** Introduction
+
+**TL;DR;**
+I have found that **aggressively minimising** the friction of my tasks
+have allowed me to easily build and maintain desirable habits.
+--- 
+
+We want to build and maintain habits because they allow us to convert our
+motivation (a finite and transient resource) into a more permanent routine.
+But I often find myself not sticking to the habits I've tried to build.
+
+How can you stick to your habits?
+I have found that **aggressively minimising** task friction has been the
+most effective,
+and that even tiny decreases in friction (from almost-zero to zero)
+can make a huge difference in adherence.
+
+In this post, I'll explain why habits are useful, define what it means to
+"aggressively minimise" the friction of a task,
+and give several examples of how aggressive minimisation helped me. 
+
+If like me you find yourself struggling to maintain habits like
+"work out every day",
+"check my email only twice a day" or
+"clear my Anki flashcards every day",
+you may find this method highly effective.
+
+** Aggressively minimising friction is a highly effective way to maintain one's habits
+
+Define the _static friction_ of a task as
+the time/effort/displeasure incurred to _start doing_ the task,
+and the __dynamic friction__ of a task as
+the effort required to actually perform it.
+
+Scott Young writes that reducing static friction is by far more significant [[https://www.scotthyoung.com/blog/2015/03/25/permanent-habits/][(link)]]:
+
+> For a lot of tasks, the second cost reduction is far greater than the first.
+> Flossing, for instance, hasn’t gotten any easier the hundredth time I’ve done
+> it, but I have stopped thinking about whether I should do it.
+
+He suggests starting a habit as a way to reduce the static friction:
+
+> If you read your fifty pages at lunch, every day, for three months, the next
+> lunch break you’ll automatically start reading without having to decide
+> whether to do it.
+
+The idea is that if you succesfully maintain a habit
+you will decrease the task's static friction because that action will become habitual.
+This begs the question, however:
+*how* do I maintain the habits that I've started?
+I've found that **aggressively minimising** friction is by far the most
+effective method to do so.
+
+Here are some examples:
+- I started working out much more often
+  once I switched to a bodyweight fitness routine that didn't require me to travel
+  to the gym,
+  allowing me to maintain my daily workout habit.
+- I started vacuuming the floor of my room daily once we bought a cordless
+  vacuum cleaner,
+  because I no longer had to lug the heavy thing around and plug it into an
+  outlet.
+- Simply leaving the guitar out of its case makes me practice 10x more often,
+  because I could just pick it up whenever I got bored.
+  
+How do we aggressively minimise friction?
+Think about a habit that you're trying (and failing) to adhere to.
+Then think about what you dread about/ what's difficult about starting the task. 
+
+** There are no diminishing returns to decreasing friction
+
+I have observed no diminishing returns to decreasing friction.
+Even a tiny bit of friction can spell the difference between a successful habit
+and an abandoned one.
+Always look out for ways to decrease friction. You must be aggressive!
+
+Here are some examples of how small frictions make a difference:
+
+- Even on the very low-friction bodyweight routine,
+  I am much more consistent in doing my "push" workout compared to my
+  "pull" workout because the "pull" workout requires me to make the 2-minute walk
+  to the fitness corner outside.
+  I therefore bought gym equipment and put it in my room. 
+- Putting Pleco (a dictionary app) on the first page of my home screen
+  made me much more likely
+  to look words up. The same was true for Anki, even though it literally takes
+  one swipe to go from the first screen to the second.
+
+** Corollary: to break a bad habit, deliberately try to *increase* friction
+
+Again, even a tiny bit of added friction can make a big difference!
+
+Here are some examples:
+- I stopped playing as much computer games once I switched from Windows to Linux dual boot
+  because it was a hassle to reboot the computer.
+- I wasted much less time on Facebook/LinkedIn/YouTube
+  once I added a LeechBlock delay of just a few seconds to every link.
+  The delay is only a few seconds, 
+  but this is enough for me to close the tab immediately most of the time.
+
+** Conclusion

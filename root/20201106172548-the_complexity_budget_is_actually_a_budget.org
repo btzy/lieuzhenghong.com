@@ -1,0 +1,9 @@
+#+title: The "complexity budget" is actually a budget
+
+https://scattered-thoughts.net/writing/complexity-budgets/:
+
+> Patch X makes the code more complex, but it adds a new feature or increases
+performance or makes debugging easier. We add up the goodness points, subtract
+the badness points and if the result is more than zero it's a good patch.
+
+[[file:20201106173153-what_can_you_buy_with_your_complexity_budget.org][What can you buy with your complexity budget?]]

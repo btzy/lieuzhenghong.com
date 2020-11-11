@@ -17,7 +17,7 @@
 - [[https://i.imgur.com/rMWqubP.gif][Inverted skullcrushers]]
 ** Fitness infographics
 - Starting Stretching Infographic
-  [[file:~/dev/lieuzhenghong.com/img/fitness/starting_stretching.jpg]]
+  [[file:~/dev/lieuzhenghong.com/root/img/fitness/starting_stretching.jpg]]
 * Exercise templates
 ** <2020-11-03 Tues>
 *** Remarks
@@ -117,20 +117,47 @@ Why is this? Should investigate. Maybe ask on Reddit.
 3 sets of side planks / ab lifts
 I find that when doing planks or ab lifts, my arms tire sooner
 than my abs do. Again, need to fix this.
-** TODO <2020-11-06 Fri>  [0/1]
-*** Remarks
-Push workout
-*** TODO Exercises [0/8]
+** DONE <2020-11-06 Fri>  [1/1]
+Didn't do stretching or the legs shit
+Will do stretching first thing in the morning tomorrow.
+*** DONE Exercises [8/8]
+**** KILL Starting Stretching
+**** KILL Warmup
+**** DONE Archer pushups
+BW 12 10
+**** DONE Decline pushups
+BW 15 12
+**** DONE Inverted skullcrushers
+BW 10 10
+**** KILL Pistol squats
+**** KILL Bulgarian split squats
+**** KILL Unilateral standing calf raises
+
+** TODO <2020-11-07 Sat> [0/1]
+Pull workout
+*** TODO Exercises [1/9]
+**** DONE Starting Stretching
+**** TODO Warmup
+**** TODO Archer pullups
+**** TODO Incline pullups
+**** TODO Bicep curls
+**** TODO Lat raises
+**** TODO Nordic curls
+**** TODO Single-legged Romanian deadlifts
+**** TODO Abs
+** TODO <2020-11-09 Mon> [0/1]
+Pull workout
+*** TODO Exercises [0/9]
 **** TODO Starting Stretching
 **** TODO Warmup
-**** TODO Archer pushups
-**** TODO Decline pushups
-**** TODO Inverted skullcrushers
-**** TODO Pistol squats
-**** TODO Bulgarian split squats
-**** TODO Unilateral standing calf raises
-** TODO <2020-11-07 Sat> [0/1]
-*** Remarks
+**** TODO Archer pullups
+**** TODO Incline pullups
+**** TODO Bicep curls
+**** TODO Lat raises
+**** TODO Nordic curls
+**** TODO Single-legged Romanian deadlifts
+**** TODO Abs
+** TODO <2020-11-11 Wed> [0/1]
 Pull workout
 *** TODO Exercises [0/9]
 **** TODO Starting Stretching
@@ -148,22 +175,9 @@ Push workout
 *** TODO Exercises [0/8]
 **** TODO Starting Stretching
 **** TODO Warmup
-**** TODO Archer pushups
-**** TODO Decline pushups
-**** TODO Inverted skullcrushers
-**** TODO Pistol squats
-**** TODO Bulgarian split squats
-**** TODO Unilateral standing calf raises
-** TODO <2020-11-09 Mon> [0/1]
-*** Remarks
-Pull workout
-*** TODO Exercises [0/9]
-**** TODO Starting Stretching
-**** TODO Warmup
-**** TODO Archer pullups
-**** TODO Incline pullups
-**** TODO Bicep curls
-**** TODO Lat raises
-**** TODO Nordic curls
-**** TODO Single-legged Romanian deadlifts
-**** TODO Abs
+*** TODO Archer pushups
+*** TODO Decline pushups
+*** TODO Inverted skullcrushers
+*** TODO Pistol squats
+*** TODO Bulgarian split squats
+*** TODO Unilateral standing calf raises

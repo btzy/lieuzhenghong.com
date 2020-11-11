@@ -6,7 +6,10 @@ To clone type ~C-c C-x c~
 ~C-c C-t~ changes the state of a TODO
 ~C-c C-x C-i~ clocks in,
 ~C-c C-x C-o~ clocks out.
+~C-c [~ adds to agenda.
 ------
+* TODO Check in weekly with Joel
+SCHEDULED: <2020-11-11 Wed 22:00 ++1w>
 * TODO Exercise :PHYSICAL:
 SCHEDULED: <2020-11-03 Tue ++1d>
 :PROPERTIES:
@@ -15,11 +18,13 @@ SCHEDULED: <2020-11-03 Tue ++1d>
 - State "DONE"       from "TODO"       [2020-11-02 Mon 23:59]
 * TODO Work for IMDA :WORK:IMDA:
 ** TODO Attend standup
-SCHEDULED: <2020-11-05 Thu 09:00 ++1d>
+SCHEDULED: <2020-11-11 Wed 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-04 Wed 10:36]
+:LAST_REPEAT: [2020-11-10 Tue 10:30]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-11-10 Tue 10:30]
+- State "DONE"       from "TODO"       [2020-11-06 Fri 09:29]
 :LOGBOOK:
 CLOCK: [2020-11-06 Fri 09:03]--[2020-11-06 Fri 09:29] =>  0:26
 CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
@@ -74,13 +79,17 @@ change weights_path."
 :LOGBOOK:
 CLOCK: [2020-11-05 Thu 14:05]--[2020-11-05 Thu 15:32] =>  1:27
 :END:
-*** TODO Fix the Dockerfile for James
-***** TODO Comment out the PyTorch line in the Dockerfile
+*** DONE Fix the Dockerfile for James
+***** DONE Comment out the PyTorch line in the Dockerfile
 *** TODO Get the ML model working
+*** TODO Talk from host 
+https://aws.amazon.com/sqs/
+Mount vs Volume versus tempfs mount
+
 * TODO Get transferred to OGP
 ** DONE Follow up on the liquidated damages query
 ** WAIT Wait for IMDA to calculate my LD
-** TODO Interview with GovTech CEO
+** TODO Prepare for the interview with GovTech CEO
 SCHEDULED: <2020-12-04 Fri 16:30>
 * TODO Meet and talk to people :SERENDIPITY:RELATIONSHIPS:
 ** DONE Video call Tak Huen
@@ -88,16 +97,24 @@ SCHEDULED: <2020-11-02 Mon 22:15>
 ** DONE Congratulate Bea and Chen on expecting (and their new flat)
 DEADLINE: <2020-11-02 Mon 21:00>
 ** [X] Meet Joy for lunch
-** [ ] Meet Bernard for dinner
+** [ ] Meet Bernard for lunch
 SCHEDULED: <2020-11-07 Sat 12:00>
 ** [ ] Call Celine 
 SCHEDULED: <2020-11-08 Sun 16:00 +1w>
 * TODO Learn org-mode :CS:
-** TODO [[https://blog.jethro.dev/posts/capturing_inbox/][Read this entire series written by Jethro]]
-** TODO [[https://orgmode.org/worg/org-tutorials/org4beginners.html][Org Mode beginning at the basics]]
+** TODO Figure out how to use org-capture and org-roam
+*** WAIT Why no backlinks?
+*** TODO How do I tag?
+*** TODO How do I convert to YAML-Markdown?
+Markdown Roam: https://github.com/nobiot/md-roam
+** TODO Install md-roam
+** TODO Watch org-roam talks at the EmacsConf
+[[https://emacsconf.org/2020/schedule/][Emacs Conf 2020 schedule]]
+** [[https://blog.jethro.dev/posts/capturing_inbox/][Read this entire series written by Jethro]]
+** [[https://orgmode.org/worg/org-tutorials/org4beginners.html][Org Mode beginning at the basics]]
 ** [[orgmode.org/manual][Org Mode Manual]]
-** TODO Think about how to use agenda mode
-** TODO Think about how to organise my todo files
+** DONE Think about how to use agenda mode
+** DONE Think about how to organise my todo files
 Do I use `todo.org` at all? Should I just use `braindump.org` for everything?
 In general should I use multiple files or a single large file?
 Take a look at [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Jethro's Zettelkasten with Org-mode.]]
@@ -193,10 +210,17 @@ see braindump for notes on the call
 **** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
 *** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
 Prerequisite: [[Learn Rust]]
+** TODO Complete Bradfield CS take-home
+[[file:docs/bradfield_csi_takehome.pdf]]
+DEADLINE: <2020-11-08 Sun 12:00>
+:LOGBOOK:
+CLOCK: [2020-11-07 Sat 17:52]--[2020-11-07 Sat 20:00] =>  2:08
+:END:
 * TODO Write for the blog :BLOG:
 ** TODO Write post about interviewing with OGP and preparation process, even if I get rejected
-SCHEDULED: <2020-11-06 Fri>
+SCHEDULED: <2020-11-07 Sat>
 :LOGBOOK:
+CLOCK: [2020-11-10 Tue 17:58]
 CLOCK: [2020-11-05 Thu 22:25]--[2020-11-06 Fri 00:00] => 01:35
 :END:
 Clarified with Russell what I am or am not allowed to say:
@@ -207,6 +231,7 @@ Clarified with Russell what I am or am not allowed to say:
 > hiring process e.g. the stuff we tell u about what we're looking for - yeah you
 > can go ahead and share that too. but the actual questions we use and ask,
 > please don't
+[[file:my_ogp_interview_experience.md][My OGP interview experience]]
 ** TODO Write post about my three years in Oxford
   - Year 1
   - Year 2
@@ -236,8 +261,16 @@ design-build contracts, introduced into Canada just before costs exploded.
 *** TODO Follow up with Alon
 SCHEDULED: <2020-11-03 Tue ++1w>
 ** TODO New exploration: could Singapore afford a UBI? What would it take?
+** TODO New post: the importance of minimising friction
+:LOGBOOK:
+CLOCK: [2020-11-06 Fri 22:27]--[2020-11-07 Sat 17:52] => 19:25
+:END:
+[[file:20201106170251-making_your_habits_zero_friction_is_a_massive_productivity_hack.org][Making your habits zero-friction is a massive productivity hack]]   
+** TODO New post: The six pillars of software engineering tradeoffs (or something about complexity budgets)
+[[file:20201106172548-the_complexity_budget_is_actually_a_budget.org][The "complexity budget" is actually a budget]] 
 * TODO Improve the UX of my website :BLOG:
 ** TODO Add "Related Posts" widget on my posts
+** TODO Improve my blog: Filter pages, tag pages, tag search, tag index pages... 
 ** DONE Add blogroll
 * TODO Build software :SIDEPROJECTS:
 ** TODO Finish and ship MVP of Board Game Engine: server and lobby
@@ -280,10 +313,14 @@ layout customisable by me)
 * TODO Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
 * TODO Publish cryptogram book on Amazon 
 ** TODO Add gutter margins
+DEADLINE: <2020-11-07 Sat>
 [[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
-* WAIT Complain to Town council about the poorly shaded floodlights
-** DONE Wait for call from Town Council
-** WAIT Wait for Frederick to come and inspect the place
+** TODO Meet with NYC
+SCHEDULED: <2020-11-13 Fri 15:00-16:00>
+Zoom Date: 13 Nov 2020
+Zoom ID: 876 2180 2169
+Zoom PW: 131120
+Time: 3.00pm to 4.00pm folks
 * TODO Start scheduling my priorities
 How many hours do I devote each day to each item?
 Have a set time to exercise every day
@@ -295,17 +332,20 @@ So the things I need to do are:
 - Learn Rust
 - Go through the OS course
 - Self-study networking or go through a project or something
-
-* DONE Find out why I can't open shit in the same Emacs instance
-* TODO Just a random (stupid) idea: maybe I can make my blog use a color scheme like this Emacs theme
-* TODO Thank Kwotsin and update him about my job offer
-SCHEDULED: <2020-11-06 Fri 09:45>
-
-* TODO Think about how best to structure my digital garden/second brain/whatever
-** DONE Move all my files around and stuff
+* TODO Think of a way to display/digest time spent on each todo in a week
+** TODO Ask Joel about this
+* TODO Digital gardening
+** TODO Think about the separation between todo.org and braindump.org.
+Todos are todos, braindumps are just dumps/notes, but sometimes braindumps are
+actionable and sometimes TODOs need context.
+** TODO Think about how best to structure my digital garden/second brain/whatever
+*** DONE Move all my files around and stuff
 :LOGBOOK:
-CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] =>  3:35
-:END:
-* TODO Think about the separation between todo.org and braindump.org.
-Todos are todos, braindumps are just dumps/notes,
-but sometimes braindumps are actionable and sometimes TODOs need context.
+CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] => 3:35 :END:
+
+** TODO Come up with some sort of visualisation for my .org files, like Jethro's braindump in [[Digital gardens]]
+* WAIT Complain to Town council about the poorly shaded floodlights
+** DONE Wait for call from Town Council
+** WAIT Wait for Frederick to come and inspect the place
+* TODO What's the canonical way to link to other posts with Eleventy?
+* TODO Build a distributed, encrypted key-value store?

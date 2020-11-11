@@ -1,0 +1,179 @@
+#+title: Dynamo: Amazon's Highly Available Key-value Store
+
+> What are the parameters R, W, and N?
+Assuming there's no "hinted handoff",
+how many node failures can the system tolerate
+while still ensuring that successful read operations return up-to-date data?
+
+**N** is the number of nodes any data item is replicated to.
+"In addition to locally storing each key within its range,
+the coordinator replicates these keys at the N-1 clockwise successor nodes
+in the ring. This results in a system where each node is responsible for the
+region of the ring between it and its Nth predecessor".
+
+**R** is the minimum number of nodes that must participate in a successful read operation.
+
+**W** is the number of nodes that must participate in a successful write operation.
+
+"hinted handoff": a node stores some data that isn't meant for it,
+but keeps a record who it's *meant* to be for, and will
+deliver the replica to the intended recipient once
+the recipient has recovered.
+
+Suppose we are looking at the following sequence of events:
+
+1. get() call
+2. put() call
+3. get() call <--- successful, but must return up-to-date data.
+
+I think the answer to the question depends on
+**when** the nodes fail.
+If the nodes fail after the successful put call, then 
+as little as $W$ nodes need to fail (where $W < N-W$)
+in order for subsequent successful get() calls
+to no longer be up-to-date.
+In the worst-case scenario, all
+W nodes that held the latest version of the object written to
+have failed, and you lose your updated data
+(until you can bring it up again). 
+
+But if the nodes fail *before* the put call
+(or even before the first get call),
+the maximum number of node failures the system can tolerate is
+
+$$min(N-W, N-R).$$
+
+Why is this?
+Suppose there is no hinted handoff and we have consistent data
+replicated over N nodes.
+In order to perform a successful read there must be at least R
+nodes participating. So the maximum number of nodes
+that can fail and still allow a successful read is N-R.
+
+Suppose we have a successful read and we now want to write the
+data. In order to perform a successful write we must have
+at least W nodes participating.
+So the maximum number of nodes that can fail and still
+allow a successful write is N-W.
+
+And if you have no more nodes failing after the put()
+call, it is guaranteed that the W nodes
+that have successfully written the updated data
+are the highest W nodes in the priority list,
+which means that they will be selected in the next get()
+call, so you are guaranteed to get the latest version of the data.
+
+> What's "eventual consistency", and what are some advantages and disadvantages?
+What's a specific example of behaviour that could happen under this consistency
+model?
+
+"Consistency": any transaction can only bring the database from one valid state
+to another, maintaining database invariants.
+
+Eventual consistency means that the database *eventually*
+reaches a valid state.
+I understand this as meaning that each of the N nodes must
+_eventually_ hold the same copy of every key.
+More formally,
+there exists some time t in the future where $t > t_0$ such that
+for each key in each of the N nodes $key_t$,
+each key's value is the same:
+that is, $I(key_t) == J(key_t)$ for each $(I, J) \in N$.
+
+Advantages: you get asynchronous propagation. ~put()~ calls 
+are always available (provided you have at least W nodes),
+subsequent ~get()~ calls can return without waiting for
+~put()~ calls to replicate themselves over N nodes,
+which is good if $W << N$ or if we have server outages.
+
+Disadvantages: subsequent ~get()~ calls are not guaranteed to
+return the latest version of the data,
+and reconciliation must be performed.
+
+Specific example of behaviour that could happen under this
+consistency model:
+deleted items resurfacing in a "delete item from cart"
+if one chooses to merge the two different objects.
+
+> How does "consistent hashing" (compared to, say, ~hash(key) % N~) reduce the
+amount of data that needs to be moved when a node joins or leaves the cluster?
+
+For simplicity, suppose you had a 3-bit hash function ~hash(key)~ that mapped keys
+uniformly to an integer in range[0, 7] inclusive.
+And suppose that you had three nodes so each ~hash(key) mod 3~ would give a
+key of 0, 1 or 2.
+Let's look at how each of the keys maps in mod3:
+
+0 : 0
+1 : 1
+2 : 2
+3 : 0
+4 : 1
+5 : 2
+6 : 0
+7 : 1
+
+Now suppose a new node enters the cluster
+The key insight is that almost all of the hashes have changed
+(I've marked the keys that have changed with **asterisks**):
+
+0 : 0
+1 : 1
+2 : 2
+3 : **3**
+4 : **0**
+5 : **1**
+6 : **2**
+7 : **3**
+
+This will mean that a vast majority of data (those which mapped to 3--8)
+has to be moved from one cluster to another.
+In fact if N is small and the domain of the hash function, K, is large
+such that N << 2^K almost all of the data will have to be moved.
+The same is true if we remove a node from the cluster.
+
+Consistent hashing avoids this problem
+(we'll ignore how Dynamo assigns multiple nodes for simplicity).
+In the basic version of consistent hashing each hash is assigned
+to a node with the first ID larger than it.
+The nodes are randomly assigned a position.
+
+Again we'll use the three-bit hash function with three machines.
+Here's a very badly-drawn circle with the three nodes denoted with asterisks.
+In this case the three nodes have been assigned 0, 2 and 5 respectively.
+
+
+     *0
+  7     1
+6        *2 
+  *5   3
+     4
+
+0 : 2
+1 : 2
+2 : 5
+3 : 5
+4 : 5
+5 : 0
+6 : 0
+7 : 0
+
+Now let's insert a new node with value (say) 4:
+
+     *0
+  7     1
+6        *2 
+  *5   3
+     *4
+
+0 : 2
+1 : 2
+2 : **4**
+3 : **4**
+4 : 5
+5 : 0
+6 : 0
+7 : 0
+
+As we can see, only the nodes in between 2 and 5
+need to be moved.

@@ -1,0 +1,13 @@
+#+title: What can you buy with your complexity budget?
+
+*TODO*
+
+Six main things....
+
+- Maintainability: how hard is it to maintain, extend, or modify the codebase
+over a period of time?
+- Performance: how quickly does the code run?
+- Velocity: how fast can you write and ship your code?
+- Robustness: how well does the codebase handle unexpected behaviour
+(e.g. packet drops, user clicks Submit twice)?
+- User-friendliness: how intuitive are your interfaces/abstractions?

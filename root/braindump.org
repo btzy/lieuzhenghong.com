@@ -1,3 +1,4 @@
+#+TITLE: Braindump
 ---------
 **Very useful commands for Org Mode:**
 - `C-c C-o` navigates to link
@@ -355,14 +356,22 @@ Think about how we could make everyone automatically apply for the social progra
 Idea came from Mrs Hauw where she said that a family of four was only getting 900 SGD a month even though
 by right they would be eligible for much more.
 
-
 * Digital gardens
  I realise that I've been doing something very similar --- convergent evolution?
 rather than doing a stream of consciousness, or a list of blog posts/essays,
-I've been using my repo as a dump 
-Key idea here: chronological order is not a good way to order my posts
+I've been using my folder as a monorepo to do all sorts of things:
+save my PDFs, write notes, make plans, etc.
+Key idea here: chronological order is not a good way to order my posts,
+and not everything in the repo must be shown.
+
 taking cues from Gwern
 [[https://twitter.com/Mappletons/status/1250532315459194880][List of digital gardens (Twitter thread)]]
+https://nesslabs.com/digital-gardeners
+https://nesslabs.com/mind-garden
+
+Tom Critchlow's wiki Mind Garden (should emulate): [[https://tomcritchlow.com/wiki/]]
+Jethro Kuan's brain dump: https://braindump.jethro.dev/posts/
+Joel Hooks on digital gardens https://joelhooks.com/digital-garden
 
 There are two things really that I want here.
 The first is that I want to move my blog around in such a way that I don't have to think about
@@ -370,12 +379,215 @@ where to put a new post of mine.
 The second is to make it very easy to link from any post to every other post, as well as access any auxillary resources.
 
 That's why we want to put everything in a root folder, so every note is accessible by any other note.
+    - I've just done this.
+    - The next is to write some code that implements backlinks.
+      Org roam might alreayd do what I want: https://blog.jethro.dev/posts/introducing_org_roam/
+      Check out Jethro's post on doing Roam in org mode:
+      https://blog.jethro.dev/posts/zettelkasten_with_org/
+
+https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/
+https://fortelabs.co/blog/building-a-second-brain-in-emacs-and-org-mode/
+https://nesslabs.com/antilibrary
 
 ** Roam
 Super hot note taking app nowadays, some principles I should follow, but I will never leave my own editor.
 Non-negotiable!
 Check out the demo here: https://www.roambrain.com/getting-started/
+[[https://roamresearch.com/][Roam Research homepage]]
+Look carefully at which principles I can adopt from Roam that will help me 
 
-* TODO New post idea: "The principle of zero friction"
-* TODO New post idea: The six pillars of software engineering tradeoffs (or something about complexity budgets)
-* TODO Filter pages, tag pages, tag search, tag index pages... 
+* Taking the train from Singapore to Oxford for graduation
+Bernard had an absolutely brilliant idea:
+Bernard Teo, [07.11.20 22:00]
+i believe its something like:
+Singapore -> JB -> [Gemas] -> Butterworth (Penang) -> [Padang Besar] -> Bangkok -> [somewhere at the northern border of Thailand] -> Vientiane -> Kunming -> (Xian) -> Beijing -> (Ulaanbatar) -> (Irkutsk) -> Moscow -> (Warszawa) -> (Berlin) -> Paris -> London
+
+Bernard Teo, [07.11.20 22:00]
+those in '[]' are stops where you wouldn't want to stay overnight
+
+Bernard Teo, [07.11.20 22:01]
+those in '()' are optional stops that are interesting enough to be worth stopping overnight
+
+https://railtravelstation.com/from-london-to-singapore-in-40-days-by-train-for-under-s5000/
+
+Bernard estimates that it's going to take about 10 weeks and cost around 10k or more
+
+* [[file:20201107223444-computer_networks_a_top_down_approach.org][Computer Networks: A top-down approach]]
+** Think about implementing a DHT (distributed hash table)
+** Chat application on TCP
+* TODO Establish a presence and tools for Gemini
+** TODO Build a gemlog
+*** Why is Gemini an attractive protocol? Why do I want to start a gemlog on the Small Web?
+[[file:20201109002722-why_i_like_the_small_web.org][Why I like the Small Web]]
+*** TODO Think about what I would put on my gemlog
+*** TODO Find a way to export .org files to text/gemini files
+[[file:20201108233512-thinking_about_being_the_king_of_gemini.org][Thinking about being the King of Gemini]]
+1. allow new org-roam files to have arbitrary metadata automatically tagged on
+   at the start of the file
+2. to convert org-files with arbitrary metadata on top to Markdown-with-YAML
+3. Finally, we want .org and .md files both convert to Gemini
+** DONE Read the Gemini spec
+** DONE Join the Gemini mailing list
+** DONE See if there's an index of all Gemini pages
+** KILL Build a Gemini web crawler?
+* Getting involved in Gemini
+** What is the tildeverse?
+22:18:38       rndusr | lieu: the tildeverse is a collection of public access   │ g
+             │                      | unix systems: http://tildeverse.org                     │ gbmor
+** Why Gemini? Is Gemini actually simple? Client compact enforces Gemini's simplicity. Chatdump
+19:04:43         ew0k | and you can build a client that eschews the gemini way of  │@julienx        x
+4.fset       │                      | only making calls explicitly inititated by the user        │@tomasino
+5.  #projects│19:04:54         lieu | what do you mean by calls?                                 │@xq
+6.  #python  │19:05:12         ew0k | Get calls to the server                                    │ __R__
+7.  nickserv │19:05:42         ew0k | as in, fetching scripts, images, stylesheets etc without   │ ace
+             │                      | the user explicitly clicking those links                   │ admicos
+             │19:06:17         lieu | oh i see what you mean                                     │ alex11
+             │19:06:30         lieu | so the current protocol makes one GET request and gets     │ alexw1
+             │                      | back the header/body                                       │ appll
+             │19:06:46         lieu | and the client needs to make additional GET requests to    │ aravk
+             │                      | get all the images/links/etc in the response body          │ auscompgeek
+             │19:07:05         lieu | but you're saying we could theoretically circumvent that   │ autumnova
+             │                      | with a client                                              │ avane
+             │19:07:13         ew0k | doing that (serving html+js, loading elements without user │ bacterio
+             │                      | input, etc) and rendering that in the browser isn’t *bad*, │ bard
+             │                      | but I would argue that http is better for it               │ bie
+             │19:07:27         lieu | well that would defeat the purpose of gemini entirely      │ boringcactus
+             │19:07:31         ew0k | we could, definitely                                       │ Cadey
+             │19:07:37         ew0k | exactly                                                    │ calamitous
+             │19:07:38         lieu | might as well just go back to HTTP then                    │ calmbit
+             │19:07:48         ew0k | yup :)                                                     │ cel
+             │19:07:51         lieu | yes so that's the main concern i have here                 │ coleman
+             │19:07:58         lieu | or like i guess you could call it a main confusion         │ CommunistWolf
+             │19:08:55         lieu | so the gemini protocol allows serving of all types of      │ ComputerTech
+             │                      | files including arbitrary binary data / HTML/ videos etc   │ CoopDot
+             │19:09:17         lieu | so in fact it's not the PROTOCOL that is enforcing the     │ creme
+             │                      | "simplicity" of Gemini                                     │ dacav
+             │19:09:29         lieu | it is a compact made by all gemini CLIENT developers       │ dctrud
+             │19:09:48         lieu | the simplicity is not in the protocol but rather in the    │ ddevault
+             │                      | client                                                     │ djph
+             │19:09:52         lieu | do you see what i'm trying to get at                       │ dkibi
+             │19:09:57         ew0k | Pretty much spot on                                        │ dokuja
+             │19:10:24         ew0k | it’s a philosophy and a community agreement, you could say │ doppler
+             │19:10:34         lieu | yes but in that case aren't we barking up the wrong tree?  │ Dr-WaSabi
+             │                      | shouldn't we just build simple HTTP clients?               │ easeout
+             │19:10:38         lieu | like lynx or whatever                                      │ ehmry
+             │19:10:45         lieu | why do we need to have a new gemini protocol?              │ Ekkie
+             │19:11:13          bie | we don't *need* it, but                                    │ englishm
+             │19:11:17          bie | it's fun                                                   │ enpo
+             │19:11:31          bie | and even simple http clients are pretty complex            │ epoch
+             │19:11:36         ew0k | Purists will argue that there isn’t really a ”sane” subset │ ericonr
+             │                      | of http, and that setting a standard around that is        │ erin
+             │                      | impossible                                                 │ ew0k
+             │19:12:22         ew0k | but there’s also the history of where gemini comes from. I │ ew0k1
+             │                      | found that tomasino’s video on gopher helped me understand │ flamwenco
+             │                      | that: https://toobnix.org/videos/watch/1b9699da-3c41-48a8- │ g
+             │                      | 8009-97b756e88a3d                                          
+** Links
+[[https://proxy.vulpes.one/gemini/gemini.circumlunar.space/][Gemini homepage]]
+Software for developing: https://proxy.vulpes.one/gemini/gemini.circumlunar.space/software/
+GUS search engine: gemini://gus.guru
+https://natpen.net/code/gus/tree/gus/lib
+https://tilde.chat/ -- this is a useful link to ask people for help about Gemini
+[[https://portal.mozz.us/gemini/gemini.circumlunar.space/capcom/][CapCOM Geminispace aggregator (Atom Feeds)]]
+* [[file:20201108111035-dynamo_amazon_s_highly_available_key_value_store.org][Dynamo: Amazon's Highly Available Key-value Store]] 
+* Learn about IRC protocol, WeeChat
+https://weechat.org/files/doc/stable/weechat_user.en.html#usage
+
+* A realistic-economy, libertarian MMORPG
+lieu, [09.11.20 16:16]
+anyway i have been thinking about a game
+
+lieu, [09.11.20 16:16]
+imagine like a multiplayer game where anyone can join
+
+lieu, [09.11.20 16:16]
+2d top down game
+
+lieu, [09.11.20 16:16]
+and like theres 1000x1000 squares
+
+lieu, [09.11.20 16:17]
+anyone can claim any amount of unclaimed land for themselves for free
+
+lieu, [09.11.20 16:17]
+provided that they pay a hanson LVT (land value tax) proportinoal to their self-declared land value (that anyone can buy their land for)
+
+lieu, [09.11.20 16:19]
+did you write that?
+
+lieu, [09.11.20 16:21]
+im not sure how this game would be fun tho
+
+lieu, [09.11.20 16:21]
+like what would you do with the claimed land
+
+lieu, [09.11.20 16:22]
+one idea is that you would mine "mana deposits" which are the main fiat currency
+
+lieu, [09.11.20 16:22]
+the only function of mana deposits are to pay LVT
+
+lieu, [09.11.20 16:23]
+maybe another thing you can do with land is grow food
+
+lieu, [09.11.20 16:23]
+which is needed to give your character energy to do actions
+
+lieu, [09.11.20 16:24]
+thats all i have for an economy though
+
+lieu, [09.11.20 16:24]
+its not very compelling
+
+lieu, [09.11.20 16:24]
+i think it would be emergently fun
+
+lieu, [09.11.20 16:24]
+in the sense that a lot of the fun would be about like bidding for land and claiming it
+
+lieu, [09.11.20 16:25]
+but yeah there's nothing compelling to do right now
+
+lieu, [09.11.20 16:25]
+i want to build a manufacturing sector
+
+lieu, [09.11.20 16:25]
+so we have an agricultural sector
+
+lieu, [09.11.20 16:25]
+ergo growing stuff
+
+lieu, [09.11.20 16:26]
+we should also have a manufacturing sector which should
+
+lieu, [09.11.20 16:26]
+ideally improve the agricultural sector
+
+lieu, [09.11.20 16:26]
+i was thinking of a food nutrition system
+
+lieu, [09.11.20 16:26]
+each food has an Energy vs Satiety ratio
+you can only eat foods up to your max Satiety
+so you want the highest Energy/Satiety ratio so you can do the most actions
+there would be ways to combine foodstuffs 
+Chin Kee Yong, [09.11.20 16:58]
+u go flesh out your idea more
+
+Chin Kee Yong, [09.11.20 16:58]
+one thing i dont like is
+
+Chin Kee Yong, [09.11.20 16:59]
+you always have big ideas but you never commit anything to a google doc and work out what it looks like in actual mechanics
+
+Chin Kee Yong, [09.11.20 16:59]
+i have ideas too but they are google docs with control schemes and characters and core mechanics
+
+Chin Kee Yong, [09.11.20 16:59]
+and if you dont have that baseline to critique then its very hard to discuss
+
+* Low-impact development: don't runoff water, do it naturally
+rain gardens, vegetated rooftops, rain barrels
+Permeable pavement
+https://www.youtube.com/watch?v=wdcXmerZWDc
+https://www.youtube.com/watch?v=ERPbNWI_uLw
