@@ -17,8 +17,8 @@ tags:
 
 ## Introduction
 
-After reading the scientific literature and thinking the first principles,
-I've built a routine that I believe (as far as the evidence goes) 
+After reading the scientific literature and thinking through first principles,
+I've been thinking about a training method that I believe (as far as the evidence goes) 
 maximises hypertrophy but also happens to be very easy and painless.
 This training method deviates from most programs in two (three) main ways:
 
@@ -147,7 +147,7 @@ compared to doing the same exercises over several days AND taking long rests bet
 The best part is that if you do them spread out you can do more volume which
 means more gains---AND you hurt much less.
 
-## Why a 5-day split?
+## Why a 5-day full-body workout?
 
 **TL;DR: Training each bodypart more frequently maximises muscle protein synthesis.**
 
@@ -195,6 +195,10 @@ on trained men.
 > adaptations in well-trained men... TOTAL induced a significantly greater
 > increase in MT of the forearm flexors and vastus lateralis (p < 0.05)...
 > **TOTAL may confer a potentially superior hypertrophic effect**.
+
+Why five days, and not six or seven?
+I'm not sure (and would have to do more research on this) but it could be a way
+to reduce accumulated fatigue
 
 ## Why cluster sets/blood flow restriction training?
 
