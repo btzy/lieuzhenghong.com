@@ -8,21 +8,34 @@ To clone type ~C-c C-x c~
 ~C-c C-x C-o~ clocks out.
 ~C-c [~ adds to agenda.
 ------
+* TODO Meeting with Gabe and Moon
+SCHEDULED: <2020-11-23 Mon 22:00>
 * TODO Check in weekly with Joel
-SCHEDULED: <2020-11-11 Wed 22:00 ++1w>
-* TODO Exercise :PHYSICAL:
-SCHEDULED: <2020-11-03 Tue ++1d>
+SCHEDULED: <2020-11-25 Wed 22:00 ++1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-03 Tue 00:57]
+:LAST_REPEAT: [2020-11-19 Thu 13:29]
 :END:
-- State "DONE"       from "TODO"       [2020-11-02 Mon 23:59]
+- State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
+- State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
+* TODO Hangout Thursdays with Celine
+SCHEDULED: <2020-11-26 Thu 23:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-20 Fri 10:05]
+:END:
+- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
 * TODO Work for IMDA :WORK:IMDA:
 ** TODO Attend standup
-SCHEDULED: <2020-11-11 Wed 09:00 ++1d>
+SCHEDULED: <2020-11-21 Sat 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-10 Tue 10:30]
+:LAST_REPEAT: [2020-11-20 Fri 10:05]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
+- State "KILL"       from "TODO"       [2020-11-19 Thu 13:29]
+- State "DONE"       from "TODO"       [2020-11-18 Wed 14:06]
+- State "KILL"       from "TODO"       [2020-11-17 Tue 19:44]
+- State "DONE"       from "TODO"       [2020-11-16 Mon 11:31]
+- State "DONE"       from "TODO"       [2020-11-12 Thu 10:53]
 - State "DONE"       from "TODO"       [2020-11-10 Tue 10:30]
 - State "DONE"       from "TODO"       [2020-11-06 Fri 09:29]
 :LOGBOOK:
@@ -32,19 +45,13 @@ CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
 - State "DONE"       from "TODO"       [2020-11-04 Wed 10:36]
 - State "DONE"       from "TODO"       [2020-11-03 Tue 09:53]
 ** TODO Build the Python pipeline 
+*** DONE Iron out the bugs in the TCP streaming system
 *** DONE Think about the advantages and disadvantages of the DeepStream SDK
 :LOGBOOK:
 CLOCK: [2020-11-02 Mon 17:16]--[2020-11-02 Mon 18:18] =>  1:02
 :END:
-*** TODO Write a proposal on how to build a Python pipeline
-**** DONE Sketch out a big picture architecture diagram
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 11:10]--[2020-11-03 Tue 11:30] =>  0:20
-:END:
-[[./img/diagram.png]]
-**** DONE Note down or otherwise document how to install RealSense libs on the Jetson
-**** TODO Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
-**** TODO Understand RealSense API and I/O
+*** DONE Write a proposal on how to build a Python pipeline
+**** DONE Understand RealSense API and I/O
 :LOGBOOK:
 CLOCK: [2020-11-03 Tue 11:30]--[2020-11-03 Tue 12:05] =>  0:35
 :END:
@@ -58,22 +65,29 @@ CLOCK: [2020-11-03 Tue 11:30]--[2020-11-03 Tue 12:05] =>  0:35
 This [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~]] extends the [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.frame.html?highlight=get_data#pyrealsense2.frame.get_data][~frame~]] class.
 We get the data from the frame using the ~get_data~ method,
 which in turn returns a ~BufData~ data structure.
-***** TODO find out what the type signature is for BufData (help(type(self)))
+***** DONE find out what the type signature is for BufData (help(type(self)))
 We know that the BufData can be converted into a numpy array which we might be able to feed
-**** TODO Ask one of the scientists of the inputs of the 7-class model
+**** DONE Sketch out a big picture architecture diagram
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 11:10]--[2020-11-03 Tue 11:30] =>  0:20
+:END:
+[[./img/diagram.png]]
+**** DONE Note down or otherwise document how to install RealSense libs on the Jetson
+**** DONE Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
+**** DONE Ask one of the scientists of the inputs of the 7-class model
 What is the I/O of the current model?
 Would this change when moving to TensorRT?
 
 **ANSWER**: The I/O takes a NumPy array no problems and returns a JSON object.
 We can check the JSON object schema in the folder.
-**** TODO Check with Marcus or Siyang how I would deploy the 7-class model on the Jetson
+**** DONE Check with Marcus or Siyang how I would deploy the 7-class model on the Jetson
 [[s3://vama-sceneuds-images/Archive_weights/best_4class.pt]]
 "The above link is the saved model, we can use it with B1_detect.py,
 change weights_path."
-**** TODO Finalise architecture diagram
-*** TODO Get a "Hello World" working on librealsense
-**** TODO Write a Dockerfile to make installation of pylibrealsense easy
-***** TODO Find a way to get past the permissions thing of the script
+**** DONE Finalise architecture diagram
+*** DONE Get a "Hello World" working on librealsense
+**** KILL Write a Dockerfile to make installation of pylibrealsense easy
+***** KILL Find a way to get past the permissions thing of the script
 **** DONE Install pylibrealsense libraries (build from source)
 **** DONE Write documentation on how to install pylibrealsense on the Jetson
 :LOGBOOK:
@@ -81,26 +95,22 @@ CLOCK: [2020-11-05 Thu 14:05]--[2020-11-05 Thu 15:32] =>  1:27
 :END:
 *** DONE Fix the Dockerfile for James
 ***** DONE Comment out the PyTorch line in the Dockerfile
-*** TODO Get the ML model working
-*** TODO Talk from host 
+*** DONE Get the ML model working
+*** DONE Talk from host 
 https://aws.amazon.com/sqs/
 Mount vs Volume versus tempfs mount
 
+*** DONE Refactor
+*** TODO Write code to get depth data
+:LOGBOOK:
+CLOCK: [2020-11-20 Fri 10:23]
+:END:
+*** TODO Write documentation
 * TODO Get transferred to OGP
 ** DONE Follow up on the liquidated damages query
 ** WAIT Wait for IMDA to calculate my LD
 ** TODO Prepare for the interview with GovTech CEO
 SCHEDULED: <2020-12-04 Fri 16:30>
-* TODO Meet and talk to people :SERENDIPITY:RELATIONSHIPS:
-** DONE Video call Tak Huen
-SCHEDULED: <2020-11-02 Mon 22:15>
-** DONE Congratulate Bea and Chen on expecting (and their new flat)
-DEADLINE: <2020-11-02 Mon 21:00>
-** [X] Meet Joy for lunch
-** [ ] Meet Bernard for lunch
-SCHEDULED: <2020-11-07 Sat 12:00>
-** [ ] Call Celine 
-SCHEDULED: <2020-11-08 Sun 16:00 +1w>
 * TODO Learn org-mode :CS:
 ** TODO Figure out how to use org-capture and org-roam
 *** WAIT Why no backlinks?
@@ -210,28 +220,18 @@ see braindump for notes on the call
 **** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
 *** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
 Prerequisite: [[Learn Rust]]
-** TODO Complete Bradfield CS take-home
+** DONE Complete Bradfield CS take-home
 [[file:docs/bradfield_csi_takehome.pdf]]
 DEADLINE: <2020-11-08 Sun 12:00>
 :LOGBOOK:
 CLOCK: [2020-11-07 Sat 17:52]--[2020-11-07 Sat 20:00] =>  2:08
 :END:
 * TODO Write for the blog :BLOG:
-** TODO Write post about interviewing with OGP and preparation process, even if I get rejected
-SCHEDULED: <2020-11-07 Sat>
-:LOGBOOK:
-CLOCK: [2020-11-10 Tue 17:58]
-CLOCK: [2020-11-05 Thu 22:25]--[2020-11-06 Fri 00:00] => 01:35
-:END:
-Clarified with Russell what I am or am not allowed to say:
-
-> my general principle which I'd say to OGP officers (and I counting you in that
-> fold by extension) is go ahead and share freely, but dont go and share
-> something that would give any reader an unfair advantage into the actual
-> hiring process e.g. the stuff we tell u about what we're looking for - yeah you
-> can go ahead and share that too. but the actual questions we use and ask,
-> please don't
-[[file:my_ogp_interview_experience.md][My OGP interview experience]]
+** TODO Write series about "How to write a First-Class Oxford PPE essay":
+  - how to read,
+  - how to synthesise what you've read into a big debate/ few key viewpoints
+  - "Think very hard",
+  - how to structure the essay
 ** TODO Write post about my three years in Oxford
   - Year 1
   - Year 2
@@ -239,11 +239,6 @@ Clarified with Russell what I am or am not allowed to say:
 *** TODO collate pictures
 ** TODO Upload my notes
 ** TODO Upload my exam paper attempts
-** TODO Write series about "How to write a First-Class Oxford PPE essay":
-  - how to read,
-  - how to synthesise what you've read into a big debate/ few key viewpoints
-  - "Think very hard",
-  - how to structure the essay
 ** TODO Write a post about Board Game Engine
 ** TODO New exploration: why is metro construction in Singapore so expensive?
 Why have costs ballooned over the past fifteen years?
@@ -258,8 +253,7 @@ English-speaking world is the trend of the privatization of the state since the
 consultants. This trend is intensifying, for example with increasing use of
 design-build contracts, introduced into Canada just before costs exploded.
 
-*** TODO Follow up with Alon
-SCHEDULED: <2020-11-03 Tue ++1w>
+*** HOLD Follow up with Alon
 ** TODO New exploration: could Singapore afford a UBI? What would it take?
 ** TODO New post: the importance of minimising friction
 :LOGBOOK:
@@ -268,6 +262,24 @@ CLOCK: [2020-11-06 Fri 22:27]--[2020-11-07 Sat 17:52] => 19:25
 [[file:20201106170251-making_your_habits_zero_friction_is_a_massive_productivity_hack.org][Making your habits zero-friction is a massive productivity hack]]   
 ** TODO New post: The six pillars of software engineering tradeoffs (or something about complexity budgets)
 [[file:20201106172548-the_complexity_budget_is_actually_a_budget.org][The "complexity budget" is actually a budget]] 
+** TODO New post: Convergence is (finally) coming
+** TODO New post: Teaching game theory (PBEs) using one of Faker's plays
+[[file:20201119143515-learn_game_theory_from_league_of_legends_faker_s_fakeout.org][Learn game theory from League of Legends: Faker's Fakeout]]
+** HOLD New post: Singapore's historical land usage for golf courses
+** DONE Write post about interviewing with OGP and preparation process, even if I get rejected
+SCHEDULED: <2020-11-07 Sat>
+:LOGBOOK:
+CLOCK: [2020-11-05 Thu 22:25]--[2020-11-06 Fri 00:00] => 01:35
+:END:
+Clarified with Russell what I am or am not allowed to say:
+
+> my general principle which I'd say to OGP officers (and I counting you in that
+> fold by extension) is go ahead and share freely, but dont go and share
+> something that would give any reader an unfair advantage into the actual
+> hiring process e.g. the stuff we tell u about what we're looking for - yeah you
+> can go ahead and share that too. but the actual questions we use and ask,
+> please don't
+[[file:my_ogp_interview_experience.md][My OGP interview experience]]
 * TODO Improve the UX of my website :BLOG:
 ** TODO Add "Related Posts" widget on my posts
 ** TODO Improve my blog: Filter pages, tag pages, tag search, tag index pages... 
@@ -275,7 +287,7 @@ CLOCK: [2020-11-06 Fri 22:27]--[2020-11-07 Sat 17:52] => 19:25
 * TODO Build software :SIDEPROJECTS:
 ** TODO Finish and ship MVP of Board Game Engine: server and lobby
 *** TODO Pair program with Joshua 
-SCHEDULED: <2020-11-03 Tue 21:30>
+SCHEDULED: <2020-11-21 Sat 22:00 +1w>
 :LOGBOOK:
 CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
 :END:
@@ -288,50 +300,64 @@ Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
 ** HOLD Repair gramophone
 ** TODO Build adjustable monitor stand
 ** TODO Build DIY RGBA night lamp
-** WAIT Build home gym
+** DONE Build home gym
 * TODO Publish academic work :SIDEPROJECTS:THESIS:
-** HOLD Paper with Nick Eubank
 ** TODO Paper with Gabe Schoenbach
 *** TODO Pair program with Gabe
-SCHEDULED: <2020-11-10 Tue 22:00 +1w>
+SCHEDULED: <2020-11-20 Fri 22:30 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-03 Tue 23:54]
+:LAST_REPEAT: [2020-11-18 Wed 00:36]
 :END:
+- State "DONE"       from "TODO"       [2020-11-18 Wed 00:36]
+- State "KILL"       from "TODO"       [2020-11-12 Thu 11:01]
 - State "DONE"       from "TODO"       [2020-11-03 Tue 23:54]
 :LOGBOOK:
 CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
 :END:
+** TODO Paper with Nick Eubank
+*** DONE Reply to Nick Eubank
 * TODO Buy things [3/5]
 - [X] Buy home gym equipment (~\$800--\$2000)
 - [X] Buy a new toothbrush
-- [ ] Buy a webcam
+- [X] Buy a webcam
 - [ ] Buy a night light
 - [ ] Buy split keyboard (~ \$500)
 * TODO Find a format for my resume that fulfills all my goals :WORK:
 (not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
 layout customisable by me)
 * TODO Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
+** TODO Post it on LessWrong?
 * TODO Publish cryptogram book on Amazon 
 ** TODO Add gutter margins
 DEADLINE: <2020-11-07 Sat>
 [[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
-** TODO Meet with NYC
+*** DONE Read the code for adding gutter margins
+DEADLINE: <2020-11-15 Sun>
+*** WAIT Wait for a reply on my issue on GitHub
+** DONE Think about meeting with NYC and Nicole
+Leader PFA fund?? All of our Youth Corps leaders
+FOr a period of three years you have a "Pay it forward" award
+Seed fund is for any leader to start and sustain a project
+
+- Talk to social workers to do need analysis
+- Adults with special needs? Would they greatly benefit?
+
+Adult with special needs: homebound. They depend on caregivers.
+They stay inside, they can only do things inside
+and then they stare/watch TV the whole day.
+** DONE Meet with NYC
 SCHEDULED: <2020-11-13 Fri 15:00-16:00>
 Zoom Date: 13 Nov 2020
 Zoom ID: 876 2180 2169
 Zoom PW: 131120
 Time: 3.00pm to 4.00pm folks
-* TODO Start scheduling my priorities
-How many hours do I devote each day to each item?
-Have a set time to exercise every day
-So the things I need to do are:
-- Write Three Years in Oxford
-- Write How to Write a First-Class PPE Essay
-- Write OGP interview and preparation post
-- Upload resume to personal website
-- Learn Rust
-- Go through the OS course
-- Self-study networking or go through a project or something
+* TODO Apply for universities
+** TODO Apply for Harvard
+** TODO Apply for ETH Zurich
+* TODO Send in pull request for Intel RealSense repo
+SCHEDULED: <2020-11-17 Tue>
+* TODO Reply to Rob Heaton
+SCHEDULED: <2020-11-17 Tue>
 * TODO Think of a way to display/digest time spent on each todo in a week
 ** TODO Ask Joel about this
 * TODO Digital gardening
@@ -344,8 +370,24 @@ actionable and sometimes TODOs need context.
 CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] => 3:35 :END:
 
 ** TODO Come up with some sort of visualisation for my .org files, like Jethro's braindump in [[Digital gardens]]
-* WAIT Complain to Town council about the poorly shaded floodlights
-** DONE Wait for call from Town Council
-** WAIT Wait for Frederick to come and inspect the place
-* TODO What's the canonical way to link to other posts with Eleventy?
+https://notes.alexkehayias.com/
 * TODO Build a distributed, encrypted key-value store?
+* WAIT What's the canonical way to link to other posts with Eleventy?
+* WAIT Add feature request to support Jekyll-style tags in org-roam
+SCHEDULED: <2020-11-17 Tue>
+* DONE Have dinner with Marc
+SCHEDULED: <2020-11-17 Tue>
+* DONE Complain to Town council about the poorly shaded floodlights
+** DONE Wait for call from Town Council
+** DONE Wait for Frederick to come and inspect the place
+* DONE Set up GIRO automatic deductions to top up parents' CPF account
+** DONE Grab an envelope
+https://www.cpf.gov.sg/Assets/members/Documents/FORM_RSTU_GIROandSI.pdf
+(iii) GIRO
+
+    Use our GIRO facility to make monthly and/or yearly cash top-ups to your own or loved ones’ CPF accounts.
+    Download and complete the latest* Top Up Retirement Sum Using GIRO (PDF, 1.3MB).
+    Mail it to:
+    CPF Board
+    Robinson Road P.O. Box 3060 Singapore 905060
+

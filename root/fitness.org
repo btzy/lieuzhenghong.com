@@ -12,6 +12,8 @@
 1. Starting Stretching
 2. Face pulls and glute stretches
 3. Pull or push workout
+** Exercise reference
+[[file:docs/BODYBUILDING AT HOME The Ultimate Workout Template.pdf][PDF]]
 ** Exercise GIF reference
 - [[https://i.imgur.com/bzQMhNJ.gif][Archer pushup]]
 - [[https://i.imgur.com/rMWqubP.gif][Inverted skullcrushers]]
@@ -133,51 +135,116 @@ BW 10 10
 **** KILL Bulgarian split squats
 **** KILL Unilateral standing calf raises
 
-** TODO <2020-11-07 Sat> [0/1]
+** KILL <2020-11-07 Sat> [1/1]
 Pull workout
-*** TODO Exercises [1/9]
+*** KILL Exercises [9/9]
 **** DONE Starting Stretching
-**** TODO Warmup
-**** TODO Archer pullups
-**** TODO Incline pullups
-**** TODO Bicep curls
-**** TODO Lat raises
-**** TODO Nordic curls
-**** TODO Single-legged Romanian deadlifts
-**** TODO Abs
-** TODO <2020-11-09 Mon> [0/1]
+**** KILL Warmup
+**** KILL Archer pullups
+**** KILL Incline pullups
+**** KILL Bicep curls
+**** KILL Lat raises
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** KILL Abs
+** KILL <2020-11-09 Mon> [1/1]
 Pull workout
-*** TODO Exercises [0/9]
-**** TODO Starting Stretching
-**** TODO Warmup
-**** TODO Archer pullups
-**** TODO Incline pullups
-**** TODO Bicep curls
-**** TODO Lat raises
-**** TODO Nordic curls
-**** TODO Single-legged Romanian deadlifts
-**** TODO Abs
-** TODO <2020-11-11 Wed> [0/1]
+I was sick so didn't do this
+*** KILL Exercises [9/9]
+**** DONE Starting Stretching
+**** KILL Warmup
+**** KILL Archer pullups
+**** KILL Incline pullups
+**** KILL Bicep curls
+**** KILL Lat raises
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** KILL Abs
+** DONE <2020-11-10 Tues> [1/1]
 Pull workout
-*** TODO Exercises [0/9]
-**** TODO Starting Stretching
-**** TODO Warmup
-**** TODO Archer pullups
-**** TODO Incline pullups
-**** TODO Bicep curls
-**** TODO Lat raises
-**** TODO Nordic curls
-**** TODO Single-legged Romanian deadlifts
-**** TODO Abs
-** TODO <2020-11-08 Sun>  [0/1]
+*** DONE Exercises [9/9]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pullups
+10 6
+**** DONE Incline pullups
+15 15
+**** DONE Bicep curls
+15 15
+**** DONE Lat raises
+10 
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** DONE Abs
+** DONE <2020-11-11 Wed>  [1/1]
 *** Remarks
 Push workout
-*** TODO Exercises [0/8]
-**** TODO Starting Stretching
-**** TODO Warmup
-*** TODO Archer pushups
-*** TODO Decline pushups
-*** TODO Inverted skullcrushers
-*** TODO Pistol squats
-*** TODO Bulgarian split squats
-*** TODO Unilateral standing calf raises
+*** DONE Exercises [8/8]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pushups
+12 10
+**** DONE Decline pushups
+15 13
+**** DONE Inverted skullcrushers
+**** DONE Pistol squats
+**** KILL Bulgarian split squats
+**** KILL Unilateral standing calf raises
+** KILL <2020-11-05 Thu> [1/1]
+*** Remarks
+Pull workout
+*** DONE Exercises [9/9]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pullups
+BW 10 6
+Really focused on the unilateral pulling this time
+and could really feel the exercise getting much harder.
+**** DONE Incline pullups
+BW 15 12
+My forearms start to burn even before my back becomes sore.
+Why is this? Should investigate. Maybe ask on Reddit.
+**** DONE Bicep curls
+**** DONE Lat raises
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** DONE Abs
+3 sets of side planks / ab lifts
+I find that when doing planks or ab lifts, my arms tire sooner
+than my abs do. Again, need to fix this.
+** DONE <2020-11-13 Fri>  [1/1]
+*** Remarks
+Push workout
+*** DONE Exercises [8/8]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pushups
+**** DONE Decline pushups
+**** DONE Inverted skullcrushers
+**** DONE Pistol squats
+**** KILL Bulgarian split squats
+**** KILL Unilateral standing calf raises
+** DONE <2020-11-14 Sat> [1/1]
+Pull workout
+*** DONE Exercises [9/9]
+**** DONE Starting Stretching
+**** DONE Warmup
+**** DONE Archer pullups
+10 6
+Even though the number of reps didn't go up, I 
+**** DONE Incline pullups
+15 15
+**** DONE Bicep curls
+15 15
+**** DONE Lat raises
+10 
+**** KILL Nordic curls
+**** KILL Single-legged Romanian deadlifts
+**** DONE Abs
+** TODO <2020-11-22 Sun> [0/0]
+Don't really know what I'm doing, need to program a new workout
+*** Dumbbell bench press, 5kg each side (16)
+16 
+*** Dumbbell rows
+16
+*** Dumbbell shoulder press

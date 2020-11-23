@@ -355,7 +355,6 @@ really can't find out why certain things behave certain ways.
 Think about how we could make everyone automatically apply for the social programs they're eligible for
 Idea came from Mrs Hauw where she said that a family of four was only getting 900 SGD a month even though
 by right they would be eligible for much more.
-
 * Digital gardens
  I realise that I've been doing something very similar --- convergent evolution?
 rather than doing a stream of consciousness, or a list of blog posts/essays,
@@ -591,3 +590,164 @@ rain gardens, vegetated rooftops, rain barrels
 Permeable pavement
 https://www.youtube.com/watch?v=wdcXmerZWDc
 https://www.youtube.com/watch?v=ERPbNWI_uLw
+
+* Why do we cut grass?
+Why do we prune the plants that grow and why do we cut grass?
+Where does the grass we cut grow? Is it composted or is it simply thrown away?
+Might it be better to grow plants rather than grass?
+
+* Device convergence: one device to rule them all
+Tablet, laptop and desktop "Shells" with a single phone-size SOC
+https://nexdock.com/ -- still hasn't been manufactured, but laptop case is $100 
+https://anywaretek.com/products/phonebook -- $300
+https://www.amazon.com/Raspberry-320x480-Monitor-Raspbian-RetroPie/dp/B07N38B86S/ref=sr_1_21?dchild=1&keywords=Raspberry+Pi+Laptop&qid=1605428573&sr=8-21
+Razr Project Linda --- CES concept that never got off the ground
+https://www.razer.com/sg-en/concepts/project-linda
+https://www.reddit.com/r/linux/comments/4biamr/a_list_of_handheldpocket_linux_computers/
+PopCorn PC --- again, hasn't been manufactured, but looks very cool. The main
+question is whether it's a) powerful enough to run stuff and b) whether it will
+integrate nicely over USB-C with laptop/desktop "shells"
+
+** PureOS and Librem is the best and most mature I think
+
+https://pocket.popcorncomputer.com/
+https://puri.sm/posts/the-general-purpose-computer-in-your-pocket/
+https://puri.sm/posts/investing-in-real-convergence/
+
+
+> What Real Convergence Looks Like
+
+Real convergence means bringing your desktop computer with you wherever you go. When we talk about how we have invested in convergence at Purism with PureOS we start with the desktop OS and shrink it down to your pocket.
+
+** Extract from a convo
+lieu, [15.11.20 18:11]
+[Forwarded from lieu]
+Exactly what I said
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+You only upgrade one device
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+You can keep the shells and peripherals the same
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+That is a key value prop imo
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+And the best thing is that those shells can be really any form factor you want really
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+They don't even have to be restricted to laptop tablet desktop
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+Could be anything
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+That's what i mean by decoupling
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+Conceivably in the future you might have a touchscreen wall
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+let's say
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+Just plug your phone into the dock
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+And then the entire wall mounted screen becomes a massive tablet
+
+lieu, [15.11.20 17:39]
+[Forwarded from lieu]
+If you want to do big screen gaming plug it into your TV
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+for consumer .. the way forward is to wait for apple to do it
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+Microsoft doesn't have the solution because
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+you need to control both mobile and desktop
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+and apple is the only person who does
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+Google has chromebooks which are shite
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+Microsoft king of desktop only
+
+lieu, [15.11.20 17:47]
+[Forwarded from lieu]
+so apple is the only one who could pull it off
+
+* Questions I have for Alvin Pang
+** How do I get feedback? How do I find a good editor?
+** How do I write more quickly and consistently?
+** I wonder if there's room for a non-linear document format with collapsible and expandable sections (expand to get the nitty-gritty technical details)
+** Ask Alvin about the best way to *teach* good writing is --- I want to write a post about writing First-class essays, and I currently give my sister advice on her writing.
+** There is a difference between writing creatively (possibly meandering, possibly florid, expressive language) and writing publicly (use simple words, short and concise). Is there any overlap? Is there any room for florid language?
+- yes, when painting a picture of the future
+  anchor or highlight a particular argument
+  "Thinkpieces" -- but be very selective.
+
+** alfwork@gmail.com 
+** Neon Yang's TENSORATE series 
+* Third places in Singapore
+* Interesting saucy story from Edward's ex-boss
+Edward Low, [17.11.20 15:31]
+in the not so distant past
+four (rich) men in singapore would get together to buy a condominium apartment
+they would use said apartment to meet up, talk cock, drink beer, watch football, and fuck their mistresses
+this was apparently a very common arrangement
+geographically there are certain spots in singapore which were popular sites for purchase
+this is all hearsay from my ex-boss
+my ex-boss is gay but these guys certainly weren't
+the most famous of these 'arrangements' was between the heads of the key local banks
+DBS UBS, one more i forgot (OCBC?), and then minister of finance (i believe)
+so one of the bank heads owned the then newly opened mandarin oriental
+so the four of them would meet up in the restaurant for a banquet of exotic asian cuisines to boost their sex drives (i.e. tiger penis)
+then retire upstairs to the rooms for orgies
+naturally they developed a close relationship with each other, which turned out to be p good for singapore
+there was apparently a major share crash in the early days of SGX
+some bluechip malaysian company defaulted
+so the stockbrokers were getting fucked
+so the minister called up his fuck buddies and told them to hold off on collecting payment from the stockbrokers so as to allow them to remain slightly liquid
+this staved off the crash
+
+* Rust tidbits
+When the program has a valid reference, the borrow checker enforces the ownership and borrowing rules (covered in Chapter 4) to ensure this reference and any other references to the contents of the vector remain valid. Recall the rule that states you can’t have mutable and immutable references in the same scope. That rule applies in Listing 8-7, where we hold an immutable reference to the first element in a vector and try to add an element to the end, which won’t work if we also try to refer to that element later in the function:
+
+ [This code does not compile!] 
+    let mut v = vec![1, 2, 3, 4, 5];
+
+    let first = &v[0];
+
+    v.push(6);
+
+    println!("The first element is: {}", first);
+
+Listing 8-7: Attempting to add an element to a vector while holding a reference to an item
+
+* Rust problems
+ - having trouble with strings
+ - enums2

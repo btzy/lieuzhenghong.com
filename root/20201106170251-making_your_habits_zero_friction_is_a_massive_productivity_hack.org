@@ -1,4 +1,9 @@
 #+title: Making your habits zero-friction is a massive productivity hack
+:PROPERTIES:
+:layout: base
+:tags:   public
+:tags+:  draft
+:END:
 
 ** Introduction
 
@@ -65,9 +70,10 @@ Here are some examples:
 - Simply leaving the guitar out of its case makes me practice 10x more often,
   because I could just pick it up whenever I got bored.
   
-How do we aggressively minimise friction?
+How do we aggressively minimise friction? I think there's not that much to it:
 Think about a habit that you're trying (and failing) to adhere to.
 Then think about what you dread about/ what's difficult about starting the task. 
+See if you can reduce or eliminate whatever that is.
 
 ** There are no diminishing returns to decreasing friction
 
@@ -101,3 +107,6 @@ Here are some examples:
   but this is enough for me to close the tab immediately most of the time.
 
 ** Conclusion
+
+Reducing friction aggressively has outsize effects on habit adherence with
+little to no diminishing returns.

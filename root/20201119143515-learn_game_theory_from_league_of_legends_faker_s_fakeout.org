@@ -1,0 +1,78 @@
+#+title: Learn game theory from League of Legends: Faker's Fakeout
+
+Motivation: this post from Tsun Lok
+https://www.reddit.com/r/leagueoflegends/comments/jw0014/dopas_secrets_applied_to_fakers_last_world/ 
+
+Goal: to teach the concept of a Perfect Bayesian Equilibrium (PBE)
+using the frame story of Faker's play. Use interactive diagrams to show how
+there is a unique PBE. Build up from the story of pure and mixed equilibrium.
+
+We can formalise the game 
+
+Start as follows:
+
+A big part of playing League is knowing when to be aggressive and when to be
+passive.
+Being aggressive is good because it allows you to win the lane and get some
+advantage.
+But if you play too aggressively the jungler will come and you will be ganked,
+which is really not good for you.
+
+You may or may not have seen something called a "payoff matrix" before,
+but essentially it allows us to represent these outcomes in a simple diagram.
+
+Why does Faker play aggressively? It's to signal that LS is at mid and not bot.
+How can we formalise this?
+
+The first play is as follows.
+Faker pretends to ward top brush, plays very aggressively, makes a bad trade,
+and keeps running to his top jungle rather than the safety of his tower.
+Question for Cass: Does Cass go all-in?
+
+Faker plays aggressively and makes a "bad trade" --> Does Cass all in? -->
+ - If yes and LS around at mid, she loses, and LS is revealed.
+ - If yes and LS not at mid, she wins.
+ - If no and LS at mid, she's OK (gets some advantage).
+ - If no and LS not at mid, she's OK (gets some advantage).
+
+Payoff matrix something like this, from Casseo's PoV:
+
+       LS Mid   LS Bot
+All-in -1 1      1  -1 
+Don't  .5 -.5   .5 -.5
+
+Faker has an "outside option" of (0,0) by not playing aggressively.
+Note that there is no pure NE.
+Note that if Faker was rational and honest, he would never play aggressively
+when LS is at bot --- strictly dominated by playing passive!
+
+So opponent falsely concludes that LS is at bot. 
+Casseo does not go all in because she believes LS is on mid.
+
+If LS is not revealed, then we play the follow-up game:
+
+The game at bottom lane is as follows.
+- If bottom goes aggressive with no LS at bot, they get some advantage.
+- If bottom goes aggressive with LS at bot, they get huge disadvantage.
+- If bottom goes passive, they get no advantage/disadvantage regardless of where
+  LS is.
+
+            LS Mid     LS Bot
+ Aggro      .5 -.5    -1   1
+ Passive     0   0     0   0       
+ 
+Questions:
+What's the significance of the fact that Faker puts a deep ward and sees Olaf?
+What would be different about the analysis if so?
+
+Game sequence as follows:
+
+1. Both junglers place themselves secretly (at bottom or at mid).
+2. Mid lane game (Faker chooses either to play passive or aggro, Casseo decides
+   whether or not to all-in).
+3. Bottom lane game (Enemy bottom chooses either to play passive or aggro).
+
+**Extra analysis**: What would happen if opponents wised up to Faker's tricks?
+Then Faker's signal would be semi-cheap talk. 
+This would be a really interesting analysis.
+We could find a mixed equilibrium. (I don't think this a PBE? Since there are no types.)
