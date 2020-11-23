@@ -8,28 +8,31 @@ To clone type ~C-c C-x c~
 ~C-c C-x C-o~ clocks out.
 ~C-c [~ adds to agenda.
 ------
-* TODO Meeting with Gabe and Moon
+* DONE Call 
+* TODO Plan what activities fit in what day
+* TODO Meet Celia for dinner and shopping
+* TODO Reply to Rob Heaton
+SCHEDULED: <2020-11-23 Mon>
+* TODO Reply to Nick Eubank
+SCHEDULED: <2020-11-23 Mon>
+* TODO Link up with Preston
+* DONE Meeting with Gabe and Moon
 SCHEDULED: <2020-11-23 Mon 22:00>
-* TODO Check in weekly with Joel
-SCHEDULED: <2020-11-25 Wed 22:00 ++1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-11-19 Thu 13:29]
-:END:
-- State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
-- State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
-* TODO Hangout Thursdays with Celine
-SCHEDULED: <2020-11-26 Thu 23:00 +1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-11-20 Fri 10:05]
-:END:
-- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
+* DONE Call Alexis
+* TODO Meet Eliza for garden
+* TODO Apply for universities
+** TODO Apply for Harvard
+** TODO Apply for ETH Zurich
+* TODO Attend CSI interview
+SCHEDULED: <2020-12-02 Wed 11:00>
 * TODO Work for IMDA :WORK:IMDA:
 ** TODO Attend standup
-SCHEDULED: <2020-11-21 Sat 09:00 ++1d>
+SCHEDULED: <2020-11-24 Tue 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-20 Fri 10:05]
+:LAST_REPEAT: [2020-11-23 Mon 16:05]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-11-23 Mon 16:05]
 - State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
 - State "KILL"       from "TODO"       [2020-11-19 Thu 13:29]
 - State "DONE"       from "TODO"       [2020-11-18 Wed 14:06]
@@ -101,7 +104,7 @@ https://aws.amazon.com/sqs/
 Mount vs Volume versus tempfs mount
 
 *** DONE Refactor
-*** TODO Write code to get depth data
+*** DONE Write code to get depth data
 :LOGBOOK:
 CLOCK: [2020-11-20 Fri 10:23]
 :END:
@@ -263,8 +266,11 @@ CLOCK: [2020-11-06 Fri 22:27]--[2020-11-07 Sat 17:52] => 19:25
 ** TODO New post: The six pillars of software engineering tradeoffs (or something about complexity budgets)
 [[file:20201106172548-the_complexity_budget_is_actually_a_budget.org][The "complexity budget" is actually a budget]] 
 ** TODO New post: Convergence is (finally) coming
+[[file:convergence_is_finally_coming.md][Convergence is (finally) coming]]
 ** TODO New post: Teaching game theory (PBEs) using one of Faker's plays
 [[file:20201119143515-learn_game_theory_from_league_of_legends_faker_s_fakeout.org][Learn game theory from League of Legends: Faker's Fakeout]]
+** TODO New post: Three levels of competence
+ [[file:three_levels_of_competency.md][There are three levels of competency in any field]]
 ** HOLD New post: Singapore's historical land usage for golf courses
 ** DONE Write post about interviewing with OGP and preparation process, even if I get rejected
 SCHEDULED: <2020-11-07 Sat>
@@ -325,9 +331,9 @@ CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
 * TODO Find a format for my resume that fulfills all my goals :WORK:
 (not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
 layout customisable by me)
-* TODO Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
+* HOLD Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
 ** TODO Post it on LessWrong?
-* TODO Publish cryptogram book on Amazon 
+* WAIT Publish cryptogram book on Amazon 
 ** TODO Add gutter margins
 DEADLINE: <2020-11-07 Sat>
 [[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
@@ -351,12 +357,7 @@ Zoom Date: 13 Nov 2020
 Zoom ID: 876 2180 2169
 Zoom PW: 131120
 Time: 3.00pm to 4.00pm folks
-* TODO Apply for universities
-** TODO Apply for Harvard
-** TODO Apply for ETH Zurich
 * TODO Send in pull request for Intel RealSense repo
-SCHEDULED: <2020-11-17 Tue>
-* TODO Reply to Rob Heaton
 SCHEDULED: <2020-11-17 Tue>
 * TODO Think of a way to display/digest time spent on each todo in a week
 ** TODO Ask Joel about this
@@ -375,6 +376,23 @@ https://notes.alexkehayias.com/
 * WAIT What's the canonical way to link to other posts with Eleventy?
 * WAIT Add feature request to support Jekyll-style tags in org-roam
 SCHEDULED: <2020-11-17 Tue>
+* TODO Check in weekly with Joel
+SCHEDULED: <2020-11-25 Wed 22:00 ++1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-19 Thu 13:29]
+:END:
+- State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
+- State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
+* TODO Hangout Thursdays with Celine
+SCHEDULED: <2020-11-26 Thu 23:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-11-20 Fri 10:05]
+:END:
+- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
+* DONE Meet Jon for dinner
+SCHEDULED: <2020-11-23 Mon>
+* DONE Book a slot for CSI interview
+SCHEDULED: <2020-11-23 Mon>
 * DONE Have dinner with Marc
 SCHEDULED: <2020-11-17 Tue>
 * DONE Complain to Town council about the poorly shaded floodlights

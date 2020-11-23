@@ -1,5 +1,5 @@
 ---
-title: "Maximise your gains by resting for hours between exercises"
+title: "A new method of training: can resting for hours between exercises maximise your gains?"
 layout: base
 tags:
   - fitness
@@ -17,20 +17,20 @@ tags:
 
 ## Introduction
 
-After reading the scientific literature and thinking about the first principles,
+After reading the scientific literature and thinking the first principles,
 I've built a routine that I believe (as far as the evidence goes) 
-maximises hypertrophy but also happens to be very easy and lazy.
+maximises hypertrophy but also happens to be very easy and painless.
 This training method deviates from most programs in two (three) main ways:
 
-1. Advocates full body workout 5 days a week 
+1. Advocates full body workouts, 5 days a week 
 2. Advocates long (~15--25 minute) rests between sets, and even longer
-   rests (~ hours) between exercises
+   rests (~hours) between exercises
 3. (optional) Consider cluster sets (resting a couple of seconds in between reps) and
 blood-flow restriction training 
 
-I designed the method for my very particular set of circumstances and
+While I designed the method for my very particular set of circumstances and
 preferences (I have a home gym and prefer squeezing in sets throughout the day
-rather than blocking out a large block of time), but I believe this method of
+rather than blocking out a large block of time), I believe this method of
 training could actually be optimal for muscle growth.
 
 The key idea is to maximise effective volume and muscle protein synthesis 
@@ -85,8 +85,11 @@ I haven't read the papers he cited but I trust him.
 The TL;DW is that:
 
 i) muscle damage is a *necessary byproduct* of muscle tension,
-and increased muscle damage causes greater muscle protein synthesis, but no
-*net* muscle growth; additionally, blood flow restriction training seems to be
+but does not itself stimulate hypertrophy.
+Increased muscle damage causes greater muscle protein synthesis, but no
+*net* muscle growth; the increased muscle protein synthesis simply
+repairs the damaged muscles. 
+Additionally, blood flow restriction training seems to be
 able to induce similar levels of muscle growth with little to no muscle damage.
 
 ii) training to failure causes metabolic stress to rise exponentially but we
@@ -107,8 +110,9 @@ Both these adjustments minimise metabolic stress and maximise volume.
 
 ## Why long rests?
 
-**TL;DR: It works much better with my schedule/preferences,
-and it also allows increased volume, which is the primary driver of growth.**
+**TL;DR:**
+It allows increased volume---the primary driver of growth---
+and also works much better with my schedule/preferences.
 
 ---
 
@@ -126,8 +130,8 @@ Here's [Henselmans](https://mennohenselmans.com/optimal-program-design/):
 > signal for muscle growth.  However, in practice, ‘work-equated’ doesn’t exist,
 > as it’s just you, so resting shorter for a given amount of sets decreases how
 > many reps you can do in later sets and thereby your training volume. This
-> means for most people, resting only a minute or less in between sets is
-> probably detrimental for muscle growth rather than beneficial. 
+> means for most people, **resting only a minute or less in between sets is
+> probably detrimental for muscle growth rather than beneficial**. 
 
 The scientific literature doesn't seem to examine very long rest periods, 
 probably because nobody has the time to sit around for ages doing nothing.
@@ -154,12 +158,12 @@ found that
 muscle protein synthesis (MPS) in trained individuals returns to baseline just 12 hours
 after working out, which means that in order to keep muscle protein synthesis at
 its peak for a particular muscle one should be working that muscle every single
-day, possibly even two times a day for elite athletes. 
+day---possibly even two times a day for elite athletes. 
 
 Additionally, muscle growth is a hyperlocal phenomenon: elevated MPS in your
 chest isn't going to make your arms or quads bigger.
 
-This is why we should work full-body: since 
+This is why we should work full-body. Since 
 
 1. MPS is hyperlocal,
 2. MPS drops off 12 hours after working out, 
@@ -176,11 +180,11 @@ see more gains. See
 
 Both these factors combine to suggest that body-part splits are suboptimal:
 if you really demolish one body part for a workout then not only do
-you get fatigued and can't really maximise volume/ get the full mind-muscle connection,
+you get fatigued and can't really maximise volume/get the full mind-muscle connection,
 but that massive volume load can only really cause a spike in muscle protein
 synthesis for 12 hours anyway.
 
-Empirical evidence seems to supports this: 
+Empirical evidence seems to support this: 
 [Zaroni et al. (2019)](https://europepmc.org/article/MED/31260419)
 found that a 5-day per week whole-body workout gave significantly greater hypertrophy
 on trained men.
@@ -189,10 +193,8 @@ on trained men.
 > with muscle groups trained once per week (SPLIT) vs. whole-body split training
 > routine with muscle groups trained 5 days per week (TOTAL) on neuromuscular
 > adaptations in well-trained men... TOTAL induced a significantly greater
-> increase in MT of the forearm flexors and vastus lateralis (p < 0.05). In
-> conclusion, muscle strength increment is similar regardless of the
-> experimental conditions studied; however, TOTAL may confer a potentially
-> superior hypertrophic effect.
+> increase in MT of the forearm flexors and vastus lateralis (p < 0.05)...
+> **TOTAL may confer a potentially superior hypertrophic effect**.
 
 ## Why cluster sets/blood flow restriction training?
 
@@ -202,6 +204,7 @@ Cluster sets (sets with built-in, short rest periods of 5-20 or so seconds)
 decrease metabolic stress and allow you to get more volume in.
 If you rest between sets you can lift more weight more times --> more volume -->
 more hypertrophy. 
+
 But take note that in order to maximise muscle fiber recruitment one might want to
 work at a high intensity (high % of 1RM): 
 you don't want to do cluster sets with too low weight as that might only
@@ -227,7 +230,8 @@ rested a long time between them.
 **TODO**
 
 5 days a week full body hitting 10-20 sets of volume for each body part
-Dumbbell + calisthenics only because that's what I have
+Dumbbell + calisthenics only because that's what I have.
+
 Might take a look at 
 [Jeff Nippard's video](https://www.youtube.com/watch?v=nxisr1AalNc)
 for some ideas.

@@ -9,7 +9,7 @@
 
 **TL;DR;**
 I have found that **aggressively minimising** the friction of my tasks
-have allowed me to easily build and maintain desirable habits.
+has allowed me to easily build and maintain desirable habits.
 --- 
 
 We want to build and maintain habits because they allow us to convert our
@@ -25,12 +25,6 @@ can make a huge difference in adherence.
 In this post, I'll explain why habits are useful, define what it means to
 "aggressively minimise" the friction of a task,
 and give several examples of how aggressive minimisation helped me. 
-
-If like me you find yourself struggling to maintain habits like
-"work out every day",
-"check my email only twice a day" or
-"clear my Anki flashcards every day",
-you may find this method highly effective.
 
 ** Aggressively minimising friction is a highly effective way to maintain one's habits
 
@@ -72,7 +66,7 @@ Here are some examples:
   
 How do we aggressively minimise friction? I think there's not that much to it:
 Think about a habit that you're trying (and failing) to adhere to.
-Then think about what you dread about/ what's difficult about starting the task. 
+Next, think about what you dread about/ what's difficult about starting the task. 
 See if you can reduce or eliminate whatever that is.
 
 ** There are no diminishing returns to decreasing friction
@@ -80,7 +74,6 @@ See if you can reduce or eliminate whatever that is.
 I have observed no diminishing returns to decreasing friction.
 Even a tiny bit of friction can spell the difference between a successful habit
 and an abandoned one.
-Always look out for ways to decrease friction. You must be aggressive!
 
 Here are some examples of how small frictions make a difference:
 
@@ -103,10 +96,10 @@ Here are some examples:
   because it was a hassle to reboot the computer.
 - I wasted much less time on Facebook/LinkedIn/YouTube
   once I added a LeechBlock delay of just a few seconds to every link.
-  The delay is only a few seconds, 
+  The delay is only a few seconds long, 
   but this is enough for me to close the tab immediately most of the time.
 
 ** Conclusion
 
-Reducing friction aggressively has outsize effects on habit adherence with
+Reducing friction aggressively has outsized effects on habit adherence with
 little to no diminishing returns.
