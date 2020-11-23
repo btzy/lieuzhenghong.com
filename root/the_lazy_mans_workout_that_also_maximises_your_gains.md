@@ -7,6 +7,14 @@ tags:
   - draft
 ---
 
+~ 1600 words
+
+<div class = "toc">
+
+[[toc]]
+
+</div>
+
 ## Introduction
 
 After reading the scientific literature and thinking about the first principles,
@@ -24,6 +32,7 @@ I designed the method for my very particular set of circumstances and
 preferences (I have a home gym and prefer squeezing in sets throughout the day
 rather than blocking out a large block of time), but I believe this method of
 training could actually be optimal for muscle growth.
+
 The key idea is to maximise effective volume and muscle protein synthesis 
 while minimising metabolic stress and muscle damage.
 The long rests between sets/exercises brings to mind the Greasing the Groove
@@ -36,13 +45,15 @@ with high (7--8) RPE to maximise muscle tension/volume.
 (force production and stretch)
 is the primary (and possibly the *only*) driver of growth.
 There is little evidence to show that muscle damage ("microtears")
-or metabolic stress ("burn" from lactic acid, "pump") contribute to hypertrophy.
+or metabolic stress ("burn" from lactic acid, "pump") contribute to hypertrophy,
+suggesting that we should maximise muscle tension and minimise muscle
+damage/metabolic stress.
+
+---
 
 The scientific consensus used to believe otherwise. 
-In Brad Schoenfield's seminal paper 
-"The mechanisms of muscle hypertrophy and their application to resistance
-training" (2010)
-https://pdfs.semanticscholar.org/be0a/06fe358cff98b87a5a73b690ccec21caff7d.pdf
+In 
+[Brad Schoenfield's seminal paper (2010)](https://pdfs.semanticscholar.org/be0a/06fe358cff98b87a5a73b690ccec21caff7d.pdf)
 
 he writes that
 
@@ -59,19 +70,13 @@ and concludes that
 > program should employ a repetition range of 6-12 reps per set with rest
 > intervals of 60-90 seconds between sets.
 
-But in this video "Brad Schoenfeld - An updated view on the mechanisms of muscle hypertrophy"
-https://www.youtube.com/watch?v=hOWoAg8pG8E
+But in [this video](https://www.youtube.com/watch?v=hOWoAg8pG8E)
 Schoenfeld updates his model.
-Is there an additive effect of muscle damage or metabolic stress on hypertrophy ?
-Brad says that the evidence is really equivocal, none of it is compelling.
+He says that the evidence for an additive effect of muscle damage or metabolic stress on hypertrophy
+is really equivocal and none of it is compelling.
 
-He says that there is no study yet on whether moderate or low sustained muscle
-damage or metabolic stress has an additive effect on hypertrophy, and part of
-the reason is that it's really difficult to isolate the individual effects in an
-RCT.
-
-In 2017 Menno Henselmans gave a talk 
-(link https://www.youtube.com/watch?v=voMnQr7sfmk&feature=emb_title)
+In 2017 Menno Henselmans gave a 
+[talk](https://www.youtube.com/watch?v=voMnQr7sfmk&feature=emb_title)
 where he cites a lot of papers and claims that both 
 muscle damage (microtears in the muscle fibers) and 
 metabolic stress (acidosis, lactic acid buildup, "pump", etc.)
@@ -87,7 +92,7 @@ able to induce similar levels of muscle growth with little to no muscle damage.
 ii) training to failure causes metabolic stress to rise exponentially but we
 observe little to no increase in muscle growth (S-shaped curve).
 
-It looks like there is no good evidence to believe that muscle damage or
+There seems to be no good evidence to believe that muscle damage or
 metabolic stress contribute to hypertrophy.
 (Also, muscle damage and metabolic stress both hurt, and I don't like to hurt).
 This leads to a pretty counterintuitive conclusion: in order to maximise
@@ -103,14 +108,16 @@ Both these adjustments minimise metabolic stress and maximise volume.
 ## Why long rests?
 
 **TL;DR: It works much better with my schedule/preferences,
-and it also allows increased volume, which is the primary driver of growth***
+and it also allows increased volume, which is the primary driver of growth.**
+
+---
 
 Exercise volume can be defined as the product of total repetitions, sets, and
 load performed in a training session (Schoenfeld 2010).
 If we believe that muscle tension (ergo volume) is the primary driver 
 of hypertrophy, the idea then is simple:
 if we take longer rests, we can do more volume, which means more gains!
-Here's Henselmans on his website (https://mennohenselmans.com/optimal-program-design/):
+Here's [Henselmans](https://mennohenselmans.com/optimal-program-design/):
 
 > In conclusion, your rest interval matters primarily because it affects your
 > training volume. As long as you perform a given amount of total training
@@ -138,9 +145,12 @@ means more gains---AND you hurt much less.
 
 ## Why a 5-day split?
 
-**TL;DR: Training each bodypart more frequently maximises muscle protein synthesis**
+**TL;DR: Training each bodypart more frequently maximises muscle protein synthesis.**
 
-Damas et al. (2015) (https://www.ncbi.nlm.nih.gov/pubmed/25739559) found that
+---
+
+[Damas et al. (2015)](https://www.ncbi.nlm.nih.gov/pubmed/25739559) 
+found that
 muscle protein synthesis (MPS) in trained individuals returns to baseline just 12 hours
 after working out, which means that in order to keep muscle protein synthesis at
 its peak for a particular muscle one should be working that muscle every single
@@ -161,8 +171,8 @@ to maximise MPS and muscle hypertrophy.
 
 Additionally, there's the concept of "maximal effective volume": there may or may not
 be a hard cap of how much volume a muscle group can be worked in a session to
-see more gains. See Menno again: 
-(https://mennohenselmans.com/maximum-productive-training-volume-per-session/)
+see more gains. See 
+[Menno again](https://mennohenselmans.com/maximum-productive-training-volume-per-session/).
 
 Both these factors combine to suggest that body-part splits are suboptimal:
 if you really demolish one body part for a workout then not only do
@@ -170,9 +180,8 @@ you get fatigued and can't really maximise volume/ get the full mind-muscle conn
 but that massive volume load can only really cause a spike in muscle protein
 synthesis for 12 hours anyway.
 
-Empirical evidence seems to supports this: Zaroni et al. (2019)
-"High Resistance-Training Frequency Enhances Muscle Thickness in Resistance-Trained Men"
-https://europepmc.org/article/MED/31260419
+Empirical evidence seems to supports this: 
+[Zaroni et al. (2019)](https://europepmc.org/article/MED/31260419)
 found that a 5-day per week whole-body workout gave significantly greater hypertrophy
 on trained men.
 
@@ -203,11 +212,11 @@ Blood flow restriction training might decrease muscle damage which might be
 useful,
 but this is really speculative.
 
-## Doubts
+## Questions I still have
 
 ### Will long rests make your muscles cool down? Will you have to warm up between sets?
 
-Anecdotally powerlifters seem to rest for ~15 minutes between sets without
+Anecdotally, powerlifters seem to rest for ~15 minutes between sets without
 having to warm up between sets so maybe this is OK? Not sure.
 
 You might need to elevate your core temp again between exercises if you've
@@ -215,23 +224,28 @@ rested a long time between them.
 
 ## Sample program
 
-TODO
+**TODO**
 
 5 days a week full body hitting 10-20 sets of volume for each body part
 Dumbbell + calisthenics only because that's what I have
-Might take a look at Jeff Nippard's video for some ideas
-(https://www.youtube.com/watch?v=nxisr1AalNc)
+Might take a look at 
+[Jeff Nippard's video](https://www.youtube.com/watch?v=nxisr1AalNc)
+for some ideas.
 
-Abs: leg raises, ab slides, double leg thrust
+- Chest:
+- Legs:
+- Abs: leg raises, ab slides, double leg thrust
 
 ## Conclusion
 
-TODO
+**TODO**
+
+--- 
 
 ## Appendix
 
 Things that don't fit in the main article
-
+    
 ### Notes I took from Menno's video
 
 Three primary drivers have been proposed for hypertrophy:
@@ -311,3 +325,7 @@ prevents contractability in the fast twitch fibers. Less contractability means
 less fiber recruitment means less hypertrophy. This suggests that decreasing
 metabolic fatigue (ergo less acidosis) can directly increase hypertrophy.
     
+He also says that there is no study yet on whether moderate or low sustained muscle
+damage or metabolic stress has an additive effect on hypertrophy, and part of
+the reason is that it's really difficult to isolate the individual effects in an
+RCT.
