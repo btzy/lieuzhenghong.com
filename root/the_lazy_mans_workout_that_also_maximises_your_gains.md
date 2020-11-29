@@ -1,10 +1,7 @@
 ---
 title: "A new method of training: can resting for hours between exercises maximise your gains?"
 layout: base
-tags:
-  - fitness
-  - public
-  - draft
+tags: ["fitness", "public", "exploration"]
 ---
 
 ~ 1600 words

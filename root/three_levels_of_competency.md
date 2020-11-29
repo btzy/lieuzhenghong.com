@@ -1,9 +1,7 @@
 ---
 title: "Three levels of competency"
 layout: base
-tags:
-  - public
-  - draft
+tags: ["public", "draft"]
 ---
 
 [Forwarded from lieu]

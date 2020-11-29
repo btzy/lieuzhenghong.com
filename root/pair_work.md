@@ -3,12 +3,7 @@ title: "Pair work: the One Weird Trick to finally ship your side projects"
 layout: base
 author: Lieu Zheng Hong
 date: 2020-10-08
-tags:
-  - exploration
-  - productivity
-  - scratchpad
-  - public
-  - draft
+tags: ["exploration", "productivity", "public"]
 permalink: "/explorations/{{page.fileSlug}}/"
 ---
 
@@ -18,10 +13,8 @@ permalink: "/explorations/{{page.fileSlug}}/"
 
 </div>
 
-**_This is a draft._**
 _Epistemic status: somewhat uncertain._
 
-_Time taken to write this draft_: ~30 minutes ideation, ~1h writing, ~1h editing.
 
 ## Introduction
 

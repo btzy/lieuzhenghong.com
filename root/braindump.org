@@ -73,6 +73,215 @@ Zheng Hong will then need to meet with representatives from the Govtech Senior L
 When Zheng Hong is accepted by SLM, Govtech HR will follow through with IMDA on the transfer payment.
 
 I've clarified with them for their advice on how you should approach IMDA HR. They suggested that until you have the interview with the Govtech senior leadership team, you could position this as a general query to understand your LD. Whilst its accurate to say that you have cleared Govtech interviews and OGP would be happy to take you in as a software engineer, it would be premature to also inform IMDA that Govtech has agreed to takeover your bond, as this requires govtech senior leadership approval (hence the interview).
+* Preparing for interview with GovTech CE
+== THINK ABOUT MY FUTURE from the CE's PERSPECTIVE == 
+Where do I want to be in five years?
+- I want to lead my own technical group (not necessarily in GovTech)
+  That's why I'm joining OGP, to learn the technical and the leadership skills
+What value do I bring to the organisation? Am I going to be a 10X engineer?
+- I am an excellent writer (well-trained, at least).
+  - With good writing I can attract engineers much better than me.
+  - With writing I can argue coherently when we are faced with a tussle with
+  other agencies
+- What is unique about me? How can I contribute to the rest of the Civil Service?
+  - PPE background AND am interested in CS: to develop the interest in CS,
+    get a proper engineering background
+  - When I go into the rest of the Civil Service, I can properly articulate
+    the Smart Nation plan.
+    I can talk to the engineers 
+    I can translate what engineers are saying to the rest of the Civil Service.
+Why don't I want to join SIoT?
+- SIoT is hardware, they do do pure software but software mentorship is not there
+Why don't I want to join GDS?
+- Team is a big too big, worry that I might be a cog in the machine
+Why don't I want to join Meteor?
+- Not that excited by the work they do (MoM, form stuff)
+- Timeline of projects a bit long for my taste
+
+== PROS OF OGP ==
+  
+OGP is really good at encouraging independent learning, they are really gung-ho
+they like to do things first and apologise later
+They don't play the government game, they don't report to anyone.
+Every Friday they have 20% time, build any project you're passionate about.
+
+== CONS OF OGP ==
+The group is very flat,
+good if you can stomach a direct line to your boss, but
+bad if you like a bit of hierarchy or get intimidated by speaking to the Director
+
+Very young team:
+you can get a few years of mentorship,
+but you won't be able to get advanced level mentorship
+
+Gung-ho attitude works against you sometimes
+because the agency you're trying to help might not appreciate
+that you didn't consult them.
+
+Overall: perfect place for you to work as a young engineer,
+lots of plusses, you'll only run into the drawbacks in a couple of years.
+
+** GDS (Ronald)
+Ronald (GDS):
+
+Fresh grad, graduated 3 years ago, been in GDS 2 years going to 3. Currently in GDS I'm in a "tribe": five tribes, 
+
+1. DSAID (Data science)
+2. Application development (engineering productivity, ace, dcube)
+5. Design (UI/UX)
+
+I'm from the engineering productivity team
+
+In this three years I've never switched tribes and I've always been in GDS,
+
+What he likes:
+
+GovTech lots of flexibility in improving yourself, exploring new technologies. He's had exposure to many tech stacks and different technologies.
+
+PaaS team writing front and back (angular, node, etc). Next went into an API gateway project (more devops stuff like Kubernetes, cloud stuff).
+Third project: writing application development for billing and reporting, doing React and NestJS
+
+Forward thinking in terms of tech adoption and tech stack
+
+When we think about products and projects we're thinking about what we can do to benefit 
+
+We have innovative projects: OpenCert, certificates on the blockchain.
+"Nice playground to explore, learn and grow"
+
+How do you decide what project to work on? —> you choose to go deep or venture out
+
+Process of moving to a new project: first of all you need to contact the person and ask them if they're willing to take you. Then talk to your reporting officer and say I want to contribute to this project ... based on RO's discretion.
+
+Two ways that projects can be started:
+
+1. Everyone can start their own project if they have their own idea. OpenCerts have their own initiatives, they came up with  an MVP, spoke to their RO and got approval. 
+2. Unless it's an agency project, agency will approach GDS to ask them to develop.
+
+DSAID not under GDS.
+
+What are tribes? FOUR tribes.
+
+1. ESD (UI/UX)
+2. ACE (partners with agencies to collaborate to do projects, software development team)
+3. DCUBE (similar to ACE, fully focused on development. ACE Is more enterprise (WSG), DCUBE more citizen-centric)
+4. Engineering productivity (non client facing, backbone, middleware layer that supports ACE and DCUBE, creates WoG PaaS, API gateway, etc. SG, CICD pipeline, that sort of thing)
+
+In Engineering Productivity: Our projects have a long lifespan because we have to create, maintain and update it —> 3 to 4 years and we have to constantly be improving
+
+API Gateway: on-prem, recently containerised to move to Kubernetes.
+
+What don't you like?
+
+- Policy is a problem, getting approvals, meeting audit requirements, etc etc. bureaucracy is the main red tape
+
+What sets GDS apart from the other divisions?
+
+- Can't compare between divisions because they're all focused on different areas on things, so can't compare. It really depends on your skillsets and interests. 
+
+- Think more about the projects that I'll be working on, rather than the tribes I'm interested in. Comparing tribes doesn't really make sense either because tribes don't really affect us? As software developers we are more product focused
+
+- Within GDS, most of the tribes have the same culture. Some differences but in terms of workwise, I think it's the same. All Agile, product-focused.
+
+Are there cases where top-down boss dictates criteria down to management 
+
+- in agencies more common, you don't really have full control. It happens quite commonly in workspaces.
+
+Pay grade? 
+
+— Even nontechnical staff and technical staff get paid on the pay grade
+— Pay grade can have a very wide band.
+— Tech Associate Program: starting pay is higher, even 6 is not a problem?
+
+lieu, [24.11.20 14:10]
+Directly under GovTech: DSAID, CSG, Govt Infra, Governance Group, SIoT, GDS
+
+Collaboration:
+
+Under MOE:  
+Under MOM: Meteor. We will send engineers to MOM
+
+lieu, [24.11.20 14:11]
+when govtech collaborated with MoE to create Parents Gateway: this was DCube, so when they coprogram together the product is still owned by MoE
+** Meteor (Thomas)
+lieu, [24.11.20 16:24]
+Meteor is still considered pretty new in GovTech:
+
+Govtech got two parts: HQ, Hive all this,  second part is the services.
+Services are in ministry: manpower, CPF, MoE whatever. Biggest service is MOM which is under Meteor.
+Meteor is tribe. 80—90 all technical people.
+So HQ is better because they have more people.
+
+They do more public facing projects. Within their tribe they also have a lot of projects.
+Meteor does work exclusively for MoM right now, but we are constantly expanding, and we're going to do projects like MyCareersFuture and so on. 
+
+Higher overview: Foreign domestic worker proejct dealing with maids and stuff, there's also another big project called the finance planning, Moneysense, For my team we are doing employment pass team. We have 5 "feature teams" and each team is <20 people. We are building forms. Node and Vue.js. Super complicated processes and architecture. 
+Rules and integration with legacy systems. Rules: algorithms
+GovTech focuses a lot of code quality and reusability. A lot of emphasis on the architecture and stuff. For example we started with EP and he went 2 years on a single pass. But that's also because we were building the foundation/architecture etc.
+
+We have to handle the security, and APIs, and work with different teams, and so on.
+
+Most people would choose HQ to be their base because the projects are more exciting.
+
+From an employee point of view, because Meteor is smaller, you get more recognised.
+Technical complexity: Meteor work is much more complex than what people in HQ have developed.
+HQ is very developed, so you're kind of like a cog in the machine almost. Harder to shine and harder to innovate/create
+Enter the project and be just a developer and you can build features.
+
+In Meteor you'll be given a chance to be a reviewer, shadow a tech lead
+
+Something I would change about Meteor: nothing, everyone in GovTech is quite happy with their job
+
+We don't pay as much as FAANG but management wants you to support you to go to FAANG.
+I have worked in other companies before, but we have a really good "growing system" for employees.
+All of us have "levels" on every single one of our skills and we are encouraged to level up.
+
+Promotions: mainly based on how well you perform, there's a bell curve.
+
+How are projects initialised? Done by the tech lead position level.
+They want you to spend two to three years on a project before moving on. 
+
+How's the mentorship in Meteor?
+-> We all work closely with one another, including the tech lead.
+-> For my team there's around 5-6 software engineers, we work closely together to come up with solutions
+-> When you hit roadblocks you can always approach tech lead who is just your colleague.
+-> Very open desk (MoM).
+
+Meteor is quite mature: projects already scoped out, the innovation are in constantly building out features/scope creep/tech debt. Reducing software complexity. 
+
+How is the day-to-day:
+Entire GovTech run by 2 week sprints, every start of sprint we'll do some planning for the two weeks, day to day we'll pick up JIRA tickets to code, we'll submit a merge request, there's a reviewer who will review the code, and we generally encourage software engineer to pair program. (Junior full-time pair programming. The whole of GovTech does pair programming). Merge into master and that's it for the story.
+
+Generally not really a lot of meetings unless you are more senior. Even for meetings the tech huddle is quite technical related
+
+Fresh grad salary? Maybe first digit is 5. You can choose to work pure technical route.
+
+INternal document cannot be shared. Competency framework. Speak to Desmond about it.
+
+lieu, [24.11.20 16:46]
+Main gist: you have more chance/opportunities to show yourself in Meteor because it's smaller, less cog in the machine.
+Our projects are on a much bigger scale.
+
+My form 50-60 people working on it, way more complex and way more large compared to HQ projects.
+
+GovTech culture is pretty good, don't need to worry about
+** SIoT (Ben)
+Small team -> no resource, no small
+What does Sensors and IoT (SIoT) do:
+  software tied to hardware or purely hardware
+Trying to collect data autonomously.
+Where to collect data, how to use it?
+TraceTogether token built with us 
+Four different divisions:
+1. MANUKA team does the hardware platform
+2. DECADA: Deploy MANUKA, how to manage? Overarching cloud platform
+   to manage the deployed IoT devices
+3. Implementation team: this is the team that takes MANUKA and DECADA and deploy
+   out. Smart garden, smart gym, smart offices 
+4. Research team that does application research for cutting-edge sensors like
+   robotics and stuff, taking that and passing it out to the implementation team.
+Software wise will be implementation team that write software, and DECADA will
+be the cloud management software, frontend backend.
+
 * Salaries of different roles
 Global Markets Analyst, HSBC, 9.2k (110k pa) + 3 month bonus
 Analyst, IB Credit Suisse, 10k monthly (120k pa) + bonus
@@ -751,3 +960,37 @@ Listing 8-7: Attempting to add an element to a vector while holding a reference 
 * Rust problems
  - having trouble with strings
  - enums2
+
+* TODO Learn org-mode :CS:
+** TODO Figure out how to use org-capture and org-roam
+*** WAIT Why no backlinks?
+*** TODO How do I tag?
+*** TODO How do I convert to YAML-Markdown?
+Markdown Roam: https://github.com/nobiot/md-roam
+** TODO Install md-roam
+** TODO Watch org-roam talks at the EmacsConf
+[[https://emacsconf.org/2020/schedule/][Emacs Conf 2020 schedule]]
+** [[https://blog.jethro.dev/posts/capturing_inbox/][Read this entire series written by Jethro]]
+** [[https://orgmode.org/worg/org-tutorials/org4beginners.html][Org Mode beginning at the basics]]
+** [[orgmode.org/manual][Org Mode Manual]]
+** DONE Think about how to use agenda mode
+** DONE Think about how to organise my todo files
+Do I use `todo.org` at all? Should I just use `braindump.org` for everything?
+In general should I use multiple files or a single large file?
+Take a look at [[https://blog.jethro.dev/posts/zettelkasten_with_org/][Jethro's Zettelkasten with Org-mode.]]
+See if I want to use Zettlekasten.
+* TODO Build a distributed, encrypted key-value store?
+* TODO Digital gardening
+** TODO Think about the separation between todo.org and braindump.org.
+Todos are todos, braindumps are just dumps/notes, but sometimes braindumps are
+actionable and sometimes TODOs need context.
+** TODO Think about how best to structure my digital garden/second brain/whatever
+*** DONE Move all my files around and stuff
+:LOGBOOK:
+CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] => 3:35 :END:
+
+** TODO Come up with some sort of visualisation for my .org files, like Jethro's braindump in [[Digital gardens]]
+https://notes.alexkehayias.com/
+
+* HOLD What's the canonical way to link to other posts with Eleventy?
+    

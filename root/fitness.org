@@ -241,10 +241,41 @@ Even though the number of reps didn't go up, I
 **** KILL Nordic curls
 **** KILL Single-legged Romanian deadlifts
 **** DONE Abs
-** TODO <2020-11-22 Sun> [0/0]
-Don't really know what I'm doing, need to program a new workout
-*** Dumbbell bench press, 5kg each side (16)
-16 
-*** Dumbbell rows
-16
-*** Dumbbell shoulder press
+** DONE <2020-11-22 Sun> [0/0]
+Don't really know what I'm doing, need to program a new workout *** Dumbbell bench press, 5kg each side (16) 16 *** Dumbbell rows 16 *** Dumbbell shoulder press
+** DONE <2020-11-25 Wed>
+New idea: every workout every day should hit:
+- chest
+- back
+- arms
+- shoulders
+- abs
+  
+X = AMRAP
+
+*** Incline dumbbell press
+21 8 8 
+Its not a fly its a press, so don't bring weights together at the top
+https://youtu.be/uJA9dx_MMyA
+
+Lead with the pinkies to get more extension of the elbow/more tricep
+and less front delt activation
+https://youtu.be/SHsUIZiNdeY?t=228
+*** Pull-ups
+BW X 
+*** Bicep curls
+2.5 X 
+*** 
+** TODO <2020-11-27 Fri>
+
+** DONE <2020-11-28 Sat>
+- Incline dumbbell press
+  16
+  X X X
+- Pull-ups
+  BW
+  X X X 
+- Tricep extensions
+  X X
+
+
