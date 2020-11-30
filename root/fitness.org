@@ -266,7 +266,7 @@ BW X
 *** Bicep curls
 2.5 X 
 *** 
-** TODO <2020-11-27 Fri>
+** DONE <2020-11-27 Fri>
 
 ** DONE <2020-11-28 Sat>
 - Incline dumbbell press
@@ -277,5 +277,10 @@ BW X
   X X X 
 - Tricep extensions
   X X
-
-
+** DONE <2020-11-30 Mon>
+- Humble rows
+  X X X
+- DB bench press
+  16
+  12 12 12
+- Double leg thrust

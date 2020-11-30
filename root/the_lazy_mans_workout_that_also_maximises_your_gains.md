@@ -237,9 +237,29 @@ Might take a look at
 [Jeff Nippard's video](https://www.youtube.com/watch?v=nxisr1AalNc)
 for some ideas.
 
-- Chest:
-- Legs:
+- Chest: 
+pushup variations, 
+incline DB press,
+flat DB press,
+- Arms:
+skullcrushers,
+bicep curls,
+tricep extensions
+- Back:
+  - Lats: 
+    unilateral DB rows, 
+    humble rows,
+    archer pullps, 
+    weighted pullups,
+  - Traps should be worked by heavy shrugs
+- Shoulders:
+  side and front delt don't need to be isolated
+  and will be worked with seated or standing DB press
+  - Rear delts should be isolated with ~15 sets a week:
+  unilateral bent over external shoulder rotation,
+  band face pulls,
 - Abs: leg raises, ab slides, double leg thrust
+- Legs: lol what are these
 
 ## Conclusion
 

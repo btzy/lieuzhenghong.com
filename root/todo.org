@@ -44,14 +44,10 @@ SCHEDULED: <2020-12-03 Thu 23:00 +1w>
 * TODO Review/Serendipitous Sundays
 
 
-* TODO Talk to the Town Council and ask why the Jackfruit tree is gonna be cut down
-- maybe attend Meet-the-People session
+* TODO Talk to Rob
+SCHEDULED: <2020-12-01 Tue 18:00-19:00>
 * TODO Write calligraphy for Celine
-* TODO Attend 8pm meeting for UpStars
-SCHEDULED: <2020-11-30 Mon 20:00>
-* TODO Do 9pm board game engine with
-SCHEDULED: <2020-11-30 Mon 21:00>
-* TODO Write email to EMA 
+* TODO Write email to EMA
 SCHEDULED: <2020-11-27 Fri>
 * TODO Buy Singaporean food for Celine
 SCHEDULED: <2020-11-27 Fri>
@@ -64,15 +60,15 @@ SCHEDULED: <2020-11-26 Thu>
 SCHEDULED: <2020-11-27 Fri>
 
 
-* TODO Write Week 48 review
 * TODO Write post in a Writeathon with Bernard
-SCHEDULED: <2020-11-28 Sat>
+SCHEDULED: <2020-12-01 Tue>
 [[file:group_testing.md][Group Testing]]
 * TODO Think of a way to display/digest time spent on each todo in a week
 SCHEDULED: <2020-11-27 Fri>
 * TODO Read what Nobiot wrote and look how I can use markdown with org/convert org to MD
 SCHEDULED: <2020-11-29 Sun>
 * TODO Meet Eliza for gardening
+SCHEDULED: <2020-12-02 Wed>
 * TODO Apply for universities
 ** TODO Apply for Harvard
 ** TODO Apply for ETH Zurich
@@ -105,7 +101,7 @@ CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
 :END:
 - State "DONE"       from "TODO"       [2020-11-04 Wed 10:36]
 - State "DONE"       from "TODO"       [2020-11-03 Tue 09:53]
-* TODO Build the Python pipeline 
+* TODO Build the Python pipeline
 ** DONE Iron out the bugs in the TCP streaming system
 ** DONE Think about the advantages and disadvantages of the DeepStream SDK
 :LOGBOOK:
@@ -372,7 +368,7 @@ SCHEDULED: <2021-01-15 Fri>
 SCHEDULED: <2020-11-26 Thu>
 * WAIT Wait for IMDA to calculate my LD
 * WAIT Add feature request to support Jekyll-style tags in org-roam
-* WAIT Publish cryptogram book on Amazon 
+* WAIT Publish cryptogram book on Amazon
 ** TODO Add gutter margins
 DEADLINE: <2020-11-07 Sat>
 [[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
@@ -404,6 +400,13 @@ CLOCK: [2020-11-26 Thu 10:02]
 CPF received 18 of November
 21 working days from the start of 18th November roughly. 
 If everything goes smoothly it should be done End December. 
+* DONE Do 9pm board game engine with
+SCHEDULED: <2020-11-30 Mon 21:00>
+* DONE Write Week 48 review
+* KILL Attend 8pm meeting for UpStars
+SCHEDULED: <2020-11-30 Mon 20:00>
+* DONE Talk to the Town Council and ask why the Jackfruit tree is gonna be cut down
+- maybe attend Meet-the-People session
 * DONE Have dinner with Yian, Vivienne and Xiaohui
 SCHEDULED: <2020-11-27 Fri>
 * DONE Go to Singpost and get a box
