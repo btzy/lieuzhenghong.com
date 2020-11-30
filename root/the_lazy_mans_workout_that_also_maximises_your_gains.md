@@ -238,13 +238,13 @@ Might take a look at
 for some ideas.
 
 - Chest: 
-pushup variations, 
-incline DB press,
-flat DB press,
+    pushup variations, 
+    incline DB press,
+    flat DB press,
 - Arms:
-skullcrushers,
-bicep curls,
-tricep extensions
+    skullcrushers,
+    bicep curls,
+    tricep extensions
 - Back:
   - Lats: 
     unilateral DB rows, 
@@ -354,3 +354,4 @@ He also says that there is no study yet on whether moderate or low sustained mus
 damage or metabolic stress has an additive effect on hypertrophy, and part of
 the reason is that it's really difficult to isolate the individual effects in an
 RCT.
+    

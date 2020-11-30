@@ -11,7 +11,7 @@ To clone type ~C-c C-x c~
 * TODO Rusty Mondays
 * TODO Thesis Tuesdays
 ** TODO Pair program with Gabe
-SCHEDULED: <2020-11-27 Fri 22:30 +1w>
+SCHEDULED: <2020-12-03 Thu 22:00 +1w>
 :PROPERTIES:
 :LAST_REPEAT: [2020-11-24 Tue 11:40]
 :END:
@@ -23,6 +23,8 @@ SCHEDULED: <2020-11-27 Fri 22:30 +1w>
 CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
 :END:
 * TODO Working Paper Wednesdays
+** TODO Get Parquet files to Nick
+SCHEDULED: <2020-12-02 Wed>
 ** TODO Checkin with Joel
 SCHEDULED: <2020-12-02 Wed 22:00 ++1w>
 :PROPERTIES:
@@ -41,32 +43,47 @@ SCHEDULED: <2020-12-03 Thu 23:00 +1w>
 - State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
 * TODO Freedom Fridays
 * TODO Writing/Board Game Saturdays
+** TODO Finish and ship MVP of Board Game Engine: server and lobby
+*** TODO Pair program with Joshua
+SCHEDULED: <2020-12-12 Sat 22:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-12-01 Tue 00:49]
+:END:
+- State "DONE"       from "TODO"       [2020-12-01 Tue 00:43]
+- State "KILL"       from "TODO"       [2020-11-26 Thu 15:14]
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
+:END:
 * TODO Review/Serendipitous Sundays
 
 
-* TODO Talk to Rob
-SCHEDULED: <2020-12-01 Tue 18:00-19:00>
-* TODO Write calligraphy for Celine
 * TODO Write email to EMA
 SCHEDULED: <2020-11-27 Fri>
-* TODO Buy Singaporean food for Celine
-SCHEDULED: <2020-11-27 Fri>
-* TODO Write card for Celine
-SCHEDULED: <2020-11-27 Fri>
-* TODO Finish writing documentation for the Python pipeline
-** TODO Finish writing the note on building the socket
-SCHEDULED: <2020-11-26 Thu>
+* TODO Catch up with Rob
+SCHEDULED: <2020-12-01 Tue 18:00-19:00>
 * TODO Buy resistance band for Celine
+SCHEDULED: <2020-12-01 Tue>
+* TODO Send a box of love to Celine
+** TODO Write calligraphy for Celine
+** TODO Buy Singaporean food for Celine
+SCHEDULED: <2020-12-01 Tue>
+** TODO Write card for Celine
 SCHEDULED: <2020-11-27 Fri>
-
-
+SCHEDULED: <2020-12-01 Tue>
+* TODO Build the Python pipeline
+** TODO Finish writing documentation for the Python pipeline
+SCHEDULED: <2020-12-01 Tue>
+** TODO Refactor the RabbitMQ receiver
+SCHEDULED: <2020-12-01 Tue>
+** TODO Publish ROS2 topic
+SCHEDULED: <2020-12-01 Tue>
+** TODO Run everything on the Jetson just to make sure it works
+SCHEDULED: <2020-12-01 Tue>
 * TODO Write post in a Writeathon with Bernard
 SCHEDULED: <2020-12-01 Tue>
 [[file:group_testing.md][Group Testing]]
-* TODO Think of a way to display/digest time spent on each todo in a week
-SCHEDULED: <2020-11-27 Fri>
 * TODO Read what Nobiot wrote and look how I can use markdown with org/convert org to MD
-SCHEDULED: <2020-11-29 Sun>
+SCHEDULED: <2020-12-04 Fri>
 * TODO Meet Eliza for gardening
 SCHEDULED: <2020-12-02 Wed>
 * TODO Apply for universities
@@ -75,13 +92,14 @@ SCHEDULED: <2020-12-02 Wed>
 * TODO Attend CSI interview
 SCHEDULED: <2020-12-02 Wed 11:00>
 * TODO Write up reasons why I prefer OGP
-SCHEDULED: <2020-11-29 Sun>
+SCHEDULED: <2020-12-04 Fri>
 * TODO Attend standup
-SCHEDULED: <2020-11-28 Sat 09:00 ++1d>
+SCHEDULED: <2020-12-01 Tue 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-27 Fri 12:43]
+:LAST_REPEAT: [2020-12-01 Tue 00:42]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-12-01 Tue 00:42]
 - State "KILL"       from "TODO"       [2020-11-27 Fri 12:43]
 - State "DONE"       from "TODO"       [2020-11-26 Thu 10:23]
 - State "DONE"       from "TODO"       [2020-11-25 Wed 09:35]
@@ -101,166 +119,6 @@ CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
 :END:
 - State "DONE"       from "TODO"       [2020-11-04 Wed 10:36]
 - State "DONE"       from "TODO"       [2020-11-03 Tue 09:53]
-* TODO Build the Python pipeline
-** DONE Iron out the bugs in the TCP streaming system
-** DONE Think about the advantages and disadvantages of the DeepStream SDK
-:LOGBOOK:
-CLOCK: [2020-11-02 Mon 17:16]--[2020-11-02 Mon 18:18] =>  1:02
-:END:
-** DONE Write a proposal on how to build a Python pipeline
-*** DONE Understand RealSense API and I/O
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 11:30]--[2020-11-03 Tue 12:05] =>  0:35
-:END:
-[[https://dev.intelrealsense.com/docs/api-architecture][Intel RealSense API Reference]]
-[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.html#module-pyrealsense2][Python LibRealSense bindings reference]]
-[[https://dev.intelrealsense.com/docs/python2][Code examples showing how to use LibRealSense's Python wrapper]]
-[[https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md][Installing LibRealSense on the Jetson]]
-**Outputs of wait_for_frame**:
-~pipeline~ has a ~wait_for_frames~ or ~poll_for_frames~ function that returns a
-[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~   ]]
-This [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~]] extends the [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.frame.html?highlight=get_data#pyrealsense2.frame.get_data][~frame~]] class.
-We get the data from the frame using the ~get_data~ method,
-which in turn returns a ~BufData~ data structure.
-**** DONE find out what the type signature is for BufData (help(type(self)))
-We know that the BufData can be converted into a numpy array which we might be able to feed
-*** DONE Sketch out a big picture architecture diagram
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 11:10]--[2020-11-03 Tue 11:30] =>  0:20
-:END:
-[[./img/diagram.png]]
-*** DONE Note down or otherwise document how to install RealSense libs on the Jetson
-*** DONE Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
-*** DONE Ask one of the scientists of the inputs of the 7-class model
-What is the I/O of the current model?
-Would this change when moving to TensorRT?
-
-**ANSWER**: The I/O takes a NumPy array no problems and returns a JSON object.
-We can check the JSON object schema in the folder.
-*** DONE Check with Marcus or Siyang how I would deploy the 7-class model on the Jetson
-[[s3://vama-sceneuds-images/Archive_weights/best_4class.pt]]
-"The above link is the saved model, we can use it with B1_detect.py,
-change weights_path."
-*** DONE Finalise architecture diagram
-** DONE Get a "Hello World" working on librealsense
-*** KILL Write a Dockerfile to make installation of pylibrealsense easy
-**** KILL Find a way to get past the permissions thing of the script
-*** DONE Install pylibrealsense libraries (build from source)
-*** DONE Write documentation on how to install pylibrealsense on the Jetson
-:LOGBOOK:
-CLOCK: [2020-11-05 Thu 14:05]--[2020-11-05 Thu 15:32] =>  1:27
-:END:
-** DONE Fix the Dockerfile for James
-**** DONE Comment out the PyTorch line in the Dockerfile
-** DONE Get the ML model working
-** DONE Talk from host 
-https://aws.amazon.com/sqs/
-Mount vs Volume versus tempfs mount
-
-** DONE Refactor
-** DONE Write code to get depth data
-:LOGBOOK:
-CLOCK: [2020-11-20 Fri 10:23]--[2020-11-20 Fri 10:23] =>  0:00
-:END:
-** TODO Write documentation
-** TODO Document why I had to do what I did
-* TODO Become the best software engineer that I can be :WORK:OGP:CS:
-** Overview
-I will be a "proper" card-carrying software engineer soon.
-I want to focus on being the best software engineer that I can be.
-What should I learn in order to be the best?
-This is what OGP's career document has to say:
-
-:OGPCAREERDOCUMENT:
-Software Engineers are competent individual contributors. 
-They are comfortable with engineering tools such as source control, error
-monitoring, automated testing, and more. They can successfully run systems in
-production, though they may be unable to design such systems themselves. They
-can reason about the practical implications of a system design and can make
-useful contributions to design discussions. Overall, they are able to prioritize
-engineering tasks for themselves and complete them independently.
- 
-Concretely this means Software Engineers are able to:
-
-- Write code that matches the readability and design standards of the team
-- Implement systems from a given architectural design
-- Understand the design goals and limits of a given system and work around them
-- Prioritize engineering tasks effectively and avoid getting stuck on low impact work
-- Use engineering tools effectively
-  - Collaborate with other engineers by writing well defined pull requests
-  - Participate productively in a code review both as a reviewee and reviewer
-  - Branching and merging appropriately in source control
-  - Configure build tools for simplified deployment and development
-  - Setup automated testing to prevent code regressions
-- Operate production systems reliably
-  - Setup and operate cloud infrastructure for a given architectural design
-  - Implement logging and be comfortable searching through logs
-  - Configure basic alert systems to minimize downtime
-  - Deploy code to production using practices that minimize risk of user interruption
-  - Respond to production outages and recover from simple errors
-  - Conduct post mortems detailing the significant events and root cause analysis
-    :END:
-    
-It looks like the pull request and code review part 
-can be learned through OSS work (or on the job),
-but how do I learn the learn automated testing and build tools?
-And how do I learn everything under the section 
-"Operate production systems reliably"?
-
-What's going to give me the best bang for my buck?
-Should I be working on open-source projects?
-Or writing my own side projects?
-Or should I learn fundamental CS concepts like networks, OS, distributed systems?
-** TODO Compile the largest gaps in my CS knowledge
-- Reading source code
-- Force yourself to understand it by reading through the source code.
-** TODO Ask mentors for advice: what should I do?
-*** DONE Ask Seb for advice with several well-crafted questions
-*** DONE Attend Office hours with Ben 
-SCHEDULED: <2020-11-05 Wed 21:30>
-see braindump for notes on the call
-*** TODO Write an email to Robert to ask him for advice + ask for another office hour?
-*** DONE Think about what Ben said and send an email to thank him
-** TODO Compile what different mentors said and synthesise them into something actionable
-** TODO Read and learn from the best textbooks
-*** DONE Move the PDFs to the Remarkable so that I can read them on the go
-*** TODO [[./books/DDIA.pdf][Designing Data-Intensive Applications (DDIA)]]
-*** TODO [[./books/SICP_JS.pdf][SICP (JS version)]]
-** TODO Do projects that maximise my learning
-*** TODO Learn Rust
-**** DONE [[https://www.youtube.com/watch?v=DnT-LUQgc7s][Considering Rust: video link]]
-**** TODO [[https://doc.rust-lang.org/book/index.html][Rust tutorial: The Rust Programming Language]]
-***** TODO Work through the tutorial [0/20]
-****** TODO Chapter 1
-****** TODO Chapter 2
-****** TODO Chapter 3
-****** TODO Chapter 4
-****** TODO Chapter 5
-****** TODO Chapter 6
-****** TODO Chapter 7
-****** TODO Chapter 8
-****** TODO Chapter 9
-****** TODO Chapter 10
-****** TODO Chapter 11
-****** TODO Chapter 12
-****** TODO Chapter 13
-****** TODO Chapter 14
-****** TODO Chapter 15
-****** TODO Chapter 16
-****** TODO Chapter 17
-****** TODO Chapter 18
-****** TODO Chapter 19
-****** TODO Chapter 20
-**** TODO [[http://www.arewewebyet.org/][Web development in Rust]]
-**** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
-*** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
-Prerequisite: [[Learn Rust]]
-** DONE Complete Bradfield CS take-home
-[[file:docs/bradfield_csi_takehome.pdf]]
-DEADLINE: <2020-11-08 Sun 12:00>
-:LOGBOOK:
-CLOCK: [2020-11-07 Sat 17:52]--[2020-11-07 Sat 20:00] =>  2:08
-:END:
 * TODO Write for the blog :BLOG:
 ** TODO Write series about "How to write a First-Class Oxford PPE essay":
   - how to read,
@@ -328,38 +186,28 @@ Clarified with Russell what I am or am not allowed to say:
 ** TODO Add "Related Posts" widget on my posts
 ** TODO Improve my blog: Filter pages, tag pages, tag search, tag index pages... 
 ** DONE Add blogroll
-* TODO Build software :SIDEPROJECTS:
-** TODO Finish and ship MVP of Board Game Engine: server and lobby
-*** TODO Pair program with Joshua 
-SCHEDULED: <2020-11-28 Sat 22:00 +1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-11-26 Thu 15:14]
-:END:
-- State "KILL"       from "TODO"       [2020-11-26 Thu 15:14]
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
-:END:
+* TODO Build stuff :SIDEPROJECTS:
+** TODO Build adjustable monitor stand
+** TODO Build DIY RGBA night lamp
 ** HOLD Build Julia Path Tracer
 ** HOLD Build [[https://www.benkuhn.net/krss/][KindleRSS]] but for the Remarkable.
 Idea from Ben Kuhn.
 Check the following [GitHub repo](https://github.com/reHackable/awesome-reMarkable).
 Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
-* TODO Build hardware :SIDEPROJECTS:HOBBIES:
 ** HOLD Repair gramophone
-** TODO Build adjustable monitor stand
-** TODO Build DIY RGBA night lamp
-** DONE Build home gym
-* TODO Buy things [3/7]
+* TODO Buy things [5/7]
 - [X] Buy home gym equipment (~\$800--\$2000)
 - [X] Buy a new toothbrush
 - [X] Buy a webcam
-- [ ] Buy a night light
+- [X] Earplugs (for both me and Celine)
+- [X] Buy a night light
 - [ ] Buy split keyboard (~ \$500)
 - [ ] Mirror wall
-- [ ] Earplugs (for both me and Celine)
 * TODO Find a format for my resume that fulfills all my goals :WORK:
 (not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
 layout customisable by me)
+* HOLD Think of a way to display/digest time spent on each todo in a week
+SCHEDULED: <2020-11-27 Fri>
 * WAIT Attend the interview with GovTech CEO
 SCHEDULED: <2021-01-15 Fri>
 * HOLD Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
@@ -368,9 +216,8 @@ SCHEDULED: <2021-01-15 Fri>
 SCHEDULED: <2020-11-26 Thu>
 * WAIT Wait for IMDA to calculate my LD
 * WAIT Add feature request to support Jekyll-style tags in org-roam
-* WAIT Publish cryptogram book on Amazon
-** TODO Add gutter margins
-DEADLINE: <2020-11-07 Sat>
+* HOLD Publish cryptogram book on Amazon
+** HOLD Add gutter margins
 [[https://github.com/bpampuch/pdfmake/issues/2106#event-3945256138][GitHub link]]
 *** DONE Read the code for adding gutter margins
 DEADLINE: <2020-11-15 Sun>
@@ -400,72 +247,3 @@ CLOCK: [2020-11-26 Thu 10:02]
 CPF received 18 of November
 21 working days from the start of 18th November roughly. 
 If everything goes smoothly it should be done End December. 
-* DONE Do 9pm board game engine with
-SCHEDULED: <2020-11-30 Mon 21:00>
-* DONE Write Week 48 review
-* KILL Attend 8pm meeting for UpStars
-SCHEDULED: <2020-11-30 Mon 20:00>
-* DONE Talk to the Town Council and ask why the Jackfruit tree is gonna be cut down
-- maybe attend Meet-the-People session
-* DONE Have dinner with Yian, Vivienne and Xiaohui
-SCHEDULED: <2020-11-27 Fri>
-* DONE Go to Singpost and get a box
-SCHEDULED: <2020-11-27 Fri>
-* DONE Cut my hair
-SCHEDULED: <2020-11-27 Fri>
-* DONE Reply to Nick Eubank
-* KILL Send email to cancel climbing with Sihong and Sonya
-SCHEDULED: <2020-11-27 Fri>
-* KILL Climb with Sihong and Sonya
-SCHEDULED: <2020-11-28 Sat 10:00-13:00>
-* DONE Check in with Xin Zheng
-SCHEDULED: <2020-11-26 Thu>
-* DONE Working Paper Wednesday: Look through the codebase
-SCHEDULED: <2020-11-25 Wed 18:00>
-* DONE Reply to Rob Heaton
-SCHEDULED: <2020-11-23 Mon>
-* DONE Write documentation and refactor the code I've written
-SCHEDULED: <2020-11-24 Tue>
-* DONE Update JIRA
-SCHEDULED: <2020-11-24 Tue>
-* KILL Send in pull request for Intel RealSense repo
-SCHEDULED: <2020-11-17 Tue>
-* DONE Call Alexis
-* DONE Meeting with Gabe and Moon
-SCHEDULED: <2020-11-23 Mon 22:00>
-* DONE Meet Jon for dinner
-SCHEDULED: <2020-11-23 Mon>
-* DONE Book a slot for CSI interview
-SCHEDULED: <2020-11-23 Mon>
-* DONE Have dinner with Marc
-SCHEDULED: <2020-11-17 Tue>
-* DONE Complain to Town council about the poorly shaded floodlights
-** DONE Wait for call from Town Council
-** DONE Wait for Frederick to come and inspect the place
-* DONE Set up GIRO automatic deductions to top up parents' CPF account
-** DONE Grab an envelope
-https://www.cpf.gov.sg/Assets/members/Documents/FORM_RSTU_GIROandSI.pdf
-(iii) GIRO
-
-    Use our GIRO facility to make monthly and/or yearly cash top-ups to your own or loved ones’ CPF accounts.
-    Download and complete the latest* Top Up Retirement Sum Using GIRO (PDF, 1.3MB).
-    Mail it to:
-    CPF Board
-    Robinson Road P.O. Box 3060 Singapore 905060
-
-* DONE Plan what activities fit in what day
-- CS Mondays
-- Thesis Tuesdays
-- Working Paper Wednesdays
-- Deutsche Donnerstag
-- Freedom Fridays
-- Board Game Saturdays
-- Serendipitious Sundays
-* DONE Meet Celia for dinner and shopping
-SCHEDULED: <2020-11-24 Tue 17:00>
-* DONE Reply to Nick Eubank
-SCHEDULED: <2020-11-23 Mon>
-* DONE Call Desmond
-SCHEDULED: <2020-11-25 Wed 10:00>
-* DONE Call Xin Zheng
-SCHEDULED: <2020-11-25 Wed 10:30>

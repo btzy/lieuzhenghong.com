@@ -993,4 +993,100 @@ CLOCK: [2020-11-06 Fri 09:51]--[2020-11-06 Fri 13:26] => 3:35 :END:
 https://notes.alexkehayias.com/
 
 * HOLD What's the canonical way to link to other posts with Eleventy?
-    
+* TODO Become the best software engineer that I can be :WORK:OGP:CS:
+** Overview
+I will be a "proper" card-carrying software engineer soon.
+I want to focus on being the best software engineer that I can be.
+What should I learn in order to be the best?
+This is what OGP's career document has to say:
+
+:OGPCAREERDOCUMENT:
+Software Engineers are competent individual contributors.
+They are comfortable with engineering tools such as source control, error
+monitoring, automated testing, and more. They can successfully run systems in
+production, though they may be unable to design such systems themselves. They
+can reason about the practical implications of a system design and can make
+useful contributions to design discussions. Overall, they are able to prioritize
+engineering tasks for themselves and complete them independently.
+
+Concretely this means Software Engineers are able to:
+
+- Write code that matches the readability and design standards of the team
+- Implement systems from a given architectural design
+- Understand the design goals and limits of a given system and work around them
+- Prioritize engineering tasks effectively and avoid getting stuck on low impact work
+- Use engineering tools effectively
+  - Collaborate with other engineers by writing well defined pull requests
+  - Participate productively in a code review both as a reviewee and reviewer
+  - Branching and merging appropriately in source control
+  - Configure build tools for simplified deployment and development
+  - Setup automated testing to prevent code regressions
+- Operate production systems reliably
+  - Setup and operate cloud infrastructure for a given architectural design
+  - Implement logging and be comfortable searching through logs
+  - Configure basic alert systems to minimize downtime
+  - Deploy code to production using practices that minimize risk of user interruption
+  - Respond to production outages and recover from simple errors
+  - Conduct post mortems detailing the significant events and root cause analysis
+    :END:
+
+It looks like the pull request and code review part
+can be learned through OSS work (or on the job),
+but how do I learn the learn automated testing and build tools?
+And how do I learn everything under the section
+"Operate production systems reliably"?
+
+What's going to give me the best bang for my buck?
+Should I be working on open-source projects?
+Or writing my own side projects?
+Or should I learn fundamental CS concepts like networks, OS, distributed systems?
+** TODO Compile the largest gaps in my CS knowledge
+- Reading source code
+- Force yourself to understand it by reading through the source code.
+** TODO Ask mentors for advice: what should I do?
+*** DONE Ask Seb for advice with several well-crafted questions
+*** DONE Attend Office hours with Ben
+SCHEDULED: <2020-11-05 Wed 21:30>
+see braindump for notes on the call
+*** TODO Write an email to Robert to ask him for advice + ask for another office hour?
+*** DONE Think about what Ben said and send an email to thank him
+** TODO Compile what different mentors said and synthesise them into something actionable
+** TODO Read and learn from the best textbooks
+*** DONE Move the PDFs to the Remarkable so that I can read them on the go
+*** TODO [[./books/DDIA.pdf][Designing Data-Intensive Applications (DDIA)]]
+*** TODO [[./books/SICP_JS.pdf][SICP (JS version)]]
+** TODO Do projects that maximise my learning
+*** TODO Learn Rust
+**** DONE [[https://www.youtube.com/watch?v=DnT-LUQgc7s][Considering Rust: video link]]
+**** TODO [[https://doc.rust-lang.org/book/index.html][Rust tutorial: The Rust Programming Language]]
+***** TODO Work through the tutorial [0/20]
+****** TODO Chapter 1
+****** TODO Chapter 2
+****** TODO Chapter 3
+****** TODO Chapter 4
+****** TODO Chapter 5
+****** TODO Chapter 6
+****** TODO Chapter 7
+****** TODO Chapter 8
+****** TODO Chapter 9
+****** TODO Chapter 10
+****** TODO Chapter 11
+****** TODO Chapter 12
+****** TODO Chapter 13
+****** TODO Chapter 14
+****** TODO Chapter 15
+****** TODO Chapter 16
+****** TODO Chapter 17
+****** TODO Chapter 18
+****** TODO Chapter 19
+****** TODO Chapter 20
+**** TODO [[http://www.arewewebyet.org/][Web development in Rust]]
+**** TODO [[https://fasterthanli.me/articles/a-half-hour-to-learn-rust][Teaches you Rust from code snippets]]
+*** TODO Do CS140e: building an OS on the Raspberry Pi 1A+
+Prerequisite: [[Learn Rust]]
+** DONE Complete Bradfield CS take-home
+[[file:docs/bradfield_csi_takehome.pdf]]
+DEADLINE: <2020-11-08 Sun 12:00>
+:LOGBOOK:
+CLOCK: [2020-11-07 Sat 17:52]--[2020-11-07 Sat 20:00] =>  2:08
+:END:

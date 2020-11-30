@@ -80,3 +80,477 @@ SCHEDULED: <2020-11-06 Fri 09:45>
 :ARCHIVE_CATEGORY: todo
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Iron out the bugs in the TCP streaming system
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Think about the advantages and disadvantages of the DeepStream SDK
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+CLOCK: [2020-11-02 Mon 17:16]--[2020-11-02 Mon 18:18] =>  1:02
+:END:
+
+* DONE Write a proposal on how to build a Python pipeline
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** DONE Understand RealSense API and I/O
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 11:30]--[2020-11-03 Tue 12:05] =>  0:35
+:END:
+[[https://dev.intelrealsense.com/docs/api-architecture][Intel RealSense API Reference]]
+[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.html#module-pyrealsense2][Python LibRealSense bindings reference]]
+[[https://dev.intelrealsense.com/docs/python2][Code examples showing how to use LibRealSense's Python wrapper]]
+[[https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md][Installing LibRealSense on the Jetson]]
+**Outputs of wait_for_frame**:
+~pipeline~ has a ~wait_for_frames~ or ~poll_for_frames~ function that returns a
+[[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~   ]]
+This [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.composite_frame.html?highlight=get_depth_frame#pyrealsense2.composite_frame][~composite_frame~]] extends the [[https://intelrealsense.github.io/librealsense/python_docs/_generated/pyrealsense2.frame.html?highlight=get_data#pyrealsense2.frame.get_data][~frame~]] class.
+We get the data from the frame using the ~get_data~ method,
+which in turn returns a ~BufData~ data structure.
+*** DONE find out what the type signature is for BufData (help(type(self)))
+We know that the BufData can be converted into a numpy array which we might be able to feed
+** DONE Sketch out a big picture architecture diagram
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 11:10]--[2020-11-03 Tue 11:30] =>  0:20
+:END:
+[[./img/diagram.png]]
+** DONE Note down or otherwise document how to install RealSense libs on the Jetson
+** DONE Think about what components we need and where we might run into issues if doing the Python pipeline approach (known unknowns)
+** DONE Ask one of the scientists of the inputs of the 7-class model
+What is the I/O of the current model?
+Would this change when moving to TensorRT?
+
+**ANSWER**: The I/O takes a NumPy array no problems and returns a JSON object.
+We can check the JSON object schema in the folder.
+** DONE Check with Marcus or Siyang how I would deploy the 7-class model on the Jetson
+[[s3://vama-sceneuds-images/Archive_weights/best_4class.pt]]
+"The above link is the saved model, we can use it with B1_detect.py,
+change weights_path."
+** DONE Finalise architecture diagram
+
+* DONE Get a "Hello World" working on librealsense
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** KILL Write a Dockerfile to make installation of pylibrealsense easy
+*** KILL Find a way to get past the permissions thing of the script
+** DONE Install pylibrealsense libraries (build from source)
+** DONE Write documentation on how to install pylibrealsense on the Jetson
+:LOGBOOK:
+CLOCK: [2020-11-05 Thu 14:05]--[2020-11-05 Thu 15:32] =>  1:27
+:END:
+
+* DONE Fix the Dockerfile for James
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+*** DONE Comment out the PyTorch line in the Dockerfile
+
+* DONE Get the ML model working
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Talk from host
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+https://aws.amazon.com/sqs/
+Mount vs Volume versus tempfs mount
+
+
+* DONE Refactor
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Write code to get depth data
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+CLOCK: [2020-11-20 Fri 10:23]--[2020-11-20 Fri 10:23] =>  0:00
+:END:
+
+* DONE Write documentation
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Document why I had to do what I did
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Build home gym
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build stuff
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: SIDEPROJECTS
+:END:
+
+* TODO Buy things [5/7]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [X] Buy home gym equipment (~\$800--\$2000)
+- [X] Buy a new toothbrush
+- [X] Buy a webcam
+- [X] Earplugs (for both me and Celine)
+- [X] Buy a night light
+- [ ] Buy split keyboard (~ \$500)
+- [ ] Mirror wall
+
+* TODO Find a format for my resume that fulfills all my goals :WORK:
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+(not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
+layout customisable by me)
+
+* HOLD Think of a way to display/digest time spent on each todo in a week
+SCHEDULED: <2020-11-27 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: HOLD
+:END:
+
+* TODO Buy things [5/7]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:44
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+- [X] Buy home gym equipment (~\$800--\$2000)
+- [X] Buy a new toothbrush
+- [X] Buy a webcam
+- [X] Earplugs (for both me and Celine)
+- [X] Buy a night light
+- [ ] Buy split keyboard (~ \$500)
+- [ ] Mirror wall
+
+* DONE Do 9pm board game engine with
+SCHEDULED: <2020-11-30 Mon 21:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Write Week 48 review
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* KILL Attend 8pm meeting for UpStars
+SCHEDULED: <2020-11-30 Mon 20:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:
+
+* DONE Talk to the Town Council and ask why the Jackfruit tree is gonna be cut down
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- maybe attend Meet-the-People session
+
+* DONE Have dinner with Yian, Vivienne and Xiaohui
+SCHEDULED: <2020-11-27 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Go to Singpost and get a box
+SCHEDULED: <2020-11-27 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Cut my hair
+SCHEDULED: <2020-11-27 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Reply to Nick Eubank
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* KILL Send email to cancel climbing with Sihong and Sonya
+SCHEDULED: <2020-11-27 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:
+
+* KILL Climb with Sihong and Sonya
+SCHEDULED: <2020-11-28 Sat 10:00-13:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:
+
+* DONE Check in with Xin Zheng
+SCHEDULED: <2020-11-26 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Working Paper Wednesday: Look through the codebase
+SCHEDULED: <2020-11-25 Wed 18:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Reply to Rob Heaton
+SCHEDULED: <2020-11-23 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Write documentation and refactor the code I've written
+SCHEDULED: <2020-11-24 Tue>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Update JIRA
+SCHEDULED: <2020-11-24 Tue>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* KILL Send in pull request for Intel RealSense repo
+SCHEDULED: <2020-11-17 Tue>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:
+
+* DONE Call Alexis
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Meeting with Gabe and Moon
+SCHEDULED: <2020-11-23 Mon 22:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Meet Jon for dinner
+SCHEDULED: <2020-11-23 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Book a slot for CSI interview
+SCHEDULED: <2020-11-23 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Have dinner with Marc
+SCHEDULED: <2020-11-17 Tue>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Complain to Town council about the poorly shaded floodlights
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** DONE Wait for call from Town Council
+** DONE Wait for Frederick to come and inspect the place
+
+* DONE Set up GIRO automatic deductions to top up parents' CPF account
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** DONE Grab an envelope
+https://www.cpf.gov.sg/Assets/members/Documents/FORM_RSTU_GIROandSI.pdf
+(iii) GIRO
+
+    Use our GIRO facility to make monthly and/or yearly cash top-ups to your own or loved ones’ CPF accounts.
+    Download and complete the latest* Top Up Retirement Sum Using GIRO (PDF, 1.3MB).
+    Mail it to:
+    CPF Board
+    Robinson Road P.O. Box 3060 Singapore 905060
+
+
+* DONE Plan what activities fit in what day
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- CS Mondays
+- Thesis Tuesdays
+- Working Paper Wednesdays
+- Deutsche Donnerstag
+- Freedom Fridays
+- Board Game Saturdays
+- Serendipitious Sundays
+
+* DONE Meet Celia for dinner and shopping
+SCHEDULED: <2020-11-24 Tue 17:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Reply to Nick Eubank
+SCHEDULED: <2020-11-23 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Call Desmond
+SCHEDULED: <2020-11-25 Wed 10:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Call Xin Zheng
+SCHEDULED: <2020-11-25 Wed 10:30>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-01 Tue 00:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:

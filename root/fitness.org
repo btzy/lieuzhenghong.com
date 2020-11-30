@@ -284,3 +284,4 @@ BW X
   16
   12 12 12
 - Double leg thrust
+  X
