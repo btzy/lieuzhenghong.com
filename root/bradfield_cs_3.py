@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Time zones
+3 Time zones
 '''
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
