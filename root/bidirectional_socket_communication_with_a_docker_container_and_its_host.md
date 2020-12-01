@@ -17,13 +17,20 @@ running on it to communicate bidirectionally.
 I needed to do this because our machine learning model ran on a Docker container
 and we needed to send data to/receive data from it.
 
+Note that this is a technical deep dive
+of how one particular feature 
+(namely, the communication between the webcam stream and the ML model)
+is implemented;
+those who want a brief overview of the entire pipeline I build 
+should refer to the README instead.
+
 ## The problem
 
 We want the machine learning model to be in a Dockerfile
 to make setup and configuration easy.
 But this introduces a new challenge:
-how do we send data from the Jetson (host) to the machine learning model (Docker
-container)?
+how do we send data from the Jetson (host) 
+to the machine learning model (Docker container)?
 
 If the code for the machine learning model were not in a Docker, we could simply
 `import` the module into the webcam stream code, something like this:
@@ -66,7 +73,9 @@ i) file I/O is slow, and
 ii) you will have to write code to handle deleting old files.
 It also didn't seem very elegant to have to constantly create and delete files.
 Therefore, I chose not to use this approach in the end.
-But since everything in Unix is a file, couldn't we use Unix sockets?
+But since everything in Unix is a file [^1], couldn't we use Unix sockets?
+
+[^1]: Don't quite understand the implications of this fact, have to do more research
 
 ### Building bidirectional communication over TCP
 
@@ -96,28 +105,24 @@ while True:
 
 ## How to build bidirectional communication over TCP
 
-I used a low-level Python library called `socket`
+I used a low-level Python library called `socket`. 
+This library directly calls the Unix socket syscalls
+(again, something I don't quite understand).
 
 We first establish a connection using `socket.connect`
 before sending any data over.
 
-First we start a listener on the server side.
+**Server-side**: First we start a listener on the server side.
 We *bind* the socket to an open port (in this case 6000)
 and start listening for connections forever in a `while` loop,
-calling `socket.accept` to accept incoming connections on that socket [^0].
+calling `socket.accept` to accept incoming connections on that socket.
+Something to note here is that the `socket.accept` call actually returns a new socket when a client `connects` to it: 
+a new socket is created for the connection ready to `send` and `recv`,
+and the original socket continues to listen for new connections [^2].
 
-[^0]: https://beej.us/guide/bgnet/html/ 
+[^2]: From https://beej.us/guide/bgnet/html/ 
 
-> Get ready—the accept() call is kinda weird! What’s going to happen is this:
-someone far far away will try to connect() to your machine on a port that you
-are listen()ing on. Their connection will be queued up waiting to be accept()ed.
-You call accept() and you tell it to get the pending connection. It’ll return to
-you a brand new socket file descriptor to use for this single connection! That’s
-right, suddenly you have two socket file descriptors for the price of one! The
-original one is still listening for more new connections, and the newly created
-one is finally ready to send() and recv(). We’re there!
-
-The client side is simple: 
+**Client-side**: The client side is simple: 
 we just use `socket.connect` to connect to the remote socket. 
 
 Here's what that looks like on the server side:
@@ -156,8 +161,37 @@ knowing when the message has ended.
 
 ### Serialising and deserialising the data
 
-We use `np.save` and `np.load` to serialise and deserialise 
-the numpy arrays to and from a `BytesIO` object.
+The first main complication is 
+how to send numpy arrays over the TCP connection,
+because a TCP connection only accepts bytes.
+One way to do it would be to
+simply convert the numpy arrays into a string,
+convert that into a bytestring using `bytes()`,
+and send that.
+
+There's a better way to do it though.
+I use Numpy's built-in `np.save` and `np.load` 
+to write and read to a `BytesIO` object,
+which is basically a file AFAIK.
+The BytesIO file can simply be `file.read()` and sent over.
+
+Take note that writing to a file places a pointer to the end of the file
+(not sure how this works)
+so we'll need to do `file.seek(0)`to seek to the start of the file
+in order to read the file with `file.read`.
+
+Here's what that looks like:
+
+```python
+message = BytesIO()
+np.save(message, img)
+message.seek(0)
+sock.sendall(message.read()) # sock is the connected socket
+```
+
+When receiving a response we simply use
+`file.write()` to write to a new `BytesIO` object.
+and `np.load` to get it back into an numpy array.
 
 ### Knowing when the message has ended
 
@@ -175,19 +209,19 @@ puts it nicely:
 > or indicate how long they are (much better), or end by shutting down the
 > connection.
 
-The simplest way to solve this problem is to simply close the connection after
-we've
-sent out the image. 
+The simplest way to solve this problem is to simply close the connection 
+after we've sent out the image. 
 But we don't want to close the connection because 
-we want to get a response back from the server (namely, the bounding boxes).
-So we'll have to specify the message length instead. [^1]
+we want to get a response back from the server 
+(namely, the bounding boxes).
+So we'll have to specify the message length instead. [^3]
 We'll simply prepend the message with the message length.
 The problem is that the message length itself can also vary, 
 so we'll need to pad it to ensure the first `N` bytes will be guaranteed to be the header.
 If you don't pad the message length then you might read part of the array in 
 as your message length. 
 
-[^1]: HTTP specifies message length using a "Content Length" or "Transfer Encoding" header field: see 
+[^3]: HTTP specifies message length using a "Content Length" or "Transfer Encoding" header field: see 
 [this SO link](https://stackoverflow.com/questions/4824451/detect-end-of-http-request-body#4824738)
 for details.
 
@@ -225,7 +259,9 @@ On the Docker container we first receive the message length and decode it.
 will be 10 bytes long!)**
 We then keep receiving until the number of bytes we've received
 equals the message length. 
-We then send it to the object detection model and send the bounding boxes back.
+We then send it to the object detection model 
+(calling the `detect` function)
+and send the bounding boxes back.
 
 ```python
 # ml_model.py
@@ -261,3 +297,5 @@ that the first 10 (or whatever) bytes of the message buffer
 would be the message length. 
 But since we close the socket and re-open a new one after each frame,
 this is not a problem.
+
+## Conclusion
