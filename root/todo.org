@@ -1,5 +1,4 @@
 #+TAGS:  PHYSICAL(0) [ WORK(1) : IMDA OGP ] SERENDIPITY(2) [ SIDEPROJECTS(3) : BLOG BOARDGAMEENGINE THESIS CS ] HOBBIES(4) RELATIONSHIPS(5)
-
 ------
 To repeat
 To clone type ~C-c C-x c~
@@ -7,6 +6,7 @@ To clone type ~C-c C-x c~
 ~C-c C-x C-i~ clocks in,
 ~C-c C-x C-o~ clocks out.
 ~C-c [~ adds to agenda.
+~C-c C-x C-a~ moves it to the archive
 ------
 * TODO Rusty Mondays
 * TODO Thesis Tuesdays
@@ -55,8 +55,14 @@ SCHEDULED: <2020-12-12 Sat 22:00 +1w>
 CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
 :END:
 * TODO Review/Serendipitous Sundays
+** TODO Have lunch and boulder with Van
+SCHEDULED: <2020-12-06 Sun 13:00-17:00>
 
 
+* TODO Attend Meeting with Steve
+SCHEDULED: <2020-12-04 Fri 16:00-17:00>
+* TODO Push folder to "SU-RMF pipe" repo
+SCHEDULED: <2020-12-01 Tue 17:30-18:00>
 * TODO Write email to EMA
 SCHEDULED: <2020-11-27 Fri>
 * TODO Catch up with Rob
@@ -64,21 +70,22 @@ SCHEDULED: <2020-12-01 Tue 18:00-19:00>
 * TODO Buy resistance band for Celine
 SCHEDULED: <2020-12-01 Tue>
 * TODO Send a box of love to Celine
-** TODO Write calligraphy for Celine
 ** TODO Buy Singaporean food for Celine
 SCHEDULED: <2020-12-01 Tue>
+*** TODO Buy salted egg fish skin
 ** TODO Write card for Celine
-SCHEDULED: <2020-11-27 Fri>
 SCHEDULED: <2020-12-01 Tue>
 * TODO Build the Python pipeline
 ** TODO Finish writing documentation for the Python pipeline
 SCHEDULED: <2020-12-01 Tue>
+:LOGBOOK:
+CLOCK: [2020-12-01 Tue 10:47]--[2020-12-01 Tue 10:59] =>  0:12
+:END:
 ** TODO Refactor the RabbitMQ receiver
 SCHEDULED: <2020-12-01 Tue>
 ** TODO Publish ROS2 topic
 SCHEDULED: <2020-12-01 Tue>
 ** TODO Run everything on the Jetson just to make sure it works
-SCHEDULED: <2020-12-01 Tue>
 * TODO Write post in a Writeathon with Bernard
 SCHEDULED: <2020-12-01 Tue>
 [[file:group_testing.md][Group Testing]]
@@ -89,16 +96,15 @@ SCHEDULED: <2020-12-02 Wed>
 * TODO Apply for universities
 ** TODO Apply for Harvard
 ** TODO Apply for ETH Zurich
-* TODO Attend CSI interview
-SCHEDULED: <2020-12-02 Wed 11:00>
 * TODO Write up reasons why I prefer OGP
 SCHEDULED: <2020-12-04 Fri>
 * TODO Attend standup
-SCHEDULED: <2020-12-01 Tue 09:00 ++1d>
+SCHEDULED: <2020-12-02 Wed 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-12-01 Tue 00:42]
+:LAST_REPEAT: [2020-12-01 Tue 10:46]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-12-01 Tue 10:46]
 - State "DONE"       from "TODO"       [2020-12-01 Tue 00:42]
 - State "KILL"       from "TODO"       [2020-11-27 Fri 12:43]
 - State "DONE"       from "TODO"       [2020-11-26 Thu 10:23]
@@ -206,10 +212,9 @@ Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
 * TODO Find a format for my resume that fulfills all my goals :WORK:
 (not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
 layout customisable by me)
-* HOLD Think of a way to display/digest time spent on each todo in a week
-SCHEDULED: <2020-11-27 Fri>
 * WAIT Attend the interview with GovTech CEO
 SCHEDULED: <2021-01-15 Fri>
+* HOLD Think of a way to display/digest time spent on each todo in a week
 * HOLD Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
 ** TODO Post it on LessWrong?
 * WAIT Link up with Preston
@@ -240,10 +245,6 @@ Zoom ID: 876 2180 2169
 Zoom PW: 131120
 Time: 3.00pm to 4.00pm folks
 * WAIT Set up GIRO transfer
-SCHEDULED: <2020-11-26 Thu>
-:LOGBOOK:
-CLOCK: [2020-11-26 Thu 10:02]
-:END:
 CPF received 18 of November
 21 working days from the start of 18th November roughly. 
 If everything goes smoothly it should be done End December. 
