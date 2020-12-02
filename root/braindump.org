@@ -1090,3 +1090,100 @@ DEADLINE: <2020-11-08 Sun 12:00>
 :LOGBOOK:
 CLOCK: [2020-11-07 Sat 17:52]--[2020-11-07 Sat 20:00] =>  2:08
 :END:
+
+* Notes on Talk with Robert (1st December 2020)
+- Don't do a Master's for signalling purpose but do it for the student experience or the joy of learning.
+- For a post that is more of parenting, I come up with little ideas that make up a sentence or paragraph
+  and collate them over two months
+- Write down all the notes you can and everytime you think of something add it to your list.
+- Is writing difficult? Is writing *uniquely* difficult?
+  - I only really ever write in the morning, something about timing makes it good
+  - It gets harder and harder as you get closer and closer to finishing it
+  - Sometimes I try to write a funny joke and I stress out about whether
+  - Write "TODO" if you're not having fun and move around, keep it flowy
+  - Sometimes set a goal to write for X amount of time could help.
+- About writing full-time?
+  - Having the chance to really focus on that full-time would be cool
+  - Are you thinking of monetising writing full time?
+    It's easier to not. Realistically I should. If I do it full time I can spend much more writing
+    and I can look into monetising stuff and presentation and AdWords, put more thought into that
+    kind of stuff
+- How do I become Senior ASAP?
+  - You need to push for more technically complex projects to be put on,
+    managers are supposed to be thinking "This person is here for X years,
+    he should be Y level, how do we make that happen?"
+    At Stripe it takes about 3 or 4 years to get from L1 to L3
+  - Previously I sort of muddled along and
+    now instead I
+    go down through the checklist and say "What am I doing at this level? What do I need to do?"
+- How to write better? I'm competent, can write concisely, but I don't have that flair, that faculty
+  - Sprinkling little jokes throughout tells the reader that you're a real person
+    even if the jokes aren't funny.
+    You're on their side.
+- My wife is my best editor
+  - She's less experienced in programming so she has a beginner's mind
+  - Hard to get reviews from my friends
+- I read this eBook and it's about writing non-fiction books and a big part of it is about getting feedback.
+
+* Thinking about my thesis
+** What do we want to prove?
+My thesis showed a correlation between
+travel-time compact districts and homogeneity.
+
+Why might this be the case?
+The idea is that more homogenous communities
+tend to have lower average pairwise travel time
+between its members
+as compared to a similar random selection of
+people around the region.
+
+Districts that keep communities of interest
+together therefore simultaneously
+a) decrease average APTT; and
+b) are more homogeneous (less spatially diverse)
+
+** How can we prove the mechanism of ED/travel times?
+In order to prove that
+groups of people who are travel-time compact
+tend also to be homogeneous,
+it would be instructive to
+find a case like this:
+Consider three groups of people.
+Call these groups A, B and C.
+Let A be closer to B by Euclidean distance,
+while C be closer to B by travel time.
+Ergo,
+ED(B,A) < ED(B,C), but
+TT(B,A) > TT(B,C).
+(This could be possible with cliffs,
+rivers or otherwise impassible terrain).
+
+We would ideally like to find that in terms of
+Spatial Diversity scores,
+C and B are more similar
+than A and B.
+
+How we might do this in practice:
+Find triplets of adjacent Census Tracts
+and calculate the Euclidean distance
+vs travel times between the centroids
+of these Census Tracts.
+
+Another approach would be to find a subset of
+Census Tracts that belong to a CoI
+and show that that subset of Census Tracts
+tends to have lower pairwise APTTs/EDs
+AND lower spatial diversity compared to
+another "similar" subset of Census Tracts
+that don't belong to a CoI.
+(But similar how? How to control?)
+
+As a lower bar:
+We could just take any random subset of Census Tracts.
+Compare a random subset of Census Tracts
+to another random subset of Census Tracts
+(but they roughly be in the same region
+otherwise lots of omitted variables),
+and show a correlation between
+average APTT between tract centroids and
+the spatial diversity of those tracts.

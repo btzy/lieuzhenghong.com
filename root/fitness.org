@@ -285,3 +285,19 @@ BW X
   12 12 12
 - Double leg thrust
   X
+
+** DONE <2020-12-01 Tues>
+- Concentration curls
+  11
+  X X
+- Weighted pullups
+  20
+  6 6 7
+  RPE ~8, ~9.5 for the last set
+- Double leg thrust
+  X
+- Semi-weighted dips
+  (I call these semi-weighted because
+  there is no tension at the bottom)
+  20
+  6 6

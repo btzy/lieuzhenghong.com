@@ -9,12 +9,15 @@ To clone type ~C-c C-x c~
 ~C-c C-x C-a~ moves it to the archive
 ------
 * TODO Rusty Mondays
+** TODO Meet Gabe on Monday
+SCHEDULED: <2020-12-01 Tue 22:00>
 * TODO Thesis Tuesdays
 ** TODO Pair program with Gabe
-SCHEDULED: <2020-12-03 Thu 22:00 +1w>
+SCHEDULED: <2020-12-10 Thu 22:00 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-24 Tue 11:40]
+:LAST_REPEAT: [2020-12-01 Tue 22:51]
 :END:
+- State "DONE"       from "TODO"       [2020-12-01 Tue 22:51]
 - State "DONE"       from "TODO"       [2020-11-24 Tue 11:40]
 - State "DONE"       from "TODO"       [2020-11-18 Wed 00:36]
 - State "KILL"       from "TODO"       [2020-11-12 Thu 11:01]
@@ -59,35 +62,30 @@ CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
 SCHEDULED: <2020-12-06 Sun 13:00-17:00>
 
 
+* TODO Send a box of love to Celine
+** TODO Write card for Celine
+SCHEDULED: <2020-12-01 Tue>
+* TODO Buy resistance band for Celine
+SCHEDULED: <2020-12-01 Tue>
 * TODO Attend Meeting with Steve
 SCHEDULED: <2020-12-04 Fri 16:00-17:00>
 * TODO Push folder to "SU-RMF pipe" repo
-SCHEDULED: <2020-12-01 Tue 17:30-18:00>
+SCHEDULED: <2020-12-02 Wed 09:00>
 * TODO Write email to EMA
 SCHEDULED: <2020-11-27 Fri>
-* TODO Catch up with Rob
-SCHEDULED: <2020-12-01 Tue 18:00-19:00>
-* TODO Buy resistance band for Celine
-SCHEDULED: <2020-12-01 Tue>
-* TODO Send a box of love to Celine
-** TODO Buy Singaporean food for Celine
-SCHEDULED: <2020-12-01 Tue>
-*** TODO Buy salted egg fish skin
-** TODO Write card for Celine
-SCHEDULED: <2020-12-01 Tue>
 * TODO Build the Python pipeline
 ** TODO Finish writing documentation for the Python pipeline
-SCHEDULED: <2020-12-01 Tue>
+SCHEDULED: <2020-12-02 Wed>
 :LOGBOOK:
 CLOCK: [2020-12-01 Tue 10:47]--[2020-12-01 Tue 10:59] =>  0:12
 :END:
 ** TODO Refactor the RabbitMQ receiver
-SCHEDULED: <2020-12-01 Tue>
+SCHEDULED: <2020-12-02 Wed>
 ** TODO Publish ROS2 topic
 SCHEDULED: <2020-12-01 Tue>
 ** TODO Run everything on the Jetson just to make sure it works
 * TODO Write post in a Writeathon with Bernard
-SCHEDULED: <2020-12-01 Tue>
+SCHEDULED: <2020-12-04 Fri>
 [[file:group_testing.md][Group Testing]]
 * TODO Read what Nobiot wrote and look how I can use markdown with org/convert org to MD
 SCHEDULED: <2020-12-04 Fri>
