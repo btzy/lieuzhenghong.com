@@ -20,32 +20,6 @@
 ** Fitness infographics
 - Starting Stretching Infographic
   [[file:~/dev/lieuzhenghong.com/root/img/fitness/starting_stretching.jpg]]
-* Exercise templates
-** <2020-11-03 Tues>
-*** Remarks
-Pull workout
-*** Exercises:
-**** Starting Stretching
-**** Warmup
-**** Archer pullups
-**** Incline pullups
-**** Bicep curls
-**** Lat raises
-**** Nordic curls
-**** Single-legged Romanian deadlifts
-**** Abs
-** <2020-11-02 Mon>
-*** Remarks
-Push workout
-*** Exercises:
-**** Starting Stretching
-**** Warmup
-**** Archer pushups
-**** Decline pushups
-**** Inverted skullcrushers
-**** Pistol squats
-**** Bulgarian split squats
-**** Unilateral standing calf raises
 * Exercise log
 ** DONE <2020-11-02 Mon> PUSH 
 *** Remarks
@@ -267,7 +241,6 @@ BW X
 2.5 X 
 *** 
 ** DONE <2020-11-27 Fri>
-
 ** DONE <2020-11-28 Sat>
 - Incline dumbbell press
   16
@@ -285,7 +258,6 @@ BW X
   12 12 12
 - Double leg thrust
   X
-
 ** DONE <2020-12-01 Tues>
 - Concentration curls
   11
@@ -301,3 +273,13 @@ BW X
   there is no tension at the bottom)
   20
   6 6
+** DONE <2020-12-02 Tues>
+- Incline DB bench
+  16
+  12 12
+- Shrugs
+  16
+  30 15
+- Tricep extensions
+
+- Double leg thrust

@@ -4,6 +4,146 @@ layout: base
 tags: ["public", "exploration", "maths", "computer science"]
 ---
 
+The year is 2020 and the world has been transformed into a post-apocalyptic wasteland. 
+Due to a global pandemic the remnants of humanity have been reduced to
+scavenging for GrabFood discounts, unable to remember what the sun looks like.
+But there is hope. 
+A new screening test has been devised: a perfect, infinitely sensitive test
+able to detect whether someone has the virus in a matter of seconds.
+
+You are an overworked civil servant at the Ministry of Health.
+Your boss comes in one day into the bunker 
+(all Government officers have been relocated to
+fortified underground bunkers to prevent raider attacks)
+brandishing a couple of important-looking documents.
+
+"New directive from the Minister---we need
+to test every traveler that comes in with the new test! 
+Write me a proposal by today."
+
+Resigned, you start writing the proposal.
+It goes something like this:
+All visitors to the country will have to line up at a testing booth.
+When it's their turn they'll have to spit in a cup 
+and then their secretions will be tested for the virus.
+If they test negative, they're free to go;
+otherwise, they'll be whisked away to a quarantine facility.
+You bang it all out and send it to your boss.
+
+`<image here of a testing booth and a long line of people queuing up>`
+
+You get a call the next day.
+Your boss is aghast.
+
+"We haven't got nearly enough tests
+to test everyone who comes!"
+
+"Can we order more tests?" you ask.
+
+"No, the whole world is out of tests."
+
+You take a deep breath to calm yourself.
+
+"The Minister wants us to test everybody that comes in, right?"
+
+"Yes."
+
+"But we don't have enough tests to test everybody?"
+
+"Yes."
+
+*What the hell do you expect me to do then?*
+you think, but (wisely) stay silent.
+If your boss had any shame he'd have the courtesy
+to at least *look* sheepish, but you've learned not
+to expect that from him.
+In any case, he wants you to come up with a new proposal.
+
+---
+
+You're tearing your hair out.
+Testing everyone without enough tests for everyone?
+How is that possible?
+
+You review the evidence.
+Preliminary findings suggest that 
+out of every 1000 people, 
+roughly 3 people will have the virus.
+
+<TODO> Then you have a Eureka moment!!!
+
+## 1. Can we share tests between two people?
+
+Let's make one small change to the protocol.
+Visitors will have to queue-up-and-spit---just as before---but 
+now TWO visitors will spit in one cup.
+This combined cup will then be sent for testing
+Because the test is quite sensitive, it will test
+positive if either (or both) of the visitors have the virus.
+If the combined test comes back negative, then neither visitor
+has the virus, and they are free to go.
+If it comes back positive, then at least one of the pair has the virus.
+We then test each of them individually.
+
+This two-visitors-one-cup protocol will save almost half
+of the tests because most of the tests will come out negative.
+Why is this so? 
+The key here is that **most travelers don't have the virus.**
+
+Let's use an example to illustrate. 
+
+Suppose we have 1,000 travelers and 3 of them have the virus.
+If you test them individually then you will use up 1,000 tests.
+If you pair them up at random, however, one of the following
+must be the case:
+
+1. There are three pairs with one positive person,
+   and 497 all-negative pairs.
+2. There is one pair with two positive people, 
+   one pair of one pair with one positive person,
+   and 498 all-negative pairs;
+
+In the first case, 
+we will use three tests for each of the three positive pairs
+(one combined + two individual),
+and 497 tests for the negative pairs, for a total of 
+$497 + 3 * 3 = 506$.
+
+In the second,
+we will use three tests for each of the two positive pairs,
+and 498 tests for the negative pairs, for a total of
+$498 + 3 * 2 = 504$.
+
+In either case, we've cut the number of tests needed by almost half!
+
+## 2. Can we share tests between even more people?
+
+If two is good, surely three is better, four even better, 
+and ten EVEN better?
+We'll group travelers into groups---of ten, say---
+and get them all to spit into the cup.
+Leaving aside how gross that is, doing so could save us even more
+tests if most visitors don't have the virus. 
+Assuming we only have three visitors with the virus,
+there can be at most three positive groups, 
+so doing groups of 10 would mean at most thirty individual tests,
+for a total of $97 + (3*10) = 127$ tests.
+
+But of course, there's an upper bound to how many people you can
+put in a group.
+If you get all 1,000 people to spit into a bucket and test *that*
+you'll only have to do one combined test,
+but that test is definitely going to come out positive
+and you're going to have to test all 1,000 people.
+So in that case you haven't saved any tests at all. 
+
+Now it turns out that there's an optimal
+
+## 3. Can we share tests even when combined test comes back positive?
+
+Must we test everyone individually when the combined test comes back positive?
+
+
 ## Sequence of events
 
 1. Frame story: you're the Minister for Health of a small island nation and you

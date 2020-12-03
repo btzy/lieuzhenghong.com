@@ -1187,3 +1187,10 @@ otherwise lots of omitted variables),
 and show a correlation between
 average APTT between tract centroids and
 the spatial diversity of those tracts.
+
+* Interesting hack from NDI: facial recognition?
+NDI has a facial recognition API
+You send them an NRIC and a face photo and they give u a confidence
+score
+Stalking people with just a photo?
+Keep whacking the API with random NRIC until we get a high confidence score
