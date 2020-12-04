@@ -29,21 +29,22 @@ CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
 ** TODO Get Parquet files to Nick
 SCHEDULED: <2020-12-02 Wed>
 ** TODO Checkin with Joel
-SCHEDULED: <2020-12-02 Wed 22:00 ++1w>
+SCHEDULED: <2020-12-09 Wed 22:00 ++1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-26 Thu 10:02]
+:LAST_REPEAT: [2020-12-04 Fri 09:09]
 :END:
+- State "DONE"       from "TODO"       [2020-12-04 Fri 09:09]
 - State "KILL"       from "TODO"       [2020-11-26 Thu 10:02]
 - State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
 - State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
 * TODO Deutsche Donnerstag
-** TODO Call Nicole
-SCHEDULED: <2020-12-03 Thu 18:00>
 ** TODO Hangout with Celine
-SCHEDULED: <2020-12-03 Thu 23:00 +1w>
+SCHEDULED: <2020-12-17 Thu 23:00 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-11-27 Fri 10:51]
+:LAST_REPEAT: [2020-12-04 Fri 01:11]
 :END:
+- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
+- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
 - State "DONE"       from "TODO"       [2020-11-27 Fri 10:51]
 - State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
 
@@ -65,11 +66,6 @@ CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
 SCHEDULED: <2020-12-06 Sun 13:00-17:00>
 
 
-* TODO Go to IMDA for a meeting
-SCHEDULED: <2020-12-09 Wed 09:00>
-* TODO Send a box of love to Celine
-** DONE Write card for Celine
-SCHEDULED: <2020-12-03 Thu>
 * TODO Attend Meeting with Steve
 SCHEDULED: <2020-12-04 Fri 16:00-17:00>
 * TODO Write email to EMA
@@ -211,6 +207,8 @@ Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
 * TODO Find a format for my resume that fulfills all my goals :WORK:
 (not too verbose/hard to edit, exports nicely to PDF, also exports to HTML,
 layout customisable by me)
+* TODO Go to IMDA for a meeting
+SCHEDULED: <2020-12-09 Wed 09:00>
 * WAIT Attend the interview with GovTech CEO
 SCHEDULED: <2021-01-15 Fri>
 * HOLD Think of a way to display/digest time spent on each todo in a week
@@ -246,5 +244,9 @@ Time: 3.00pm to 4.00pm folks
 CPF received 18 of November
 21 working days from the start of 18th November roughly. 
 If everything goes smoothly it should be done End December. 
+* DONE Send a box of love to Celine
+SCHEDULED: <2020-12-04 Fri>
+- Tape up the box
+- Go to the post office and mail it
 * KILL Meet Tommie for coffee
 SCHEDULED: <2020-12-03 Thu 15:00-16:00>

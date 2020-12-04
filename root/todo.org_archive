@@ -637,3 +637,23 @@ SCHEDULED: <2020-12-01 Tue>
 :ARCHIVE_CATEGORY: todo
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Call Nicole
+SCHEDULED: <2020-12-03 Thu 18:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-04 Fri 01:11
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Deutsche Donnerstag
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Write card for Celine
+SCHEDULED: <2020-12-03 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-04 Fri 01:12
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Send a box of love to Celine
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:

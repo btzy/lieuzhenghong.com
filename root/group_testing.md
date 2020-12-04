@@ -4,25 +4,38 @@ layout: base
 tags: ["public", "exploration", "maths", "computer science"]
 ---
 
-The year is 2020 and the world has been transformed into a post-apocalyptic wasteland. 
-Due to a global pandemic the remnants of humanity have been reduced to
+> The year is 2021 and the world has been transformed into a post-apocalyptic wasteland. 
+> Due to a global pandemic the remnants of humanity have been reduced to
+> scavenging for GrabFood discounts, unable to remember what the sun looks like.
+> But there is hope. 
+
+The year is 2021. The world has been transformed into a post-apocalyptic wasteland. 
+COVID-19 has been cured,
+but one of the vaccines went horribly awry:
+some of the people who got the Oxford-Zeneca vaccine started
+frothing at the mouth,
+indiscriminately biting people, 
+and chanting *"Volker Halbach, Volker Halbach"*
+before succumbing to their lack of qualia.
+Two pandemics in a row was too much for the world to handle,
+and the remnants of humanity have been reduced to
 scavenging for GrabFood discounts, unable to remember what the sun looks like.
-But there is hope. 
-A new screening test has been devised: a perfect, infinitely sensitive test
-able to detect whether someone has the virus in a matter of seconds.
+But there is hope. A new screening test has been devised:
+a perfect, infinitely sensitive test that
+can detect whether someone has the virus in a matter of seconds.
 
 You are an overworked civil servant at the Ministry of Health.
-Your boss comes in one day into the bunker 
-(all Government officers have been relocated to
-fortified underground bunkers to prevent raider attacks)
+Your boss comes in one day 
+(all Government offices have been relocated to
+fortified underground bunkers to prevent *pzombie* attacks)
 brandishing a couple of important-looking documents.
 
 "New directive from the Minister---we need
-to test every traveler that comes in with the new test! 
-Write me a proposal by today."
+to test every traveler that comes in.
+Can you write me a proposal by today?"
 
-Resigned, you start writing the proposal.
-It goes something like this:
+What choice do you have?
+The proposal goes something like this:
 All visitors to the country will have to line up at a testing booth.
 When it's their turn they'll have to spit in a cup 
 and then their secretions will be tested for the virus.
@@ -36,7 +49,7 @@ You get a call the next day.
 Your boss is aghast.
 
 "We haven't got nearly enough tests
-to test everyone who comes!"
+to test everyone who comes!" he shouts.
 
 "Can we order more tests?" you ask.
 
@@ -54,14 +67,17 @@ You take a deep breath to calm yourself.
 
 *What the hell do you expect me to do then?*
 you think, but (wisely) stay silent.
+
 If your boss had any shame he'd have the courtesy
 to at least *look* sheepish, but you've learned not
 to expect that from him.
 In any case, he wants you to come up with a new proposal.
+"Can you find some way to do it with fewer tests? As few as possible?"
+You try to say something noncommittal but he's already hung up.
 
 ---
 
-You're tearing your hair out.
+Clumps of your hair lie morosely on the table.
 Testing everyone without enough tests for everyone?
 How is that possible?
 
@@ -70,7 +86,11 @@ Preliminary findings suggest that
 out of every 1000 people, 
 roughly 3 people will have the virus.
 
-<TODO> Then you have a Eureka moment!!!
+Then---it comes to you. 
+Since the test is infinitely-sensitive
+and perfectly accurate, we can test as many people
+as we want with one test!
+And this makes all the difference:
 
 ## 1. Can we share tests between two people?
 
@@ -78,7 +98,7 @@ Let's make one small change to the protocol.
 Visitors will have to queue-up-and-spit---just as before---but 
 now TWO visitors will spit in one cup.
 This combined cup will then be sent for testing
-Because the test is quite sensitive, it will test
+Because the test is infinitely sensitive, it will test
 positive if either (or both) of the visitors have the virus.
 If the combined test comes back negative, then neither visitor
 has the virus, and they are free to go.
@@ -92,7 +112,7 @@ The key here is that **most travelers don't have the virus.**
 
 Let's use an example to illustrate. 
 
-Suppose we have 1,000 travelers and 3 of them have the virus.
+Suppose we have 1,000 travelers and 3 of them have the virus. [^1]
 If you test them individually then you will use up 1,000 tests.
 If you pair them up at random, however, one of the following
 must be the case:
@@ -104,30 +124,39 @@ must be the case:
    and 498 all-negative pairs;
 
 In the first case, 
-we will use three tests for each of the three positive pairs
-(one combined + two individual),
-and 497 tests for the negative pairs, for a total of 
-$497 + 3 * 3 = 506$.
+we will use 500 tests for each of the pairs.
+Three of those tests will come out positive and we will use
+an additional two tests for each of them. 
+The total number of tests is
+$500 + 3*2 = 506$.
 
 In the second,
-we will use three tests for each of the two positive pairs,
-and 498 tests for the negative pairs, for a total of
-$498 + 3 * 2 = 504$.
+we will again use 500 tests for each of the pairs,
+and use two additional tests for each of the two positive pairs,
+for a total of
+$500 + 2*2 = 504$.
 
-In either case, we've cut the number of tests needed by almost half!
+In either case, we've cut the number of tests needed by almost half! 
+This method only works because most travelers are negative,
+and so most pairs will test negative.
+If for example 800 people had the virus then
+almost all of the pairs would test positive
+and you would do better just testing everyone individually.
+
+[^1]: Note that this method doesn't rely on knowing exactly how many people have the virus, only the expected value. If you knew that there were EXACTLY three people you could stop once you found three positives.
 
 ## 2. Can we share tests between even more people?
 
 If two is good, surely three is better, four even better, 
-and ten EVEN better?
+and ten double-plus-good better?
 We'll group travelers into groups---of ten, say---
 and get them all to spit into the cup.
 Leaving aside how gross that is, doing so could save us even more
 tests if most visitors don't have the virus. 
 Assuming we only have three visitors with the virus,
-there can be at most three positive groups, 
-so doing groups of 10 would mean at most thirty individual tests,
-for a total of $97 + (3*10) = 127$ tests.
+there can be at most three positive groups *no matter the group size.*
+Doing groups of 10 would mean at most thirty individual tests,
+for an upper bound of $100 + (3*10) = 130$ tests.
 
 But of course, there's an upper bound to how many people you can
 put in a group.
@@ -135,13 +164,134 @@ If you get all 1,000 people to spit into a bucket and test *that*
 you'll only have to do one combined test,
 but that test is definitely going to come out positive
 and you're going to have to test all 1,000 people.
-So in that case you haven't saved any tests at all. 
+In that case you haven't saved any tests at all. 
 
-Now it turns out that there's an optimal
+Now it turns out that we can calculate an optimal group size.
+The fundamental trade-off having bigger groups
+is that you do less combined tests,
+but have to do more individual tests when a combined test comes back positive.
+Let's introduce some notation:
 
-## 3. Can we share tests even when combined test comes back positive?
+- Number of total people = $N$
+- Number of infected = $K$
+- Number of groups = $G$
+- Number of people in each partition = $N/G = p$
+   
+In the worst case one has to do $G + (p * min(K, G))$ tests.
+Why is this so?
+In the first step you need to test the $G$ groups.
+And in the worst case, all $K$ of the groups will come out positive 
+(ergo each positive group has exactly one positive person),
+and you'll have to test each of those $K$ groups individually
+which takes $p$ tests each.
 
-Must we test everyone individually when the combined test comes back positive?
+We can prove by differentiation 
+that the optimal number of people in each partition,
+$p^{*}$, is given by $p^{*} = \sqrt{\frac{N}{k}}$.
+
+Using the running example of $N=1000$ and $K=3$,
+this would mean that the optimal group size is $\sqrt{333}$
+which is something like 18.5. [^2] If we use $p = 20$ instead
+(just so the numbers are easier to work with)
+you would need $50 + (3*20) = 110$ tests at most.
+
+`<diagram to show upper bound of tests where k = 3?>`
+
+[^2]: You can achieve an effective group size of 18.5 by having groups of 18 and 19.
+
+That's pretty awesome! By just grouping people together
+we can decrease the number of tests needed by almost 90%,
+from 1,000 to around 100.
+
+## 3. Can we share tests after the combined test comes back positive?
+
+You're feeling pretty pleased with yourself but you wonder if you can do better.
+Recall that the current proposal is to test groups of 20,
+and if any group tests positive,
+test every single person in that group.
+But must we test everyone individually?
+Can't we group people together again into subgroups of, say, 5?
+And if that subgroup tests positive, can't we group people together *again*? 
+And so on.
+
+Here's an example. We have a group of 20 that tested positive.
+We might then choose subgroups of 5 from that 20,
+and start testing the first subgroup of 5.
+If *that* subgroup tests positive we then split them
+*again* into subsubgroups of 2 and 3, and if those subsubgroups
+test positive we test them individually.
+As before, if any group/subgroup/subsubgroup... tests negative
+then we simply move on to the next one.
+
+`<diagram here would be very helpful>`
+
+Does this actually save us tests?
+Let's think about how many tests we would use in the worst case.
+The worst case is when the positive tests are as
+"spread out" as possible: that is, in different
+groups/subgroups/subsubgroups.
+
+So we test 50 groups of 20, using 50 tests.
+In the worst case, three of the groups test positive.
+
+When we get a positive group of 20 we
+split it up into subgroups of 5.
+There will be 12 such subgroups in total ($(20 * 3)/ 5 = 12$).
+We test all 12, using 12 tests.
+In the worst case, three of those subgroups test positive.
+
+Again, when we get a positive subgroup of 5
+we split them up into subsubgroups of 2 and 3.
+There will be three subgroups of 2 and three subgroups of 3.
+
+Again we test all six, using 6 tests.
+Three of *those* subsubgroups test positive,
+and because this is the worst case, all the positive subsubgroups
+are of size 3.
+
+Finally, we test each of those subsubgroups individually,
+using $3*3 = 9$ tests.
+
+How many tests have we used in total?
+$50 + 12 + 5 + 9 = 76$.
+
+`<really need a diagram>`
+
+If you think about it, this algorithm finds the position
+of the *first* positive person, and
+repeating it on all the elements will eventually give us
+all the positives.
+
+Here's a diagram:
+
+`<diagram here>`
+
+## 4. Can we do better by picking the right sub/subsubgroup size?
+
+You know from part 2 that choosing the right group size
+makes a pretty big difference in the number of tests we need.
+It stands to reason that the subgroup and subsubgroup sizes
+also matter. But how should we pick the sizes?
+
+## 6. The final algorithm
+
+1. Set your group size to be $G = N/k$. Pick the first $G$ people, group them
+   together and test them.
+2. If that group tests negative, remove all of these people, and repeat the
+   algorithm with $N$ now set to $N-G$.
+3. If that group tests positive, take a subgroup of half of those people and
+   test them: 
+    - If that subgroup tests negative, clear them and test the next subgroup.
+    - If that subgroup tests positive, take a sub-subgroup of half of the subgroup
+        and test them, repeating this process.
+4. Remove all the people before and including the first positive person, 
+   repeating the algorithm and setting $N$ and $k$ appropriately. Repeat this
+   process until all people have been cleared.
+
+You're feeling very clever with yourself until it turns out that 
+Hwang (1972) beat you to it almost fifty years ago with
+_A Method for Detecting All Defective Members in a Population by Group Testing_.
+Oh well. Maybe you should have studied something useful instead of PPE.
 
 
 ## Sequence of events
