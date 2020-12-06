@@ -273,7 +273,7 @@ BW X
   there is no tension at the bottom)
   20
   6 6
-** DONE <2020-12-02 Tues>
+** DONE <2020-12-02 Wed>
 - Incline DB bench
   16
   12 12
@@ -283,3 +283,11 @@ BW X
 - Tricep extensions
 
 - Double leg thrust
+** DONE <2020-12-06 Sun>
+- Rock climbing and bouldering
+  X
+- Tricep extensions
+- Hanging bicep curls
+- Flat DB bench
+  16
+  X X

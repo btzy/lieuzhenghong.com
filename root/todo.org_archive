@@ -657,3 +657,76 @@ SCHEDULED: <2020-12-03 Thu>
 :ARCHIVE_CATEGORY: todo
 :ARCHIVE_TODO: DONE
 :END:
+
+* DONE Attend Meeting with Steve
+SCHEDULED: <2020-12-04 Fri 16:00-17:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-05 Sat 12:45
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Finish writing first draft of documentation for the Python pipeline
+SCHEDULED: <2020-12-02 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 20:39
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+CLOCK: [2020-12-01 Tue 10:47]--[2020-12-01 Tue 10:59] =>  0:12
+:END:
+
+* DONE Refactor the RabbitMQ receiver
+SCHEDULED: <2020-12-02 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 20:39
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Run everything on the Jetson just to make sure it works
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 20:39
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Send a box of love to Celine
+SCHEDULED: <2020-12-04 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 20:45
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- Tape up the box
+- Go to the post office and mail it
+
+* DONE Have lunch and boulder with Van
+SCHEDULED: <2020-12-06 Sun 13:00-17:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 20:47
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Review/Serendipitous Sundays
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+
+
+* KILL Apply for ETH Zurich
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-06 Sun 22:08
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Apply for universities
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:

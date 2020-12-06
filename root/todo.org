@@ -54,49 +54,43 @@ SCHEDULED: <2020-12-17 Thu 23:00 +1w>
 *** TODO Pair program with Joshua
 SCHEDULED: <2020-12-12 Sat 22:00 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-12-01 Tue 00:49]
+:LAST_REPEAT: [2020-12-06 Sun 20:46]
 :END:
+- State "KILL"       from "TODO"       [2020-12-06 Sun 20:46]
 - State "DONE"       from "TODO"       [2020-12-01 Tue 00:43]
 - State "KILL"       from "TODO"       [2020-11-26 Thu 15:14]
 :LOGBOOK:
 CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
 :END:
 * TODO Review/Serendipitous Sundays
-** TODO Have lunch and boulder with Van
-SCHEDULED: <2020-12-06 Sun 13:00-17:00>
 
 
-* TODO Attend Meeting with Steve
-SCHEDULED: <2020-12-04 Fri 16:00-17:00>
+* TODO Send email to Desmond to confirm that I don't want any other GovTech division
+SCHEDULED: <2020-12-07 Mon>
+* TODO Send email to IMDA to calculate my LD
+SCHEDULED: <2020-12-07 Mon>
+* TODO Meet Tommie for coffee
+SCHEDULED: <2020-12-07 Mon 15:00-16:00>
 * TODO Write email to EMA
-SCHEDULED: <2020-11-27 Fri>
+SCHEDULED: <2020-12-07 Mon>
 * TODO Build the Python pipeline
-** DONE Finish writing first draft of documentation for the Python pipeline
-SCHEDULED: <2020-12-02 Wed>
-:LOGBOOK:
-CLOCK: [2020-12-01 Tue 10:47]--[2020-12-01 Tue 10:59] =>  0:12
-:END:
-** DONE Refactor the RabbitMQ receiver
-SCHEDULED: <2020-12-02 Wed>
+** TODO Find out whether it's possible to publish ROS2 topics over the Internet
+SCHEDULED: <2020-12-07 Mon>
 ** TODO Publish ROS2 topic
-SCHEDULED: <2020-12-03 Thu>
-** TODO Run everything on the Jetson just to make sure it works
 * TODO Write post in a Writeathon with Bernard
-SCHEDULED: <2020-12-04 Fri>
 [[file:group_testing.md][Group Testing]]
-* TODO Read what Nobiot wrote and look how I can use markdown with org/convert org to MD
-SCHEDULED: <2020-12-04 Fri>
 * TODO Apply for universities
 ** TODO Apply for Harvard
-** TODO Apply for ETH Zurich
+SCHEDULED: <2020-12-07 Mon>
 * TODO Write up reasons why I prefer OGP
 SCHEDULED: <2020-12-04 Fri>
 * TODO Attend standup
-SCHEDULED: <2020-12-04 Fri 09:00 ++1d>
+SCHEDULED: <2020-12-07 Mon 09:00 ++1d>
 :PROPERTIES:
-:LAST_REPEAT: [2020-12-03 Thu 12:31]
+:LAST_REPEAT: [2020-12-06 Sun 20:36]
 :ORDERED:  t
 :END:
+- State "KILL"       from "TODO"       [2020-12-06 Sun 20:36]
 - State "KILL"       from "TODO"       [2020-12-03 Thu 12:31]
 - State "DONE"       from "TODO"       [2020-12-02 Wed 16:41]
 - State "DONE"       from "TODO"       [2020-12-01 Tue 10:46]
@@ -211,6 +205,8 @@ layout customisable by me)
 SCHEDULED: <2020-12-09 Wed 09:00>
 * WAIT Attend the interview with GovTech CEO
 SCHEDULED: <2021-01-15 Fri>
+* HOLD Read what Nobiot wrote and look how I can use markdown with org/convert org to MD
+SCHEDULED: <2020-12-04 Fri>
 * HOLD Think of a way to display/digest time spent on each todo in a week
 * HOLD Canvas some support for my forest protection mechanism idea :SIDEPROJECTS:
 ** TODO Post it on LessWrong?
@@ -244,9 +240,3 @@ Time: 3.00pm to 4.00pm folks
 CPF received 18 of November
 21 working days from the start of 18th November roughly. 
 If everything goes smoothly it should be done End December. 
-* DONE Send a box of love to Celine
-SCHEDULED: <2020-12-04 Fri>
-- Tape up the box
-- Go to the post office and mail it
-* KILL Meet Tommie for coffee
-SCHEDULED: <2020-12-03 Thu 15:00-16:00>
