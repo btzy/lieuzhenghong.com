@@ -1,11 +1,7 @@
 ---
 title: "Blogs I enjoy very much"
 layout: base
-tags:
-  - draft
 ---
-
-**This is a draft**.
 
 ## Introduction
 
@@ -42,28 +38,35 @@ _please_ send an email to me: I really love reading!
   - [Parenthood #3: Oscar Heaton, Quarterly Baby Review](https://robertheaton.com/2019/08/25/parenthood-3-oscar-heaton-quarterly-baby-review/)
   - [A blogging style guide](https://robertheaton.com/2018/12/06/a-blogging-style-guide/),
   - [I Might Be Spartacus: a differential privacy marketplace](https://robertheaton.com/2018/10/28/i-might-be-spartacus-differential-privacy-marketplace/)
+  
+- [Bartoz Ciechanowski](https://ciechanow.ski): 
+  he writes really beautiful deep dives of interesting physics/CS concepts.
+  His visualisations are absolutely top-class: professional and beautiful.
+  You could compile them into a textbook, honestly.
+  This is definitely something I need to ape.
+  (see [Light and Shadows](https://ciechanow.ski/lights-and-shadows/)).
+  I really like the way he explains complicated concepts from first principles:
+  in [Cameras and Lenses](https://ciechanow.ski/cameras-and-lenses/), for instance,
+  he starts with a photosensor, then a pinhole camera, then lenses and finally cameras.
+  I must confess that I have not read them fully because they are long and difficult
+  but I will surely return to them again and again.
 
-- [Wicked Fighting](https://www.wickedfighting.wordpress.com):
-  His faculty with words is unparalleled, and even when I don't agree with him
-  I still find his writing witty and cutting and a joy to read.
-  He has the genius talent of coming up with absolutely savage zingers.
-  My favourite posts:
-  one where
-  he [shits on PSC scholars](https://wickedfighting.wordpress.com/2019/04/01/the-problem-with-psc-scholars/)
-  (I loved this one for the zinger "policy-based evidence making"),
-  another one where
-  he [shits on Five Guys](https://wickedfighting.wordpress.com/2019/12/29/review-five-guys/),
-  yet another where
-  he [shits on Singapore's mandatory conscription](https://wickedfighting.tumblr.com/post/50830029264/every-singaporean-son).
-  I also loved this
-  [beautiful and inspiring post on legal activism](https://wickedfighting.wordpress.com/2019/02/01/vignettes-of-work-8/),
-  and I'll quote the last paragraph here:
+  Some of my favourites (apart from the ones already linked):
 
-> One more thing about the public record – cases will be read. All lawyers
-> trace the ancestry of their knowledge to those who came before. And
-> constitutional lawyers especially, will learn from the mistakes of the old,
-> and craft a better case. A new song to move even the shrivelled hearts of old
-> men and women.
+  - [Gears](https://ciechanow.ski/gears/)
+  - [Earth and Sun](https://ciechanow.ski/earth-and-sun/)
+  - [Color Spaces](https://ciechanow.ski/color-spaces/)
+
+- [Dyno Might](https://dyno-might.github.io/): 
+  good, clear explanations of things very much in my ballpark
+  (statistics/economics/game theory/).
+  I don't know who he is but I wouldn't be surprised if he did PPE.
+  
+  Some of my favourites:
+  
+  - [Making the Monty Hall problem weirder but obvious](https://dyno-might.github.io/2020/09/17/making-the-monty-hall-problem-weirder-but-obvious/)
+  - [Simpson's Paradox and the Tyranny of Strata](https://dyno-might.github.io/2020/11/16/simpsons-paradox-and-the-tyranny-of-strata/)
+
 
 ## Well-known people on the internet
 
@@ -126,3 +129,25 @@ _please_ send an email to me: I really love reading!
   that's already been [praised by Emily Short](https://emshort.blog/2017/12/28/2017-in-interactive-fiction/)
   (queen of IF), but has also built loads of other games like
   [a chess tower defence game](https://chinkeeyong.itch.io/chess-defense).
+
+- [Wicked Fighting](https://www.wickedfighting.wordpress.com):
+  His faculty with words is unparalleled, and even when I don't agree with him
+  I still find his writing witty and cutting and a joy to read.
+  He has the genius talent of coming up with absolutely savage zingers.
+  My favourite posts:
+  one where
+  he [shits on PSC scholars](https://wickedfighting.wordpress.com/2019/04/01/the-problem-with-psc-scholars/)
+  (I loved this one for the zinger "policy-based evidence making"),
+  another one where
+  he [shits on Five Guys](https://wickedfighting.wordpress.com/2019/12/29/review-five-guys/),
+  yet another where
+  he [shits on Singapore's mandatory conscription](https://wickedfighting.tumblr.com/post/50830029264/every-singaporean-son).
+  I also loved this
+  [beautiful and inspiring post on legal activism](https://wickedfighting.wordpress.com/2019/02/01/vignettes-of-work-8/),
+  and I'll quote the last paragraph here:
+
+> One more thing about the public record – cases will be read. All lawyers
+> trace the ancestry of their knowledge to those who came before. And
+> constitutional lawyers especially, will learn from the mistakes of the old,
+> and craft a better case. A new song to move even the shrivelled hearts of old
+> men and women.
