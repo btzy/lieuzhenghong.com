@@ -306,110 +306,16 @@ It is then intuitive to treat the people (M+1) to G as a new group, check (with 
 
 `<diagram>`
 
-It turns out that this intuition is correct.  There are $K$ infected individuals, and we need $\log \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log p + 1)$ tests.  
+It turns out that this intuition is correct.  There are $K$ infected individuals, and we need $\log_2 \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log_2 \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log_2 p + 1)$ tests.  
 
 Again using differentiation, we can show that the optimal number of people in each partition,
 $p^{*}$, is given by $p^{*} = \frac{N}{k}$.
 
-TODO
+## 5. Do we even need to fix the group size?
 
+Throughout the previous section, we've used a fixed number of groups $G$, which we determined to be optimal when there are as many groups as infected individuals.  However, since it is very likely that each group that tests positive only has one infected individual, it is overwhelmingly likely that after we identify an infected individual, the test on the remainder of the group will be negative.
 
-we want to do something akin to a binary search, to identify that positive person.  In other words, we want to half the size of the (sub)group each time.
-That is, if our group size is 20,
-then the subgroup size should be 10,
-subsubgroup size 5,
-sub^3group size 2.5, and so on (rounding fractional values to the nearest integer).
-
-
-
-
-
-Why? Recall from the diagram in part 3 that our algorithm finds 
-where the first positive person is. 
-You can think of all of the people in a line and us trying to find
-where the first positive person is on that line.
-Once we find the first positive person the algorithm can be run again
-to find the 2nd, 3rd, ... kth positive person.
-
-Now suppose we have a group size of 20 and we have a positive group of 20.
-Initially there are 20 possibilities where the first positive person might be.
-By splitting into subgroups we are essentially trying to find
-the first positive as quickly as we can.
-For instance, if we test the first subgroup of 5 and it comes back negative,
-we know that the first positive person must lie from the 6th person onwards.
-And if we test the first subgroup of 5 and it comes back negative we
-know that the first positive person must be one of the first 5.
-
-It turns out that the best way to eliminate all the possibilities
-is to split the group size into half each time.
-
-Why is this so?
-
-Think about having a group of 20 and a subgroup of 5.
-Now it's possible that the first subgroup tests positive,
-in which case we know that the first positive person
-lies in the front 5. This means we can eliminate 15 possibilities.
-But of course it's more likely that the subgroup tests *negative*
-(since the first positive person has an equal chance of being in
-any of the 20 positions)
-and we can only eliminate 5 positions 
-(ergo there are still 15 possibilities for the first positive).
-
-On the other hand, if we used a subgroup of 10, 
-then we can eliminate 10 possibilities 
-for the first positive person
-no matter whether the subgroup tests positive or negative.
-
-Implementing the new algorithm gives the following
-number of tests in the worst case scenario:
-
-- 50 tests (of size 20), 3 positive
-- 6 tests (of size 10), 3 positive
-- 6 tests (of size 5), 3 positive
-- 3 tests of size 2 and 3 of size 3, 3 positive
-- 9 tests of size 1
-
-$50 + 6 + 6 + 6 + 9 = 77$
-
-Hmm, that's strange, how come the number of tests needed
-went up?
-It turns out that the optimal group size
-that we calculated in the previous part is no longer optimal.
-Recall that the fundamental trade-off in having bigger groups
-is that you do less combined tests,
-but have to do more individual tests when a combined test comes back positive.
-Previously our optimal group size for $N = 1000$ and 
-$k = 3$ was 20. If a group of 20 tested positive
-we then needed 20 subsequent tests to identify the positives.
-But with our new repeated-halving testing protocol
-we will use a fraction of that on average.
-
-Since we now have a more efficient way to 
-do the subsequent tests, our optimal group size is now larger.
-
-How much larger?
-It turns out that when $k$ is relatively small compared to
-$N$ the ideal group size $G$ is $N/k$.
-That means that our new optimal group size is
-$N/k = 333$.
-How many tests would we need in the worst case?
-Enumerating:
-
-- 3 tests of size 333, 3 positive
-- 6 tests of size 162, 3 positive
-- 6 tests of size 81, 3 positive
-- 6 tests of size 41, 3 positive
-- 6 tests of size 21, 3 positive
-- 6 tests of size 11, 3 positive
-- 6 tests of size 5, 3 positive
-- 6 tests of size 3, 3 positive
-- 9 tests of size 1, 3 postiive
-
-$3 + 6 + 6 + 6 + 6 + 6 + 6 + 6 + 9 = 51$
-
-## 5. Can we do better by dynamically choosing sub^Ngroup sizes? 
-
-## 6. The final algorithm
+This allows us to pick the group size dynamically, updating it after we find each infected individual.  This leads us to the final algorithm:
 
 1. Set your group size to be $G = N/k$. Pick the first $G$ people, group them
    together and test them.
