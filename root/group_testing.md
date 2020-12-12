@@ -177,7 +177,7 @@ Let's introduce some notation:
 - Number of groups = $G$
 - Number of people in each partition = $N/G = p$
    
-In the worst case one has to do $G + (p * min(K, G))$ tests.
+In the worst case one has to do $G + (p * \min(K, G))$ tests.
 Why is this so?
 In the first step you need to test the $G$ groups.
 And in the worst case, all $K$ of the groups will come out positive 
@@ -274,12 +274,53 @@ makes a pretty big difference in the number of tests we need.
 It stands to reason that the subgroup and subsubgroup sizes
 also matter. But how should we pick these sizes?
 
-It turns out that the optimal sub^N group size 
-is half the size of its parent sub^N-1 group.
-That is, if our group size is 20, 
+Well, each group that tests positive is quite likely to have only one infected individual, because there are more groups than infected individuals.  Let's assume for now that each group that tests positive has exactly one infected individual.  Our objective, then, is to determine which one of the 20 people in this group is infected.
+
+It turns out that we should halve the size of the (sub)group each time.  (If you have heard of binary search, this is precisely the algorithm being described here.)
+That is, we start with a group size is 20 (of which we know exactly one person is infected),
+and we first conduct a test on the first 10 of the 20 people (i.e. the subgroup size is 10), allowing us to eliminate either these 10 people (if the test came back negative) or the other 10 people (if the test came back positive).
+After that, of the remaining 10 people, we conduct a test on the first 5 of the 10 people (i.e. the subgroup size is 5), allowing us to eliminate 5 people.
+We continue doing so until we are left with a single person --- this person must be infected.
+
+`<diagram>`
+
+To see why this is optimal, consider what would happen if we first conducted a test on 5 (instead of 10) of the 20 people in the group.  If the test comes back positive, then we get to eliminate a whopping 15 people!  But if the test comes back negative, then we can only eliminate 5 people.  On average, then, what is the number of people that we will get to eliminate?
+
+If you've answered "10 people", that's unfortunately wrong.  Since the infected individual has an equal chance of being each of the 20 people in the group, it is more likely that the the infected individual is in the untested 15 remaining people rather than the 5 people we conducted a test on.  This means that it's more likely that we will only get to eliminate 5 people, rather than 15.  As such, the average number of people that we get to eliminate is more than 10.
+
+We may make a similar argument if 15 people are chosen for the first test, instead of 5 or 10.  The average number of people that we get to eliminate will also be more than 10.
+
+Hence, testing exactly half of the group is the most efficient way to narrow down the group size.
+
+All the things we have said will work fine when there's just one infected individual in the group, but we can't guarantee it even though it would be the case most of the time.  How do we modify this procedure to work even when there are more than one infected people?
+
+Let's first consider what the above procedure does when there are multiple infected individuals in the group.  Which person would the above procedure identify?  Since we conduct testing on the _first_ half of the (sub)group each time, and make decisions based on whether this half tests positive, the above procedure will identify the _first_ infected individual.
+
+`<diagram showing that the procedure identifies the first one>`
+
+Notice that the procedure gives us totally no information about the people behind the first infected individual.  In other words, suppose the procedure tells us that the M^th person is the first infected individual.  Then we know that persons 1 to (M-1) are not infected, and (of course) that person M is infected, but whether each of persons (M+1) to G is infected never affects any of the test results obtained by the procedure.  This means that persons (M+1) to G are equally likely to be infected, and it is as if we never did any tests on them at all.
+
+It is then intuitive to treat the people (M+1) to G as a new group, check (with a single test) if there is at least one infected individual, and if so, repeat the binary search procedure on them.
+
+`<diagram>`
+
+It turns out that this intuition is correct.  There are $K$ infected individuals, and we need $\log \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log p + 1)$ tests.  
+
+Again using differentiation, we can show that the optimal number of people in each partition,
+$p^{*}$, is given by $p^{*} = \frac{N}{k}$.
+
+TODO
+
+
+we want to do something akin to a binary search, to identify that positive person.  In other words, we want to half the size of the (sub)group each time.
+That is, if our group size is 20,
 then the subgroup size should be 10,
-subsubgroup size 5, 
-sub^3group size 2.5, and so on.
+subsubgroup size 5,
+sub^3group size 2.5, and so on (rounding fractional values to the nearest integer).
+
+
+
+
 
 Why? Recall from the diagram in part 3 that our algorithm finds 
 where the first positive person is. 
