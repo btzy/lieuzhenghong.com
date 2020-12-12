@@ -730,3 +730,134 @@ SCHEDULED: <2020-12-06 Sun 13:00-17:00>
 :ARCHIVE_CATEGORY: todo
 :ARCHIVE_TODO: KILL
 :END:
+
+* DONE Meet Tommie for coffee
+SCHEDULED: <2020-12-07 Mon 15:00-16:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 13:23
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO Talk to Eric about the two different architecture
+SCHEDULED: <2020-12-07 Mon 18:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 16:29
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO Write notes about the new architecture diagram
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 16:29
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* DONE Find out whether it's possible to publish ROS2 topics over the Internet
+SCHEDULED: <2020-12-07 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 19:27
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Build the Python pipeline
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO Meet Gabe on Monday
+SCHEDULED: <2020-12-07 Mon 22:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 19:32
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Rusty Mondays
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* DONE Meet Gabe on Monday
+SCHEDULED: <2020-12-07 Mon 22:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 19:32
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_OLPATH: Rusty Mondays
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Send email to IMDA to calculate my LD
+SCHEDULED: <2020-12-07 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 19:35
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO Talk to Preston
+SCHEDULED: <2020-12-08 Tue 11:15>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-07 Mon 21:51
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: TODO
+:END:
+
+* DONE Check in with Eric
+SCHEDULED: <2020-12-08 Tue 12:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 00:15
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Call Eliza to germinate seeds
+SCHEDULED: <2020-12-08 Tue 13:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 00:15
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE Build the Python pipeline
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 00:16
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+** KILL Publish ROS2 topic
+
+* DONE Send email to Desmond to confirm that I don't want any other GovTech division
+SCHEDULED: <2020-12-07 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 00:28
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+
+* KILL Prepare for tomorrow's TIG Forum
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 04:39
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: KILL
+:END:
+** KILL Get out clothes
+** KILL Get a pair of shoes
+** KILL Book Grab for tomorrow (can't afford to be late)
+** KILL Buy a pair of slippers
+
+* DONE Attend end-of-sprint meeting
+SCHEDULED: <2020-12-08 Tue 16:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-12-08 Tue 04:39
+:ARCHIVE_FILE: ~/dev/lieuzhenghong.com/root/todo.org
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:

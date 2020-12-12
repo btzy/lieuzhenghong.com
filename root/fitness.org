@@ -288,6 +288,21 @@ BW X
   X
 - Tricep extensions
 - Hanging bicep curls
+  X
 - Flat DB bench
   16
-  X X
+  X X X
+
+** DONE <2020-12-09 Wed>
+- Cycling
+** DONE <2020-12-10 Thu>
+- Seated hanging bicep curls
+  2.5
+  X X X
+- Unilateral DB rows
+  7.5
+  20
+** TODO <2020-12-11 Fri>
+- Flat DB bench
+  10
+  12 12

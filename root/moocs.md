@@ -335,3 +335,12 @@ Competitive programming course taught by Russians. I took it mainly as a forcing
 to get more CP practice in when preparing for job interviews back in 2019.
 
 ![](/img/mooc_certs/cpsk.png)
+
+## DevOps Essentials
+
+A Udemy course I did for work. Not much to it: two hours of videos.
+But good for getting a overview of what DevOps is and key terms
+(what is the difference between continuous integration/deployment/delivery?
+what are microservices?
+
+![Udemy DevOps Essentials cert](/img/mooc_certs/udemy_devops_essentials.jpg)

@@ -8,7 +8,7 @@
 - `Space o A` opens agenda mode
 - `C-c C-s` schedules a schedule/schedules a deadline 
 - `C-c C-x C-s` archives the subtree
-- ~Spc w w~ switches windows
+- ~Spc w w~ switches window
 ---------
     
 * All about OGP
@@ -73,6 +73,19 @@ Zheng Hong will then need to meet with representatives from the Govtech Senior L
 When Zheng Hong is accepted by SLM, Govtech HR will follow through with IMDA on the transfer payment.
 
 I've clarified with them for their advice on how you should approach IMDA HR. They suggested that until you have the interview with the Govtech senior leadership team, you could position this as a general query to understand your LD. Whilst its accurate to say that you have cleared Govtech interviews and OGP would be happy to take you in as a software engineer, it would be premature to also inform IMDA that Govtech has agreed to takeover your bond, as this requires govtech senior leadership approval (hence the interview).
+* Biggest difference between OGP and the other divisions? From Preston
+** No cost recovery
+OGP doesn't do cost recovery
+In a lot of government work, the work done by a team needs to be "cost recovered":
+the government agency needs to pay you for your service.
+This distorts the incentives, services
+** Very opinionated, cultural
+"Very angry": strong opinions
+"This thing's a problem, that thing's a problem"
+People are empowered, people are thinking, people have autonomy.
+** Other divisions have larger product teams
+** Annual hackathon at OGP is unique
+** Place a lot of emphasis on learning: dedicate half of our working hours this month to reading design and product.
 * Preparing for interview with GovTech CE
 == THINK ABOUT MY FUTURE from the CE's PERSPECTIVE == 
 Where do I want to be in five years?
@@ -1194,3 +1207,4 @@ You send them an NRIC and a face photo and they give u a confidence
 score
 Stalking people with just a photo?
 Keep whacking the API with random NRIC until we get a high confidence score
+
