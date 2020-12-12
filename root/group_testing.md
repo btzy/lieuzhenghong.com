@@ -143,7 +143,7 @@ If for example 800 people had the virus then
 almost all of the pairs would test positive
 and you would do better just testing everyone individually.
 
-[^1]: Note that this method doesn't rely on knowing exactly how many people have the virus, only the expected value. If you knew that there were EXACTLY three people you could stop once you found three positives.
+[^1]: Note that this method doesn't rely on knowing exactly how many people have the virus, only the expected value. If you knew that there were EXACTLY three people you could stop once you found three positives. For ease of exposition we illustrate an example where there are exactly 1,000 travelers and exactly 3 positive cases, but the method and the probabilities are very similar even if we work with expected values instead.
 
 ## 2. Can we share tests between even more people?
 
@@ -193,7 +193,9 @@ Using the running example of $N=1000$ and $K=3$,
 this would mean that the optimal group size is $\sqrt{333}$
 which is something like 18.5. [^2] If we use $p = 20$ instead
 (just so the numbers are easier to work with)
-you would need $50 + (3*20) = 110$ tests at most.
+you would need $50 + (3*20) = 110$ tests at most
+in the worst case, where you do 50 combined tests,
+then test the 3 positive groups of 20 individually.
 
 `<diagram to show upper bound of tests where k = 3?>`
 
