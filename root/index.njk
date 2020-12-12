@@ -10,7 +10,11 @@ permalink: "/"
   <h3> Explorations </h3>
   <ol>
   {%- for post in collections.exploration | reverse -%}
-    <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+      {% if post in collections.draft %}
+         {# Don't display anything #}
+      {% else %}
+        <li><a href="{{ post.url | url }}"> {{post.data.title}}</a></li>
+      {% endif %}
   {%- endfor -%}
   </ol>
 
