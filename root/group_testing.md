@@ -1,3 +1,4 @@
+
 ---
 title: Group testing to save the world
 layout: base
@@ -255,7 +256,7 @@ Finally, we test each of those subsubgroups individually,
 using $3*3 = 9$ tests.
 
 How many tests have we used in total?
-$50 + 12 + 5 + 9 = 76$.
+$50 + 12 + 6 + 9 = 77$.
 
 `<really need a diagram>`
 
@@ -268,6 +269,30 @@ Thinking about the algorithm in this way will come in useful later.
 Here's a diagram:
 
 `<diagram here>`
+
+## 4. Should we test other subgroups after we've found an infected person?
+
+Instead of testing all 50 groups of 20 before testing the 12 groups of 5, and testing all the 12 groups of 5 before testing the 6 groups of 2 or 3; we could test groups of 20 until we find a group of 20 that tests positive, and from that group test groups of 5 until we find a group of 5 that tests positive, and from that group test the groups of 2 and 3, and so on.  And after finding an infected individual we backtrack to test the remaining groups at each level (if any).
+
+`<diagram of this BFS/DFS comparison>`
+
+If you've heard of depth-first search and breadth-first search, you might notice that what we did in step 3 sounds like breadth-first search, while the modified version in the previous paragraph sounds like depth-first search.  If you noticed that, you're right.  In breadth-first search, we explore all groups of the same size before exploring groups of smaller sizes (i.e. deeper levels).  But in depth-first search, we make our way to the first infected person as quickly as possible, before backtracking to find the next infected person, and so on.
+
+What's the benefit of depth-first search over breadth-first search, you might ask.  They use exactly the same number of tests!
+
+While they use the same number of tests, depth-first search opens up some further optimisations.  By delaying our search for the second infected individual until _after_ we find the first infected individual, we gain the ability to optimise the search for the second infected individual based on information from the first infected individual.
+
+Suppose we conduct our tests, using the depth-first search procedure, pausing just after we have identified the first infected individual (in our example, it is the m^th person).  [ TODO: replace m with the correct number ]
+
+So far, we have totally no information about the people behind the m^th person.  More specifically, we know that persons 1 to (m-1) are not infected, and (of course) that person m is infected, but whether each of persons (m+1) to N is infected never affects any of the test results obtained so far by the procedure.  This means that persons (m+1) to N are equally likely to be infected, since it is as if we never did any tests on them at all.
+
+What good can we do with this knowledge?
+
+Well in our procedure, after finding that the 7^th person is infected, we backtrack and test the 8^th person (individually), and then back out further and do a combined test on the 9^th and 10^th person.  Since we have totally no information on the 8^th, 9^th, and 10^th people, they are very unlikely to be infected.  Hence, those two tests above will very likely be negative.  This is rather wasteful of tests (it's almost like doing individual testing when we know that most people will test negative).
+
+Since persons (m+1) to N are equally likely to be infected, we arrive at a smaller instance of the same original problem --- there are (N-m) people that we want to test, of which (K-1) of them are infected!  It then follows that we should perform an identical procedure on these remaining people --- we recalculate the new value of $G$ (and hence $p^{*}$), proceed with the procedure with those new values.
+
+`<maybe we need an example here>`
 
 ## 4. Can we do better by picking the right sub/subsubgroup size?
 
