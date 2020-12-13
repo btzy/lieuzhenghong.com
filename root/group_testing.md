@@ -294,7 +294,7 @@ Since persons (m+1) to N are equally likely to be infected, we arrive at a small
 
 `<maybe we need an example here>`
 
-## 4. Can we do better by picking the right sub/subsubgroup size?
+## 5. Can we do better by picking the right sub/subsubgroup size?
 
 You know from part 2 that choosing the right group size
 makes a pretty big difference in the number of tests we need.
@@ -319,38 +319,28 @@ We may make a similar argument if 15 people are chosen for the first test, inste
 
 Hence, testing exactly half of the group is the most efficient way to narrow down the group size.
 
-All the things we have said will work fine when there's just one infected individual in the group, but we can't guarantee it even though it would be the case most of the time.  How do we modify this procedure to work even when there are more than one infected people?
+`<example of algorithm here>`
 
-Let's first consider what the above procedure does when there are multiple infected individuals in the group.  Which person would the above procedure identify?  Since we conduct testing on the _first_ half of the (sub)group each time, and make decisions based on whether this half tests positive, the above procedure will identify the _first_ infected individual.
+## 6. What is the best group size to start with?
 
-`<diagram showing that the procedure identifies the first one>`
+Previously, we showed that the ideal number of people in each group is $\sqrt{\frac{N}{k}}$.  However, that calculation hinges on the assumption that there is only one level of groups before we test each person individually.  This isn't the case now, since we have many levels (specifically it's $\log_2 \frac{N}{G}$ levels, since we halve the number of people in a (sub)group after each test).
 
-Notice that the procedure gives us totally no information about the people behind the first infected individual.  In other words, suppose the procedure tells us that the M^th person is the first infected individual.  Then we know that persons 1 to (M-1) are not infected, and (of course) that person M is infected, but whether each of persons (M+1) to G is infected never affects any of the test results obtained by the procedure.  This means that persons (M+1) to G are equally likely to be infected, and it is as if we never did any tests on them at all.
-
-It is then intuitive to treat the people (M+1) to G as a new group, check (with a single test) if there is at least one infected individual, and if so, repeat the binary search procedure on them.
-
-`<diagram>`
-
-It turns out that this intuition is correct.  There are $K$ infected individuals, and we need $\log_2 \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log_2 \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log_2 p + 1)$ tests.  
+Again, we formulate an expression and find the group size that gives the minimum number of tests:  There are $K$ infected individuals, and we need (at most) $\log_2 \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log_2 \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log_2 p + 1)$ tests.  
 
 Again using differentiation, we can show that the optimal number of people in each partition,
 $p^{*}$, is given by $p^{*} = \frac{N}{k}$.
 
-## 5. Do we even need to fix the group size?
-
-Throughout the previous section, we've used a fixed number of groups $G$, which we determined to be optimal when there are as many groups as infected individuals.  However, since it is very likely that each group that tests positive only has one infected individual, it is overwhelmingly likely that after we identify an infected individual, the test on the remainder of the group will be negative.
-
-This allows us to pick the group size dynamically, updating it after we find each infected individual.  This leads us to the final algorithm:
+This leads us to the final algorithm:
 
 1. Set your group size to be $G = N/k$. Pick the first $G$ people, group them
    together and test them.
 2. If that group tests negative, remove all of these people, and repeat the
    algorithm with $N$ now set to $N-G$.
-3. If that group tests positive, take a subgroup of half of those people and
+3. If that group tests positive, take a subgroup of the first half of those people and
    test them: 
-    - If that subgroup tests negative, clear them and test the next subgroup.
-    - If that subgroup tests positive, take a sub-subgroup of half of the subgroup
-        and test them, repeating this process.
+    - If that subgroup tests negative, clear them and test the first half of the other subgroup.
+    - If that subgroup tests positive, test the first half of the subgroup.
+    - In either case, repeat this process until we get to a single person.
 4. Remove all the people before and including the first positive person, 
    repeating the algorithm and setting $N$ and $k$ appropriately. Repeat this
    process until all people have been cleared.
