@@ -7,7 +7,18 @@ tags: ["public", "computer science", "programming"]
 
 ## Introduction
 
-This wa
+This was the second lab (of seven) of Stanford's CS107E course.
+It may or may not be part of my plan to study a Stanford CS degree
+in my spare time.
+CS107E is a computer architecture course where you build 
+a simple personal computer shell on the Raspberry Pi bare metal
+(without an OS).
+
+In this lab we disassembled a C program to understand how C programs
+are translated by the compiler into assembly.
+This also improved my understanding of assembly.
+I learned a bit about the stack
+We also learned a bit about Makefiles.
 
 ## Understanding Makefiles
 
