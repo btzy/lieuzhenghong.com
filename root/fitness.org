@@ -302,7 +302,31 @@ BW X
 - Unilateral DB rows
   7.5
   20
-** TODO <2020-12-11 Fri>
+** DONE <2020-12-11 Fri>
 - Flat DB bench
   10
   12 12
+** DONE <2020-12-13 Sun>
+- Hanging DB bicep curls
+  +5
+  8
+- Seated DB overhead press
+  +7.5
+  10 10
+  Put a very slight incline on the bench
+  Mix this up with standing, unilateral, etc
+- Weighted pullups
+  20
+  6 6 8
+  Quite easy, would say RPE 7
+  Can definitely up weight
+- DB shrugs
+** DONE <2020-12-21 Sun>
+- Concentration curls
+- Overhead press
+** DONE <2020-12-21 Mon>
+Slept 7 hours today because procrastinated sleep
+even though I had already knocked off at 1am
+Should make an effort to take melatonin
+- Weighted pulls
+-

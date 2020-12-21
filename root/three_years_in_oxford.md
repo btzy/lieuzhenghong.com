@@ -31,3 +31,67 @@ and his comments were very helpful as well.
 Not all of my tutors were so exemplary, of course,
 some were just phoning it in
 (the DPhil students were often guilty of this)
+
+lieu, [19.12.20 18:34]
+merton has two different kinds of bottles
+
+lieu, [19.12.20 18:34]
+glass bottles
+
+lieu, [19.12.20 18:34]
+black cap is still green cap is sparkling
+
+lieu, [19.12.20 18:34]
+then i didnt know
+
+lieu, [19.12.20 18:34]
+so i took the sparkling and poured myself a glass
+
+lieu, [19.12.20 18:34]
+imagine my surprise
+
+Amy Liang, [19.12.20 18:36]
+[In reply to lieu]
+is this what happens when kampong boy goes to merton
+
+lieu, [19.12.20 18:37]
+on sundays they have brunch and you do your eggs yourself
+
+lieu, [19.12.20 18:37]
+i did them like ya kun style
+
+lieu, [19.12.20 18:37]
+very watery half boile
+
+lieu, [19.12.20 18:37]
+they looked at me like i was an alien
+
+lieu, [19.12.20 18:37]
+its not really much different from poached eggs smh
+
+lieu, [19.12.20 18:38]
+oh ya another thing was
+
+lieu, [19.12.20 18:38]
+when i was eating formal for the first time
+
+lieu, [19.12.20 18:38]
+cos you sit in a row right
+
+lieu, [19.12.20 18:38]
+and on one side is the bread
+
+lieu, [19.12.20 18:38]
+and on the other side is the glass
+
+lieu, [19.12.20 18:38]
+....
+
+lieu, [19.12.20 18:38]
+but which bread is yours and which glass is yours
+
+lieu, [19.12.20 18:38]
+cos its all in a row
+
+lieu, [19.12.20 18:39]
+bread — glass — bread —- glass — bread — glassi

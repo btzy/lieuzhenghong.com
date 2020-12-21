@@ -8,12 +8,91 @@ To clone type ~C-c C-x c~
 ~C-c [~ adds to agenda.
 ~C-c C-x C-a~ moves it to the archive
 ------
-* TODO Attend standup
-SCHEDULED: <2020-12-09 Wed 10:00 ++1d>
+* TODO CS Mondays
+* TODO Thesis Tuesdays
+** TODO Pair program with Gabe
+SCHEDULED: <2020-12-22 Tue 22:00 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2020-12-08 Tue 06:19]
+:LAST_REPEAT: [2020-12-17 Thu 23:12]
+:END:
+- State "DONE"       from "TODO"       [2020-12-17 Thu 23:12]
+- State "DONE"       from "TODO"       [2020-12-07 Mon 19:27]
+- State "DONE"       from "TODO"       [2020-12-01 Tue 22:51]
+- State "DONE"       from "TODO"       [2020-11-24 Tue 11:40]
+- State "DONE"       from "TODO"       [2020-11-18 Wed 00:36]
+- State "KILL"       from "TODO"       [2020-11-12 Thu 11:01]
+- State "DONE"       from "TODO"       [2020-11-03 Tue 23:54]
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
+:END:
+* TODO Working Paper Wednesdays
+** TODO Checkin with Joel
+SCHEDULED: <2020-12-23 Wed 22:00 ++1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-12-18 Fri 10:53]
+:END:
+- State "KILL"       from "TODO"       [2020-12-18 Fri 10:53]
+- State "KILL"       from "TODO"       [2020-12-14 Mon 00:42]
+- State "DONE"       from "TODO"       [2020-12-04 Fri 09:09]
+- State "KILL"       from "TODO"       [2020-11-26 Thu 10:02]
+- State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
+- State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
+* TODO Deutsche Donnerstag
+** TODO Hangout with Celine
+SCHEDULED: <2020-12-24 Thu 23:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-12-18 Fri 10:53]
+:END:
+- State "DONE"       from "TODO"       [2020-12-18 Fri 10:53]
+- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
+- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
+- State "DONE"       from "TODO"       [2020-11-27 Fri 10:51]
+- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
+
+* TODO Freedom Fridays
+* TODO Writing/Board Game Saturdays
+** HOLD Finish and ship MVP of Board Game Engine: server and lobby
+*** TODO Pair program with Joshua
+SCHEDULED: <2020-12-19 Sat 22:00 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2020-12-18 Fri 10:53]
+:END:
+- State "KILL"       from "TODO"       [2020-12-18 Fri 10:53]
+- State "KILL"       from "TODO"       [2020-12-06 Sun 20:46]
+- State "DONE"       from "TODO"       [2020-12-01 Tue 00:43]
+- State "KILL"       from "TODO"       [2020-11-26 Thu 15:14]
+:LOGBOOK:
+CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
+:END:
+* TODO Review/Serendipitous Sundays
+
+
+* TODO Write a quick post about Lab 1 and Assignment 1 for CS107E
+SCHEDULED: <2020-12-19 Sat>
+* TODO Write a quick post about Lab 2 for CS107E
+* TODO Get thesis code running on my computer
+* TODO Write weekly review
+* TODO Set up CD pipeline for my blog
+* TODO Think a bit about doing a DIY Stanford CS degree in a year
+SCHEDULED: <2020-12-19 Sat>
+* TODO Write group testing post
+[[file:group_testing.md][Group Testing]]
+** TODO Draw more diagrams as necessary and rework Bernard's text
+SCHEDULED: <2020-12-19 Sat>
+* TODO Attend standup
+SCHEDULED: <2020-12-22 Tue 10:00 ++1d>
+:PROPERTIES:
+:LAST_REPEAT: [2020-12-21 Mon 09:54]
 :ORDERED:  t
 :END:
+- State "DONE"       from "TODO"       [2020-12-21 Mon 09:54]
+- State "KILL"       from "TODO"       [2020-12-19 Sat 14:36]
+- State "DONE"       from "TODO"       [2020-12-18 Fri 17:58]
+- State "DONE"       from "TODO"       [2020-12-17 Thu 18:09]
+- State "KILL"       from "TODO"       [2020-12-16 Wed 11:32]
+- State "DONE"       from "TODO"       [2020-12-15 Tue 08:21]
+- State "DONE"       from "TODO"       [2020-12-14 Mon 11:10]
+- State "KILL"       from "TODO"       [2020-12-14 Mon 00:42]
 - State "DONE"       from "TODO"       [2020-12-08 Tue 06:19]
 - State "DONE"       from "TODO"       [2020-12-07 Mon 19:25]
 - State "KILL"       from "TODO"       [2020-12-06 Sun 20:36]
@@ -40,85 +119,14 @@ CLOCK: [2020-11-04 Wed 09:45]--[2020-11-04 Wed 10:37] =>  0:52
 :END:
 - State "DONE"       from "TODO"       [2020-11-04 Wed 10:36]
 - State "DONE"       from "TODO"       [2020-11-03 Tue 09:53]
-* TODO Rusty Mondays
-* TODO Thesis Tuesdays
-** TODO Pair program with Gabe
-SCHEDULED: <2020-12-17 Thu 22:00 +1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-12-07 Mon 19:27]
-:END:
-- State "DONE"       from "TODO"       [2020-12-07 Mon 19:27]
-- State "DONE"       from "TODO"       [2020-12-01 Tue 22:51]
-- State "DONE"       from "TODO"       [2020-11-24 Tue 11:40]
-- State "DONE"       from "TODO"       [2020-11-18 Wed 00:36]
-- State "KILL"       from "TODO"       [2020-11-12 Thu 11:01]
-- State "DONE"       from "TODO"       [2020-11-03 Tue 23:54]
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 22:34]--[2020-11-03 Tue 23:53] =>  1:19
-:END:
-* TODO Working Paper Wednesdays
-** KILL Go to IMDA and take minutes
-SCHEDULED: <2020-12-09 Wed 09:00-14:00>
-** TODO Get Parquet files to Nick
-SCHEDULED: <2020-12-09 Wed>
-** TODO Checkin with Joel
-SCHEDULED: <2020-12-09 Wed 22:00 ++1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-12-04 Fri 09:09]
-:END:
-- State "DONE"       from "TODO"       [2020-12-04 Fri 09:09]
-- State "KILL"       from "TODO"       [2020-11-26 Thu 10:02]
-- State "DONE"       from "TODO"       [2020-11-19 Thu 13:29]
-- State "DONE"       from "TODO"       [2020-11-12 Thu 11:01]
-* TODO Deutsche Donnerstag
-** TODO Lunch with Claire
-SCHEDULED: <2020-12-10 Thu 12:00-14:00>
-** TODO Hangout with Celine
-SCHEDULED: <2020-12-17 Thu 23:00 +1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-12-04 Fri 01:11]
-:END:
-- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
-- State "DONE"       from "TODO"       [2020-12-04 Fri 01:11]
-- State "DONE"       from "TODO"       [2020-11-27 Fri 10:51]
-- State "DONE"       from "TODO"       [2020-11-20 Fri 10:05]
-
-* TODO Freedom Fridays
-** Meet Gabe with ideas about my thesis
-SCHEDULED: <2020-12-11 Fri 22:00>
-* TODO Writing/Board Game Saturdays
-** TODO Finish and ship MVP of Board Game Engine: server and lobby
-*** TODO Pair program with Joshua
-SCHEDULED: <2020-12-12 Sat 22:00 +1w>
-:PROPERTIES:
-:LAST_REPEAT: [2020-12-06 Sun 20:46]
-:END:
-- State "KILL"       from "TODO"       [2020-12-06 Sun 20:46]
-- State "DONE"       from "TODO"       [2020-12-01 Tue 00:43]
-- State "KILL"       from "TODO"       [2020-11-26 Thu 15:14]
-:LOGBOOK:
-CLOCK: [2020-11-03 Tue 21:49]--[2020-11-03 Tue 22:32] =>  0:43
-:END:
-* TODO Review/Serendipitous Sundays
-
-
-
-* TODO Meet with Moon
-SCHEDULED: <2020-12-10 Thu 22:30>
-* TODO Meet with Nick
-SCHEDULED: <2020-12-10 Thu 21:00>
-* TODO Prepare another egg carton of seeds
-** TODO Get cling film
 * TODO Write up reasons why I prefer OGP
 SCHEDULED: <2020-12-08 Tue>
 * TODO Write email to EMA
 SCHEDULED: <2020-12-07 Mon>
-* TODO Write post in a Writeathon with Bernard
-[[file:group_testing.md][Group Testing]]
-* TODO Apply for universities
-** TODO Apply for Harvard
-SCHEDULED: <2020-12-07 Mon>
 * TODO Write for the blog :BLOG:
+** TODO Upload my exam paper attempts
+SCHEDULED: <2020-12-19 Sat>
+** TODO Upload my notes
 ** TODO Write series about "How to write a First-Class Oxford PPE essay":
   - how to read,
   - how to synthesise what you've read into a big debate/ few key viewpoints
@@ -129,8 +137,6 @@ SCHEDULED: <2020-12-07 Mon>
   - Year 2
   - Year 3
 *** TODO collate pictures
-** TODO Upload my notes
-** TODO Upload my exam paper attempts
 ** TODO Write a post about Board Game Engine
 ** TODO New exploration: why is metro construction in Singapore so expensive?
 Why have costs ballooned over the past fifteen years?
@@ -182,8 +188,6 @@ Clarified with Russell what I am or am not allowed to say:
 > please don't
 [[file:my_ogp_interview_experience.md][My OGP interview experience]]
 
-
-
 * HOLD Build stuff :SIDEPROJECTS:
 ** HOLD Build adjustable monitor stand
 ** KILL Build DIY RGBA night lamp
@@ -200,7 +204,7 @@ Check also [this link](https://umanovskis.se/blog/post/remarkable-email/)
 - [X] Earplugs (for both me and Celine)
 - [X] Buy a night light
 - [ ] Buy split keyboard (~ \$500)
-- [ ] Mirror wall
+- [X] Mirror wall
 * HOLD Improve the UX of my website :BLOG:
 ** TODO Add "Related Posts" widget on my posts
 ** TODO Improve my blog: Filter pages, tag pages, tag search, tag index pages...
@@ -239,7 +243,3 @@ Zoom Date: 13 Nov 2020
 Zoom ID: 876 2180 2169
 Zoom PW: 131120
 Time: 3.00pm to 4.00pm folks
-* WAIT Set up GIRO transfer
-CPF received 18 of November
-21 working days from the start of 18th November roughly. 
-If everything goes smoothly it should be done End December. 

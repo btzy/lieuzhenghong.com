@@ -1,14 +1,8 @@
-
 ---
 title: Group testing to save the world
 layout: base
 tags: ["public", "exploration", "maths", "computer science"]
 ---
-
-> The year is 2021 and the world has been transformed into a post-apocalyptic wasteland. 
-> Due to a global pandemic the remnants of humanity have been reduced to
-> scavenging for GrabFood discounts, unable to remember what the sun looks like.
-> But there is hope. 
 
 The year is 2021. The world has been transformed into a post-apocalyptic wasteland. 
 COVID-19 has been cured,
@@ -44,7 +38,7 @@ If they test negative, they're free to go;
 otherwise, they'll be whisked away to a quarantine facility.
 You bang it all out and send it to your boss.
 
-`<image here of a testing booth and a long line of people queuing up>`
+![How to test travelers](/img/group_testing/queue.png)
 
 You get a call the next day.
 Your boss is aghast.
@@ -200,6 +194,8 @@ then test the 3 positive groups of 20 individually.
 
 `<diagram to show upper bound of tests where k = 3?>`
 
+![](/img/group_testing/group_test_base.png)
+
 [^2]: You can achieve an effective group size of 18.5 by having groups of 18 and 19.
 
 That's pretty awesome! By just grouping people together
@@ -226,7 +222,7 @@ test positive we test them individually.
 As before, if any group/subgroup/subsubgroup... tests negative
 then we simply move on to the next one.
 
-`<diagram here would be very helpful>`
+![](/img/group_testing/group_test_recursive.png)
 
 Does this actually save us tests?
 Let's think about how many tests we would use in the worst case.
@@ -260,27 +256,21 @@ $50 + 12 + 6 + 9 = 77$.
 
 `<really need a diagram>`
 
-One way you can think about it is that this algorithm 
-finds the position of the *first* positive person, and
-repeating it on all the elements will eventually give us 
-all the positive positions.
-Thinking about the algorithm in this way will come in useful later.
-
 Here's a diagram:
 
 `<diagram here>`
 
-## 4. Should we test other subgroups after we've found an infected person?
+## 4. Should we "reset" the search after we've found an infected person?
 
 Instead of testing all 50 groups of 20 before testing the 12 groups of 5, and testing all the 12 groups of 5 before testing the 6 groups of 2 or 3; we could test groups of 20 until we find a group of 20 that tests positive, and from that group test groups of 5 until we find a group of 5 that tests positive, and from that group test the groups of 2 and 3, and so on.  And after finding an infected individual we backtrack to test the remaining groups at each level (if any).
 
 `<diagram of this BFS/DFS comparison>`
 
-If you've heard of depth-first search and breadth-first search, you might notice that what we did in step 3 sounds like breadth-first search, while the modified version in the previous paragraph sounds like depth-first search.  If you noticed that, you're right.  In breadth-first search, we explore all groups of the same size before exploring groups of smaller sizes (i.e. deeper levels).  But in depth-first search, we make our way to the first infected person as quickly as possible, before backtracking to find the next infected person, and so on.
+If you've heard of depth-first search and breadth-first search, you might notice that what we did in step 3 sounds like breadth-first search, while the modified version in the previous paragraph sounds like depth-first search. In breadth-first search, we explore all groups of the same size before exploring groups of smaller sizes (i.e. deeper levels).  But in depth-first search, we make our way to the first infected person as quickly as possible, before backtracking to find the next infected person, and so on.
 
-What's the benefit of depth-first search over breadth-first search, you might ask.  They use exactly the same number of tests!
-
-While they use the same number of tests, depth-first search opens up some further optimisations.  By delaying our search for the second infected individual until _after_ we find the first infected individual, we gain the ability to optimise the search for the second infected individual based on information from the first infected individual.
+So should we use depth- or breadth-first search?
+Now, it turns out that they use the same number of tests, but depth-first search opens up some further optimisations. How so?
+By delaying our search for the second infected individual until _after_ we find the first infected individual, we gain the ability to optimise the search for the second infected individual based on information from the first infected individual.
 
 Suppose we conduct our tests, using the depth-first search procedure, pausing just after we have identified the first infected individual (in our example, it is the m^th person).  [ TODO: replace m with the correct number ]
 
@@ -288,7 +278,14 @@ So far, we have totally no information about the people behind the m^th person. 
 
 What good can we do with this knowledge?
 
-Well in our procedure, after finding that the 7^th person is infected, we backtrack and test the 8^th person (individually), and then back out further and do a combined test on the 9^th and 10^th person.  Since we have totally no information on the 8^th, 9^th, and 10^th people, they are very unlikely to be infected.  Hence, those two tests above will very likely be negative.  This is rather wasteful of tests (it's almost like doing individual testing when we know that most people will test negative).
+In our current procedure, 
+after finding that the 7^th person is infected, 
+we backtrack and test the 8^th person (individually), 
+then back out further and do a combined test on the 9^th and 10^th person.
+
+Since we have totally no information on the 8^th, 9^th, and 10^th people, they are very unlikely to be infected.
+Hence, those two tests above will very likely be negative.
+This is rather wasteful of tests (it's almost like doing individual testing when we know that most people will test negative).
 
 Since persons (m+1) to N are equally likely to be infected, we arrive at a smaller instance of the same original problem --- there are (N-m) people that we want to test, of which (K-1) of them are infected!  It then follows that we should perform an identical procedure on these remaining people --- we recalculate the new value of $G$ (and hence $p^{*}$), proceed with the procedure with those new values.
 
@@ -301,7 +298,20 @@ makes a pretty big difference in the number of tests we need.
 It stands to reason that the subgroup and subsubgroup sizes
 also matter. But how should we pick these sizes?
 
-Well, each group that tests positive is quite likely to have only one infected individual, because there are more groups than infected individuals.  Let's assume for now that each group that tests positive has exactly one infected individual.  Our objective, then, is to determine which one of the 20 people in this group is infected.
+Well, each group that tests positive is quite likely to have only one infected individual, 
+because there are more groups than infected individuals. [^2] 
+Suppose you rolled twenty 100-sided dice (d100): 
+the odds of getting one 
+100 is quite rate, but the odds of getting two or more 100s
+is vanishingly unlikely.
+In the same way,
+since an individual is very unlikely to have the virus,
+it is quite rare for a group to have an infected person,
+and extremely rare for a group to have two (or more) infected people.
+
+[^2]: TODO
+
+Let's assume for now that each group that tests positive has exactly one infected individual.  Our objective, then, is to determine which one of the 20 people in this group is infected.
 
 It turns out that we should halve the size of the (sub)group each time.  (If you have heard of binary search, this is precisely the algorithm being described here.)
 That is, we start with a group size is 20 (of which we know exactly one person is infected),
@@ -311,11 +321,17 @@ We continue doing so until we are left with a single person --- this person must
 
 `<diagram>`
 
-To see why this is optimal, consider what would happen if we first conducted a test on 5 (instead of 10) of the 20 people in the group.  If the test comes back positive, then we get to eliminate a whopping 15 people!  But if the test comes back negative, then we can only eliminate 5 people.  On average, then, what is the number of people that we will get to eliminate?
+To see why this is optimal, consider what would happen if we first conducted a test on 5 (instead of 10) of the 20 people in the group.  If the test comes back positive, then we get to eliminate a whopping 15 people!
+But if the test comes back negative, then we can only eliminate 5 people.
+On average, then, what is the number of people that we will get to eliminate?
 
-If you've answered "10 people", that's unfortunately wrong.  Since the infected individual has an equal chance of being each of the 20 people in the group, it is more likely that the the infected individual is in the untested 15 remaining people rather than the 5 people we conducted a test on.  This means that it's more likely that we will only get to eliminate 5 people, rather than 15.  As such, the average number of people that we get to eliminate is more than 10.
+If you've answered "10 people", that's unfortunately wrong.
+Since the infected individual has an equal chance of being each of the 20 people in the group, it is more likely that the the infected individual is in the untested 15 remaining people rather than the 5 people we conducted a test on.
+This means that it's more likely that we will only get to eliminate 5 people, rather than 15.
+As such, the average number of people that we get to eliminate is less than 10.
 
-We may make a similar argument if 15 people are chosen for the first test, instead of 5 or 10.  The average number of people that we get to eliminate will also be more than 10.
+We may make a similar argument if 15 people are chosen for the first test, instead of 5 or 10.
+The average number of people that we get to eliminate will also be more than 10.
 
 Hence, testing exactly half of the group is the most efficient way to narrow down the group size.
 
@@ -323,9 +339,14 @@ Hence, testing exactly half of the group is the most efficient way to narrow dow
 
 ## 6. What is the best group size to start with?
 
-Previously, we showed that the ideal number of people in each group is $\sqrt{\frac{N}{k}}$.  However, that calculation hinges on the assumption that there is only one level of groups before we test each person individually.  This isn't the case now, since we have many levels (specifically it's $\log_2 \frac{N}{G}$ levels, since we halve the number of people in a (sub)group after each test).
+Previously, we showed that the ideal number of people in each group is $\sqrt{\frac{N}{k}}$.
+However, that calculation hinges on the assumption that there is only one level of grouping before we test each person individually.
+This isn't the case now, since we have many levels (specifically it's $\log_2 \frac{N}{G}$ levels, since we halve the number of people in a (sub)group after each test).
 
-Again, we formulate an expression and find the group size that gives the minimum number of tests:  There are $K$ infected individuals, and we need (at most) $\log_2 \frac{N}{G} + 1$ tests per infected individual, so we need a total of $G + K (\log_2 \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log_2 p + 1)$ tests.  
+What is the new ideal group size? 
+Well, there are $K$ infected individuals, 
+and we need (at most) $\log_2 \frac{N}{G} + 1$ tests per infected individual, 
+so we need a total of $G + K (\log_2 \frac{N}{G} + 1)$ tests, or alternatively in terms of $p$ we need $\frac{N}{p} + K (\log_2 p + 1)$ tests.
 
 Again using differentiation, we can show that the optimal number of people in each partition,
 $p^{*}$, is given by $p^{*} = \frac{N}{k}$.
@@ -344,188 +365,10 @@ This leads us to the final algorithm:
 4. Remove all the people before and including the first positive person, 
    repeating the algorithm and setting $N$ and $k$ appropriately. Repeat this
    process until all people have been cleared.
+   
+<include algorithm animation here>
 
 You're feeling very clever with yourself until it turns out that 
 Hwang (1972) beat you to it almost fifty years ago with
 _A Method for Detecting All Defective Members in a Population by Group Testing_.
 Oh well. Maybe you should have studied something useful instead of PPE.
-
-
-## Sequence of events
-
-1. Frame story: you're the Minister for Health of a small island nation and you
-   need to test everyone who comes into the airport. 
-   Your boss wants you to come up with a proposal.
-2. Your first proposal is to just test everyone.
-3. Your boss is aghast. "We can't test everybody, we don't have enough tests!"
-4. So you think, Oh, can we mix everyone's saliva together and test?
-    Turns out that you can because the test is very sensitive.
-5. So in your second proposal you suggest that we group 2 people together, get
-   them to spit in the same cup (or whatever), and do a test on that combined
-   sample. 
-   (INCLUSIVE OR IDEA HERE)
-   And the idea is, that if the test comes out negative, both those people are 
-   negative,
-   and if the tests comes out positive, *at least one* of those people is positive.
-   And assuming that most epople don't have the virus, this allows us to
-   halve the number of tests! (Short proof here.) 
-   - With some loss of generality let's assume that there's only three people
-     who's positive in 1000. (We'll see how to extend this to other numbers later.)
-6. Ok, but can we do better? If two is good, surely three is better, four even
-   better, etc. What about 10? And the intuition here is that most of the
-   partitions are still going to come out negative.
-   And at the most, with a partition of 10, we'll have to test 30 people maximum.
-   But of course there's an upper bound. If you get all 1000 people to spit into
-   the same cup then that test is definitely going to be positive, BUT you're
-   going to have to test all 1,000 people. So you haven't saved any tests at
-   all.
-   In some sense the formula is as follows:
-   - Number of partitions = p
-   - Number of people N
-   - number of people in each partition = N/p
-   - Number of infected = k
-   
-   So the formula is that you'll have to , in the worst case,
-   do
-   p + N/p * k
-   In the first step you need to test all the partitions
-   And in the worst case, *k* of the partitions come out positive and you'll
-   have to test all of them.
-   And minimising this (by differentiation or AM/GM)
-   gives us .... $p = \sqrt{Nk}$.
-6. (Extra intermediate step). 
-    So one very obvious improvement is that we don't test every single person individually when the group tests positive.
-    We can split that positive group into subgroups and test *those*. 
-    I.e. for instance if we chose groups of 20 at the start,
-    and a group of 20 tested positive,
-    We might then choose subgroups of 5,
-    and if *that* subgroup tested positive we might then split them 
-    *again* into subsubgroups of 2 and 3,
-    and if *that* subsubgroup tests positive we'll then test them individually.
-    And by the same logic as previously this will allow us to reduce the number of tests.
-    (Here we should make it clear that this algo finds the position of
-    the first positive, and running it recursively on the remaining
-    elements will eventually give all the positives.)
-7. How do we choose the size of the subgroup/subgroupgroups/etc... to test? 
-    What's the ideal? 
-    So we're trying to find where the first positive is and there are 20
-    possibilities where the first positive might be.
-    Now in order to find the first positive as efficiently/quickly as possible,
-    we want to eliminate the most number of possibilities at every step.
-    And it turns out that the best way to do it is to split the group into half each
-    time.
-    Why is this so?
-    Imagine for now we had a group of 20 and we query a subgroup of 5.
-    Now it's possible that that subgroup of 5 tests positive
-    (in which case we can be sure the first positive lies in the front 5)
-    but it's more likely that the subgroup tests negative
-    and we can only eliminate 5 elements 
-    (ergo there are still 15 possibilities for the first positive)
-    Now if we used a subgroup of 10, then we can eliminate 10 possibilities 
-    for the first positive
-    no matter whether the subgroup tests positive or negative.
-8. So here's how it works: 
-    For each positive partition we test
-    the front half of that partition. 
-    If it's negative we know that everyone in the
-    front partition is negative and we can send them home---any positive
-    cases must be in the back half. 
-    Then we test the front half of that back half..
-    (TODO: diagram)
-    If it's positive then we halve that again, test the front half etc.
-    Eventually we'll reach a subgroup of size 1 or 2 and then we'll just test individually.
-    This eventually finds the first positive patient. (why? diagram)
-9. We should then ask if our initial partitioning of $p = \sqrt{nk}$ was ideal.
-    (No.) Why not? 
-    So in our initial solution, whenever we found a positive
-    partition, we had to individually test every single person in that partition.
-    But now in step 7 we've been able to get the right answer with much fewer tests.
-    And therefore our partitions can be larger.
-    But how much larger?
-
-    So recall in step 7 that we chose the size of the subgroup in order to halve
-    the number of possibilities at each step.
-    So no matter whether the subgroup returned positive or negative, half of
-    the possibilities would be eliminated.
-    Now that's equivalent to saying that we chose the size of the subgroup
-    *such that there would be a 50% probability that it would be positive* [^0]
-    And this same logic applies to the initial partitioning as well.
-    We want to choose a size of the initial group such that there's a 50%
-    chance of the initial group returning positive.
-
-    [^0]: not quite true --- assuming a uniform distribution
-
-    And it turns out (maybe we want to derive this) that the optimal group size
-    to choose in order to return a 50% chance is roughly $n/k$ (proof).
-11. So with all that said, the final algorithm you come up with is as follows:
-    1. Set your group size to be $g = n/k$. Pick the first $g$ people, group them together and
-    test them.
-    2. If that group tests negative, remove all of these people, and repeat the algorithm with n now set to $n-g$.
-    3. If that group tests positive, take a subgroup of half of those people and test
-    them: 
-    - If that subgroup tests negative, clear them and test the next subgroup.
-    - If that subgroup tests positive, take a sub-subgroup of half of the subgroup
-        and test them, repeating this process.
-    4. Remove all the people before and including the first positive person, repeating the algorithm and setting k to $k-1$ and n appropriately. Repeat this process until all people have been cleared.
-
-12. You're feeling very clever with yourself until it turns out that Hwang
-    (1972) beat you to it almost fifty years ago with 
-    _A Method for Detecting All Defective Members in a Population by Group Testing_ .
-
-13. All is well and good until you get a call from your boss a few days later.
-"The queue at the testing station is getting way too long; 
-we've had several passengers die of Covid while waiting to be tested.
-We're going to greatly increase the number of testing stations.
-Can you make your algorithm run in parallel?"
-
-
-=== 
-
-
-Now a question might come up at this point. Why half?
-Suppose we drew like 30 partitions of 1,000
-The probability of a partition having exactly ONE positive is low
-and the probability a partition having TWO positives is even lower,
-sort of like when you're rolling like a d20 getting a 20 vs rolling 2 d20s and
-getting both 20s. So we can kind-of-safely say that the parttion is MOST likely
-going to have ONLY one positive if the partition tests positive.
-
-9. So what? So if we assume that the partition only has one positive patieent,
-then if we divide the partition into half, ONLY one half will be positive.
-While this assumption doesn't always hold, because almost always we have
-only 1 positive patient,
-P(front half is positive) ~= 0.5.
-In other words, consider a positive partition. If we test the front half (or the
-back half for that matter), there is an approximately 50% chance that the test will return a positive result.
-
-So here let's look at a partition of 8. And recall in 7 that this algorithm
-finds the first positive patient. Before making any queries there are 8
-possibilities where the positive patient is.
-And when you split that into half, you find out if the patient is from 1--4 or
-5--8. In either case the number of possibilities is halved. 
-And everytime you do it it halves again.
-
-Recall that previously we had 8 possibilities and we chose to halve it (4/4),
-(2/2) and so on. We do this by choosing a set that has a 50% chance of being
-positive, and we want to do the same for the first step as well.
-
-Because each partition is so much more likely to return negative
-than positive (just look at the diagram). We can see that out of X partitions of
-size 8, only Y of them were positive (max 3 out of however many).
-
-===
-
-7. OK, but can we do better again?  So the idea of splitting up the groups into
-subgroups in Stage One was that we wanted to strike a balance between
-testing everybody (i.e. subgroups of 1), while not getting a "guaranteed"
-positive test (i.e. subgroups of 1000.)
-And so it would make very little sense if we abandoned this idea in the second
-stage, and just tested eveyrone in the group.
-In some sense the first stage removes people from consideration and we can
-consider the second stage a same reduced group, and the same logic applies.
-So e.g. instead of 1,000 people now there are 50 people to test.
-And with 50 people to test we don't have to test individually, we can split
-*that* into groups as well. 
-8. This leads us to a *multi-stage testing approach...* at every juncture we
-   split each into a subgroup.
-
