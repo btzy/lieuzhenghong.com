@@ -20,6 +20,13 @@ This also improved my understanding of assembly.
 I learned a bit about the stack
 We also learned a bit about Makefiles.
 
+## Using gdb
+
+Add a breakpoint by using `break`.
+Use `info reg` to view the registers,
+`disassemble` to view the assembly code of the current function,
+and `next` and `step` to step through code execution.
+
 ## Understanding Makefiles
 
 The symbols that begin with `$` and `%` in a pattern rule are handled by make using the following interpretations:
