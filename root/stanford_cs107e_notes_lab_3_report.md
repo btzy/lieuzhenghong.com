@@ -4,13 +4,29 @@ layout: base
 tags: ["public", "computer science", "programming"]
 ---
 
+## Introduction
+
+
+
+## Lab 3
+
 ## Writing a `strcpy` function
 
 This was a pretty easy task
 
-## Debugging with GDB
+### Debugging with GDB
 
-## More assembly
+We did a bit more debugging with GDB just to understand how
+the stack works.
+What exactly happens when a function is called?
+How does it allocate memory?
+And how does it jump back to the parent function?
+
+### More assembly
+
+I put the following function into godbolt, an online C compiler.
+This function is quite instructive so I found it quite enlightening
+to understand it in detail.
 
 ```c
 void stack_array(void)
@@ -56,24 +72,46 @@ stack_array:
     .ascii " 0x%x \000"
 ```
 
-What is happening in `.L3:`
+The function starts at `stack_array`. 
+After some preamble (more on this later)
+and initialising r5 to #0,
+it jumps to `.L2`. 
+`.L2` checks the value of r5.
+If r5 is less than 5 it ends the function
+and does some postamble
+before jumping back into the parent function
+using `bx lr`.
 
-`r5` is `i` and `r4` is the current value of `array[i]`
+L3 is the main loop. What is happening in `.L3:`?
+`r5` is `i` and `r4` is the current value of `array[i]`.
 So what we do is we load the value in the address pointed to at `r6` minus 32
 into `r4`, we increment it, then we store it back into that address.
 Note that at every loop `r6` is being added to 
 Note also that the array is being added from the back.
 
+#### `stmfd` and `ldmfd`
 
-`stmfd`
+What do these mean? `stm` means store multiple 
+and `ldm` means load multiple.
+If the stack is descending
+(ergo the stack starts from a large number and decreases)
+you use `fd` to do full descending,
+otherwise you use `fa` instead.
+
+`stmfd sp!, {r4, r5, r6, lr}` 
+stores the data inside those four registers 
+into the first four words of the stack pointer,
+then decrements the stack pointer by 16 (4 * 4).
 
 `ldmfd sp!, {r4, r5, r6, lr}`
-stores the first four words
-of the stack pointer into those four registers
+loads the first four words of the stack pointer 
+back into those four registers.
 
-If the stack is descending you use
-`fd` to do full descending
-otherwise you use `fa` instead
+Why do we do this?
+This basically saves the state of this register
+before we jump into the new function
+and restores the registers once the function
+has finished running.
 
 > So, the instruction
 
@@ -89,14 +127,12 @@ r3 = *(int)(r4+12)
 r4 = r4 + 16 // writeback (16 bytes transferred)
 ```
 
-> In the variant without ! the writeback doesn't happen so R4 retains the original value.
+In the variant without ! the writeback doesn't happen 
+so R4 retains the original value.
 
+### Lab 3: Check-in
 
-## Serial communication
-
-## Lab 3: Check-in
-
-### Explain how the lr register is used as part of making a function call. Which instruction writes to the lr register? Which instruction reads from it? What commands could you use in gdb to observe the changes to the lr register during execution of a function call?
+#### Explain how the lr register is used as part of making a function call. Which instruction writes to the lr register? Which instruction reads from it? What commands could you use in gdb to observe the changes to the lr register during execution of a function call?
 
 The `lr` register is the link register.
 You store the 
@@ -133,15 +169,14 @@ We could use `disassemble` to look at
 the source code of the function currently in scope
 and also points to the current line.
 We can use `info reg` to look at the registers
-and `step` to go stepwise and keep using `info reg`
-to observe the changes in the `lr` register.
+and `step` to go stepwise and keep using `info reg` to observe the changes in the `lr` register.
     
-### Why is it necessary to plug in both TX and RX for loopback mode to work?
+#### Why is it necessary to plug in both TX and RX for loopback mode to work?
 
 If you don't plug in TX to RX you either don't receive the transmitted messages
 or you don't transmit any messages at all (if you plug in RX but not TX).
         
-### On a hosted system, executing an incorrect call to strlen (e.g. argument is an invalid address or unterminated string) can result in a runtime error (crash/halt). But when running bare metal on the Pi, every call to strlen (whether well-formed or not) will complete “successfully” and return a value. Explain the difference in behavior. What is the return value for an erroneous call?
+#### On a hosted system, executing an incorrect call to strlen (e.g. argument is an invalid address or unterminated string) can result in a runtime error (crash/halt). But when running bare metal on the Pi, every call to strlen (whether well-formed or not) will complete “successfully” and return a value. Explain the difference in behavior. What is the return value for an erroneous call?
  
 Let's answer the second part first.
 Recall that the implementation of `strlen` iterates through incrementing
@@ -159,3 +194,30 @@ when we run it on a hosted system the stack size is limited by the OS
 
 and we're guessing that once you try to read values outside of that stack
 the OS will throw an error.
+
+## Assignment 3
+
+### string functions, stoi
+
+Most of the string functions were easy
+but the `stoi` functions were tricky.
+WN and I implemented the functions separately as a learning experience.
+He finished much quicker than I did
+and was kind enough to review my code,
+which was very helpful.
+
+### xxx_to_base functions
+
+start 2030 12/22
+end 2215 12/22
+
+We managed to write a passing `string_to_base` function.
+It was quite tricky.
+We sort of cheated by using `printf` in a REPL to debug our functions
+rather than using gdb.
+
+### sprintf
+
+### vsnprintf
+
+### printf

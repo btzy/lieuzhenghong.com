@@ -4,7 +4,6 @@ layout: base
 tags: ["public", "computer science", "programming"]
 ---
 
-
 ## Introduction
 
 This was the second lab (of seven) of Stanford's CS107E course.
@@ -19,6 +18,10 @@ are translated by the compiler into assembly.
 This also improved my understanding of assembly.
 I learned a bit about the stack
 We also learned a bit about Makefiles.
+
+The assignment is to build a clock that displays the time on 
+a seven-segment display.
+We didn't have the materials so we moved on to Lab 3 for now.
 
 ## Using gdb
 
@@ -37,3 +40,11 @@ The symbols that begin with `$` and `%` in a pattern rule are handled by make us
             
 One more special variable `$^` refers to all elements in the right part of the
 rule, after the `:`, which is to say all of the dependencies.
+
+## Breadboarding the clock circuit
+
+TODO
+
+## Assignment 3
+
+TODO
