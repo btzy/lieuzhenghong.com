@@ -245,7 +245,7 @@ in the thick thicket of Bureaucrat-ease,
 but you realise the subtext immediately.
 In order for your boss to keep his year-end bonus 
 all his charges must demonstrate a 25% efficiency increase
----which means you have to reduce the number of tests by 25%.
+---which means *you* have to reduce the number of tests by 25%.
 
 You steal a furtive glance at your boss.
 He seems to have recovered very quickly
@@ -310,7 +310,8 @@ $50 + 12 + 6 + 9 = 77$ tests.
 
 You've saved the day again!
 You send the improved proposal to your boss and
-pat yourself on a job well done.
+pat yourself on the back for a job well done.
+
 But while things are still fresh in your head 
 -- and knowing your boss --
 you reckon that you should think whether you can do *even* better
@@ -363,13 +364,15 @@ This isn't the case now, since we have many levels
 since we halve the number of people in a (sub)group after each test).
 
 What is the new ideal group size $p$? 
-Let's define a variable $G$ as the number of groups: $G = \frac{N}{p}$.
 Because we halve the size of the group each time,
-we need (at most) $\log_2 \frac{N}{G} + 1$ tests per infected individual. 
+we need (at most) $\log_2 \frac{N}{p} + 1$ tests per infected individual. 
 And since there are $k$ infected individuals, 
-we need a total of $G + k (\log_2 \frac{N}{G} + 1)$ tests. 
-Using differentiation.
-we can show that the optimal number of people in each partition,
+we need a total of $G + k (\log_2 \frac{N}{p} + 1)$ tests: 
+$G$ initial tests, then 
+$\log_2 \frac{N}{p} + 1$ 
+individual tests.
+Using differentiation
+we find that the optimal number of people in each partition,
 $p^{*}$, is given by 
 
 $$p^{*} = \frac{N}{k}.$$
@@ -389,8 +392,6 @@ The optimal group size therefore increases.
 (And for our case of $N = 1000$ and $k = 3$, 
 the optimal group size is $p^{*}=333$).
 
----
-
 ## 6. Depth-first search: should we "reset" the search after we've found an infected person?
 
 Previously, we were testing all 50 groups of 20 before testing the 12 groups of 5, 
@@ -407,7 +408,7 @@ Here's an illustration of what that looks like:
 
 ![Depth-first search](/img/group_testing/depth_first_search.png)
 
-In the literature, this is called breadth- vs depth- first search.
+This is called *breadth-* vs *depth-* first search.
 In breadth-first search, we explore all groups of the same size before exploring
 groups of smaller sizes (i.e. deeper levels). But in depth-first search, we
 make our way to the first infected person as quickly as possible, before
@@ -417,13 +418,12 @@ Does it matter whether we use depth- or breadth-first search?
 It turns out that depth-first search opens up some further
 optimisations.
 The idea is that once we find the first infected individual 
-we can stop and change the subgroup size, 
-thus using fewer tests overall.
+we can stop and "reset" the search, using fewer tests overall.
 
 Suppose we conduct our tests, using the depth-first search procedure, 
 pausing just after we have identified the first infected individual
 (in our example, it is the 13th person).
-But note here that we have totally no information 
+But note here that we have no information whatsoever
 about the people behind the 13th person.
 More specifically, we know that persons 1 to 12 are not infected, 
 and (of course) that person 13 is infected, 
@@ -475,13 +475,13 @@ All the optimisations lead you to the final, optimal algorithm:
 You smugly file the optimal algorithm away,
 content in the knowledge that you'll be able
 to appease your boss and exceed your KPIs
-for many months to come.
-
-You're feeling very clever with yourself,
+for many months to come. You're feeling very clever with yourself,
 but unbeknownst to you
 Hwang (1972) beat you to it almost fifty years ago with his paper
 _A Method for Detecting All Defective Members in a Population by Group Testing_.
 Maybe you should have studied something useful instead of PPE...
+
+---
 
 The next few months pass uneventfully.
 You spend your working hours writing florid poetry on the human condition,
