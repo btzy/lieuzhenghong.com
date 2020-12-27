@@ -240,8 +240,8 @@ stack of papers on his desk:
 > to embark upon a Productivity Improvement and Digitisation Journey
 > to increase WoG efficiency and reduce government expenditure...
 
-Lesser men would have been thrown off by 
-the thick thicket of Bureaucrat-ease,
+Lesser men would have gotten hopelessly lost
+in the thick thicket of Bureaucrat-ease,
 but you realise the subtext immediately.
 In order for your boss to keep his year-end bonus 
 all his charges must demonstrate a 25% efficiency increase
