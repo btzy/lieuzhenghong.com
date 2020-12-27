@@ -211,10 +211,10 @@ and it's quickly distributed to Border Control:
 [^2]: You can achieve an effective group size of 18.5 by having groups of 18 and 19.
 
 
-For a while, all is good.
+For a while, all is well.
 You've done the impossible with your great leap of insight
 and your boss gives you an A in your performance appraisal.
-Your meteoric rise through the ranks of the civil service
+Your meteoric rise through the ranks of the Civil Service
 is all but assured, you think to yourself -- but alas,
 Fate is never so kind...
 
@@ -231,7 +231,7 @@ and your Director is bawling his eyes out.
 
 "What happened here?" you ask,
 and in between racking sobs he points to a
-single piece of paper on his desk:
+stack of papers on his desk:
 
 > As part of the Digital Government Blueprint
 > and the continuing economic difficulties
