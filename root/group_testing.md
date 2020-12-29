@@ -16,7 +16,7 @@ before succumbing to their lack of qualia.
 Two back-to-back pandemics were too much for the world to handle,
 and the remnants of humanity have been reduced to
 scavenging for GrabFood discounts,
-unable to remember what the sun looks like.
+unable to remember what the sun looked like.
 
 But there is hope. A new screening test has been devised:
 a perfect, infinitely sensitive test that
@@ -235,7 +235,7 @@ stack of papers on his desk:
 
 > As part of the Digital Government Blueprint
 > and the continuing economic difficulties
-> caused by the post-pandemic pandemic,
+> caused by the post-pandemic apocalypse,
 > we call upon the Whole-of-Government
 > to embark upon a Productivity Improvement and Digitisation Journey
 > to increase WoG efficiency and reduce government expenditure...
